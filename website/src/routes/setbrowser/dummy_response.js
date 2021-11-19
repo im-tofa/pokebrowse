@@ -15,7 +15,13 @@ const dummy_response = {"pokemon": {
           "sp": 252
         },
         "ivs": null,
-        "nature": "Adamant"
+        "nature": "Adamant",
+        "moves": [
+          "Swords Dance",
+          "Wood Hammer",
+          "Ice Shard",
+          "Earthquake"
+        ]
       },
       {
         "name": "RU Mixed Attacker",
@@ -31,7 +37,13 @@ const dummy_response = {"pokemon": {
           "sp": 164
         },
         "ivs": null,
-        "nature": "Rash"
+        "nature": "Rash",
+        "moves": [
+          "Blizzard",
+          "Wood Hammer",
+          "Ice Shard",
+          "Focus Blast"
+        ]
       },
       {
         "name": "NU Mixed Attacker",
@@ -47,7 +59,13 @@ const dummy_response = {"pokemon": {
           "sp": 252
         },
         "ivs": null,
-        "nature": "Modest"
+        "nature": "Modest",
+        "moves": [
+          "Blizzard",
+          "Giga Drain",
+          "Focus Blast",
+          "Substitute"
+        ]
       },
       {
         "name": "NU Swords Dance",
@@ -63,7 +81,13 @@ const dummy_response = {"pokemon": {
           "sp": 252
         },
         "ivs": null,
-        "nature": "Jolly"
+        "nature": "Jolly",
+        "moves": [
+          "Swords Dance",
+          "Wood Hammer",
+          "Ice Shard",
+          "Earthquake"
+        ]
       },
       {
         "name": "PU Mixed Wallbreaker",
@@ -79,7 +103,13 @@ const dummy_response = {"pokemon": {
           "sp": 252
         },
         "ivs": null,
-        "nature": "Hasty"
+        "nature": "Hasty",
+        "moves": [
+          "Blizzard",
+          "Giga Drain",
+          "Earthquake",
+          "Ice Shard"
+        ]
       },
       {
         "name": "PU Choice Scarf",
@@ -95,7 +125,13 @@ const dummy_response = {"pokemon": {
           "sp": 252
         },
         "ivs": null,
-        "nature": "Naive"
+        "nature": "Naive",
+        "moves": [
+          "Blizzard",
+          "Giga Drain",
+          "Focus Blast",
+          "Earthquake"
+        ]
       },
       {
         "name": "PU Swords Dance",
@@ -111,7 +147,13 @@ const dummy_response = {"pokemon": {
           "sp": 252
         },
         "ivs": null,
-        "nature": "Jolly"
+        "nature": "Jolly",
+        "moves": [
+          "Swords Dance",
+          "Wood Hammer",
+          "Ice Shard",
+          "Earthquake"
+        ]
       },
       {
         "name": "Doubles Trick Room Attacker",
@@ -134,7 +176,13 @@ const dummy_response = {"pokemon": {
           "sd": null,
           "sp": 0
         },
-        "nature": "Quiet"
+        "nature": "Quiet",
+        "moves": [
+          "Blizzard",
+          "Giga Drain",
+          "Ice Shard",
+          "Protect"
+        ]
       },
       {
         "name": "1v1 4 Attacks",
@@ -150,7 +198,13 @@ const dummy_response = {"pokemon": {
           "sp": null
         },
         "ivs": null,
-        "nature": "Quiet"
+        "nature": "Quiet",
+        "moves": [
+          "Grass Knot",
+          "Blizzard",
+          "Ice Shard",
+          "Earthquake"
+        ]
       }
     ]
   }
