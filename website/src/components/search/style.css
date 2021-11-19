@@ -1,0 +1,61 @@
+/* TODO: 
+	Try design where filter is a bar at the top and you add 
+	filters by /<filtercommand> <value> in the bar. No 
+	/<filtercommand> means species name.
+*/
+.filters {
+	display: grid;
+	grid-template: 3em 1fr / 1fr;
+
+	background: #fefefe;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: #888888;
+	border-style: solid;
+
+	/* scroll and height */
+	overflow-y: hidden;
+}
+
+.cli {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 5px;
+}
+
+.cmd {
+	display: grid;
+	width: 100%;
+	margin: 10px;
+}
+
+.chosen {
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+
+	padding: 5px;
+	overflow-y: scroll;
+}
+
+.options {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	margin: 0px 10px 0px 10px;
+	padding: 10px 0px 10px 0px;
+	border-bottom-width: 1px;
+	border-bottom-color: #535353;
+	border-bottom-style: solid;
+}
+
+.options i {
+	background-color: #444444; 
+	width: 25px; 
+	height: 25px;
+	border-radius: 5px;
+}

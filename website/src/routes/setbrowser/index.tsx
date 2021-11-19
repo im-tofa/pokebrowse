@@ -14,7 +14,6 @@
 import { Component, FunctionalComponent, h, Fragment } from 'preact';
 import style from './style.css';
 import { useState, useCallback, useReducer, useEffect } from 'preact/hooks';
-import Filter from './../../components/filter';
 import parseInput from './tokenizer';
 import dummy_response from './dummy_response';
 import pokedex from './pkmnstats';
@@ -23,115 +22,16 @@ import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons'
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons'
 
 import { ApolloProvider, ApolloClient, useQuery, gql, useLazyQuery } from '@apollo/client';
+
+import SearchComponent from '../../components/search';
  
 interface Props {
-}
-
-/**
- * setbrowser
- *     search component
- *         filter component
- *     results component (structured by columns for each attribute e.g evs ivs base stats name author etc)
- *         description bar (fixed at the top)
- *         results list
- *             result of each set that was matched
- *                 
- *         
- */
-
-const dummy_filters = {
-    species: {
-        value: "Excadrill",
-        inputType: 'input',
-    },
-    speed: {
-        value: 290,
-        inputType: 'number',
-    },
-    author: {
-        value: "Storm Zone",
-        inputType: 'input',
-    }
-};
-
-const GET_GREETING = gql`
-    query get_pokemon($species: String!) {
-        pokemon(species: $species) {
-            species
-            sets {
-                name
-                ability
-                item
-                evs {
-                    hp
-                    at
-                    df
-                    sa
-                    sd
-                    sp
-                }
-                ivs {
-                    hp
-                    at
-                    df
-                    sa
-                    sd
-                    sp
-                }
-                nature
-                moves
-            }
-        }
-    }
-`;
-
-interface SearchProps {
-    setResults(pokemon: Pokemon): void; 
-};
-
-const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) => {
-    const [currentInput, setCurrentInput] = useState('');
-    const [filters, setFilters] = useState(dummy_filters);
-
-    const [fetchResults, {loading, error, data}] = useLazyQuery(GET_GREETING);
-
-    if(loading) {}
-    else {
-        if(error) {
-            console.error(error);
-            console.error(data);
-        } else {
-            if(data !== undefined) {
-                console.log(data);
-                props.setResults(data);
-            }
-        }
-    }
-
-    return (
-        <form class={style.filters}>
-          <div class={style.cli}>
-            <h3>Browse: </h3>
-            <input type="text" class={style.cmd} value={currentInput} onChange={(event) => setCurrentInput('')}/*onKeyUp={this.changeQuery} onKeyDown={this.supress}*/></input>
-          </div>
-          {Object.keys(filters).length > 0 && <div class={style.chosen}>
-            <h5>Filters: </h5>
-            {Object.entries(filters).map(([key, val]) => <Filter filterType={key} filterValue={val.value} inputType={val.inputType} remove={(event) => {event.preventDefault();}}></Filter>)}
-            </div>}
-            <button onClick={(e) => {
-                e.preventDefault(); 
-                fetchResults({
-                    variables: { species: filters.species.value }
-                });
-            }}>
-            </button>
-        </form>
-    );
 };
 
 const dummy_results = dummy_response;
 
 type Set = {
+    species: string,
     name: string,
     level: number,
     ability: string,
@@ -162,7 +62,6 @@ type Pokemon = {
 };
 
 interface ResultProps {
-    species: string;
     sets: Set[];
 };
 
@@ -216,12 +115,12 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
             <ul>
             {
                 props.sets.map((set) => (
-                    <li key={`${props.species}: ${set.name}`} class={`${style.result}`}>
+                    <li key={`${set.species}: ${set.name}`} class={`${style.result}`}>
                         <div class={style.wrapper}><div class={`${style.toptag} ${style.clip}`}>{set.name}</div><div class={style.triangle_bottom_left}></div></div>
                         <div class={`${style.resultcols} ${style.bottag}`}>
                             <div class={style.wrapper}>
                                 {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
-                                <img src={`https://play.pokemonshowdown.com/sprites/gen5ani/${props.species.toLowerCase().split(' ').join('-')}.gif`}></img>
+                                <img src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species.toLowerCase().split(' ').join('-')}.gif`} onError={(event) => event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species.toLowerCase().split(' ').join('')}.png`}></img>
                                 <img class={style.icon} src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item.toLowerCase().split(' ').join('-')}.png`}></img>
                             </div>
                             <div class={`${style.grid} ${style.c1} ${style.r3}`}>
@@ -259,12 +158,12 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
 };
 
 const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
-    const [results, setResults] = useState(dummy_results as any);
-    console.log(results);
+    const [results, setResults] = useState([]);
+    //console.log(results);
     return (
     <div class={style.setbrowser}>
         <SearchComponent setResults={(searchResults) => setResults(searchResults)}/>
-        <ResultComponent species={results.pokemon.species} sets={results.pokemon.sets}/>
+        <ResultComponent sets={results}/>
     </div>
     );
 };
