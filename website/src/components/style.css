@@ -1,4 +1,10 @@
 .preact_root {
-    height: calc(100% - 56px);
+    display: block;
+    height: 100%;
     width: 100%;
+}
+
+.flexcontainer {
+    display: flex;
+    justify-content: center;
 }

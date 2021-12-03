@@ -3,6 +3,7 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	flex-wrap: nowrap;
 
 	margin: 5px;
 
@@ -12,6 +13,8 @@
 	border-color: #888888;
 
 	background-color: #eeeeee; 
+	width: fit-content;
+	font-size: small;
 }
 
 .filter > * {
@@ -26,7 +29,11 @@
 }
 
 .filter > label {
-	min-width: 2em;
+}
+
+.filter span {
+	display: inline-block;
+	width: max-content;
 }
 
 .filter input {

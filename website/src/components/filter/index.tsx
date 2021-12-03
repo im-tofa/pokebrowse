@@ -35,7 +35,11 @@ const Filter: FunctionalComponent = (props) => {
     return (
         <div class={style.filter}>
             {/*<div>{(props as any).filterType + ": " + (props as any).filterValue}</div>*/}
-            <label><span>{(props as any).filterType + ": " + (props as any).filterValue}</span><input type={(props as any).inputType} name={(props as any).filterType} value={(props as any).filterValue} style={"width: " + (props as any).filterValue.toString().length + "em"} readonly></input></label>
+            <label>
+                <span>{(props as any).filterType + ": " + (props as any).filterValue}</span>
+                {/*<input type={(props as any).inputType} name={(props as any).filterType} value={(props as any).filterValue} readonly>
+                </input>*/}
+            </label>
             <button onClick={(props as any).remove}></button> 
         </div>
     );

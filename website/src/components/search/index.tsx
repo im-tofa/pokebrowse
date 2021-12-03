@@ -18,6 +18,7 @@ import { useState, useCallback, useReducer, useEffect } from 'preact/hooks';
 
 import Filter from './../../components/filter';
 import parseInput from '../../routes/setbrowser/tokenizer';
+import { SETS } from '../../queries';
 
 const dummy_filters = {
     species: {
@@ -34,43 +35,15 @@ const dummy_filters = {
     }
 };
 
-const GET_GREETING = gql`
-    query get_sets($species: [String]!) {
-        sets(species: $species) {
-            species
-            name
-            ability
-            item
-            evs {
-                hp
-                at
-                df
-                sa
-                sd
-                sp
-            }
-            ivs {
-                hp
-                at
-                df
-                sa
-                sd
-                sp
-            }
-            nature
-            moves
-        }
-    }
-`;
-
 interface SearchProps {
-    setResults(pokemon): void; 
+    setResults(sets): void; 
 };
 
 const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) => {
     const [currentInput, setCurrentInput] = useState('');
-    const [species, setSpecies] = useState([]);
+    const [species, setSpecies] = useState([] as string[]);
     const [speed, setSpeed] = useState(0);
+    const [author, setAuthor] = useState('');
     const [filters, setFilters] = useState(dummy_filters);
 
     function handleUserInput(event: KeyboardEvent) {
@@ -81,11 +54,14 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
             if(res){
                 switch(res.key) {
                     case "species":
-                        if(res.val in species) break;
+                        if(species.includes(res.val)) break;
                         setSpecies([...species, res.val]);
                         break;
                     case "speed":
-                        setSpeed(res.val);
+                        setSpeed(parseInt(res.val));
+                        break;
+                    case "author":
+                        setAuthor(res.val);
                         break;
                     default:
                         break;
@@ -94,7 +70,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
         }
     };
 
-    const [fetchResults, {loading, error, data}] = useLazyQuery(GET_GREETING);
+    const [fetchResults, {loading, error, data}] = useLazyQuery(SETS);
 
     if(loading) {}
     else {
@@ -118,12 +94,14 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
           {Object.keys(filters).length > 0 && <div class={style.chosen}>
             <h5>Filters: </h5>
             {species.map((val) => <Filter filterType={'species'} filterValue={val} inputType={'input'} remove={(event) => {event.preventDefault(); setSpecies([...species].filter(el => el !== val))}}></Filter>)}
+            {speed !== 0 && <Filter filterType={'speed'} filterValue={speed} inputType={'input'} remove={(event) => {event.preventDefault(); setSpeed(0)}}></Filter>}
+            {author && <Filter filterType={'author'} filterValue={author} inputType={'input'} remove={(event) => {event.preventDefault(); setAuthor('')}}></Filter>}
             </div>}
-            <button onClick={(e) => {
+            <button class={style.searchButton} onClick={(e) => {
                 e.preventDefault(); 
                 console.log(species);
                 fetchResults({
-                    variables: { species: species }
+                    variables: { species: species, author: author, speed: speed }
                 });
             }}>
                 Search!
@@ -132,4 +110,4 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
     );
 };
 
-export default SearchComponent;
+export { SearchComponent };

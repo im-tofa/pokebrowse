@@ -1,25 +1,3 @@
-.setbrowser {
-	display: grid;
-	grid-template-rows: auto 1fr;
-	position: relative;
-	top: 0;
-	left: 0;
-	padding: 5px 5px;
-	height: 100%;
-	width: 100%;
-}
-
-.setbrowser > * {
-	min-width: 100%;
-	width: max-content;
-}
-
-.setbrowser h2 {
-	/*border-bottom-width: 1px;
-	border-bottom-color: #535353;
-	border-bottom-style: solid;*/
-}
-
 .results {
 	/*display: flex;
 	justify-content: flex-start;
@@ -147,7 +125,7 @@
 
 .resultcols {
 	display: grid;
-	grid-template: 64px / 64px 150px 100px 200px 1fr 1fr;
+	grid-template: auto 1fr / 64px 150px 100px 250px 1fr;
 }
 
 .resultcols.sticky {
@@ -209,15 +187,4 @@ img {
 
 .grass {
 	background-color:lightgreen;
-}
-
-/* 
-	if these are put at the bottom, cascading in CSS will
-	enforce the media queries when applicable! This is what 
-	I want.
-*/
-@media only screen and (min-width: 1000px) {
-	.setbrowser {
-		width: 1000px;
-	}	
 }

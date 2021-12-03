@@ -7,7 +7,7 @@
   "scripts": {
     "build": "preact build",
     "serve": "sirv build --port 8080 --cors --single",
-    "dev": "preact watch",
+    "dev": "preact watch --https",
     "lint": "eslint 'website/**/*.{js,jsx,ts,tsx}'",
     "test": "jest ./tests"
   },
@@ -28,6 +28,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "axios": "^0.24.0",
     "graphql": "^15.7.2",
     "node-fetch": "^3.1.0",
     "preact": "^10.3.1",
