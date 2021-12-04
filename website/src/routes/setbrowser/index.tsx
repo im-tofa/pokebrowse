@@ -15,7 +15,7 @@ import style from './style.css';
 
 /* preact types */
 import { Component, FunctionalComponent, h, Fragment } from 'preact';
-import { useState, useCallback, useReducer, useEffect } from 'preact/hooks';
+import { useState, useCallback, useReducer, useEffect, useContext } from 'preact/hooks';
 
 /* apollo client */
 import { ApolloProvider, ApolloClient, useQuery, gql, useLazyQuery } from '@apollo/client';
@@ -27,6 +27,8 @@ import { ResultComponent } from '../../components/results';
 /* misc types */
 import parseInput from './tokenizer';
 import dummy_response from './dummy_response';
+import { AuthContext } from '../../token';
+import { route } from 'preact-router';
 
 
 interface Props {
@@ -36,6 +38,26 @@ const dummy_results = dummy_response;
 
 const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
     const [results, setResults] = useState([]);
+
+    const { accessToken, setAccessToken } = useContext(AuthContext);
+
+    useEffect(() => {
+        fetch('https://localhost:4000/token', { 
+            method: 'POST',
+            credentials: 'include'
+        })
+            .then(async res => {
+                console.log(res);
+                if(res.status !== 200) throw Error();
+                const json = await res.json();
+                setAccessToken(json.accessToken);
+            })
+            .catch(err => {
+                console.error(err);
+                setAccessToken("");
+            });
+    }, []);
+    
     //console.log(results);
     return (
     <div class={style.flexcontainer}>

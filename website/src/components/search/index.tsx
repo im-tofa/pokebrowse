@@ -70,7 +70,9 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
         }
     };
 
-    const [fetchResults, {loading, error, data}] = useLazyQuery(SETS);
+    const [fetchResults, {loading, error, data}] = useLazyQuery(SETS, {
+        fetchPolicy: "no-cache"
+    });
 
     if(loading) {}
     else {
@@ -79,7 +81,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
             console.error(data);
         } else {
             if(data !== undefined) {
-                console.log(data.sets);
+                // console.log(data.sets);
                 props.setResults(data.sets);
             }
         }
@@ -99,7 +101,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
             </div>}
             <button class={style.searchButton} onClick={(e) => {
                 e.preventDefault(); 
-                console.log(species);
+                // console.log(species);
                 fetchResults({
                     variables: { species: species, author: author, speed: speed }
                 });

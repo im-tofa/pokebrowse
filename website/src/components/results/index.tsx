@@ -19,11 +19,11 @@ interface ResultProps {
 
 const evConvert = {
     "hp": "HP",
-    "at": "Atk",
-    "df": "Def",
-    "sa": "SpA",
-    "sd": "SpD",
-    "sp": "Spe",
+    "atk": "Atk",
+    "def": "Def",
+    "spa": "SpA",
+    "spd": "SpD",
+    "spe": "Spe",
 };
 
 function evToString(set: Set, isEv: boolean = true): string {
@@ -33,7 +33,7 @@ function evToString(set: Set, isEv: boolean = true): string {
 
         // to skip __typename, since it is iterable for some reason...
         if(ev in evConvert){
-            evs += set[key][ev] ? `${set[key][ev]} ${evConvert[ev]} / ` : '';
+            evs += ev in set[key] && set[key][ev] !== (isEv ? 0 : 31) ? `${set[key][ev]} ${evConvert[ev]} / ` : '';
             // console.log(set[key][ev]);
         }
     }
@@ -76,7 +76,7 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
                                 <img class={style.icon} src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item.toLowerCase().split(' ').join('-')}.png`}></img>
                             </div>
                             <div class={`${style.grid} ${style.c1} ${style.r3}`}>
-                                <div>By <i>Storm Zone</i></div>
+                                <div>By <i>{set.author}</i></div>
                                 <div>
                                     <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
                                     <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>

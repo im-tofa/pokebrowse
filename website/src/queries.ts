@@ -5,23 +5,24 @@ export const SETS = gql`
         sets(species: $species, author: $author, speed: $speed) {
             species
             name
+            author
             ability
             item
             evs {
                 hp
-                at
-                df
-                sa
-                sd
-                sp
+                atk
+                def
+                spa
+                spd
+                spe
             }
             ivs {
                 hp
-                at
-                df
-                sa
-                sd
-                sp
+                atk
+                def
+                spa
+                spd
+                spe
             }
             nature
             moves
