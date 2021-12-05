@@ -39,25 +39,6 @@ const dummy_results = dummy_response;
 const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
     const [results, setResults] = useState([]);
 
-    const { accessToken, setAccessToken } = useContext(AuthContext);
-
-    useEffect(() => {
-        fetch('https://localhost:4000/token', { 
-            method: 'POST',
-            credentials: 'include'
-        })
-            .then(async res => {
-                console.log(res);
-                if(res.status !== 200) throw Error();
-                const json = await res.json();
-                setAccessToken(json.accessToken);
-            })
-            .catch(err => {
-                console.error(err);
-                setAccessToken("");
-            });
-    }, []);
-    
     //console.log(results);
     return (
     <div class={style.flexcontainer}>

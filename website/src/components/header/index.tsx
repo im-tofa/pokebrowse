@@ -1,4 +1,5 @@
 import { Fragment, FunctionalComponent, h } from 'preact';
+import { route } from 'preact-router';
 import { Link } from 'preact-router/match';
 import { useContext, useState } from 'preact/hooks';
 import { AuthContext } from '../../token';
@@ -27,12 +28,12 @@ const Header: FunctionalComponent = () => {
     else links = (
         <Fragment>
             <Link activeClassName={style.active} href="/setbrowser">Set Browser</Link>
-            <Link activeClassName={style.active} href="/profile">Profile</Link>            
+            <Link activeClassName={style.active} href="/profile">Profile</Link>        
         </Fragment>
     );
     return (
         <header class={style.header}>
-            <h1>Preact App</h1>
+            <h1>Set Browser</h1>
             <nav>
                 {links}
             </nav>

@@ -2,7 +2,6 @@ import { useQuery, gql } from '@apollo/client';
 import { FunctionalComponent, h } from 'preact';
 import { route } from 'preact-router';
 import { useContext, useEffect, useState } from 'preact/hooks';
-import Creator from '../../components/creator';
 import { ResultComponent } from '../../components/results';
 import { SETS } from '../../queries';
 import { AuthContext } from '../../token';
@@ -16,16 +15,13 @@ Jolly Nature
 - Toxic    
 - Iron Head`;
 
-interface Props {
-    user: string;
-}
 
-const Profile: FunctionalComponent<Props> = (props: Props) => {
-    const { user } = props;
+const Creator: FunctionalComponent = () => {
     const [time, setTime] = useState<number>(Date.now());
     const [count, setCount] = useState<number>(0);
     const { accessToken, setAccessToken } = useContext(AuthContext);
     const [ config, setConfig ] = useState("");
+    const [ name, setName ] = useState("");
     const [ desc, setDesc ] = useState("");
     const [ res, setRes ] = useState("");
 
@@ -58,37 +54,44 @@ const Profile: FunctionalComponent<Props> = (props: Props) => {
         };
     }, []);
 
-    // update the current time
-    const increment = (): void => {
-        setCount(count + 1);
-    };
-
-    const {loading, error, data} = useQuery(SETS, { variables: {species: ['excadrill']}});
-    // console.log(error);
-    if(loading) return <div>Loading...</div>;
-    if(error) {
-        console.log(error);
-        return <div>Error</div>;
-    }
-
     return (
-        <div class={style.profile}>
-            <h1>Profile</h1>
-            <Creator/>
-            <div>
-                <h2>Uploaded sets:</h2>
-                <div>{res}</div>
-                {/* <ResultComponent sets={data.sets}/> */}
+        <form class={style.creator} onSubmit={async e => {
+            e.preventDefault();
+            console.log("form submitted");
+            //console.log(username, password);
+            try {
+                const response = await fetch('https://localhost:3000/set', {
+                    method: "POST",
+                    credentials: "include",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'authorization': `Bearer ${accessToken}`
+                    },
+                    body: JSON.stringify({set: config, name, desc})
+                });
+                const json = await response.json();
+                console.log(json);
+                setRes(JSON.stringify(json));
+            } catch (error) {
+                console.log(error);
+            }
+        }}>
+            <h2>Upload a Set!</h2>
+            <div class={style.grid}>
+                <label for="name">Name:</label>
+                <input type="text" id="name" value={name} onChange={(e) => {setName(e.target.value);}}/>
             </div>
-
-            {/* <div>Current time: {new Date(time).toLocaleString()}</div>
-
-            <p>
-                <button onClick={increment}>Click Me</button> Clicked {count}{' '}
-                times.
-            </p> */}
-        </div>
+            <div class={style.grid}>
+                <label for="set">Import:</label>
+                <textarea id="set" value={config} onChange={(e) => {setConfig(e.target.value);}}/>
+            </div>
+            <div class={style.grid}>
+                <label for="desc">Description:</label>
+                <textarea id="desc" value={desc} onChange={(e) => {setDesc(e.target.value);}}/>
+            </div>
+            <button type="submit">Submit!</button>
+        </form>
     );
 };
 
-export default Profile;
+export default Creator;

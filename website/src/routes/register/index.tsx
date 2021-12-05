@@ -24,7 +24,7 @@ const Register: FunctionalComponent = () => {
                 route('/profile', true);
             })
             .catch(err => {
-                console.error(err);
+                // console.error(err);
                 setAccessToken("");
             });
     }, []);

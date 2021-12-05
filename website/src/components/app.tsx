@@ -61,6 +61,23 @@ const App: FunctionalComponent = () => {
                             <NotFoundPage default />
                         </Router>
                     </div>
+                    {accessToken && <button class={style.logout} onClick={(e) => {
+                e.preventDefault();
+                fetch('https://localhost:4000/logout', { 
+                    method: 'POST',
+                    credentials: 'include'
+                })
+                    .then(async res => {
+                        console.log(res);
+                        if(res.status !== 200) throw Error();
+                        const json = await res.json();
+                        setAccessToken("");
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        setAccessToken("");
+                    });
+            }}>Log out</button>}
                 </div>
             </ApolloProvider> 
         </AuthContext.Provider>  

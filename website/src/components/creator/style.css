@@ -1,0 +1,49 @@
+.preact_root {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.flexcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.creator {
+    background-color: #eeeeee;
+    font-size: 12px;
+    width: 250px;
+    padding: 5px;
+    border: solid;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.creator > button {
+    width: 100%;
+}
+
+.creator > h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template: auto / 100px auto;
+    margin: 5px;
+}
+
+.grid > label {
+    text-align: end;
+    align-self: center; /* works on grid AND flex, not just flex :) */
+    padding: 5px;
+}
+
+.grid * {
+    width: 100%;
+}
+
+textarea {
+	height: 90px;
+}

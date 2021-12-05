@@ -3,12 +3,3 @@
 	min-height: 100%;
 	width: 100%;
 }
-
-label {
-	display: block;
-}
-
-textarea {
-	width: 350px;
-	height: 200px;
-}
