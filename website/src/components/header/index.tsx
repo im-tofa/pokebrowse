@@ -32,7 +32,7 @@ const Header: FunctionalComponent = () => {
         </Fragment>
     );
     return (
-        <header class={style.header}>
+        <header class={`${style.header}`}>
             <h1>Set Browser</h1>
             <nav>
                 {links}

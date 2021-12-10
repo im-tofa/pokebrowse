@@ -48,37 +48,31 @@ const Profile: FunctionalComponent<Props> = (props: Props) => {
             });
     }, [accessToken]);
 
-    // gets called when this route is navigated to
-    useEffect(() => {
-        const timer = window.setInterval(() => setTime(Date.now()), 1000);
+    if(!accessToken) return <div></div>;
 
-        // gets called just before navigating away from the route
-        return (): void => {
-            clearInterval(timer);
-        };
-    }, []);
-
-    // update the current time
-    const increment = (): void => {
-        setCount(count + 1);
-    };
-
-    const {loading, error, data} = useQuery(SETS, { variables: {species: ['excadrill']}});
+    // console.log(accessToken);
+    const {loading, error, data} = useQuery(SETS, { variables: {author: JSON.parse(atob(accessToken.split('.')[1])).name, fetchPolicy: "no-cache" }});
     // console.log(error);
     if(loading) return <div>Loading...</div>;
     if(error) {
         console.log(error);
         return <div>Error</div>;
     }
+    // console.log(data);
 
     return (
         <div class={style.profile}>
             <h1>Profile</h1>
-            <Creator/>
-            <div>
-                <h2>Uploaded sets:</h2>
-                <div>{res}</div>
-                {/* <ResultComponent sets={data.sets}/> */}
+            <div class={style.container}>
+                <div>
+                    <h2>Upload Set:</h2>
+                    <Creator/>
+                </div>
+                <div>
+                    <h2>Uploaded Sets:</h2>
+                    {/* <div>{JSON.stringify(data)}</div> */}
+                    <ResultComponent sets={data.sets}/>
+                </div>
             </div>
 
             {/* <div>Current time: {new Date(time).toLocaleString()}</div>

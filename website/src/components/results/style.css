@@ -1,190 +1,143 @@
-.results {
-	/*display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-wrap: wrap;*/
+/*
+    TODO: Use MUCH more simple design here.
 
-	/*
-	background: #fefefe;
-	border-radius: 5px;
-	border-width: 1px;
-	border-color: #888888;
-	border-style: solid;
-	*/
+    I think something like this should work:
 
-	/* scroll and height */
-	overflow-y: scroll;
+    A result consists of a grid area with named 
+    areas for EVs, IVs, moves, and so on. On mobile, 
+    the structure is one way. On desktop, the structure
+    is more expanded. No stackdivs, no inner grids, none 
+    of that. Should be much more manageable.
+
+    Also, each result should have an import button that 
+    copies directly to clipboard, and/or a button for 
+    reading more (including import). Either as 'popup'
+    or as its own page.
+*/
+
+/* includes item icon */
+.name {
+    grid-area: name;
+    font-size: medium;
+    padding-left: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #aaaaaa;
 }
-
-.results ul {
-	list-style-type: none;
-	padding: 0;
-	width: 100%;
-	margin: 0;
+.image {
+    grid-area: image;
 }
-
-.result {
-	margin-bottom: 5px;
-}
-
-/* .toptag, .bottag {
-	border-style: solid;
-	border-radius: 1px;
-	border-width: 1px;
-	border-color: black;
-} */
-
-.wrapper {
-	display: block;
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-
-.toptag {
-	display: inline-block;
-	border-bottom: none;
-	background-color: #efefef;
-	width: 200px;
-	height: 18px;
-	padding-left: 5px;
-	margin: 0;
-
-}
-
-.clip {
-	/* enforce clipping of overflowing name for single lines */
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-
-.abstract {
-	position: relative;
-	overflow: hidden;
-	height: 100%;
-}
-
-.triangle_bottom_left {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 18px 0 0 18px;
-    border-color: transparent transparent transparent #efefef;
-}
-
-.bottag {
-	border-top: none;
-	background-color: #eeeeee;
-}
-
-/* TODO: stacked content does not handle overflow */
-.stackdivs {
-	display: flex;
-	flex-wrap: nowrap;
-	flex-direction: column;
-	justify-content: space-evenly;
-	height: 100%;
-}
-
-.grid {
-	display: grid;
-	height: 100%;
-}
-
-.c1 {
-	grid-template-columns: 1fr;
-}
-
-.c2 {
-	grid-template-columns: 1fr 1fr;
-}
-
-.c6 {
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.r1 {
-	grid-template-rows: 1fr;
-}
-
-.r2 {
-	grid-template-rows: 1fr 1fr;
-}
-
-.r5 {
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-}
-
-
-.grid > * {
-	align-self: center;
-	font-size: inherit;
-}
-
-.resultcols {
-	display: grid;
-	grid-template: auto 1fr / 64px 150px 100px 250px 1fr;
-}
-
-.resultcols.sticky {
-	grid-template-rows: 1fr;
-}
-
-.sticky {
-	position: sticky;
-	top: 0;
-	background-color: #fefefe;
-	z-index: 1;
-}
-
-.tight {
-	font-size: small;
-}
-
-.resultcols > * {
-	padding: 5px;
-	align-self: center;
-}
-
-img {
-	width: 100%;
-	height: 100%;
-	object-fit: scale-down;
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .icon {
-	position:absolute;
-	bottom: 0;
-	right: 0;
-	width: 24px;
-	height: 24px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
 }
-
 .author {
-	font-style: italic;
+    grid-area: author;
+    font-style: italic;
+}
+.rating {
+    grid-area: rating;
+}
+.date {
+    grid-area: date;
+}
+.ability {
+    grid-area: ability;
+}
+.nature {
+    grid-area: nature;
+}
+.evs {
+    grid-area: evs;
+}
+.ivs {
+    grid-area: ivs;
+}
+.moves {
+    grid-area: moves;
+}
+.result {
+    display: grid;
+    font-size: small;
+    grid-template-columns: 66px 1fr 1fr 2fr 1fr;
+    grid-template-rows: auto 22px 22px 22px;
+    grid-template-areas:
+        "name  name   name    name name"
+        "image author ability evs  moves"
+        "image rating nature  ivs  moves"
+        "image date   .       .    moves";
+
+    align-items: center;
+    background-color: #efefef;
+    padding: 2px;
+    border-radius: 5px;
 }
 
-.typing {
-	border-color: rgba(0,0,0,0.1);
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	padding: 2px;
+.results {
+    height: 100%;
+    width: 100%;
+
+    /* scroll and height */
+    overflow-y: scroll;
 }
 
-/* types */
-.ice {
-	background-color:azure;
+.results ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+
+    display: grid;
+    gap: 10px;
 }
 
-.dragon {
-	background-color: rgb(0, 165, 165);
+/*
+
+    TODO: This layout for mobile
+
+    toptag
+    icon <authorratingdate>   
+    <abilitynature>             
+    <evsivs>                    
+    <moves>        
+    
+    And similar to original style for desktop.
+
+    On click anywhere on a result (but with a button as well),
+    bring up 
+
+*/
+
+.wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-.grass {
-	background-color:lightgreen;
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: #fefefe;
+    z-index: 1;
+}
+
+@media (min-width: 700px) {
+    .resultcols {
+        display: grid;
+        grid-template: 64px / 64px 150px 100px 250px 1fr;
+    }
+
+    .resultcols.sticky {
+        grid-template-rows: 1fr;
+    }
 }

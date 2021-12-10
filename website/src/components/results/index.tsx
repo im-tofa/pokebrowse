@@ -47,7 +47,7 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
     return (
         <div class={style.results}>
             <div class={`${style.resultcols} ${style.sticky}`}>
-                <b>Results</b>
+                {/* <b>Results</b> */}
                 {/*<div></div>
                 <div></div>
                 <div class={`${style.stackdivs} ${style.tight}`}>
@@ -64,42 +64,35 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
                 </div>
                 <div>types</div>*/}
             </div>
-            <ul>
+            <ul class={style.scrollable}>
             {
                 props.sets.map((set) => (
                     <li key={`${set.species}: ${set.name}`} class={`${style.result}`}>
-                        <div class={style.wrapper}><div class={`${style.toptag} ${style.clip}`}>{set.name}</div><div class={style.triangle_bottom_left}></div></div>
-                        <div class={`${style.resultcols} ${style.bottag}`}>
-                            <div class={style.wrapper}>
+                            <div class={`${style.name}`}>{set.name ? set.name : set.species}</div>
+                            <div class={`${style.wrapper} ${style.image}`}>
                                 {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
-                                <img src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species.toLowerCase().split(' ').join('-')}.gif`} onError={(event) => event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species.toLowerCase().split(' ').join('')}.png`}></img>
+                                <img class={style.img} src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species.toLowerCase().split(' ').join('-')}.gif`} onError={(event) => event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species.toLowerCase().split(' ').join('')}.png`}></img>
                                 <img class={style.icon} src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item.toLowerCase().split(' ').join('-')}.png`}></img>
                             </div>
-                            <div class={`${style.grid} ${style.c1} ${style.r3}`}>
-                                <div>By <i>{set.author}</i></div>
-                                <div>
-                                    <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
-                                    <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
-                                    <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
-                                    <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
-                                    <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
-                                </div>
-                                <div>From <i>2021-11-14</i></div>
+                            <div class={`${style.author}`}>By <i>{set.author}</i></div>
+                            <div class={`${style.rating}`}>
+                                <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
                             </div>
-                            <div class={`${style.grid} ${style.c1} ${style.r2} ${style.tight}`}>
-                                <div>{set.ability}</div>
-                                <div><i>{set.nature}</i> Nature</div>
-                            </div>
-                            <div class={`${style.grid} ${style.c1} ${style.r2} ${style.tight}`}>
-                                {<div>EVs: {evToString(set)}</div>}
-                                {set.ivs ? <div>IVs: {evToString(set, false)}</div> : <div></div>}
-                            </div>
-                            <div class={`${style.grid} ${style.c2} ${style.r2} ${style.tight}`}>
+                            <div class={`${style.date}`}>From <i>{new Date(set.set_uploaded_on).toLocaleDateString()}</i></div>
+                            <div class={`${style.ability}`}>{set.ability}</div>
+                            <div class={`${style.nature}`}><i>{set.nature}</i> Nature</div>
+                            {set.evs ? <div class={`${style.evs}`}>EVs: {evToString(set)}</div> : <div class={`${style.evs}`}></div>}
+                            {set.ivs ? <div class={`${style.ivs}`}>IVs: {evToString(set, false)}</div> : <div class={`${style.ivs}`}></div>}
+                            <div class={`${style.moves}`}>
                                 {set.moves.map(move => <div>{move}</div>)}
                             </div>
-                            <div class={`${style.grid} ${style.c2} ${style.r1} ${style.tight}`}><b>Tags:</b>{/* TODO: show excerpt of description, clipped by ellipsis */}</div>
+                            {/* <div class={`${style.grid} ${style.c2} ${style.r1} ${style.tight}`}><b>Tags:</b> */}
+                            {/* TODO: show excerpt of description, clipped by ellipsis</div> */}
                             {/* {<div>{pokedex[props.species.toLowerCase()]["types"].map(_type => <div class={`${style[_type.toLowerCase()]} ${style.typing}`}>{_type}</div>)}</div>} */}
-                        </div>
                         
                     </li>
                 ))

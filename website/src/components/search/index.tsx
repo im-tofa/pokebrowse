@@ -91,7 +91,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
         <form class={style.filters}>
           <div class={style.cli}>
             <h3>Browse: </h3>
-            <input type="text" class={style.cmd} value={currentInput} onChange={(event) => setCurrentInput(event.target.value)} onKeyUp={(event) => handleUserInput(event)} onKeyDown={(event) => {if(event.code === 'Enter') event.preventDefault();}}></input>
+            <input type="text" class={style.cmd} value={currentInput} placeholder="/species <pokemon>, /speed <speedtier> or /author <name>, then press Enter" onChange={(event) => setCurrentInput(event.target.value)} onKeyUp={(event) => handleUserInput(event)} onKeyDown={(event) => {if(event.code === 'Enter') event.preventDefault();}}></input>
           </div>
           {Object.keys(filters).length > 0 && <div class={style.chosen}>
             <h5>Filters: </h5>

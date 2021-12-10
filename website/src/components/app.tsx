@@ -50,18 +50,18 @@ const App: FunctionalComponent = () => {
             <ApolloProvider client={client}>
                 <div id="preact_root" class={style.preact_root}>
                     <Header />
-                    <div class={style.flexcontainer}>
-                        <Router>
-                            <Route path="/" component={Home} />
-                            <Route path="/register/" component={Register} />     
-                            <Route path="/login/" component={Login} />     
-                            <Route path="/setbrowser/" component={SetBrowser} />     
-                            <Route path="/profile/" component={Profile} user="me" />
-                            <Route path="/profile/:user" component={Profile} />
-                            <NotFoundPage default />
-                        </Router>
-                    </div>
-                    {accessToken && <button class={style.logout} onClick={(e) => {
+                    <Router>
+                        <Route path="/" component={Home} />
+                        <Route path="/register/" component={Register} />     
+                        <Route path="/login/" component={Login} />     
+                        <Route path="/setbrowser/" component={SetBrowser} />     
+                        <Route path="/profile/" component={Profile} user="me" />
+                        <Route path="/profile/:user" component={Profile} />
+                        <NotFoundPage default />
+                    </Router>
+                    {/* <aside class={style['side']}>Sidebar</aside> */}
+                    {/* <footer class={style['main-footer']}>The footer</footer> */}
+                    {/* {accessToken && <button class={style.logout} onClick={(e) => {
                 e.preventDefault();
                 fetch('https://localhost:4000/logout', { 
                     method: 'POST',
@@ -77,7 +77,7 @@ const App: FunctionalComponent = () => {
                         console.error(err);
                         setAccessToken("");
                     });
-            }}>Log out</button>}
+            }}>Log out</button>} */}
                 </div>
             </ApolloProvider> 
         </AuthContext.Provider>  

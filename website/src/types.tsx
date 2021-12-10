@@ -1,6 +1,9 @@
 export type Set = {
+    set_id: number,
     species: string,
     author: string,
+    description: string,
+    set_uploaded_on: string,
     name: string,
     level: number,
     ability: string,

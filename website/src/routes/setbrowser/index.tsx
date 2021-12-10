@@ -41,12 +41,10 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
 
     //console.log(results);
     return (
-    <div class={style.flexcontainer}>
-        <div class={style.setbrowser}>
-            <SearchComponent setResults={(searchResults) => setResults(searchResults)}/>
-            <ResultComponent sets={results}/>
-        </div> 
-    </div>   
+    <div class={style.setbrowser}>
+        <SearchComponent setResults={(searchResults) => setResults(searchResults)}/>
+        <ResultComponent sets={results}/>
+    </div>    
     );
 };
  
