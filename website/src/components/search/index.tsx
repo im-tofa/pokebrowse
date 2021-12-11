@@ -17,7 +17,7 @@ import { Component, FunctionalComponent, h, Fragment } from 'preact';
 import { useState, useCallback, useReducer, useEffect } from 'preact/hooks';
 
 import Filter from './../../components/filter';
-import parseInput from '../../routes/setbrowser/tokenizer';
+import parseInput from '../../routes/browser/tokenizer';
 import { SETS } from '../../queries';
 
 const dummy_filters = {

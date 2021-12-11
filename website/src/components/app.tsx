@@ -5,7 +5,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache, HttpLink, ApolloLink, conc
 
 import Home from '../routes/home';
 import Profile from '../routes/profile';
-import SetBrowser from '../routes/setbrowser';
+import SetBrowser from '../routes/browser';
 import Register from '../routes/register';
 import Login from '../routes/login';
 import NotFoundPage from '../routes/notfound';
@@ -13,6 +13,7 @@ import Header from './header';
 import style from './style.css';
 import axios from 'axios';
 import { AuthContext } from '../token';
+import Uploader from '../routes/upload';
 
 // TODO: Use Preact Context to manage the user auth., and use useContext hook as the consumer instead 
 // of consumer tag
@@ -54,7 +55,8 @@ const App: FunctionalComponent = () => {
                         <Route path="/" component={Home} />
                         <Route path="/register/" component={Register} />     
                         <Route path="/login/" component={Login} />     
-                        <Route path="/setbrowser/" component={SetBrowser} />     
+                        <Route path="/browser/" component={SetBrowser} />     
+                        <Route path="/upload/" component={Uploader} />     
                         <Route path="/profile/" component={Profile} user="me" />
                         <Route path="/profile/:user" component={Profile} />
                         <NotFoundPage default />

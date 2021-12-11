@@ -19,8 +19,7 @@
 .name {
     grid-area: name;
     font-size: medium;
-    margin-left: 5px;
-    margin-right: 5px;
+
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: #aaaaaa;
@@ -29,8 +28,8 @@
     grid-area: image;
 }
 .img {
-    width: 100%;
-    height: 100%;
+    width: 66px;
+    height: 66px;
     object-fit: contain;
 }
 
@@ -65,20 +64,31 @@
 }
 .moves {
     grid-area: moves;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.moves > *:not(:first-child):before {
+    content: ", ";
 }
 .result {
     display: grid;
     font-size: small;
-    grid-template-columns: 66px 1fr 1fr 2fr 1fr;
-    grid-template-rows: auto 22px 22px 22px;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: 20px;
     grid-template-areas:
-        "name  name   name    name name"
-        "image author ability evs  moves"
-        "image rating nature  ivs  moves"
-        "image date   .       .    moves";
+        "name  name     "
+        " author  image"
+        " rating image"
+        " date image"
+        "ability  ."
+        " nature ."
+        " evs  .         "
+        " ivs  . "
+        " moves  . ";
 
     align-items: center;
-    padding: 2px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #aaaaaa;
 }
@@ -132,13 +142,28 @@
     z-index: 1;
 }
 
-@media (min-width: 700px) {
-    .resultcols {
+@media (min-width: 600px) {
+    .result {
         display: grid;
-        grid-template: 64px / 64px 150px 100px 250px 1fr;
-    }
+        font-size: small;
+        grid-template-columns: 66px 1fr 1fr 2fr 1fr;
+        grid-template-rows: auto 22px 22px 22px;
+        grid-template-areas:
+            "name  name   name    name name"
+            "image author ability evs  moves"
+            "image rating nature  ivs  moves"
+            "image date   .       .    moves";
 
-    .resultcols.sticky {
-        grid-template-rows: 1fr;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #aaaaaa;
+    }
+    .moves {
+        flex-direction: column;
+        gap: 0;
+    }
+    .moves > *:not(:first-child):before {
+        content: "";
     }
 }

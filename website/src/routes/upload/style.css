@@ -1,0 +1,15 @@
+.profile {
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.container > div {
+    height: 100%;
+}

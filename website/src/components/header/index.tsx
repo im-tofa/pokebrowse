@@ -17,18 +17,10 @@ const LoginControl: FunctionalComponent = () => {
 const Header: FunctionalComponent = () => {
     const { accessToken, setAccessToken } = useContext(AuthContext);
     
-    let links;
-    if(!accessToken) links = (
+    const links = (
         <Fragment>
-            <Link activeClassName={style.active} href="/setbrowser">Browse</Link>
-            <Link activeClassName={style.active} href="/register">Sign Up</Link>
-            <Link activeClassName={style.active} href="/login">Sign in</Link>
-        </Fragment>
-    );
-    else links = (
-        <Fragment>
-            <Link activeClassName={style.active} href="/setbrowser">Browse</Link>
-            <Link activeClassName={style.active} href="/profile"><i class="fa fa-user"/></Link>        
+            <Link activeClassName={style.active} href="/browser">Browse</Link>
+            <Link activeClassName={style.active} href="/upload">Upload</Link>
         </Fragment>
     );
     return (

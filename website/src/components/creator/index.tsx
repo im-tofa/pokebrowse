@@ -40,7 +40,7 @@ const Creator: FunctionalComponent = () => {
             .catch(err => {
                 console.error(err);
                 setAccessToken("");
-                route('/setbrowser', true);
+                route('/browser', true);
             });
     }, [accessToken]);
 

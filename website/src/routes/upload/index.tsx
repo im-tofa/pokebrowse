@@ -20,7 +20,7 @@ interface Props {
     user: string;
 }
 
-const Profile: FunctionalComponent<Props> = (props: Props) => {
+const Uploader: FunctionalComponent<Props> = (props: Props) => {
     const { user } = props;
     const [time, setTime] = useState<number>(Date.now());
     const [count, setCount] = useState<number>(0);
@@ -44,36 +44,16 @@ const Profile: FunctionalComponent<Props> = (props: Props) => {
             .catch(err => {
                 console.error(err);
                 setAccessToken("");
-                route('/browser', true);
+                route('/login', true);
             });
     }, [accessToken]);
 
     if(!accessToken) return <div></div>;
-
-    // console.log(accessToken);
-    const {loading, error, data} = useQuery(SETS, { variables: {author: JSON.parse(atob(accessToken.split('.')[1])).name, fetchPolicy: "no-cache" }});
-    // console.log(error);
-    if(loading) return <div>Loading...</div>;
-    if(error) {
-        console.log(error);
-        return <div>Error</div>;
-    }
     // console.log(data);
 
     return (
         <div class={style.profile}>
-            <h1>Profile</h1>
-            <div class={style.container}>
-                <div>
-                    <h2>Upload Set:</h2>
-                    <Creator/>
-                </div>
-                <div>
-                    <h2>Uploaded Sets:</h2>
-                    {/* <div>{JSON.stringify(data)}</div> */}
-                    <ResultComponent sets={data.sets}/>
-                </div>
-            </div>
+            <Creator/>
 
             {/* <div>Current time: {new Date(time).toLocaleString()}</div>
 
@@ -85,4 +65,4 @@ const Profile: FunctionalComponent<Props> = (props: Props) => {
     );
 };
 
-export default Profile;
+export default Uploader;
