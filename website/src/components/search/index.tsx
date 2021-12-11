@@ -41,7 +41,7 @@ interface SearchProps {
 
 const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) => {
     const [currentInput, setCurrentInput] = useState('');
-    const [species, setSpecies] = useState([] as string[]);
+    const [species, setSpecies] = useState(['Excadrill'] as string[]);
     const [speed, setSpeed] = useState(0);
     const [author, setAuthor] = useState('');
     const [filters, setFilters] = useState(dummy_filters);
@@ -49,26 +49,32 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
     function handleUserInput(event: KeyboardEvent) {
         event.preventDefault();
         if(event.code === "Enter"){
-            setCurrentInput('');
-            const res = parseInput(event.target.value);
-            if(res){
-                switch(res.key) {
-                    case "species":
-                        if(species.includes(res.val)) break;
-                        setSpecies([...species, res.val]);
-                        break;
-                    case "speed":
-                        setSpeed(parseInt(res.val));
-                        break;
-                    case "author":
-                        setAuthor(res.val);
-                        break;
-                    default:
-                        break;
-                }
-            }
+            setUserInput(event.target.value);
         }
     };
+
+    function setUserInput(value: string) {
+        setCurrentInput('');
+        const res = parseInput(value);
+        if(res){
+            switch(res.key) {
+                case "species":
+                    if(!res.val) break; // e.g empty string
+                    if(species.includes(res.val)) break;
+                    setSpecies([...species, res.val]);
+                    break;
+                case "speed":
+                    setSpeed(parseInt(res.val));
+                    break;
+                case "author":
+                    if(!res.val) break; // e.g empty string
+                    setAuthor(res.val);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 
     const [fetchResults, {loading, error, data}] = useLazyQuery(SETS, {
         fetchPolicy: "no-cache"
@@ -90,24 +96,28 @@ const SearchComponent: FunctionalComponent<SearchProps> = (props: SearchProps) =
     return (
         <form class={style.filters}>
           <div class={style.cli}>
-            <h3>Browse: </h3>
-            <input type="text" class={style.cmd} value={currentInput} placeholder="/species <pokemon>, /speed <speedtier> or /author <name>, then press Enter" onChange={(event) => setCurrentInput(event.target.value)} onKeyUp={(event) => handleUserInput(event)} onKeyDown={(event) => {if(event.code === 'Enter') event.preventDefault();}}></input>
+            {/* <h3>Filters: </h3> */}
+            <input type="text" id="cli" class={style.cmd} value={currentInput} placeholder="/species <pokemon>, /speed <speedtier> or /author <name>, then press Enter" onChange={(event) => setCurrentInput(event.target.value)} onKeyUp={(event) => handleUserInput(event)} onKeyDown={(event) => {if(event.code === 'Enter') event.preventDefault();}}></input>
+            <button class={`${style.btn}`} onClick={(event) => {event.preventDefault(); setUserInput(document.getElementById("cli").value);}}><i class="fa fa-plus"/> Add  </button>
           </div>
-          {Object.keys(filters).length > 0 && <div class={style.chosen}>
-            <h5>Filters: </h5>
-            {species.map((val) => <Filter filterType={'species'} filterValue={val} inputType={'input'} remove={(event) => {event.preventDefault(); setSpecies([...species].filter(el => el !== val))}}></Filter>)}
-            {speed !== 0 && <Filter filterType={'speed'} filterValue={speed} inputType={'input'} remove={(event) => {event.preventDefault(); setSpeed(0)}}></Filter>}
-            {author && <Filter filterType={'author'} filterValue={author} inputType={'input'} remove={(event) => {event.preventDefault(); setAuthor('')}}></Filter>}
-            </div>}
-            <button class={style.searchButton} onClick={(e) => {
-                e.preventDefault(); 
-                // console.log(species);
-                fetchResults({
-                    variables: { species: species, author: author, speed: speed }
-                });
-            }}>
-                Search!
-            </button>
+          {/* (Object.keys(species).length > 0 || author !== '' || speed !== 0) */}
+          <div class={style.query}>
+            {<div class={style.chosen}>
+                <h5>Filters: </h5>
+                {species.map((val) => <Filter filterType={'species'} filterValue={val} inputType={'input'} remove={(event) => {event.preventDefault(); setSpecies([...species].filter(el => el !== val))}}></Filter>)}
+                {speed !== 0 && <Filter filterType={'speed'} filterValue={speed} inputType={'input'} remove={(event) => {event.preventDefault(); setSpeed(0)}}></Filter>}
+                {author && <Filter filterType={'author'} filterValue={author} inputType={'input'} remove={(event) => {event.preventDefault(); setAuthor('')}}></Filter>}
+                </div>}
+                <button class={`${style.btn}`} onClick={(e) => {
+                    e.preventDefault(); 
+                    // console.log(species);
+                    fetchResults({
+                        variables: { species: species, author: author, speed: speed }
+                    });
+                }}>
+                <i class='fa fa-search'/> Search
+                </button>
+            </div>
         </form>
     );
 };

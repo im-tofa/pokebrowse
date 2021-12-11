@@ -5,43 +5,80 @@
 */
 .filters {
     /* width: 100%; */
-    height: max-content;
     display: grid;
-    grid-template: 2.5em 1fr / 1fr;
+    grid-template-columns: 1fr;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #f1f1f1;
+    padding-top: 5px;
+    z-index: 1;
+    border-bottom: 1px solid #aaaaaa;
+    /* box-shadow: 0 6px 1px -2px #aaaaaa; */
 
-    background-color: #efefef;
+    /* background-color: #efefef; */
     /* border-width: 1px;
 	border-color: #888888;
 	border-style: solid; */
 
     /* scroll and height */
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .cli {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
+    gap: 5px;
     padding: 5px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 0;
+    background-color: #fefefe;
+    color: #535353;
+}
+.btn {
+    font-size: medium;
+    padding: 5px;
+    border: none;
+    background: inherit;
+    color: #444444;
+}
+.btn:hover {
+    cursor: pointer;
+    color: gray;
 }
 
 .cmd {
+    font-size: medium;
     display: grid;
-    width: 100%;
-    margin-left: 5px;
+    outline: none;
+    border: none;
+    background: inherit;
+    padding: 5px;
+    border-right: solid 1px rgba(0, 0, 0, 0.3);
+}
+
+.query {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 5px;
 }
 
 .chosen {
     display: flex;
-    height: 2em;
 
     justify-content: flex-start;
     align-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
 
-    margin: 5px;
+    gap: 5px;
     overflow-x: scroll;
+}
+.chosen > * {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .options {
@@ -57,7 +94,7 @@
 }
 
 .options i {
-    background-color: #444444;
+    /* background-color: #444444; */
     width: 25px;
     height: 25px;
     border-radius: 5px;

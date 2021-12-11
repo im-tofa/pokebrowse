@@ -20,15 +20,15 @@ const Header: FunctionalComponent = () => {
     let links;
     if(!accessToken) links = (
         <Fragment>
-            <Link activeClassName={style.active} href="/setbrowser">Set Browser</Link>
-            <Link activeClassName={style.active} href="/register">Register</Link>
-            <Link activeClassName={style.active} href="/login">Login</Link>
+            <Link activeClassName={style.active} href="/setbrowser">Browse</Link>
+            <Link activeClassName={style.active} href="/register">Sign Up</Link>
+            <Link activeClassName={style.active} href="/login">Sign in</Link>
         </Fragment>
     );
     else links = (
         <Fragment>
-            <Link activeClassName={style.active} href="/setbrowser">Set Browser</Link>
-            <Link activeClassName={style.active} href="/profile">Profile</Link>        
+            <Link activeClassName={style.active} href="/setbrowser">Browse</Link>
+            <Link activeClassName={style.active} href="/profile"><i class="fa fa-user"/></Link>        
         </Fragment>
     );
     return (

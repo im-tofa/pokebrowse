@@ -1,56 +1,31 @@
 .filter {
     position: relative;
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
-    flex-wrap: nowrap;
-
-    margin: 5px;
 
     border: solid;
-    border-radius: 5px;
-    border-width: 1px;
-    border-color: #888888;
-
-    background-color: #eeeeee;
-    width: fit-content;
+    border-radius: 20px;
+    border-width: 0;
+    background-color: #dfdfdf;
     font-size: small;
+
+    padding: 5px;
+    gap: 5px;
 }
 
 .filter > * {
-    margin: 5px;
     padding: 0;
     text-transform: capitalize;
 }
 
-.filter > button {
-    width: 1em;
-    height: 1em;
-}
-
-.filter > label {
-}
-
-.filter span {
-    display: inline-block;
-    width: max-content;
-}
-
-.filter input {
+.btn {
     border: none;
-    border-radius: 2px;
-    border-width: 0;
-    padding: 0;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0);
-    font: inherit;
-    color: inherit;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
     background: none;
-    color: rgba(0, 0, 0, 0);
+    color: #444444;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: gray;
 }

@@ -1,11 +1,12 @@
 .preact_root {
     display: grid;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
-    overflow: hidden;
-    justify-items: center;
+    /* overflow: hidden; */
+    /* justify-items: center; */
+    background-color: #f1f1f1;
 }
 
 .main-head {

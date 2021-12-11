@@ -19,7 +19,8 @@
 .name {
     grid-area: name;
     font-size: medium;
-    padding-left: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: #aaaaaa;
@@ -77,9 +78,9 @@
         "image date   .       .    moves";
 
     align-items: center;
-    background-color: #efefef;
     padding: 2px;
     border-radius: 5px;
+    border: 1px solid #aaaaaa;
 }
 
 .results {
