@@ -15,15 +15,21 @@
     or as its own page.
 */
 
-/* includes item icon */
+/* includes read more */
 .name {
     grid-area: name;
     font-size: medium;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: #aaaaaa;
 }
+
+/* includes item icon */
 .image {
     grid-area: image;
 }
@@ -142,6 +148,22 @@
     z-index: 1;
 }
 
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+}
+.import {
+    white-space: pre;
+}
 @media (min-width: 600px) {
     .result {
         display: grid;
@@ -149,7 +171,7 @@
         grid-template-columns: 66px 1fr 1fr 2fr 1fr;
         grid-template-rows: auto 22px 22px 22px;
         grid-template-areas:
-            "name  name   name    name name"
+            "name  name   name    name name "
             "image author ability evs  moves"
             "image rating nature  ivs  moves"
             "image date   .       .    moves";

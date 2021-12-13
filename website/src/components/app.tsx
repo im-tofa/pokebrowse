@@ -11,7 +11,6 @@ import Login from '../routes/login';
 import NotFoundPage from '../routes/notfound';
 import Header from './header';
 import style from './style.css';
-import axios from 'axios';
 import { AuthContext } from '../token';
 import Uploader from '../routes/upload';
 

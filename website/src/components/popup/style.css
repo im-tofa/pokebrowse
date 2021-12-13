@@ -1,0 +1,117 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+.popup * {
+    margin: 0;
+}
+.btn {
+    font-size: medium;
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-self: flex-end;
+    width: max-content;
+    border: none;
+    color: #444444;
+    background: none;
+    padding: 4px;
+}
+.btn:hover {
+    cursor: pointer;
+    color: gray;
+}
+.author {
+    grid-area: author;
+}
+.rating {
+    grid-area: rating;
+}
+.date {
+    grid-area: date;
+}
+.wrapper {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.image {
+    grid-area: image;
+}
+.img {
+    width: 66px;
+    height: 66px;
+    object-fit: contain;
+}
+
+.icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+}
+.metadata {
+    display: grid;
+    grid-template-columns: 66px auto;
+    grid-template-rows: 22px 22px 22px;
+    grid-template-areas:
+        "image author"
+        "image rating"
+        "image date  ";
+
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+}
+.import {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    white-space: pre-line;
+}
+.import > div {
+    font-family: monospace;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    white-space: normal;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #eeeeee;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    overflow: scroll;
+    border-radius: 5px;
+}
+@media (min-width: 400px) {
+    .details {
+        width: 400px;
+        height: 600px;
+        max-height: 100%;
+    }
+}

@@ -13,11 +13,6 @@ import { faStar as farStar } from '@fortawesome/free-regular-svg-icons'
 /* custom types */
 import { Set } from '../../types'
 import { useState } from 'preact/hooks';
-import { Popup } from '../popup';
-
-interface ResultProps {
-    sets: Set[];
-};
 
 const evConvert = {
     "hp": "HP",
@@ -131,56 +126,47 @@ function exportSet(set: any) {
     return text;
 }
 
-const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) => {
-    const [chosen, setChosen] = useState(''); // use set ID since it is unique
-    const getSet = (id: string) => props.sets.find((set) => set.set_id === parseInt(id));
-    if(chosen !== '') console.log(exportSet(getSet(chosen)));
-    if(chosen !== '') console.log(JSON.stringify(getSet(chosen)));
+interface ResultProps {
+    set: Set;
+    setChosen(s: string): void; 
+};
+
+const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
+    const set = props.set;
     return (
-        <div class={style.results}>
-            {chosen && (
-                <Popup set={getSet(chosen)!} setChosen={setChosen}/>
-            )}
-            <ul class={style.scrollable}>
-            {
-                props.sets.map((set) => (
-                    <li key={`${set.set_id}`} data-set={`${set.set_id}`} class={`${style.result}`}>
-                            <div class={`${style.name}`}>
-                                <div>{set.name ? set.name : set.species}</div>
-                                <button onClick={(e) => {
-                                    e.preventDefault();
-                                    setChosen(e.currentTarget.parentElement?.parentElement?.getAttribute('data-set') || '');
-                                }}>Details</button></div>
-                            <div class={`${style.wrapper} ${style.image}`}>
+        <div class={style.popup} onClick={(e) => {
+            e.preventDefault();
+            props.setChosen('');
+        }}>
+            <div class={style.details} onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        }}>
+            <button class={style.btn} onClick={(e) => {
+                    e.preventDefault();
+                    props.setChosen('');
+                }}><i class="fa fa-times"></i></button>
+                <div class={style.metadata}>
+                <div class={`${style.wrapper} ${style.image}`}>
                                 {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
                                 <img class={style.img} src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species.toLowerCase().split(' ').join('-')}.gif`} onError={(event) => event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species.toLowerCase().split(' ').join('')}.png`}></img>
                                 <img class={style.icon} src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item.toLowerCase().split(' ').join('-')}.png`}></img>
                             </div>
-                            <div class={`${style.author}`}>By <i>{set.author}</i></div>
-                            <div class={`${style.rating}`}>
-                                <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
-                            </div>
-                            <div class={`${style.date}`}>From <i>{new Date(set.set_uploaded_on).toLocaleDateString()}</i></div>
-                            <div class={`${style.ability}`}>{set.ability}</div>
-                            <div class={`${style.nature}`}><i>{set.nature}</i> Nature</div>
-                            {set.evs ? <div class={`${style.evs}`}>EVs: {evToString(set)}</div> : <div class={`${style.evs}`}></div>}
-                            {set.ivs ? <div class={`${style.ivs}`}>IVs: {evToString(set, false)}</div> : <div class={`${style.ivs}`}></div>}
-                            <div class={`${style.moves}`}>
-                                {set.moves.map(move => <div>{move}</div>)}
-                            </div>
-                            {/* <div class={`${style.grid} ${style.c2} ${style.r1} ${style.tight}`}><b>Tags:</b> */}
-                            {/* TODO: show excerpt of description, clipped by ellipsis</div> */}
-                            {/* {<div>{pokedex[props.species.toLowerCase()]["types"].map(_type => <div class={`${style[_type.toLowerCase()]} ${style.typing}`}>{_type}</div>)}</div>} */}
-                    </li>
-                ))
-            }
-            </ul>
+                    <div class={style.author}><b>Author:</b> {set.author}</div>
+                    <div class={style.date}><b>Uploaded on:</b> {new Date(set.set_uploaded_on).toLocaleDateString()}</div>
+                    <div class={style.rating}><b>Rating:</b> <i class="fas fa-star"/><i class="fas fa-star"/><i class="fas fa-star"/><i class="far fa-star"/><i class="far fa-star"/></div>
+                </div>
+                <div class={style.description}>
+                    <h4>Description</h4>
+                    <div>{set.description}</div>
+                </div>
+                <div class={style.import}>
+                    <h4>Import</h4>
+                    <div>{exportSet(set)}</div>
+                </div>
+            </div>
         </div>
     );
 };
 
-export { ResultComponent };
+export { Popup };
