@@ -24,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .name > button {
@@ -38,8 +39,8 @@
     grid-area: image;
 }
 .img {
-    width: 66px;
-    height: 66px;
+    width: 58px;
+    height: 58px;
     object-fit: contain;
 }
 .icon {
