@@ -52,16 +52,7 @@ const Uploader: FunctionalComponent<Props> = (props: Props) => {
     // console.log(data);
 
     return (
-        <div class={style.profile}>
-            <Creator/>
-
-            {/* <div>Current time: {new Date(time).toLocaleString()}</div>
-
-            <p>
-                <button onClick={increment}>Click Me</button> Clicked {count}{' '}
-                times.
-            </p> */}
-        </div>
+        <Creator/>
     );
 };
 

@@ -76,7 +76,10 @@ const Creator: FunctionalComponent = () => {
                 console.log(error);
             }
         }}>
-            <h2>Upload a Set!</h2>
+            <div class={style.grid}>
+                <div/>
+                <h2>Upload a Set</h2>
+            </div>
             <div class={style.grid}>
                 <label for="name">Name:</label>
                 <input type="text" id="name" value={name} onChange={(e) => {setName(e.target.value);}}/>
@@ -89,7 +92,10 @@ const Creator: FunctionalComponent = () => {
                 <label for="desc">Description:</label>
                 <textarea id="desc" value={desc} onChange={(e) => {setDesc(e.target.value);}}/>
             </div>
-            <button type="submit">Submit!</button>
+            <div class={style.grid}>
+                <div/>
+                <button type="submit">Submit!</button>
+            </div>
         </form>
     );
 };

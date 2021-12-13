@@ -164,7 +164,7 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
                                 <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
                                 <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
                             </div>
-                            <div class={`${style.date}`}>From <i>{new Date(set.set_uploaded_on).toLocaleDateString()}</i></div>
+                            <div class={`${style.date}`}><i>{new Date(set.set_uploaded_on).toLocaleDateString()}</i></div>
                             <div class={`${style.ability}`}>{set.ability}</div>
                             <div class={`${style.nature}`}><i>{set.nature}</i> Nature</div>
                             {set.evs ? <div class={`${style.evs}`}>EVs: {evToString(set)}</div> : <div class={`${style.evs}`}></div>}
@@ -172,6 +172,7 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
                             <div class={`${style.moves}`}>
                                 {set.moves.map(move => <div>{move}</div>)}
                             </div>
+                            <div class={`${style.description}`}><b>Description: </b>{set.description}</div>
                             {/* <div class={`${style.grid} ${style.c2} ${style.r1} ${style.tight}`}><b>Tags:</b> */}
                             {/* TODO: show excerpt of description, clipped by ellipsis</div> */}
                             {/* {<div>{pokedex[props.species.toLowerCase()]["types"].map(_type => <div class={`${style[_type.toLowerCase()]} ${style.typing}`}>{_type}</div>)}</div>} */}

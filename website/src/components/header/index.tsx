@@ -25,7 +25,7 @@ const Header: FunctionalComponent = () => {
     );
     return (
         <header class={`${style.header}`}>
-            <h1>Set Browser</h1>
+            <h1>{`O`}</h1>
             <nav>
                 {links}
             </nav>

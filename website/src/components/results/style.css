@@ -22,11 +22,11 @@
 
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    align-items: center;
+}
 
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #aaaaaa;
+.name > button {
+    margin: 2px;
 }
 
 /* includes item icon */
@@ -38,7 +38,6 @@
     height: 66px;
     object-fit: contain;
 }
-
 .icon {
     position: absolute;
     bottom: 0;
@@ -64,41 +63,49 @@
 }
 .evs {
     grid-area: evs;
+    display: none;
 }
 .ivs {
     grid-area: ivs;
+    display: none;
 }
 .moves {
     grid-area: moves;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+}
+.description {
+    grid-area: desc;
+}
+.import {
+    grid-area: import;
+}
+/* .moves > *:first-child:before {
+    content: "Moves: ";
 }
 .moves > *:not(:first-child):before {
     content: ", ";
-}
+} */
 .result {
     display: grid;
     font-size: small;
-    grid-template-columns: 1fr auto;
-    grid-auto-rows: 20px;
+    grid-template-columns: auto auto 1fr 1fr;
     grid-template-areas:
-        "name  name     "
-        " author  image"
-        " rating image"
-        " date image"
-        "ability  ."
-        " nature ."
-        " evs  .         "
-        " ivs  . "
-        " moves  . ";
+        "name  name  name name"
+        "image author ability moves"
+        "image rating nature moves"
+        "image date  nature moves"
+        "desc desc desc desc";
 
-    align-items: center;
+    align-items: stretch;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #aaaaaa;
+    padding-top: 0;
+    /* border-radius: 5px; */
+    border-bottom: 1px solid #aaaaaa;
 }
-
+.result > * {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .results {
     height: 100%;
     width: 100%;
@@ -114,7 +121,7 @@
     margin: 0;
 
     display: grid;
-    gap: 10px;
+    gap: 5px;
 }
 
 /*
@@ -164,22 +171,16 @@
 .import {
     white-space: pre;
 }
-@media (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .result {
         display: grid;
-        font-size: small;
-        grid-template-columns: 66px 1fr 1fr 2fr 1fr;
-        grid-template-rows: auto 22px 22px 22px;
+        grid-template-columns: auto 1fr 1fr 2fr 1fr;
         grid-template-areas:
             "name  name   name    name name "
             "image author ability evs  moves"
             "image rating nature  ivs  moves"
-            "image date   .       .    moves";
-
-        align-items: center;
-        padding: 5px;
-        border-radius: 5px;
-        border: 1px solid #aaaaaa;
+            "image date   nature  ivs  moves"
+            "desc  desc   desc    desc desc ";
     }
     .moves {
         flex-direction: column;
@@ -187,5 +188,18 @@
     }
     .moves > *:not(:first-child):before {
         content: "";
+    }
+    .moves > *:first-child:before {
+        content: "";
+    }
+    .nature,
+    .ability,
+    .evs,
+    .ivs,
+    .moves {
+        display: block;
+    }
+    .import {
+        display: none;
     }
 }

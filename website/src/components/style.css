@@ -2,8 +2,8 @@
     display: grid;
     min-height: 100%;
     width: 100%;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr;
     /* overflow: hidden; */
     /* justify-items: center; */
     background-color: #f1f1f1;

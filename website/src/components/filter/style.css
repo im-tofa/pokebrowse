@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-
+    min-width: max-content;
     border: solid;
     border-radius: 20px;
     border-width: 0;

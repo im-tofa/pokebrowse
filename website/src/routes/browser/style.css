@@ -9,10 +9,10 @@ look */
     position: relative;
     top: 0;
     left: 0;
-    padding: 5px 5px;
-    width: 100%;
+    width: clamp(0px, 100%, 700px);
     /* overflow-y: hidden; */
     gap: 10px;
+    border-right: 1px solid #aaaaaa;
 }
 
 .setbrowser h2 {
@@ -209,8 +209,8 @@ look */
 	enforce the media queries when applicable! This is what 
 	I want.
 */
-@media only screen and (min-width: 700px) {
+/* @media only screen and (min-width: 700px) {
     .setbrowser {
         width: 700px;
     }
-}
+} */
