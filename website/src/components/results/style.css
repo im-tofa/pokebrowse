@@ -23,10 +23,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
 }
 
 .name > button {
     margin: 2px;
+}
+.name > button {
+    cursor: pointer;
 }
 
 /* includes item icon */
@@ -75,9 +79,6 @@
 .description {
     grid-area: desc;
 }
-.import {
-    grid-area: import;
-}
 /* .moves > *:first-child:before {
     content: "Moves: ";
 }
@@ -97,9 +98,13 @@
 
     align-items: stretch;
     padding: 10px;
-    padding-top: 0;
     /* border-radius: 5px; */
-    border-bottom: 1px solid #aaaaaa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.1s ease-in-out;
+}
+.result:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
 }
 .result > * {
     overflow: hidden;
@@ -121,7 +126,7 @@
     margin: 0;
 
     display: grid;
-    gap: 5px;
+    /* gap: 5px; */
 }
 
 /*
@@ -153,23 +158,6 @@
     top: 0;
     background-color: #fefefe;
     z-index: 1;
-}
-
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.5);
-    z-index: 100;
-}
-.import {
-    white-space: pre;
 }
 @media only screen and (min-width: 700px) {
     .result {

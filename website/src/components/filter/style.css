@@ -7,7 +7,7 @@
     border: solid;
     border-radius: 20px;
     border-width: 0;
-    background-color: #dfdfdf;
+    background-color: #f2f2f2;
     font-size: small;
 
     padding: 5px;
@@ -21,6 +21,7 @@
 
 .btn {
     border: none;
+    font-size: smaller;
     background: none;
     color: #444444;
 }

@@ -7,7 +7,7 @@
     align-items: stretch;
     /* justify-content: space-between; */
     padding: 0;
-    border-right: 1px solid #aaaaaa;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
     background: #252427;
     color: #fff;
     z-index: 50;

@@ -11,8 +11,8 @@ look */
     left: 0;
     width: clamp(0px, 100%, 700px);
     /* overflow-y: hidden; */
-    gap: 10px;
-    border-right: 1px solid #aaaaaa;
+    /* gap: 10px; */
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .setbrowser h2 {

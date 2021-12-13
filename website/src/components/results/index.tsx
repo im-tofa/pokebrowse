@@ -144,13 +144,17 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
             <ul class={style.scrollable}>
             {
                 props.sets.map((set) => (
-                    <li key={`${set.set_id}`} data-set={`${set.set_id}`} class={`${style.result}`}>
+                    <li key={`${set.set_id}`} data-set={`${set.set_id}`} class={`${style.result}`} onClick={(e) => {
+                        e.preventDefault();
+                        setChosen(e.currentTarget.getAttribute('data-set') || '');
+                    }}>
                             <div class={`${style.name}`}>
                                 <div>{set.name ? set.name : set.species}</div>
-                                <button onClick={(e) => {
+                                {/* <button onClick={(e) => {
                                     e.preventDefault();
                                     setChosen(e.currentTarget.parentElement?.parentElement?.getAttribute('data-set') || '');
-                                }}>Details</button></div>
+                                }}>Details</button> */}
+                                </div>
                             <div class={`${style.wrapper} ${style.image}`}>
                                 {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
                                 <img class={style.img} src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species.toLowerCase().split(' ').join('-')}.gif`} onError={(event) => event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species.toLowerCase().split(' ').join('')}.png`}></img>
