@@ -1,0 +1,21 @@
+/* TODO: 
+	Try design where filter is a bar at the top and you add 
+	filters by /<filtercommand> <value> in the bar. No 
+	/<filtercommand> means species name.
+*/
+.sidebar {
+    /* width: 100%; */
+    display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+    .sidebar {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        width: 100%;
+        height: fit-content;
+    }
+}

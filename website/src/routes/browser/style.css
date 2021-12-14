@@ -3,13 +3,23 @@ below results section when in mobile view; and don't have the set
 browser centered. And also don't have set-browser be a different color 
 than background, or at least not too different, go for a more discrete 
 look */
+.main {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
 .setbrowser {
     display: flex;
     flex-direction: column;
     position: relative;
     top: 0;
     left: 0;
-    width: clamp(0px, 100%, 700px);
+    width: 100%;
     /* overflow-y: hidden; */
     /* gap: 10px; */
     border-right: 1px solid rgba(0, 0, 0, 0.1);

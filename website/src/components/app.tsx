@@ -13,6 +13,9 @@ import Header from './header';
 import style from './style.css';
 import { AuthContext } from '../token';
 import Uploader from '../routes/upload';
+import { Sidebar } from './sidebar';
+import { Panel } from './panel';
+import Creator from './creator';
 
 // TODO: Use Preact Context to manage the user auth., and use useContext hook as the consumer instead 
 // of consumer tag

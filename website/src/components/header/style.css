@@ -4,7 +4,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
     /* justify-content: space-between; */
     padding: 0;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -14,7 +14,6 @@
 }
 
 .header > h1 {
-    text-align: center;
     margin: 0;
     padding: 15px;
     font-weight: 400;
@@ -37,7 +36,6 @@
     line-height: 56px;
     padding: 0 15px;
     min-width: 50px;
-    text-align: center;
     background: rgba(255, 255, 255, 0);
     text-decoration: none;
     color: inherit;
@@ -52,24 +50,9 @@
 .header nav a.active {
     font-weight: bold;
 }
-
-@media only screen and (min-width: 400px) {
-    /* .header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
-        background: #673ab7;
-        z-index: 50;
+/* 
+@media only screen and (min-width: 1000px) {
+    .header {
+        align-items: flex-start;
     }
-
-    .header > nav {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        font-size: 100%;
-    } */
-}
+} */

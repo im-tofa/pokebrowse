@@ -29,6 +29,9 @@ import parseInput from './tokenizer';
 import dummy_response from './dummy_response';
 import { AuthContext } from '../../token';
 import { route } from 'preact-router';
+import { Sidebar } from '../../components/sidebar';
+import { Panel } from '../../components/panel';
+import Creator from '../../components/creator';
 
 
 interface Props {
@@ -41,10 +44,15 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
 
     //console.log(results);
     return (
-    <div class={style.setbrowser}>
-        <SearchComponent setResults={(searchResults) => setResults(searchResults)}/>
-        <ResultComponent sets={results}/>
-    </div>    
+    <main class={style.main}>
+        <div class={style.setbrowser}>
+            <SearchComponent setResults={(searchResults) => setResults(searchResults)}/>
+            <ResultComponent sets={results}/>
+        </div> 
+        <Sidebar>
+            <Panel><Creator/></Panel>
+        </Sidebar>
+    </main>    
     );
 };
  
