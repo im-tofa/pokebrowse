@@ -7,13 +7,5 @@
     /* width: 100%; */
     display: block;
     width: 100%;
-    height: fit-content;
-    background: #f4f4f4;
-    color: #000;
-    border-radius: 15px;
-}
-.auth > h2 {
-    padding: 15px;
-    margin: 0;
-    font-size: large;
+    height: inherit;
 }
