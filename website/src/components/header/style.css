@@ -1,6 +1,7 @@
 .header {
     position: sticky;
     top: 0;
+    width: 90px;
     height: 100vh;
     display: flex;
     flex-direction: column;

@@ -1,7 +1,22 @@
-.profile {
-    padding: 0 10px;
+.upload {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* override child styling */
+.upload > * {
+    padding: 10px;
+}
+
+.upload > h2 {
+    width: fit-content;
+    padding: 15px;
+    margin: 0;
+    font-size: large;
 }
 
 .container {
@@ -13,3 +28,9 @@
 .container > div {
     height: 100%;
 }
+
+/* @media (min-width: 600px) {
+    .upload {
+        width: 400px;
+    }
+} */

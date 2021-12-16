@@ -21,6 +21,7 @@ const Header: FunctionalComponent = () => {
         <Fragment>
             <Link activeClassName={style.active} href="/browser">Browse</Link>
             <Link activeClassName={style.active} href="/upload">Upload</Link>
+            <Link activeClassName={style.active} href="/login">Sign in</Link>
         </Fragment>
     );
     return (

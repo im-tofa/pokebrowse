@@ -119,7 +119,7 @@
     width: 100%;
 
     /* scroll and height */
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .results ul {

@@ -41,7 +41,6 @@ const dummy_results = dummy_response;
 
 const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
     const [results, setResults] = useState([]);
-
     //console.log(results);
     return (
     <main class={style.main}>
@@ -50,7 +49,9 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
             <ResultComponent sets={results}/>
         </div> 
         <Sidebar>
-            <Panel><Creator/></Panel>
+            <Panel><h2>Upload a Set</h2><Creator/></Panel>
+            <Panel><h2>Upload a Set</h2><Creator/></Panel>
+            <Panel><h2>Upload a Set</h2><Creator/></Panel>
         </Sidebar>
     </main>    
     );

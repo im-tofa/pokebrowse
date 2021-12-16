@@ -3,6 +3,7 @@ import { FunctionalComponent, h } from 'preact';
 import { route } from 'preact-router';
 import { useContext, useEffect, useState } from 'preact/hooks';
 import Creator from '../../components/creator';
+import { Panel } from '../../components/panel';
 import { ResultComponent } from '../../components/results';
 import { SETS } from '../../queries';
 import { AuthContext } from '../../token';
@@ -52,7 +53,10 @@ const Uploader: FunctionalComponent<Props> = (props: Props) => {
     // console.log(data);
 
     return (
-        <Creator/>
+        <div class={style.upload}>
+            <h2>Set Uploader</h2>
+            <Creator/>
+        </div>
     );
 };
 

@@ -1,9 +1,10 @@
 .creator {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto;
     font-size: 12px;
     width: 100%;
+    max-width: 600px;
     min-height: 300px;
     padding: 5px;
     gap: 10px;
@@ -16,7 +17,6 @@
     padding-right: 5px;
     margin: 0;
 }
-
 .grid {
     display: grid;
     grid-template-columns: 100px auto;
@@ -31,8 +31,10 @@
     /*align-self: center;*/ /* works on grid AND flex, not just flex :) */
 }
 .grid > textarea,
-.grid > input {
-    border: none;
+.grid > input,
+.grid > button {
+    /* border: none; */
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     outline: none;
 }
@@ -42,8 +44,8 @@
     resize: vertical;
 }
 
-@media (min-width: 400px) {
+/* @media (min-width: 600px) {
     .creator {
-        max-width: 400px;
+        width: fit-content;
     }
-}
+} */
