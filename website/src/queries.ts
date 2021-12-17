@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 export const SETS = gql`
-    query get_sets($species: [String], $author: String = "", $speed: Int = 0) {
-        sets(species: $species, author: $author, speed: $speed) {
+    query get_sets($species: [String], $author: String = "", $speed: Int = 0, $date: String = "") {
+        sets(species: $species, author: $author, speed: $speed, date: $date) {
             set_id
             species
             name
