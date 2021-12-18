@@ -8,7 +8,12 @@ const LoginForm: FunctionalComponent = () => {
     const { accessToken, setAccessToken } = useContext(AuthContext);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    console.log(accessToken);
+    const [loginError, setLoginError] = useState("");
+    // console.log(accessToken);
+
+    useEffect(() => {
+        if(accessToken) route('/upload', true);
+    }, [accessToken]);
 
     return (
         <form
@@ -29,15 +34,25 @@ const LoginForm: FunctionalComponent = () => {
                             body: JSON.stringify({ username, password }),
                         }
                     );
+
+                    if(!response.ok) {
+                        setLoginError(await response.json());
+                        return;
+                    };
+
                     const json = await response.json();
+                    setLoginError("");
                     setAccessToken(json.accessToken);
+                    return;
                     // route("/upload", true);
                 } catch (error) {
+                    console.log("Error: ");
                     console.log(error);
                     route("/login", true);
                 }
             }}
         >
+            {loginError && <div><b style="color: red">{loginError}</b></div>}
             <input
                 value={username}
                 placeholder="username"

@@ -19,6 +19,8 @@ const httpsOptions = {
 
 const jwt = require('jsonwebtoken');
 const { toID } = require('../PSUtils');
+const ApiError = require('../error/ApiError');
+const apiErrorHandler = require('../error/api-error-handler');
 
 app.use(cors({
     origin: 'https://localhost:8080',
@@ -32,53 +34,51 @@ app.use(express.json({
     type: "application/json"
 }));
 
-app.post('/token', async (req, res) => {
+app.post('/token', async (req, res, next) => {
     // `accessToken=${accessToken}; HttpOnly; Domain; Secure; SameSite=Strict`
     const token = req.cookies.refreshToken;
-    if(!token) return res.sendStatus(401);
+    if(!token) return next(ApiError.unauthorized('User has not provided a jwt'));
 
     try {
         const payload = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);        
         const val = await pool.query('SELECT user_id, user_name, user_token_version FROM users WHERE user_name=$1', [payload.name]);
-        console.log("hej 1")
-        if(val.rows.length === 0) return res.sendStatus(403); // user does not exist
-        console.log("hej 2")
+        // console.log("hej 1")
+        if(val.rows.length === 0) return next(ApiError.badRequest('User does not exist')); // user does not exist
+        // console.log("hej 2")
         // if the refresh token version does not match the latest one, 
         // someone is trying to use an old token. Do not allow. Note that
         // this does not revoke the latest version of the refresh token.
         // And refresh token versions won't update unless explicitly stated.
-        if(val.rows[0].user_token_version !== payload.token_version) return res.sendStatus(403);
-        console.log("hej 3")
+        if(val.rows[0].user_token_version !== payload.token_version) return next(ApiError.forbidden('User attempted to use revoked token'));
+        // console.log("hej 3")
         const accessToken = generateAccessToken({id: payload.id, name: payload.name});
 
         // sen updated refresh token as long as user actively asks for refreshed access token
         sendRefreshToken(res, generateRefreshToken({id: payload.id, name: payload.name, token_version: payload.token_version}))
         return res.json({ accessToken });
     } catch (error) {
-        console.log(error);
-        return res.sendStatus(403);
+       return next(ApiError.forbidden('Rejected jwt'));
     }
 });
 
-app.post('/register', async (req, res) => {
-    console.log("recieved register request");
+app.post('/register', async (req, res, next) => {
+    // console.log("recieved register request");
     const username = toID(req.body.username);
     const password = req.body.password;
 
     try {
         const val = await pool.query('SELECT user_name FROM users WHERE user_name=$1', [username]);
-        if(val.rows.length !== 0) return res.sendStatus(422); // user already exists
+        if(val.rows.length !== 0) return next(ApiError.badRequest('User already exist')); // user already exists
         const hashedPassword = await bcrypt.hash(password, 10);
         await pool.query('INSERT INTO users(user_name, user_pw) VALUES ($1, $2)', [username, hashedPassword]);
         console.log(`Created user ${username}!`);
         res.sendStatus(200);
     } catch (err) {
-        console.error(err);
-        res.sendStatus(422);
+        return next(err);
     }
 });
 
-app.post('/login', async (req, res) => {
+app.post('/login', async (req, res, next) => {
     // Authenticate first
     const username = toID(req.body.username);
     const password = req.body.password;
@@ -88,8 +88,8 @@ app.post('/login', async (req, res) => {
 
     try {
         const val = await pool.query('SELECT user_id, user_name, user_pw, user_token_version FROM users WHERE user_name=$1', [username]);
-        if(val.rows.length === 0) return res.sendStatus(422); // user does not exist
-        if(!await bcrypt.compare(password, val.rows[0].user_pw)) return res.sendStatus(422);
+        if(val.rows.length === 0) return next(ApiError.badRequest('User does not exist')); // user does not exist
+        if(!await bcrypt.compare(password, val.rows[0].user_pw)) return next(ApiError.badRequest('Incorrect password'));
         id = val.rows[0].user_id;
         token_version = val.rows[0].user_token_version;
         // TODO: Alter last login time
@@ -98,8 +98,7 @@ app.post('/login', async (req, res) => {
         // TODO: store refresh token in database table
         res.status(200);
     } catch (err) {
-        console.error(err);
-        return res.sendStatus(422);
+        return next(err);
     }
 
     // Then return JWT
@@ -113,29 +112,30 @@ app.post('/login', async (req, res) => {
     return res.json({ accessToken });
 });
 
-app.post('/logout', async (req, res) => {
+app.post('/logout', async (req, res, next) => {
     // Authenticate first
     const token = req.cookies.refreshToken;
-    if(!token) return res.sendStatus(401);
+    if(!token) return next(ApiError.badRequest('User is already signed out'));
 
     try {
         const payload = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);        
         const val = await pool.query('SELECT user_id, user_name, user_token_version FROM users WHERE user_name=$1', [payload.name]);
-        if(val.rows.length === 0) return res.sendStatus(403); // user does not exist
+        if(val.rows.length === 0) return next(ApiError.badRequest('User does not exist')); // user does not exist
         // if the refresh token version does not match the latest one, 
         // someone is trying to use an old token. Do not allow. Note that
         // this does not revoke the latest version of the refresh token.
         // And refresh token versions won't update unless explicitly stated.
-        if(val.rows[0].user_token_version !== payload.token_version) return res.sendStatus(403);
+        if(val.rows[0].user_token_version !== payload.token_version) return next(ApiError.forbidden('User attempted to use revoked token'));
 
         // sen updated refresh token as long as user actively asks for refreshed access token
         sendRefreshToken(res, expireRefreshToken({id: payload.id, name: payload.name, token_version: payload.token_version}));
         return res.sendStatus(200);
-    } catch (error) {
-        console.log(error);
-        return res.sendStatus(403);
+    } catch (err) {
+        return next(err);
     }
 });
+
+app.use(apiErrorHandler);
 
 function generateAccessToken(user) {
     return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '15m' });

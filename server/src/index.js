@@ -111,6 +111,8 @@ const pkmnType = new GraphQLObjectType({
 
 const statModifier = require("./natures");
 const { importSet, toID } = require("./PSUtils");
+const ApiError = require("./error/ApiError");
+const apiErrorHandler = require("./error/api-error-handler");
 // console.log(statModifier);
 // Construct a schema, using GraphQL schema language
 const schema = new GraphQLSchema({
@@ -242,10 +244,10 @@ function authenticateToken(req, res, next) {
     // Bearer TOKEN
     const authHeader = req.headers["authorization"];
     const token = authHeader?.split(" ")[1];
-    if (!token) return res.sendStatus(401);
+    if (!token) next(ApiError.unauthorized('Client is not authenticated!')); // client is not authenticated at all
 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, payload) => {
-        if (err) return res.sendStatus(403);
+        if (err) next(ApiError.forbidden('Client authentication details are incorrect!')); // token has incorrect payload
         req.user = payload;
         next();
     });
@@ -342,6 +344,8 @@ app.use(
    as a param and is how you access the db. */
     })
 );
+
+app.use(apiErrorHandler);
 https.createServer(httpsOptions, app).listen(PORT, () => {
     console.log(
         `Running a GraphQL API server at http://localhost:${PORT}/graphql`
