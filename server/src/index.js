@@ -190,38 +190,18 @@ const schema = new GraphQLSchema({
                         args.push(date);
                     }
                     dbq += ";";
-                    console.log(species);
-                    console.log(dbq);
+                    // console.log(species);
+                    // console.log(dbq);
                     //console.log(species);
                     let sets = [];
                     try {
                         console.log(dbq);
                         sets = (await pool.query(dbq, args)).rows;
                     } catch (error) {
-                        console.log(dbq);
-                        console.error(error);
+                        // console.error(dbq);
+                        throw ApiError.badRequest('Filter values are invalid, please fix the filters');
                     }
                     console.log(sets);
-                    // for(const specimen of (species.length > 0 ? species : Object.keys(SETDEX_SS))) {
-                    //     console.log(specimen);
-                    //     if(specimen in SETDEX_SS === false) continue;
-
-                    //     for(const set in SETDEX_SS[specimen]){
-                    //         const speedIV = SETDEX_SS[specimen][set].ivs?.sp ? SETDEX_SS[specimen][set].ivs.sp : 31;
-                    //         const speedEV = SETDEX_SS[specimen][set].evs?.sp ? SETDEX_SS[specimen][set].evs.sp : 0;
-                    //         const level = SETDEX_SS[specimen][set].level;
-                    //         const nature = SETDEX_SS[specimen][set].nature.toLowerCase();
-                    //         let natureModifier = 1;
-                    //         if(natures[nature].plus === 'spe') natureModifier = 1.1;
-                    //         if(natures[nature].minus === 'spe') natureModifier = 0.9;
-                    //         const speedStat = Math.floor((Math.floor((2.0 * pokedex[specimen].baseStats.spe + speedIV + Math.floor(speedEV/4.0)) * level / 100.0) + 5) * natureModifier);
-                    //         if(speedStat >= speed) {
-                    //             sets.push({species: specimen, name: set, ...SETDEX_SS[specimen][set]});
-                    //         } else {
-                    //             console.log(`${speedStat} for ${specimen}: ${set}, which is slower than ${speed}`);
-                    //         }
-                    //     };
-                    // }
                     return sets;
                 },
             },
@@ -290,16 +270,22 @@ app.get("/posts", authenticateToken, (req, res) => {
     res.json(posts.filter((post) => post.author === req.user.name));
 });
 
-app.post("/set", authenticateToken, async (req, res) => {
+app.post("/set", authenticateToken, async (req, res, next) => {
     try {
         const set = importSet(req.body.set)[0];
         const name = req.body.name;
         const desc = req.body.desc;
-        console.log(set);
+
+        if(!name) return next(ApiError.badRequest('Please name your set'));
+        if(!desc || desc.length < 15) return next(ApiError.badRequest('Please describe your set a little'));
+        if(!set) return next(ApiError.badRequest('Please provide a set'));
+        if(!(set.species && set.level && set.nature && set.ability)) return next(ApiError.badRequest('Set import is malformed'));
+        
         const author = jwt.verify(
             req.headers["authorization"].split(" ")[1],
             process.env.ACCESS_TOKEN_SECRET
         ).name;
+
         const speedStat = calculateSpeedStat(
             toID(set.species),
             set.level,
@@ -307,8 +293,7 @@ app.post("/set", authenticateToken, async (req, res) => {
             set.evs?.spe ? set.evs?.spe : 0,
             set.ivs?.spe ? set.ivs?.spe : 31
         );
-        //console.log(author);
-        //console.log(set);
+
         const dbq = `INSERT INTO sets(name, author, species, nature, ability, item, moves, evs, ivs, level, speed, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *`;
         const results = await pool.query(dbq, [
             name,
@@ -327,8 +312,7 @@ app.post("/set", authenticateToken, async (req, res) => {
         //console.log(results)
         res.sendStatus(200);
     } catch (error) {
-        console.error(error);
-        res.sendStatus(422);
+        return next(ApiError.badRequest('Set import is malformed'));
     }
 });
 
@@ -337,6 +321,16 @@ app.use(
     graphqlHTTP({
         schema: schema,
         graphiql: true,
+        // customFormatErrorFn: (err) => {
+        //     console.error(err);
+
+        //     if(err.originalError instanceof ApiError) { // expected errors
+        //         console.log("HIIIFADIAIDFAIFIDAAIFD")
+        //         return err;
+        //     }
+
+        //     return err;
+        // }
         /* there is also a 'context' parameter here that is 
   'request' by default, and stores middleware context from 
    previous middleware on this request such as db access, 

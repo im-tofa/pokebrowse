@@ -99,6 +99,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
         if (error) {
             console.error(error);
             console.error(data);
+            alert(error.message);
         } else {
             if (data !== undefined) {
                 // console.log(data.sets);
