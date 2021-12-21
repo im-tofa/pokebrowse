@@ -24,7 +24,7 @@ const Profile: FunctionalComponent<Props> = (props: Props) => {
     const { user } = props;
     const [time, setTime] = useState<number>(Date.now());
     const [count, setCount] = useState<number>(0);
-    const { accessToken, setAccessToken } = useContext(AuthContext);
+    const { accessToken, setAccessToken, resetAccessToken } = useContext(AuthContext);
     const [ config, setConfig ] = useState("");
     const [ desc, setDesc ] = useState("");
     const [ res, setRes ] = useState("");

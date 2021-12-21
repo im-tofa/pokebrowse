@@ -10,11 +10,14 @@
 /* override child styling */
 .upload > * {
     padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .upload > h2 {
-    width: fit-content;
-    padding: 15px;
+    text-align: center;
+    padding: 5px;
+    padding-left: 10px;
     margin: 0;
     font-size: large;
 }

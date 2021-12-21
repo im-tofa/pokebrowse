@@ -16,6 +16,7 @@ import Uploader from '../routes/upload';
 import { Sidebar } from './sidebar';
 import { Panel } from './panel';
 import Creator from './creator';
+import { Refresh } from './refresh';
 
 // TODO: Use Preact Context to manage the user auth., and use useContext hook as the consumer instead 
 // of consumer tag
@@ -31,58 +32,46 @@ const client = new ApolloClient({
     cache: new InMemoryCache(),
 });
 
-const requestNewToken = () => {
-    return fetch('https://localhost:4000/token', { method: 'POST' })
-    .then(res => {
-        if(res.status !== 200) return null;
-        return res.json();
-    })
-    .then(json => {
-        return json.accessToken;
-    })
-    .catch(err => {
-        console.error(err);
-        return null;
-    });
-};
-
 const App: FunctionalComponent = () => {
-    const [accessToken, setAccessToken] = useState("");
+    const [accessToken, setAccessToken] = useState<string | null>("");
+
     return (
         <AuthContext.Provider value={{ accessToken, setAccessToken }}>
             <ApolloProvider client={client}>
-                <div id="preact_root" class={style.preact_root}>
-                    <Header />
-                    <Router>
-                        <Route path="/" component={Home} />
-                        <Route path="/register/" component={Register} />     
-                        <Route path="/login/" component={Login} />     
-                        <Route path="/browser/" component={SetBrowser} />     
-                        <Route path="/upload/" component={Uploader} />     
-                        <Route path="/profile/" component={Profile} user="me" />
-                        <Route path="/profile/:user" component={Profile} />
-                        <NotFoundPage default />
-                    </Router>
-                    {/* <aside class={style['side']}>Sidebar</aside> */}
-                    {/* <footer class={style['main-footer']}>The footer</footer> */}
-                    {/* {accessToken && <button class={style.logout} onClick={(e) => {
-                e.preventDefault();
-                fetch('https://localhost:4000/logout', { 
-                    method: 'POST',
-                    credentials: 'include'
-                })
-                    .then(async res => {
-                        console.log(res);
-                        if(res.status !== 200) throw Error();
-                        const json = await res.json();
-                        setAccessToken("");
+                <Refresh>
+                    <div id="preact_root" class={style.preact_root}>
+                        <Header />
+                        <Router>
+                            <Route path="/" component={Home} />
+                            <Route path="/register/" component={Register} />     
+                            <Route path="/login/" component={Login} />     
+                            <Route path="/browser/" component={SetBrowser} />     
+                            <Route path="/upload/" component={Uploader} />     
+                            <Route path="/profile/" component={Profile} user="me" />
+                            <Route path="/profile/:user" component={Profile} />
+                            <NotFoundPage default />
+                        </Router>
+                        {/* <aside class={style['side']}>Sidebar</aside> */}
+                        {/* <footer class={style['main-footer']}>The footer</footer> */}
+                        {/* {accessToken && <button class={style.logout} onClick={(e) => {
+                    e.preventDefault();
+                    fetch('https://localhost:4000/logout', { 
+                        method: 'POST',
+                        credentials: 'include'
                     })
-                    .catch(err => {
-                        console.error(err);
-                        setAccessToken("");
-                    });
-            }}>Log out</button>} */}
-                </div>
+                        .then(async res => {
+                            console.log(res);
+                            if(res.status !== 200) throw Error();
+                            const json = await res.json();
+                            setAccessToken("");
+                        })
+                        .catch(err => {
+                            console.error(err);
+                            setAccessToken("");
+                        });
+                }}>Log out</button>} */}
+                    </div>
+                </Refresh>
             </ApolloProvider> 
         </AuthContext.Provider>  
     );

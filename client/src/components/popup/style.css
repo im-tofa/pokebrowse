@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     padding: 5px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 100;
 }
 .popup * {
@@ -26,6 +26,8 @@
     color: #444444;
     background: none;
     padding: 4px;
+    width: 26px;
+    height: 26px;
 }
 .btn:hover {
     cursor: pointer;
@@ -74,9 +76,8 @@
         "image date  ";
 
     align-items: center;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #aaaaaa;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #aaaaaa;
 }
 .import {
     display: flex;
@@ -101,7 +102,7 @@
     position: relative;
     top: 0;
     left: 0;
-    background: #eeeeee;
+    background: #ffffff;
     width: 100%;
     height: 100%;
     padding: 20px;

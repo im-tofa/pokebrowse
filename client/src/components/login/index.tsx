@@ -11,10 +11,6 @@ const LoginForm: FunctionalComponent = () => {
     const [loginError, setLoginError] = useState("");
     // console.log(accessToken);
 
-    useEffect(() => {
-        if(accessToken) route('/upload', true);
-    }, [accessToken]);
-
     return (
         <form
             class={style.form}
@@ -48,6 +44,7 @@ const LoginForm: FunctionalComponent = () => {
                 } catch (error) {
                     console.log("Error: ");
                     console.log(error);
+                    setAccessToken(null);
                     route("/login", true);
                 }
             }}

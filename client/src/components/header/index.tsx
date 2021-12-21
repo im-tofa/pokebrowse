@@ -56,11 +56,11 @@ const Header: FunctionalComponent = () => {
                                 console.log(res);
                                 if (res.status !== 200) throw Error();
                                 const json = await res.json();
-                                setAccessToken("");
+                                setAccessToken(null);
                             })
                             .catch((err) => {
                                 console.error(err);
-                                setAccessToken("");
+                                setAccessToken(null);
                             });
                     }}
                 >

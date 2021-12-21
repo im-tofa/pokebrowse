@@ -149,8 +149,18 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
                 <div class={style.metadata}>
                 <div class={`${style.wrapper} ${style.image}`}>
                                 {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
-                                <img class={style.img} src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species.toLowerCase().split(' ').join('-')}.gif`} onError={(event) => event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species.toLowerCase().split(' ').join('')}.png`}></img>
-                                <img class={style.icon} src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item.toLowerCase().split(' ').join('-')}.png`}></img>
+                                <img class={style.img} src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species}.gif`} onError={(event) => {
+                                        if(event.target.src === `https://play.pokemonshowdown.com/sprites/gen5/0.png`) return;
+                                        if(event.target.src === `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`) {
+                                            event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/0.png`;
+                                            return;
+                                        }   
+                                        event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`;
+                                    }}></img>
+                                <img class={style.icon} src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item.toLowerCase().split(' ').join('-')}.png`} onError={(event) => {
+                                        if(event.target.src === `https://play.pokemonshowdown.com/sprites/itemicons/0.png`) return;
+                                        event.target.src = `https://play.pokemonshowdown.com/sprites/itemicons/0.png`;
+                                    }}></img>
                             </div>
                     <div class={style.author}><b>Author:</b> {set.author}</div>
                     <div class={style.date}><b>Uploaded on:</b> {new Date(set.set_uploaded_on).toLocaleDateString()}</div>

@@ -99,7 +99,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
         if (error) {
             console.error(error);
             console.error(data);
-            alert(error.message);
+            // alert(error.message);
         } else {
             if (data !== undefined) {
                 // console.log(data.sets);
@@ -205,6 +205,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
                     <i class="fa fa-search" /> Search
                 </button>
             </div>
+            {error && <div><b style="color: red">{error.message}</b></div>}
         </form>
     );
 };

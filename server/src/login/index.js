@@ -138,7 +138,7 @@ app.post('/logout', async (req, res, next) => {
 app.use(apiErrorHandler);
 
 function generateAccessToken(user) {
-    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '15m' });
+    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '10s' });
 }
 
 function generateRefreshToken(user) {

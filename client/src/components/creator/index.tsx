@@ -5,98 +5,96 @@ import { useContext, useEffect, useState } from 'preact/hooks';
 import { ResultComponent } from '../../components/results';
 import { SETS } from '../../queries';
 import { AuthContext } from '../../token';
+import { Auth } from '../auth';
+import { Refresh } from '../refresh';
 import style from './style.css';
 
-const sample = `Bestcadrill (Excadrill) @ Leftovers  
-Ability: Mold Breaker  
-EVs: 44 HP / 44 Atk / 212 SpD / 208 Spe  
-Jolly Nature  
-- Rapid Spin  
-- Toxic    
-- Iron Head`;
-
-
+// TODO: Rewrite to use function for retrying instead
 const Creator: FunctionalComponent = () => {
-    const [time, setTime] = useState<number>(Date.now());
-    const [count, setCount] = useState<number>(0);
     const { accessToken, setAccessToken } = useContext(AuthContext);
+    const [retry, setRetry] = useState(false);
+    const [uploadError, setUploadError] = useState("");
     const [ config, setConfig ] = useState("");
     const [ name, setName ] = useState("");
     const [ desc, setDesc ] = useState("");
-    const [ res, setRes ] = useState("");
 
-    // since this is an authenticated page, force authentication
+    const upload = async () => {
+        const response = await fetch('https://localhost:3000/set', {
+            method: "POST",
+            credentials: "include",
+            headers: {
+                'Content-Type': 'application/json',
+                'authorization': `Bearer ${accessToken}`
+            },
+            body: JSON.stringify({set: config, name, desc})
+        });
+
+        if (response.status === 403 || response.status === 401) throw new Error(await response.json()); // if authentication error
+        if (response.status !== 200) { setUploadError(await response.json()); return; }
+        
+        // console.log(json);
+        setUploadError("");
+        route('/browser', true);
+    }
+
     useEffect(() => {
-        fetch('https://localhost:4000/token', { 
-            method: 'POST',
-            credentials: 'include'
-        })
-            .then(async res => {
-                console.log(res);
-                if(res.status !== 200) throw Error();
-                const json = await res.json();
-                setAccessToken(json.accessToken);
-            })
-            .catch(err => {
-                console.error(err);
-                setAccessToken("");
-                route('/browser', true);
-            });
-    }, [accessToken]);
-
-    // gets called when this route is navigated to
-    useEffect(() => {
-        const timer = window.setInterval(() => setTime(Date.now()), 1000);
-
-        // gets called just before navigating away from the route
-        return (): void => {
-            clearInterval(timer);
-        };
-    }, []);
+        if(accessToken !== "" && retry) {
+            setRetry(false);
+            upload()
+                .then(() => {console.log("form submitted"); })
+                .catch((error) => {console.log(error); route('/login', true); });
+        }
+    }, [accessToken, retry]);
 
     return (
-        <form class={style.creator} onSubmit={async e => {
-            e.preventDefault();
-            console.log("form submitted");
-            //console.log(username, password);
-            try {
-                const response = await fetch('https://localhost:3000/set', {
-                    method: "POST",
-                    credentials: "include",
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'authorization': `Bearer ${accessToken}`
-                    },
-                    body: JSON.stringify({set: config, name, desc})
-                });
-                const json = await response.json();
-                console.log(json);
-                setRes(JSON.stringify(json));
-            } catch (error) {
-                console.log(error);
-            }
-        }}>
-            {/* <div class={style.grid}>
-                <div/>
-                <h2>Upload a Set</h2>
-            </div> */}
-            <div class={style.grid}>
-                <label for="name">Name:</label>
-                <input type="text" id="name" value={name} onChange={(e) => {setName(e.target.value);}}/>
-            </div>
-            <div class={style.grid}>
-                <label for="set">Import:</label>
-                <textarea id="set" value={config} onChange={(e) => {setConfig(e.target.value);}}/>
-            </div>
-            <div class={style.grid}>
-                <label for="desc">Description:</label>
-                <textarea id="desc" value={desc} onChange={(e) => {setDesc(e.target.value);}}/>
-            </div>
-            <div class={style.grid}>
-                <div/>
-                <button type="submit">Submit!</button>
-            </div>
-        </form>
+            <form class={style.creator} onSubmit={async e => {
+                /* THIS DOESN'T WORK BC OF ASYNC BS */
+                /* 
+                    ACTUALLY, I am pretty sure this does not work because 
+                    setting the access token during a retry does not take 
+                    effect in the current form send, only in the next form
+                    send after a re-render, since accessToken is const.
+                */
+                e.preventDefault();
+                if(retry) return; // prevent double click/spam
+
+                //console.log(username, password);
+                try {
+                    // console.log(accessToken);
+                    await upload();
+                    console.log("form submitted");
+                } catch (error) {
+                    // console.log("hesadasdf");
+                    console.log(error);
+
+                    // reset token; this will trigger parent Auth to refetch
+                    setAccessToken(""); 
+                    setRetry(true);
+                    return;
+                }
+            }}>
+                {/* <div class={style.grid}>
+                    <div/>
+                    <h2>Upload a Set</h2>
+                </div> */}
+                {uploadError && <div><b style="color: red">{uploadError}</b></div>}
+                <div class={style.grid}>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" value={name} onChange={(e) => {setName(e.target.value);}}/>
+                </div>
+                <div class={style.grid}>
+                    <label for="set">Import:</label>
+                    <textarea id="set" value={config} onChange={(e) => {setConfig(e.target.value);}}/>
+                </div>
+                <div class={style.grid}>
+                    <label for="desc">Description:</label>
+                    <textarea id="desc" value={desc} onChange={(e) => {setDesc(e.target.value);}}/>
+                </div>
+                <div class={style.grid}>
+                    <div/>
+                    <button type="submit">Submit!</button>
+                </div>
+            </form>        
     );
 };
 

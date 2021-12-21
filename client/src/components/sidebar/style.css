@@ -22,6 +22,7 @@
         align-items: stretch;
         gap: 15px;
         width: 100%;
-        height: min-content;
+        height: 100%;
+        overflow-y: scroll;
     }
 }

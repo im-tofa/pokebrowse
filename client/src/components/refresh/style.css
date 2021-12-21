@@ -1,0 +1,11 @@
+/* TODO: 
+	Try design where filter is a bar at the top and you add 
+	filters by /<filtercommand> <value> in the bar. No 
+	/<filtercommand> means species name.
+*/
+.auth {
+    /* width: 100%; */
+    display: block;
+    width: 100%;
+    height: inherit;
+}

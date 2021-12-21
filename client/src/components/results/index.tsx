@@ -157,8 +157,19 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
                                 </div>
                             <div class={`${style.wrapper} ${style.image}`}>
                                 {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
-                                <img class={style.img} src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species.toLowerCase().split(' ').join('-')}.gif`} onError={(event) => event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species.toLowerCase().split(' ').join('')}.png`}></img>
-                                <img class={style.icon} src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item.toLowerCase().split(' ').join('-')}.png`}></img>
+                                {/* NOTE that species are already in ID form, from server processing */}
+                                <img class={style.img} src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species}.gif`} onError={(event) => {
+                                        if(event.target.src === `https://play.pokemonshowdown.com/sprites/gen5/0.png`) return;
+                                        if(event.target.src === `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`) {
+                                            event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/0.png`;
+                                            return;
+                                        }   
+                                        event.target.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`;
+                                    }}></img>
+                                <img class={style.icon} src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item.toLowerCase().split(' ').join('-')}.png`} onError={(event) => {
+                                        if(event.target.src === `https://play.pokemonshowdown.com/sprites/itemicons/0.png`) return;
+                                        event.target.src = `https://play.pokemonshowdown.com/sprites/itemicons/0.png`;
+                                    }}></img>
                             </div>
                             <div class={`${style.author}`}>By <i>{set.author}</i></div>
                             <div class={`${style.rating}`}>
