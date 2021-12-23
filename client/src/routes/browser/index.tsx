@@ -95,6 +95,7 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
                 <SearchComponent
                     fetchResults={fetchResults}
                 />
+                {error && <div><b style="color: red">{error.message}</b></div>}
                 <ResultComponent results={{next_cursor: results.next_cursor, sets: results.sets}} fetchMore={fetchMore} />
             </div>
             <Sidebar>
