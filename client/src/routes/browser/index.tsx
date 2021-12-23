@@ -46,13 +46,15 @@ import { Panel } from "../../components/panel";
 import Creator from "../../components/creator";
 import { Auth } from "../../components/auth";
 import LoginForm from "../../components/login";
+import { SETS } from "../../queries";
+import { Set } from "../../types";
 
 interface Props {}
 
 const dummy_results = dummy_response;
 
 const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
-    const [results, setResults] = useState([]);
+    const [results, setResults] = useState<{sets: Set[], next_cursor: number | null}>({sets: [], next_cursor: null});
     const signIn = (
         <Panel>
             <h2>Sign In</h2>
@@ -62,14 +64,38 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
             </small>
         </Panel>
     );
+
+    const [fetchResults, { loading, error, data, fetchMore } ] = useLazyQuery(SETS, 
+        // ({
+        //      fetchPolicy: "no-cache",
+        // })
+    );
+
+    if (loading) {
+    } else {
+        if (error) {
+            console.error(error);
+            console.error(data);
+            // alert(error.message);
+        } else {
+            if (data !== undefined) {
+                console.log(data);
+                setResults(data.sets);
+                // console.log(data.sets);
+                // console.log(fetchMore);
+                console.log("hiiiiiiiii");
+            }
+        }
+    }
+
     //console.log(results);
     return (
         <main class={style.main}>
             <div class={style.setbrowser}>
                 <SearchComponent
-                    setResults={(searchResults) => setResults(searchResults)}
+                    fetchResults={fetchResults}
                 />
-                <ResultComponent sets={results} />
+                <ResultComponent results={{next_cursor: results.next_cursor, sets: results.sets}} fetchMore={fetchMore} />
             </div>
             <Sidebar>
                 <Auth notAuth={signIn}>

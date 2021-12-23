@@ -98,6 +98,14 @@ const setType = new GraphQLObjectType({
     }),
 });
 
+const setsType = new GraphQLObjectType({
+    name: "Sets",
+    fields: () => ({
+        sets: { type: new GraphQLList(setType) },
+        next_cursor: { type: GraphQLInt }
+    })
+})
+
 const pkmnType = new GraphQLObjectType({
     name: "Pokemon",
     fields: () => ({
@@ -143,7 +151,7 @@ const schema = new GraphQLSchema({
                 },
             },
             sets: {
-                type: new GraphQLList(setType),
+                type: setsType,
                 args: {
                     species: {
                         type: new GraphQLList(GraphQLString),
@@ -155,8 +163,10 @@ const schema = new GraphQLSchema({
                         type: GraphQLString,
                         defaultValue: "",
                     },
+                    cursor: { type: GraphQLInt },
+                    limit: { type: GraphQLInt },
                 },
-                resolve: async (_, { species, author, speed, date }) => {
+                resolve: async (_, { species, author, speed, date, cursor, limit }) => {
                     console.log("hi");
                     let filters = 1;
                     let args = [];
@@ -189,6 +199,21 @@ const schema = new GraphQLSchema({
                         filters++;
                         args.push(date);
                     }
+                    if (cursor) { // not null and not 0
+                        dbq += `${
+                            filters > 1 ? "AND" : "WHERE"
+                        } set_id > $${filters} `;
+                        filters++;
+                        args.push(cursor);
+                    }
+
+                    // AT THE END
+                    if (limit) { // not null and not 0
+                        dbq += `LIMIT $${filters} `;
+                        filters++;
+                        args.push(limit);
+                    }
+
                     dbq += ";";
                     // console.log(species);
                     // console.log(dbq);
@@ -201,8 +226,10 @@ const schema = new GraphQLSchema({
                         // console.error(dbq);
                         throw ApiError.badRequest('Filter values are invalid, please fix the filters');
                     }
+                    // console.log(sets.slice(Math.min(cursor > 0 ? cursor : 0, sets.length), Math.min((cursor + limit) > 0 ? (cursor + limit) : 0, sets.length)));
                     console.log(sets);
-                    return sets;
+                    const sliced = sets;
+                    return { sets: sliced, next_cursor: (sliced.length === limit ? sliced[limit-1].set_id : null)}
                 },
             },
         }),

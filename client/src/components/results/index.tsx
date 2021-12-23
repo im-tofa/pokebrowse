@@ -16,7 +16,8 @@ import { useState } from 'preact/hooks';
 import { Popup } from '../popup';
 
 interface ResultProps {
-    sets: Set[];
+    results: {next_cursor: number | null, sets: Set[]};
+    fetchMore: any; // too lazy to write out the type
 };
 
 const evConvert = {
@@ -133,17 +134,27 @@ function exportSet(set: any) {
 
 const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) => {
     const [chosen, setChosen] = useState(''); // use set ID since it is unique
-    const getSet = (id: string) => props.sets.find((set) => set.set_id === parseInt(id));
+    const fetchMore = props.fetchMore;
+    const sets = props.results.sets;
+    const next_cursor = props.results.next_cursor;
+
+    const getSet = (id: string) => sets.find((set) => set.set_id === parseInt(id));
     if(chosen !== '') console.log(exportSet(getSet(chosen)));
     if(chosen !== '') console.log(JSON.stringify(getSet(chosen)));
     return (
-        <div class={style.results}>
+        <div class={style.results} onScroll={(e) => {
+            e.preventDefault();
+            // const element = e.currentTarget;
+            // if(element.scrollHeight - element.scrollTop === element.clientHeight) {
+            //     if(next_cursor && fetchMore) fetchMore({ variables: {cursor: next_cursor }});
+            // }
+        }}>
             {chosen && (
                 <Popup set={getSet(chosen)!} setChosen={setChosen}/>
             )}
             <ul class={style.scrollable}>
             {
-                props.sets.map((set) => (
+                sets.map((set) => (
                     <li key={`${set.set_id}`} data-set={`${set.set_id}`} class={`${style.result}`} onClick={(e) => {
                         e.preventDefault();
                         setChosen(e.currentTarget.getAttribute('data-set') || '');
@@ -195,6 +206,11 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
                 ))
             }
             </ul>
+            {next_cursor && <button class={style.more} onClick={(e) => {
+                e.preventDefault();
+                console.log(next_cursor);
+                if(next_cursor && fetchMore) fetchMore({ variables: {cursor: next_cursor }});
+            }}><i class="fa fa-chevron-down"/></button>}
         </div>
     );
 };

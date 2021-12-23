@@ -132,6 +132,18 @@
     /* gap: 5px; */
 }
 
+.more {
+    width: 100%;
+    height: 48px;
+    border: none;
+    background: none;
+}
+
+.more:hover {
+    color: #aaaaaa;
+    cursor: pointer;
+}
+
 /*
 
     TODO: This layout for mobile

@@ -18,6 +18,8 @@ import {
     useQuery,
     gql,
     useLazyQuery,
+    QueryLazyOptions,
+    OperationVariables,
 } from "@apollo/client";
 import { Component, FunctionalComponent, h, Fragment } from "preact";
 import { useState, useCallback, useReducer, useEffect } from "preact/hooks";
@@ -42,7 +44,7 @@ const dummy_filters = {
 };
 
 interface SearchProps {
-    setResults(sets): void;
+    fetchResults(options?: QueryLazyOptions<OperationVariables> | undefined): void;
 }
 
 const SearchComponent: FunctionalComponent<SearchProps> = (
@@ -53,7 +55,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
     const [date, setDate] = useState("");
     const [speed, setSpeed] = useState(0);
     const [author, setAuthor] = useState("");
-    const [filters, setFilters] = useState(dummy_filters);
+    const fetchResults = props.fetchResults;
 
     function handleUserInput(event: KeyboardEvent) {
         event.preventDefault();
@@ -90,23 +92,32 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
         }
     }
 
-    const [fetchResults, { loading, error, data }] = useLazyQuery(SETS, {
-        fetchPolicy: "no-cache",
-    });
+    // const [fetchResults, { loading, error, data, fetchMore } ] = useLazyQuery(SETS, 
+    //     // ({
+    //     //      fetchPolicy: "no-cache",
+    //     // })
+    // );
 
-    if (loading) {
-    } else {
-        if (error) {
-            console.error(error);
-            console.error(data);
-            // alert(error.message);
-        } else {
-            if (data !== undefined) {
-                // console.log(data.sets);
-                props.setResults(data.sets);
-            }
-        }
-    }
+    // if (loading) {
+    // } else {
+    //     if (error) {
+    //         console.error(error);
+    //         console.error(data);
+    //         // alert(error.message);
+    //     } else {
+    //         if (data !== undefined) {
+    //             // console.log(data.sets);
+    //             props.setResults(data.sets);
+    //             // console.log(fetchMore);
+    //             console.log("hiiiiiiiii");
+    //             if(once) {
+    //                 console.log(fetchMore);
+    //                 props.setFetchMore(fetchMore);
+    //             }
+    //         }
+    //     }
+    //     setOnce(false);
+    // }
 
     return (
         <form class={style.filters}>
@@ -198,6 +209,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
                                 author: author,
                                 speed: speed,
                                 date: date,
+                                cursor: 0
                             },
                         });
                     }}
@@ -205,7 +217,12 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
                     <i class="fa fa-search" /> Search
                 </button>
             </div>
-            {error && <div><b style="color: red">{error.message}</b></div>}
+            {/* {error && <div><b style="color: red">{error.message}</b></div>} */}
+            {/* <button onClick={(e) => {
+                e.preventDefault();
+                console.log(fetchMore);
+                if(fetchMore) fetchMore({ variables: {offset: data.sets.length }});
+            }}>More</button> */}
         </form>
     );
 };
