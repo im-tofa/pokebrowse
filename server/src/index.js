@@ -255,6 +255,7 @@ function authenticateToken(req, res, next) {
 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, payload) => {
         if (err) next(ApiError.forbidden('Client authentication details are incorrect!')); // token has incorrect payload
+        console.log(err);
         req.user = payload;
         next();
     });
@@ -340,6 +341,34 @@ app.post("/set", authenticateToken, async (req, res, next) => {
         res.sendStatus(200);
     } catch (error) {
         return next(ApiError.badRequest('Set import is malformed'));
+    }
+});
+
+app.delete("/set", authenticateToken, async (req, res, next) => {
+    try {
+        const set_ids = req.body.set_ids;
+
+        if(!set_ids || !set_ids.length) return next(ApiError.badRequest('Please choose which set IDs to delete'));
+        
+        const author = jwt.verify(
+            req.headers["authorization"].split(" ")[1],
+            process.env.ACCESS_TOKEN_SECRET
+        ).name;
+
+        const dbq_sel = `SELECT author FROM sets WHERE set_id = ANY($1);`;
+        const results_sel = await pool.query(dbq_sel, [set_ids]);
+
+        for(const row of results_sel.rows) {
+            if(author !== row.author) return next(ApiError.forbidden('This set does not belong to you!'));
+        }
+
+        const dbq_del = `DELETE FROM sets WHERE set_id = ANY($1);`;
+        const results_del = await pool.query(dbq_del, [set_ids]);
+
+        //console.log(results)
+        res.sendStatus(200);
+    } catch (error) {
+        return next(ApiError.badRequest('Error during database access'));
     }
 });
 

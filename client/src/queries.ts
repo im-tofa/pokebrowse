@@ -2,7 +2,7 @@ import gql from "graphql-tag";
 
 export const SETS = gql`
     query get_sets($species: [String], $author: String = "", $speed: Int = 0, $date: String = "", $cursor: Int) {
-        sets(species: $species, author: $author, speed: $speed, date: $date, cursor: $cursor, limit: 5) {
+        sets(species: $species, author: $author, speed: $speed, date: $date, cursor: $cursor, limit: 10) {
             next_cursor
             sets {
                 set_id
