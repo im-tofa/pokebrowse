@@ -1,4 +1,4 @@
-import { useQuery, gql } from '@apollo/client';
+import { useQuery, gql, useApolloClient } from '@apollo/client';
 import { FunctionalComponent, h } from 'preact';
 import { route } from 'preact-router';
 import { useContext, useEffect, useState } from 'preact/hooks';
@@ -9,14 +9,20 @@ import { Auth } from '../auth';
 import { Refresh } from '../refresh';
 import style from './style.css';
 
+interface Props {
+    reroute?: string;
+};
+
 // TODO: Rewrite to use function for retrying instead
-const Creator: FunctionalComponent = () => {
+const Creator: FunctionalComponent<Props> = (props: Props) => {
     const { accessToken, setAccessToken } = useContext(AuthContext);
     const [retry, setRetry] = useState(false);
+    const client = useApolloClient();
     const [uploadError, setUploadError] = useState("");
     const [ config, setConfig ] = useState("");
     const [ name, setName ] = useState("");
     const [ desc, setDesc ] = useState("");
+    const reroute = props.reroute ? props.reroute : '/browser';
 
     const upload = async () => {
         const response = await fetch('https://localhost:3000/set', {
@@ -34,7 +40,8 @@ const Creator: FunctionalComponent = () => {
         
         // console.log(json);
         setUploadError("");
-        route('/browser', true);
+        client.clearStore();
+        window.location.reload();
     }
 
     useEffect(() => {
@@ -67,7 +74,7 @@ const Creator: FunctionalComponent = () => {
                     // console.log("hesadasdf");
                     console.log(error);
 
-                    // reset token; this will trigger parent Auth to refetch
+                    // reset token; this will trigger Refresh context to attempt refetch
                     setAccessToken(""); 
                     setRetry(true);
                     return;

@@ -12,12 +12,15 @@ import { faStar as farStar } from '@fortawesome/free-regular-svg-icons'
 
 /* custom types */
 import { Set } from '../../types'
-import { useState } from 'preact/hooks';
+import { StateUpdater, useState } from 'preact/hooks';
 import { Popup } from '../popup';
 
 interface ResultProps {
     results: {next_cursor: number | null, sets: Set[]};
     fetchMore: any; // too lazy to write out the type
+    editable?: boolean;
+    selected?: string[];
+    setSelected?: StateUpdater<string[]>;
 };
 
 const evConvert = {
@@ -134,9 +137,12 @@ function exportSet(set: any) {
 
 const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) => {
     const [chosen, setChosen] = useState(''); // use set ID since it is unique
+    const highlighted = props.selected;
+    const setHighlighted = props.setSelected;
     const fetchMore = props.fetchMore;
     const sets = props.results.sets;
     const next_cursor = props.results.next_cursor;
+    const editable = props.editable;
 
     const getSet = (id: string) => sets.find((set) => set.set_id === parseInt(id));
     if(chosen !== '') console.log(exportSet(getSet(chosen)));
@@ -149,15 +155,22 @@ const ResultComponent: FunctionalComponent<ResultProps> = (props: ResultProps) =
             //     if(next_cursor && fetchMore) fetchMore({ variables: {cursor: next_cursor }});
             // }
         }}>
-            {chosen && (
+            {chosen && !editable && (
                 <Popup set={getSet(chosen)!} setChosen={setChosen}/>
             )}
             <ul class={style.scrollable}>
             {
                 sets.map((set) => (
-                    <li key={`${set.set_id}`} data-set={`${set.set_id}`} class={`${style.result}`} onClick={(e) => {
+                    <li key={`${set.set_id}`} data-set={`${set.set_id}`} class={`${style.result} ${highlighted?.includes(set.set_id.toString()) ? style.highlighted : ''}`} onClick={(e) => {
                         e.preventDefault();
-                        setChosen(e.currentTarget.getAttribute('data-set') || '');
+                        const key = e.currentTarget.getAttribute('data-set')!;
+                        if(!editable) setChosen(key);
+                        if(editable) {
+                            if(highlighted!.includes(key))
+                                setHighlighted!(highlighted!.filter((el) => el !== key));
+                            else
+                                setHighlighted!([...highlighted!, key]);
+                        }
                     }}>
                             <div class={`${style.name}`}>
                                 <div>{set.name ? set.name : set.species}</div>

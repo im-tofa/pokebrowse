@@ -38,6 +38,15 @@ const Header: FunctionalComponent = () => {
             </Link>
             <Auth
                 notAuth={
+                    <Fragment/>
+                }
+            >
+                <Link activeClassName={style.active} href="/profile">
+                        Profile
+                    </Link>
+            </Auth>
+            <Auth
+                notAuth={
                     <Link activeClassName={style.active} href="/login">
                         Sign in
                     </Link>
@@ -56,11 +65,11 @@ const Header: FunctionalComponent = () => {
                                 console.log(res);
                                 if (res.status !== 200) throw Error();
                                 const json = await res.json();
-                                setAccessToken(null);
+                                setAccessToken("");
                             })
                             .catch((err) => {
                                 console.error(err);
-                                setAccessToken(null);
+                                setAccessToken("");
                             });
                     }}
                 >

@@ -96,7 +96,7 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
                     fetchResults={fetchResults}
                 />
                 {error && <div><b style="color: red">{error.message}</b></div>}
-                <ResultComponent results={{next_cursor: results.next_cursor, sets: results.sets}} fetchMore={fetchMore} />
+                <ResultComponent results={results} fetchMore={fetchMore} />
             </div>
             <Sidebar>
                 <Auth notAuth={signIn}>
