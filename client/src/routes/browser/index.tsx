@@ -38,7 +38,6 @@ import { ResultComponent } from "../../components/results";
 
 /* misc types */
 import parseInput from "./tokenizer";
-import dummy_response from "./dummy_response";
 import { AuthContext } from "../../token";
 import { Link, route } from "preact-router";
 import { Sidebar } from "../../components/sidebar";
@@ -50,8 +49,6 @@ import { SETS } from "../../queries";
 import { Set } from "../../types";
 
 interface Props {}
-
-const dummy_results = dummy_response;
 
 const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
     const [results, setResults] = useState<{sets: Set[], next_cursor: number | null}>({sets: [], next_cursor: null});
