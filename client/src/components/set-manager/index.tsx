@@ -48,6 +48,7 @@ const SetManager: FunctionalComponent = () => {
         const author = JSON.parse(atob(accessToken ? accessToken.split('.')[1] : "")).name
         
         // fetch sets after any deletion
+        setSelected([]);
         client.clearStore(); // NOTE: A bit extreme, maybe be more precise in the cache updates
         fetchResults({variables: {author}});
     }
