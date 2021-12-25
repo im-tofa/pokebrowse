@@ -14,32 +14,18 @@
 import style from "./style.css";
 
 /* preact types */
-import { Component, FunctionalComponent, h, Fragment } from "preact";
-import {
-    useState,
-    useCallback,
-    useReducer,
-    useEffect,
-    useContext,
-} from "preact/hooks";
+import { FunctionalComponent, h } from "preact";
+import { useState } from "preact/hooks";
 
 /* apollo client */
-import {
-    ApolloProvider,
-    ApolloClient,
-    useQuery,
-    gql,
-    useLazyQuery,
-} from "@apollo/client";
+import { useLazyQuery } from "@apollo/client";
 
 /* custom components */
 import { SearchComponent } from "../../components/search";
-import { ResultComponent } from "../../components/results";
+import { Results } from "../../components/results";
 
 /* misc types */
-import parseInput from "./tokenizer";
-import { AuthContext } from "../../token";
-import { Link, route } from "preact-router";
+import { Link } from "preact-router";
 import { Sidebar } from "../../components/sidebar";
 import { Panel } from "../../components/panel";
 import Creator from "../../components/creator";
@@ -71,21 +57,14 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
     if (loading) {
     } else {
         if (error) {
-            console.error(error);
-            console.error(data);
-            // alert(error.message);
+            // console.error(error);
         } else {
             if (data !== undefined) {
-                console.log(data);
                 setResults(data.sets);
-                // console.log(data.sets);
-                // console.log(fetchMore);
-                console.log("hiiiiiiiii");
             }
         }
     }
 
-    //console.log(results);
     return (
         <main class={style.main}>
             <div class={style.setbrowser}>
@@ -93,7 +72,7 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
                     fetchResults={fetchResults}
                 />
                 {error && <div><b style="color: red">{error.message}</b></div>}
-                <ResultComponent results={results} fetchMore={fetchMore} />
+                <Results results={results} fetchMore={fetchMore} />
             </div>
             <Sidebar>
                 <Auth notAuth={signIn}>

@@ -103,7 +103,7 @@
     padding-top: 5px;
     /* border-radius: 5px; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    transition: background 0.05s ease-in-out;
+    transition: background 0.1s ease-in-out;
 }
 .result:hover {
     background-color: rgba(0,0,0,0.05);
@@ -133,15 +133,15 @@
 }
 
 .highlighted {
-    border-bottom: 1px solid #c8dcff;
+    border-bottom: 1px solid #e8f0fe;
     border-radius: 0;
-    border-left: 3px solid rgb(119, 187, 255);
-    border-right: 3px solid rgb(119, 187, 255);
+    /* border-left: 3px solid rgb(119, 187, 255);
+    border-right: 3px solid rgb(119, 187, 255); */
 
-    background-color: #e8f0fe;
+    background: #e8f0fe;
 }
 .highlighted:hover {
-    background-color: #c4daff !important;
+    background: #e8f0fe;
 }
 
 .more {

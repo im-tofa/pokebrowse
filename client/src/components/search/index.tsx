@@ -1,47 +1,11 @@
-/**
- * setbrowser
- *     search component
- *         filter component
- *     results component (structured by columns for each attribute e.g evs ivs base stats name author etc)
- *         description bar (fixed at the top)
- *         results list
- *             result of each set that was matched
- *
- *
- */
-
 import style from "./style.css";
 
-import {
-    ApolloProvider,
-    ApolloClient,
-    useQuery,
-    gql,
-    useLazyQuery,
-    QueryLazyOptions,
-    OperationVariables,
-} from "@apollo/client";
-import { Component, FunctionalComponent, h, Fragment } from "preact";
-import { useState, useCallback, useReducer, useEffect } from "preact/hooks";
+import { QueryLazyOptions, OperationVariables } from "@apollo/client";
+import { FunctionalComponent, h } from "preact";
+import { useState } from "preact/hooks";
 
 import Filter from "./../../components/filter";
 import parseInput from "../../routes/browser/tokenizer";
-import { SETS } from "../../queries";
-
-const dummy_filters = {
-    species: {
-        value: "Excadrill",
-        inputType: "input",
-    },
-    speed: {
-        value: 290,
-        inputType: "number",
-    },
-    author: {
-        value: "Storm Zone",
-        inputType: "input",
-    },
-};
 
 interface SearchProps {
     fetchResults(options?: QueryLazyOptions<OperationVariables> | undefined): void;
@@ -92,37 +56,9 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
         }
     }
 
-    // const [fetchResults, { loading, error, data, fetchMore } ] = useLazyQuery(SETS, 
-    //     // ({
-    //     //      fetchPolicy: "no-cache",
-    //     // })
-    // );
-
-    // if (loading) {
-    // } else {
-    //     if (error) {
-    //         console.error(error);
-    //         console.error(data);
-    //         // alert(error.message);
-    //     } else {
-    //         if (data !== undefined) {
-    //             // console.log(data.sets);
-    //             props.setResults(data.sets);
-    //             // console.log(fetchMore);
-    //             console.log("hiiiiiiiii");
-    //             if(once) {
-    //                 console.log(fetchMore);
-    //                 props.setFetchMore(fetchMore);
-    //             }
-    //         }
-    //     }
-    //     setOnce(false);
-    // }
-
     return (
         <form class={style.filters}>
             <div class={style.cli}>
-                {/* <h3>Filters: </h3> */}
                 <input
                     type="text"
                     id="cli"
@@ -133,19 +69,16 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
                     onKeyUp={(event) => handleUserInput(event)}
                     onKeyDown={(event) => {
                         if (event.code === "Enter") event.preventDefault();
-                    }}
-                ></input>
+                    }}/>
                 <button
                     class={`${style.btn}`}
                     onClick={(event) => {
                         event.preventDefault();
                         setUserInput(document.getElementById("cli").value);
-                    }}
-                >
+                    }}>
                     <i class="fa fa-plus" /> Add{" "}
                 </button>
             </div>
-            {/* (Object.keys(species).length > 0 || author !== '' || speed !== 0) */}
             <div class={style.query}>
                 {
                     <div class={style.chosen}>
@@ -217,12 +150,6 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
                     <i class="fa fa-search" /> Search
                 </button>
             </div>
-            {/* {error && <div><b style="color: red">{error.message}</b></div>} */}
-            {/* <button onClick={(e) => {
-                e.preventDefault();
-                console.log(fetchMore);
-                if(fetchMore) fetchMore({ variables: {offset: data.sets.length }});
-            }}>More</button> */}
         </form>
     );
 };
