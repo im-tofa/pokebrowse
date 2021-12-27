@@ -1,0 +1,7 @@
+{
+    "prettier.configPath": "client/.prettierrc.json",
+    "prettier.requireConfig": true,
+    "prettier.prettierPath": "client/node_modules/prettier",
+    "prettier.jsxBracketSameLine": true,
+    "editor.formatOnSave": true
+}

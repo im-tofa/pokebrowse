@@ -1,59 +1,51 @@
 .header {
-    position: sticky;
-    top: 0;
-    width: 100px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* justify-content: space-between; */
-    padding: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-    background: #252427;
-    color: #fff;
-    z-index: 50;
+  position: sticky;
+  top: 0;
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background: #252427;
+  color: #fff;
+  z-index: 50;
 }
 
 .header > h1 {
-    margin: 0;
-    padding: 15px;
-    font-weight: 400;
-    font-size: large;
-    color: inherit;
+  margin: 0;
+  padding: 15px;
+  font-weight: 400;
+  font-size: large;
+  color: inherit;
 }
 
 .header > nav {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    /* float: right; */
-    font-size: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  font-size: 100%;
 }
 
 .header > nav > a {
-    display: inline-block;
-    height: 56px;
-    line-height: 56px;
-    padding: 0 15px;
-    min-width: 50px;
-    background: rgba(255, 255, 255, 0);
-    text-decoration: none;
-    color: inherit;
-    will-change: background-color;
+  display: inline-block;
+  height: 56px;
+  line-height: 56px;
+  padding: 0 15px;
+  min-width: 50px;
+  background: rgba(255, 255, 255, 0);
+  text-decoration: none;
+  color: inherit;
+  will-change: background-color;
 }
 
 .header nav a:hover,
 .header nav a:active {
-    color: #aaaaaa;
+  color: #aaaaaa;
 }
 
 .header nav a.active {
-    font-weight: bold;
+  font-weight: bold;
 }
-/* 
-@media only screen and (min-width: 1000px) {
-    .header {
-        align-items: flex-start;
-    }
-} */

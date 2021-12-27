@@ -1,107 +1,63 @@
-/* TODO: 
-	Try design where filter is a bar at the top and you add 
-	filters by /<filtercommand> <value> in the bar. No 
-	/<filtercommand> means species name.
-*/
 .filters {
-    /* width: 100%; */
-    display: grid;
-    grid-template-columns: 1fr;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background: #ffffff;
-    padding: 10px;
-    padding-bottom: 0;
-    z-index: 1;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    /* box-shadow: 0 6px 1px -2px #aaaaaa; */
-
-    /* background-color: #efefef; */
-    /* border-width: 1px;
-	border-color: #888888;
-	border-style: solid; */
-
-    /* scroll and height */
-    /* overflow-y: hidden; */
+  display: grid;
+  grid-template-columns: 1fr;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  padding: 10px;
+  padding-bottom: 0;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 .cli {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 0;
-    background-color: #f2f2f2;
-    overflow: hidden;
-    color: #535353;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 0;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  color: #535353;
 }
 .btn {
-    font-size: medium;
-    padding: 5px;
-    border: none;
-    background: inherit;
-    color: #444444;
+  font-size: medium;
+  padding: 5px;
+  border: none;
+  background: inherit;
+  color: #444444;
 }
 .btn:hover {
-    cursor: pointer;
-    color: gray;
+  cursor: pointer;
+  color: gray;
 }
-
 .cmd {
-    font-size: medium;
-    display: grid;
-    outline: none;
-    border: none;
-    background: inherit;
-    padding: 5px;
-    border-right: solid 1px rgba(0, 0, 0, 0.3);
+  font-size: medium;
+  display: grid;
+  outline: none;
+  border: none;
+  background: inherit;
+  padding: 5px;
+  border-right: solid 1px rgba(0, 0, 0, 0.3);
 }
-
 .query {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 5px;
 }
-
 .chosen {
-    display: flex;
-
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: center;
-    flex-wrap: nowrap;
-
-    gap: 5px;
-    overflow-x: scroll;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px;
+  overflow-x: scroll;
 }
 .chosen > * {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.options {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    margin: 0px 10px 0px 10px;
-    padding: 10px 0px 10px 0px;
-    border-bottom-width: 1px;
-    border-bottom-color: #535353;
-    border-bottom-style: solid;
-}
-
-.options i {
-    /* background-color: #444444; */
-    width: 25px;
-    height: 25px;
-    border-radius: 5px;
-}
-
-.searchButton {
-    margin: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
 }

@@ -7,24 +7,14 @@
  * needed to store this. Communication with a database thus
  * needs to occur through a server, to validate any searches
  * before requesting from the database.
- *
  */
 
-/* style */
 import style from "./style.css";
-
-/* preact types */
 import { FunctionalComponent, h } from "preact";
 import { useState } from "preact/hooks";
-
-/* apollo client */
 import { useLazyQuery } from "@apollo/client";
-
-/* custom components */
 import { SearchComponent } from "../../components/search";
 import { Results } from "../../components/results";
-
-/* misc types */
 import { Link } from "preact-router";
 import { Sidebar } from "../../components/sidebar";
 import { Panel } from "../../components/panel";
@@ -32,58 +22,59 @@ import Creator from "../../components/creator";
 import { Auth } from "../../components/auth";
 import LoginForm from "../../components/login";
 import { SETS } from "../../queries";
-import { Set } from "../../types";
+import { Set } from "../../helpers/types";
 
 interface Props {}
 
 const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
-    const [results, setResults] = useState<{sets: Set[], next_cursor: number | null}>({sets: [], next_cursor: null});
-    const signIn = (
-        <Panel>
-            <h2>Sign In</h2>
-            <LoginForm />
-            <small>
-                No account? <Link href="/register">Sign up</Link>!
-            </small>
-        </Panel>
-    );
+  const [results, setResults] = useState<{
+    sets: Set[];
+    next_cursor: number | null;
+  }>({ sets: [], next_cursor: null });
+  const signIn = (
+    <Panel>
+      <h2>Sign In</h2>
+      <LoginForm />
+      <small>
+        No account? <Link href="/register">Sign up</Link>!
+      </small>
+    </Panel>
+  );
 
-    const [fetchResults, { loading, error, data, fetchMore } ] = useLazyQuery(SETS, 
-        // ({
-        //      fetchPolicy: "no-cache",
-        // })
-    );
+  const [fetchResults, { loading, error, data, fetchMore }] =
+    useLazyQuery(SETS);
 
-    if (loading) {
+  if (loading) {
+  } else {
+    if (error) {
     } else {
-        if (error) {
-            // console.error(error);
-        } else {
-            if (data !== undefined) {
-                setResults(data.sets);
-            }
-        }
+      if (data !== undefined) {
+        setResults(data.sets);
+      }
     }
+  }
 
-    return (
-        <main class={style.main}>
-            <div class={style.setbrowser}>
-                <SearchComponent
-                    fetchResults={fetchResults}
-                />
-                {error && <div><b style="color: red">{error.message}</b></div>}
-                <Results results={results} fetchMore={fetchMore} />
-            </div>
-            <Sidebar>
-                <Auth notAuth={signIn}>
-                    <Panel>
-                        <h2>Upload a Set</h2>
-                        <Creator />
-                    </Panel>
-                </Auth>
-            </Sidebar>
-        </main>
-    );
+  return (
+    <main class={style.main}>
+      <div class={style.setbrowser}>
+        <SearchComponent fetchResults={fetchResults} />
+        {error && (
+          <div>
+            <b style="color: red">{error.message}</b>
+          </div>
+        )}
+        <Results results={results} fetchMore={fetchMore} />
+      </div>
+      <Sidebar>
+        <Auth notAuth={signIn}>
+          <Panel>
+            <h2>Upload a Set</h2>
+            <Creator />
+          </Panel>
+        </Auth>
+      </Sidebar>
+    </main>
+  );
 };
 
 export default SetBrowser;

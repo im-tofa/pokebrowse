@@ -1,12 +1,8 @@
-import style from './style.css';
+import style from "./style.css";
 
-import { Component, FunctionalComponent, h, Fragment } from 'preact';
+import { FunctionalComponent, h } from "preact";
 const Sidebar: FunctionalComponent = (props) => {
-    return (
-        <div class={style.sidebar}>
-          {props.children}
-        </div>
-    );
+  return <div class={style.sidebar}>{props.children}</div>;
 };
 
 export { Sidebar };

@@ -1,220 +1,111 @@
-/*
-    TODO: Use MUCH more simple design here.
-
-    I think something like this should work:
-
-    A result consists of a grid area with named 
-    areas for EVs, IVs, moves, and so on. On mobile, 
-    the structure is one way. On desktop, the structure
-    is more expanded. No stackdivs, no inner grids, none 
-    of that. Should be much more manageable.
-
-    Also, each result should have an import button that 
-    copies directly to clipboard, and/or a button for 
-    reading more (including import). Either as 'popup'
-    or as its own page.
-*/
-
-/* includes read more */
 .name {
-    grid-area: name;
-    font-size: medium;
+  grid-area: name;
+  font-size: medium;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.name > button {
-    margin: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 .name > button {
-    cursor: pointer;
+  margin: 2px;
 }
-
+.name > button {
+  cursor: pointer;
+}
 /* includes item icon */
 .image {
-    grid-area: image;
+  grid-area: image;
 }
 .img {
-    width: 58px;
-    height: 58px;
-    object-fit: contain;
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
 }
 .icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 24px;
-    height: 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
 }
 .author {
-    grid-area: author;
-    font-style: italic;
+  grid-area: author;
+  font-style: italic;
 }
 .rating {
-    grid-area: rating;
+  grid-area: rating;
 }
 .date {
-    grid-area: date;
+  grid-area: date;
 }
 .ability {
-    grid-area: ability;
+  grid-area: ability;
 }
 .nature {
-    grid-area: nature;
+  grid-area: nature;
 }
 .evs {
-    grid-area: evs;
-    display: none;
+  grid-area: evs;
+  display: none;
 }
 .ivs {
-    grid-area: ivs;
-    display: none;
+  grid-area: ivs;
+  display: none;
 }
 .moves {
-    grid-area: moves;
+  grid-area: moves;
 }
 .description {
-    grid-area: desc;
-    margin-top: 5px;
+  grid-area: desc;
+  margin-top: 5px;
 }
-/* .moves > *:first-child:before {
-    content: "Moves: ";
-}
-.moves > *:not(:first-child):before {
-    content: ", ";
-} */
 .result {
-    display: grid;
-    font-size: small;
-    grid-template-columns: auto 1fr 1fr 1fr;
-    grid-template-areas:
-        "name  name  name name"
-        "image author ability moves"
-        "image rating nature moves"
-        "image date  nature moves"
-        "desc desc desc desc";
+  display: grid;
+  font-size: small;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  grid-template-areas:
+    "name  name  name name"
+    "image author ability moves"
+    "image rating nature moves"
+    "image date  nature moves"
+    "desc desc desc desc";
 
-    align-items: stretch;
-    padding: 10px;
-    padding-top: 5px;
-    /* border-radius: 5px; */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    transition: background 0.1s ease-in-out;
+  align-items: stretch;
+  padding: 10px;
+  padding-top: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background 0.1s ease-in-out;
 }
 .result:hover {
-    background-color: rgba(0,0,0,0.05);
-    cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 .result > * {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.results {
-    height: 100%;
-    width: 100%;
-
-    /* scroll and height */
-    overflow-y: scroll;
-}
-
-.results ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    margin: 0;
-
-    display: grid;
-    /* gap: 5px; */
-}
-
-.highlighted {
-    border-bottom: 1px solid #e8f0fe;
-    border-radius: 0;
-    /* border-left: 3px solid rgb(119, 187, 255);
-    border-right: 3px solid rgb(119, 187, 255); */
-
-    background: #e8f0fe;
-}
-.highlighted:hover {
-    background: #e8f0fe;
-}
-
-.more {
-    width: 100%;
-    height: 48px;
-    border: none;
-    background: none;
-}
-
-.more:hover {
-    color: #aaaaaa;
-    cursor: pointer;
-}
-
-/*
-
-    TODO: This layout for mobile
-
-    toptag
-    icon <authorratingdate>   
-    <abilitynature>             
-    <evsivs>                    
-    <moves>        
-    
-    And similar to original style for desktop.
-
-    On click anywhere on a result (but with a button as well),
-    bring up 
-
-*/
-
 .wrapper {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.sticky {
-    position: sticky;
-    top: 0;
-    background-color: #fefefe;
-    z-index: 1;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 @media only screen and (min-width: 700px) {
-    .result {
-        display: grid;
-        grid-template-columns: auto 1fr 1fr 2fr 1fr;
-        grid-template-areas:
-            "name  name   name    name name "
-            "image author ability evs  moves"
-            "image rating nature  ivs  moves"
-            "image date   nature  ivs  moves"
-            "desc  desc   desc    desc desc ";
-    }
-    .moves {
-        flex-direction: column;
-        gap: 0;
-    }
-    .moves > *:not(:first-child):before {
-        content: "";
-    }
-    .moves > *:first-child:before {
-        content: "";
-    }
-    .nature,
-    .ability,
-    .evs,
-    .ivs,
-    .moves {
-        display: block;
-    }
-    .import {
-        display: none;
-    }
+  .result {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 2fr 1fr;
+    grid-template-areas:
+      "name  name   name    name name "
+      "image author ability evs  moves"
+      "image rating nature  ivs  moves"
+      "image date   nature  ivs  moves"
+      "desc  desc   desc    desc desc ";
+  }
+  .evs,
+  .ivs {
+    display: block;
+  }
 }
