@@ -1,21 +1,15 @@
-/* TODO: 
-	Try design where filter is a bar at the top and you add 
-	filters by /<filtercommand> <value> in the bar. No 
-	/<filtercommand> means species name.
-*/
 .panel {
-    /* width: 100%; */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 300px;
-    height: fit-content;
-    background: #f4f4f4;
-    color: #000;
-    border-radius: 15px;
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  height: fit-content;
+  background: #f4f4f4;
+  color: #000;
+  border-radius: 15px;
+  padding: 15px;
 }
 .panel > h2 {
-    margin: 0;
-    font-size: large;
+  margin: 0;
+  font-size: large;
 }

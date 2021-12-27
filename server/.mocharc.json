@@ -1,7 +1,7 @@
 {
-    "spec": ["test/index.js"],
-    "grep": "^((?!\\(slow\\)).)*$",
-    "reporter": "dot",
-    "ui": "bdd",
-    "exit": true
+  "spec": ["test/index.js"],
+  "grep": "^((?!\\(slow\\)).)*$",
+  "reporter": "dot",
+  "ui": "bdd",
+  "exit": true
 }

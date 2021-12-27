@@ -1,51 +1,43 @@
 .creator {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    font-size: 12px;
-    width: 100%;
-    max-width: 600px;
-    min-height: 300px;
-    padding: 5px;
-    gap: 10px;
-    border: solid;
-    border-width: 0;
-    border-radius: 5px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  font-size: 12px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 300px;
+  padding: 5px;
+  gap: 10px;
+  border: solid;
+  border-width: 0;
+  border-radius: 5px;
 }
 .creator * {
-    /* padding-left: 5px;
-    padding-right: 5px; */
-    margin: 0;
+  margin: 0;
 }
 .grid {
-    display: grid;
-    grid-template-columns: 100px auto;
-    gap: 5px;
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 5px;
 }
 
 .grid > * {
-    padding: 5px;
+  padding: 5px;
 }
 .grid > label {
-    text-align: end;
-    /*align-self: center;*/ /* works on grid AND flex, not just flex :) */
+  text-align: end;
+  /*align-self: center;*/ /* works on grid AND flex, not just flex :) */
 }
 .grid > textarea,
 .grid > input,
 .grid > button {
-    /* border: none; */
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    outline: none;
+  /* border: none; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  outline: none;
 }
 
 .grid > textarea {
-    height: 100px;
-    resize: vertical;
+  height: 100px;
+  resize: vertical;
 }
-
-/* @media (min-width: 600px) {
-    .creator {
-        width: fit-content;
-    }
-} */

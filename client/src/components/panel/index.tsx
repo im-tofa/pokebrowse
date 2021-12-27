@@ -1,12 +1,8 @@
-import style from './style.css';
+import style from "./style.css";
 
-import { Component, FunctionalComponent, h, Fragment } from 'preact';
+import { Component, FunctionalComponent, h, Fragment } from "preact";
 const Panel: FunctionalComponent = (props) => {
-    return (
-        <div class={style.panel}>
-          {props.children}
-        </div>
-    );
+  return <div class={style.panel}>{props.children}</div>;
 };
 
 export { Panel };

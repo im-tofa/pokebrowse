@@ -1,32 +1,32 @@
 .filter {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    min-width: max-content;
-    border: solid;
-    border-radius: 20px;
-    border-width: 0;
-    background-color: #f2f2f2;
-    font-size: small;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  min-width: max-content;
+  border: solid;
+  border-radius: 20px;
+  border-width: 0;
+  background-color: #f2f2f2;
+  font-size: small;
 
-    padding: 5px;
-    gap: 5px;
+  padding: 5px;
+  gap: 5px;
 }
 
 .filter > * {
-    padding: 0;
-    text-transform: capitalize;
+  padding: 0;
+  text-transform: capitalize;
 }
 
 .btn {
-    border: none;
-    font-size: smaller;
-    background: none;
-    color: #444444;
+  border: none;
+  font-size: smaller;
+  background: none;
+  color: #444444;
 }
 
 .btn:hover {
-    cursor: pointer;
-    color: gray;
+  cursor: pointer;
+  color: gray;
 }

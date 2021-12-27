@@ -1,29 +1,21 @@
-/* TODO: Maybe add a sidebar that has "set of the day" or something, 
-below results section when in mobile view; and don't have the set 
-browser centered. And also don't have set-browser be a different color 
-than background, or at least not too different, go for a more discrete 
-look */
 .main {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    top: 0;
-    left: 0;
-    overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
 }
 
 .setbrowser {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 0;
-    left: 0;
-    /* width: 100%; */
-    /* overflow-y: hidden; */
-    /* gap: 10px; */
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-    height: 100%;
-    overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow-y: hidden;
 }
