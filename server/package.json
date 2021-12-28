@@ -1,5 +1,5 @@
 {
-  "name": "set-browser",
+  "name": "pokebrowse",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/im-tofa/set-browser.git"
+    "url": "git+https://github.com/im-tofa/pokebrowse.git"
   },
   "author": "im-tofa",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/im-tofa/set-browser/issues"
+    "url": "https://github.com/im-tofa/pokebrowse/issues"
   },
-  "homepage": "https://github.com/im-tofa/set-browser#readme",
+  "homepage": "https://github.com/im-tofa/pokebrowse#readme",
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/mocha": "^9.0.0",
