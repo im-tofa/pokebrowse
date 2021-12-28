@@ -19,7 +19,7 @@ const Profile: FunctionalComponent = () => {
               blue). Then, press the delete button that appears in order to
               delete your sets.
               <br /> <br />
-              <b>WARNING:</b> Deleting your sets is an irreversible action!
+              <b>WARNING:</b> Deleting a set is an irreversible action!
             </div>
           </Panel>
           <Panel>

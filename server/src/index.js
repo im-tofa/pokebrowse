@@ -9,16 +9,14 @@ const {
   GraphQLString,
   GraphQLList,
 } = require("graphql");
-const { DateTimeResolver, LocalDateResolver } = require("graphql-scalars");
+const { DateTimeResolver } = require("graphql-scalars");
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const httpsOptions = {
-  key: fs.readFileSync(
-    path.join(__dirname, "..", "..", "..", "configs", "key.pem")
-  ),
+  key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
   cert: fs.readFileSync(
-    path.join(__dirname, "..", "..", "..", "configs", "cert.pem")
+    path.join(__dirname, "..", "..", "configs", "cert.pem")
   ),
 };
 
@@ -26,14 +24,13 @@ const httpsOptions = {
 
 /* ENV VARIABLE SETUP */
 require("dotenv").config({
-  path: path.join(__dirname, "..", "..", "..", "configs", ".env"),
+  path: path.join(__dirname, "..", "..", "configs", ".env"),
 });
 
 /* DATABASE SETUP */
 const { Pool, Client } = require("pg");
 const pool = new Pool();
 
-const SETDEX_SS = require("./sets");
 const pokedex = require("./pkmnstats");
 const natures = require("./natures");
 
@@ -119,29 +116,6 @@ const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: "Query",
     fields: () => ({
-      pokemon: {
-        type: pkmnType,
-        args: {
-          species: { type: GraphQLString },
-        },
-        resolve: (_, { species }) => {
-          if (species in SETDEX_SS === false) return undefined;
-
-          let sets = [];
-          for (const set in SETDEX_SS[species]) {
-            sets.push({
-              species,
-              name: set,
-              ...SETDEX_SS[species][set],
-            });
-          }
-
-          return {
-            species,
-            sets,
-          };
-        },
-      },
       sets: {
         type: setsType,
         args: {

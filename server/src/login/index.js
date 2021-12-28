@@ -2,24 +2,24 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const express = require("express");
 const app = express();
-
 const bcrypt = require("bcrypt");
-const { Sequelize } = require("sequelize");
-const { Pool, Client } = require("pg");
-const pool = new Pool();
-
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
+
 require("dotenv").config({
-  path: path.join(__dirname, "..", "..", "..", "..", "configs", ".env"),
+  path: path.join(__dirname, "..", "..", "..", "configs", ".env"),
 });
+
+const { Pool } = require("pg");
+const pool = new Pool();
+
 const httpsOptions = {
   key: fs.readFileSync(
-    path.join(__dirname, "..", "..", "..", "..", "configs", "key.pem")
+    path.join(__dirname, "..", "..", "..", "configs", "key.pem")
   ),
   cert: fs.readFileSync(
-    path.join(__dirname, "..", "..", "..", "..", "configs", "cert.pem")
+    path.join(__dirname, "..", "..", "..", "configs", "cert.pem")
   ),
 };
 
