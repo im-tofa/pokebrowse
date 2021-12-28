@@ -30,4 +30,4 @@ To make the services trusted by browsers, a Certificate Authority is your best b
 
 **NOTE:** If you choose to use a self-signed certificate without configuring your browser to trust the certificate, you can get around it by manually accessing the server (`https://localhost:3000`), login server (`https://localhost:4000`) and client (`https://localhost:8080`) through the browser and "access the website anyway" to make the browser temporarily trust the service.
 
-Also note that the client uses a default certificate, not yours! The provided certificate is currently only used for the server.
+Also note that the client uses a default certificate, not yours! Your provided certificate is currently only used for the server.
