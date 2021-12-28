@@ -25,3 +25,7 @@ Uploading sets can only be done if you are signed into an account, by accessing 
 ## NOTE: ONLY use this locally!
 
 Please run the server and client locally, do not serve it over the Internet :) this is a personal project meant for learning and may not be fully secure or even legal to publish. Only use this locally if you want to use it! You could, however, technically have a shared PostgreSQL database among your friends if you want to share sets with each other, just make sure to [configure the database](configs/README.md)!
+
+## License
+
+Pokebrowse is distributed under the terms of the [MIT License](LICENSE).
