@@ -50,7 +50,7 @@ You could, however, technically have a shared PostgreSQL database among your fri
 - Ensure a good enough level of security
 - Ensure GDPR conformity
 - Rate limiting, preventing spam
-- Migrate to full REST or full GraphQL: I initially wanted only GraphQL but had trouble with enabling JWT authentication on only some routes, so I used REST for authenticated routes instead. But everything should be possible via GraphQL, just need to figure out how. GraphQL is nice for its typechecking alone, even if the querying capabilities of GraphQL are especially beneficial in this version of the app.
+- Migrate to full REST or full GraphQL: I initially wanted only GraphQL but had trouble with enabling JWT authentication on only some queries, so I used REST for authenticated routes instead. But everything should be possible via GraphQL, just need to figure out how. GraphQL is nice for its typechecking alone, even if the querying capabilities of GraphQL aren't especially beneficial in this version of the app.
 
 ## License
 
