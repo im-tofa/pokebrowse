@@ -23,10 +23,12 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
   const [author, setAuthor] = useState("");
   const fetchResults = props.fetchResults;
 
-  function handleUserInput(event: KeyboardEvent) {
+  function handleUserInput(
+    event: h.JSX.TargetedKeyboardEvent<HTMLInputElement>
+  ) {
     event.preventDefault();
     if (event.code === "Enter") {
-      setUserInput(event.target.value);
+      setUserInput(event.currentTarget.value);
     }
   }
 
@@ -67,7 +69,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
           class={style.cmd}
           value={currentInput}
           placeholder="/species <pokemon>, /speed <speedtier>, /author <name> or /date <date>, then press Enter"
-          onChange={(event) => setCurrentInput(event.target.value)}
+          onChange={(event) => setCurrentInput(event.currentTarget.value)}
           onKeyUp={(event) => handleUserInput(event)}
           onKeyDown={(event) => {
             if (event.code === "Enter") event.preventDefault();
@@ -77,7 +79,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
           class={`${style.btn}`}
           onClick={(event) => {
             event.preventDefault();
-            setUserInput(document.getElementById("cli").value);
+            setUserInput(document.getElementById("cli").getAttribute("value"));
           }}>
           <i class="fa fa-plus" /> Add{" "}
         </button>

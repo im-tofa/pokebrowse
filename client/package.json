@@ -3,11 +3,11 @@
   "name": "client",
   "version": "0.0.0",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "preact build",
-    "serve": "sirv build --port 8080 --cors --single",
-    "dev": "preact watch --https",
+    "serve": "sirv build --port 8080 --cors --single --http2 --key '../server/configs/key.pem' --cert '../server/configs/cert.pem'",
+    "dev": "preact watch --https --key '../server/configs/key.pem' --cert '../server/configs/cert.pem'",
     "lint": "eslint 'website/**/*.{js,jsx,ts,tsx}'",
     "test": "jest ./tests"
   },

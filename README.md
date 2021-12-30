@@ -22,9 +22,21 @@ Browsing can be done by anyone, even if they are not signed in, by accessing the
 
 Uploading sets can only be done if you are signed into an account, by accessing the `/upload` route on the client (e.g `https://localhost:8080/upload`). To upload a set, simply provide a name, an import in PS format and a description of the set! You can delete sets later on by going to your profile, located on the `/profile` route on the client.
 
-## NOTE: ONLY use this locally!
+## WARNING: ONLY use this locally!
 
-Please run the server and client locally, do not serve it over the Internet :) this is a personal project meant for learning and may not be fully secure or even legal to publish. Only use this locally if you want to use it! You could, however, technically have a shared PostgreSQL database among your friends if you want to share sets with each other, just make sure to [configure the database](configs/README.md)!
+Please run the server and client locally, do not serve it over the Internet :) this is a personal project meant for learning and may not be fully secure or even legal to publish. Only use this locally if you want to use it! You could, however, technically have a shared PostgreSQL database among your friends if you want to share sets with each other, just make sure to [configure the database](server/configs/README.md)!
+
+## TODO
+
+- HTTPS connection between server and database
+- Do not use default TLS cert for client
+- More filter types
+- Allow editing (only the description!) your uploaded sets
+- Better design of `/upload` route
+- Iterate design of `/profile` route
+- Allow rating sets (must be signed in)
+- Collapse side panels by default?
+- Migrate to full REST or full GraphQL: I initially wanted only GraphQL but had trouble with enabling JWT authentication on only some routes, so I used REST for authenticated routes instead. But everything should be possible via GraphQL, just need to figure out how.
 
 ## License
 

@@ -88,7 +88,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
           id="name"
           value={name}
           onChange={(e) => {
-            setName(e.target.value);
+            setName(e.currentTarget.value);
           }}
         />
       </div>
@@ -98,7 +98,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
           id="set"
           value={config}
           onChange={(e) => {
-            setConfig(e.target.value);
+            setConfig(e.currentTarget.value);
           }}
         />
       </div>
@@ -108,7 +108,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
           id="desc"
           value={desc}
           onChange={(e) => {
-            setDesc(e.target.value);
+            setDesc(e.currentTarget.value);
           }}
         />
       </div>

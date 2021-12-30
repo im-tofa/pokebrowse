@@ -6,27 +6,24 @@ const bcrypt = require("bcrypt");
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
+const jwt = require("jsonwebtoken");
+const { toID } = require("../utils/ps-utils");
+const ApiError = require("../error/ApiError");
+const apiErrorHandler = require("../error/api-error-handler");
 
 require("dotenv").config({
-  path: path.join(__dirname, "..", "..", "..", "configs", ".env"),
+  path: path.join(__dirname, "..", "..", "configs", ".env"),
 });
 
 const { Pool } = require("pg");
 const pool = new Pool();
 
 const httpsOptions = {
-  key: fs.readFileSync(
-    path.join(__dirname, "..", "..", "..", "configs", "key.pem")
-  ),
+  key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
   cert: fs.readFileSync(
-    path.join(__dirname, "..", "..", "..", "configs", "cert.pem")
+    path.join(__dirname, "..", "..", "configs", "cert.pem")
   ),
 };
-
-const jwt = require("jsonwebtoken");
-const { toID } = require("../PSUtils");
-const ApiError = require("../error/ApiError");
-const apiErrorHandler = require("../error/api-error-handler");
 
 app.use(
   cors({

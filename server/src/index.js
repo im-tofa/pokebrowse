@@ -14,17 +14,15 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
-  cert: fs.readFileSync(
-    path.join(__dirname, "..", "..", "configs", "cert.pem")
-  ),
+  key: fs.readFileSync(path.join(__dirname, "..", "configs", "key.pem")),
+  cert: fs.readFileSync(path.join(__dirname, "..", "configs", "cert.pem")),
 };
 
 // TODO: use helmet middleware to force https? not necessary though idt
 
 /* ENV VARIABLE SETUP */
 require("dotenv").config({
-  path: path.join(__dirname, "..", "..", "configs", ".env"),
+  path: path.join(__dirname, "..", "configs", ".env"),
 });
 
 /* DATABASE SETUP */
@@ -32,7 +30,7 @@ const { Pool, Client } = require("pg");
 const pool = new Pool();
 
 const pokedex = require("./pkmnstats");
-const natures = require("./natures");
+const { natures } = require("./utils/ps-utils");
 
 const PORT = process.env.PORT || 3000;
 
@@ -107,7 +105,7 @@ const pkmnType = new GraphQLObjectType({
   }),
 });
 
-const { importSet, toID } = require("./PSUtils");
+const { importSet, toID } = require("./utils/ps-utils");
 const ApiError = require("./error/ApiError");
 const apiErrorHandler = require("./error/api-error-handler");
 
@@ -179,9 +177,6 @@ const schema = new GraphQLSchema({
           }
 
           dbq += ";";
-          // console.log(species);
-          // console.log(dbq);
-          //console.log(species);
           let sets = [];
           try {
             console.log(dbq);
@@ -192,8 +187,6 @@ const schema = new GraphQLSchema({
               "Filter values are invalid, please fix the filters"
             );
           }
-          // console.log(sets.slice(Math.min(cursor > 0 ? cursor : 0, sets.length), Math.min((cursor + limit) > 0 ? (cursor + limit) : 0, sets.length)));
-          console.log(sets);
           const sliced = sets;
           return {
             sets: sliced,
@@ -250,25 +243,6 @@ function calculateSpeedStat(species, level, nature, evSpe, ivSpe) {
   return speedStat;
 }
 
-const posts = [
-  {
-    author: "tofa",
-    title: "SD Garchomp",
-  },
-  {
-    author: "tofa",
-    title: "DD Dragonite",
-  },
-  {
-    author: "Storm Zone",
-    title: "Leviathan",
-  },
-];
-
-app.get("/posts", authenticateToken, (req, res) => {
-  res.json(posts.filter((post) => post.author === req.user.name));
-});
-
 app.post("/set", authenticateToken, async (req, res, next) => {
   try {
     const set = importSet(req.body.set)[0];
@@ -310,7 +284,6 @@ app.post("/set", authenticateToken, async (req, res, next) => {
       speedStat,
       desc,
     ]);
-    //console.log(results)
     res.sendStatus(200);
   } catch (error) {
     return next(ApiError.badRequest("Set import is malformed"));
@@ -339,8 +312,6 @@ app.delete("/set", authenticateToken, async (req, res, next) => {
 
     const dbq_del = `DELETE FROM sets WHERE set_id = ANY($1);`;
     const results_del = await pool.query(dbq_del, [set_ids]);
-
-    //console.log(results)
     res.sendStatus(200);
   } catch (error) {
     return next(ApiError.badRequest("Error during database access"));
@@ -352,21 +323,11 @@ app.use(
   graphqlHTTP({
     schema: schema,
     graphiql: true,
-    // customFormatErrorFn: (err) => {
-    //     console.error(err);
-
-    //     if(err.originalError instanceof ApiError) { // expected errors
-    //         console.log("HIIIFADIAIDFAIFIDAAIFD")
-    //         return err;
-    //     }
-
-    //     return err;
-    // }
     /* there is also a 'context' parameter here that is 
   'request' by default, and stores middleware context from 
    previous middleware on this request such as db access, 
    authorization etc. This arg is available in all resolvers 
-   as a param and is how you access the db. */
+   as a param and is how you could access the db. */
   })
 );
 

@@ -53,13 +53,13 @@ const LoginForm: FunctionalComponent = () => {
       <input
         value={username}
         placeholder="username"
-        onChange={(e) => setUsername(e.target?.value || "")}
+        onChange={(e) => setUsername(e.currentTarget.value || "")}
       />
       <input
         type="password"
         value={password}
         placeholder="password"
-        onChange={(e) => setPassword(e.target?.value || "")}
+        onChange={(e) => setPassword(e.currentTarget.value || "")}
       />
       <button type="submit">Sign in</button>
     </form>

@@ -1,8 +1,8 @@
 /* 
-    toID, importSet (aka importTeam) and parseExportedTeamLine are taken from   
-    the PokémonShowdown client repository, with slight modifications:
-    https://github.com/smogon/pokemon-showdown-client/blob/b2ec75af6fac552a33e76c999f4c7bd4b7e20dea/src/panel-teamdropdown.tsx
-
+    natures, toID, importSet (aka importTeam) and parseExportedTeamLine are derived from   
+    the Pokémon Showdown client repository, with slight modifications:
+    https://github.com/smogon/pokemon-showdown-client/blob/master/src/panel-teambuilder.tsx
+    https://github.com/smogon/pokemon-showdown-client/blob/master/src/battle-dex-data.ts
 */
 function toID(text) {
   if (text?.id) {
@@ -11,7 +11,7 @@ function toID(text) {
     text = text.userid;
   }
   if (typeof text !== "string" && typeof text !== "number") return "";
-  return ("" + text).toLowerCase().replace(/[^a-z0-9]+/g, ""); // does not handle formes well.
+  return ("" + text).toLowerCase().replace(/[^a-z0-9]+/g, ""); // does not handle formes.
 }
 
 function importSet(buffer) {
@@ -244,6 +244,125 @@ function exportSet(set) {
   return text;
 }
 
+const natures = {
+  adamant: {
+    name: "Adamant",
+    plus: "atk",
+    minus: "spa",
+  },
+  bashful: {
+    name: "Bashful",
+  },
+  bold: {
+    name: "Bold",
+    plus: "def",
+    minus: "atk",
+  },
+  brave: {
+    name: "Brave",
+    plus: "atk",
+    minus: "spe",
+  },
+  calm: {
+    name: "Calm",
+    plus: "spd",
+    minus: "atk",
+  },
+  careful: {
+    name: "Careful",
+    plus: "spd",
+    minus: "spa",
+  },
+  docile: {
+    name: "Docile",
+  },
+  gentle: {
+    name: "Gentle",
+    plus: "spd",
+    minus: "def",
+  },
+  hardy: {
+    name: "Hardy",
+  },
+  hasty: {
+    name: "Hasty",
+    plus: "spe",
+    minus: "def",
+  },
+  impish: {
+    name: "Impish",
+    plus: "def",
+    minus: "spa",
+  },
+  jolly: {
+    name: "Jolly",
+    plus: "spe",
+    minus: "spa",
+  },
+  lax: {
+    name: "Lax",
+    plus: "def",
+    minus: "spd",
+  },
+  lonely: {
+    name: "Lonely",
+    plus: "atk",
+    minus: "def",
+  },
+  mild: {
+    name: "Mild",
+    plus: "spa",
+    minus: "def",
+  },
+  modest: {
+    name: "Modest",
+    plus: "spa",
+    minus: "atk",
+  },
+  naive: {
+    name: "Naive",
+    plus: "spe",
+    minus: "spd",
+  },
+  naughty: {
+    name: "Naughty",
+    plus: "atk",
+    minus: "spd",
+  },
+  quiet: {
+    name: "Quiet",
+    plus: "spa",
+    minus: "spe",
+  },
+  quirky: {
+    name: "Quirky",
+  },
+  rash: {
+    name: "Rash",
+    plus: "spa",
+    minus: "spd",
+  },
+  relaxed: {
+    name: "Relaxed",
+    plus: "def",
+    minus: "spe",
+  },
+  sassy: {
+    name: "Sassy",
+    plus: "spd",
+    minus: "spe",
+  },
+  serious: {
+    name: "Serious",
+  },
+  timid: {
+    name: "Timid",
+    plus: "spe",
+    minus: "atk",
+  },
+};
+
 exports.toID = toID;
 exports.importSet = importSet;
 exports.exportSet = exportSet;
+exports.natures = natures;
