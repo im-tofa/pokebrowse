@@ -42,13 +42,16 @@ You could, however, technically have a shared PostgreSQL database among your fri
 
 - HTTPS connection between server and database
 - Do not use default TLS cert for client
-- More filter types
+- Allow rating sets (must be signed in)
+- More filter types (typing, rating, intended checks and counters)
+- Refactor server (better code structure, split logic into reasonable files)
 - Allow editing (only the description!) your uploaded sets
 - Better design of `/upload` route
 - Iterate design of `/profile` route
-- Allow rating sets (must be signed in)
-- Collapse side panels by default?
-- Migrate to full REST or full GraphQL: I initially wanted only GraphQL but had trouble with enabling JWT authentication on only some routes, so I used REST for authenticated routes instead. But everything should be possible via GraphQL, just need to figure out how.
+- Ensure a good enough level of security
+- Ensure GDPR conformity
+- Rate limiting, preventing spam
+- Migrate to full REST or full GraphQL: I initially wanted only GraphQL but had trouble with enabling JWT authentication on only some routes, so I used REST for authenticated routes instead. But everything should be possible via GraphQL, just need to figure out how. GraphQL is nice for its typechecking alone, even if the querying capabilities of GraphQL are especially beneficial in this version of the app.
 
 ## License
 
