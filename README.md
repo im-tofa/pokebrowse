@@ -41,7 +41,6 @@ You could, however, technically have a shared PostgreSQL database among your fri
 ## TODO list
 
 - HTTPS connection between server and database
-- Do not use default TLS cert for client
 - Allow rating sets (must be signed in)
 - More filter types (typing, rating, intended checks and counters)
 - Refactor server (better code structure, split logic into reasonable files)
