@@ -32,11 +32,13 @@ You can interact with the browsing service programmatically as well, the browsin
 
 Uploading sets can only be done if you are signed into an account, by accessing the `/upload` route on the client (e.g `https://localhost:8080/upload`). To upload a set, simply provide a name, an import in PS format and a description of the set! You can delete sets later on by going to your profile, located on the `/profile` route on the client.
 
-## WARNING: ONLY use this locally!
+## Note on Usage
 
-Please use the server and client locally (e.g on localhost), do not serve it over the Internet :) this is a personal project meant for learning and may not be fully secure or even legal for you to serve over the Internet. Only use this locally for now if you want to use it! You could, however, technically have a shared PostgreSQL database among your friends if you want to share sets with each other, just make sure to [configure the database](server/configs/README.md)!
+I recommend that you only use the server and client locally for now (e.g on localhost), do not serve it over the Internet :) this project was created from me wanting to learn, and may not be fully secure yet or even legal for you to serve over the Internet (with GDPR, etc). The app doesn't collect or store anything more than sets and hashed login credentials (only for users that decide to create accounts), but still, this requires conforming to GDPR (which the app doesn't as of now, at least not fully).
 
-## TODO
+You could, however, technically have a shared PostgreSQL database among your friends if you want to share sets with each other, just make sure to [configure the database](server/configs/README.md)!
+
+## TODO list
 
 - HTTPS connection between server and database
 - Do not use default TLS cert for client
@@ -50,4 +52,6 @@ Please use the server and client locally (e.g on localhost), do not serve it ove
 
 ## License
 
-Pokebrowse is distributed under the terms of the [MIT License](LICENSE).
+The source code for pokebrowse is distributed under the terms of the [MIT License](LICENSE).
+
+Pokémon and Pokémon character names are trademarks of Nintendo.
