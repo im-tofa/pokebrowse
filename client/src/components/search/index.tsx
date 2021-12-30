@@ -68,7 +68,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
           id="cli"
           class={style.cmd}
           value={currentInput}
-          placeholder="/species <pokemon>, /speed <speedtier>, /author <name> or /date <date>, then press Enter"
+          placeholder="/species <pokemon>, /speed <speedtier>, /author <name> or /date <yyyy-mm-dd>, then press Enter"
           onChange={(event) => setCurrentInput(event.currentTarget.value)}
           onKeyUp={(event) => handleUserInput(event)}
           onKeyDown={(event) => {

@@ -4,6 +4,14 @@ A web application for uploading and browsing Pokémon sets.
 
 ![](./images/browser.png)
 
+## How to Run
+
+After setting up a PostgreSQL database [using the provided SQL file](server/src/db/schemas.sql) and performing the necessary [configuration](server/configs/README.md), run the following:
+
+- `npm run build`, then `npm run serve` to start the client
+- `npm run start` to start the server
+- `npm run startLogin` to start the login server
+
 ## Overview
 
 The application provides two services: _browse_ and _upload_.
@@ -17,6 +25,8 @@ Browsing can be done by anyone, even if they are not signed in, by accessing the
 - `/date <yyyy-mm-dd>`: Only allow sets uploaded no earlier than this date in the search results.
 - `/speed <number>`: Only allow sets with a speed no lower than the specified number. Takes the base stats, level, EVs, IVs and nature into account but not the item or ability.
 - Other filters: TBD
+
+You can interact with the browsing service programmatically as well, the browsing is powered by GraphQL. You can look at the [query used by the client](client/src/queries.ts) to see all possible arguments and outputs you can query from the GraphQL server. You can even create a custom client if you want, as long as you modify the server CORS policy to accept that client.
 
 ### Upload
 
