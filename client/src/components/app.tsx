@@ -77,7 +77,7 @@ function offsetFromCursor(items, cursor, readField) {
 
 // you don't need priviliges to access the graphql data
 const client = new ApolloClient({
-  uri: "https://localhost:3000/graphql",
+  uri: "http://localhost:3000/graphql",
   cache: cache,
 });
 

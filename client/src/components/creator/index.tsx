@@ -21,7 +21,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
   const reroute = props.reroute ? props.reroute : "/browser";
 
   const upload = async () => {
-    const response = await fetch("https://localhost:3000/set", {
+    const response = await fetch("http://localhost:3000/set", {
       method: "POST",
       credentials: "include",
       headers: {

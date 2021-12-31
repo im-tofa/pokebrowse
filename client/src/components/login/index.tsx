@@ -19,7 +19,7 @@ const LoginForm: FunctionalComponent = () => {
         console.log("form submitted");
         //console.log(username, password);
         try {
-          const response = await fetch("https://localhost:4000/login", {
+          const response = await fetch("http://localhost:4000/login", {
             method: "POST",
             credentials: "include",
             headers: {

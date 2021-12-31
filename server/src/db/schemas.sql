@@ -1,5 +1,9 @@
+/* run these if you want to delete tables and re-create them */
+DROP TABLE Ratings CASCADE;
 DROP TABLE Users CASCADE;
 DROP TABLE Sets CASCADE;
+
+/* run these if you want to create new tables */
 CREATE TABLE IF NOT EXISTS Users (
     user_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     user_name VARCHAR(32) UNIQUE NOT NULL, /* 32 characters at most */
@@ -23,6 +27,7 @@ CREATE TABLE IF NOT EXISTS Sets (
     ivs JSON, 
     speed SMALLINT NOT NULL,
     set_uploaded_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    description TEXT,
     FOREIGN KEY (author) REFERENCES Users(user_name) ON DELETE CASCADE
 );
 
