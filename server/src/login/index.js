@@ -18,16 +18,16 @@ require("dotenv").config({
 const { Pool } = require("pg");
 const pool = new Pool();
 
-const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
-  cert: fs.readFileSync(
-    path.join(__dirname, "..", "..", "configs", "cert.pem")
-  ),
-};
+// const httpsOptions = {
+//   key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
+//   cert: fs.readFileSync(
+//     path.join(__dirname, "..", "..", "configs", "cert.pem")
+//   ),
+// };
 
 app.use(
   cors({
-    origin: "https://localhost:8080",
+    origin: "http://localhost:8080",
     credentials: true,
   })
 );
@@ -194,9 +194,9 @@ function expireRefreshToken(user) {
 function sendRefreshToken(res, refreshToken) {
   // header info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
   res.setHeader("Set-Cookie", [
-    `refreshToken=${refreshToken}; HttpOnly; Domain; Secure; SameSite=Strict`,
+    `refreshToken=${refreshToken}; HttpOnly; Domain; SameSite=Strict`,
   ]);
 }
 
-//app.listen(4000);
-https.createServer(httpsOptions, app).listen(4000);
+app.listen(4000);
+// https.createServer(httpsOptions, app).listen(4000);

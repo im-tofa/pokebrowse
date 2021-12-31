@@ -18,7 +18,7 @@ The application provides two services: _browse_ and _upload_.
 
 ### Browse
 
-Browsing can be done by anyone, even if they are not signed in, by accessing the `/browser` route on the client (e.g `https://localhost:8080/browser`). To search for sets, first add filters by typing them into the input bar. Then, when you have added the desired filters, click the Search button. The results can then be clicked, providing a popup with the import and full description of the set. The input format for the available filters are:
+Browsing can be done by anyone, even if they are not signed in, by accessing the `/browser` route on the client (e.g `http://localhost:8080/browser`). To search for sets, first add filters by typing them into the input bar. Then, when you have added the desired filters, click the Search button. The results can then be clicked, providing a popup with the import and full description of the set. The input format for the available filters are:
 
 - `/species <pokemon>`: Allow this Pokémon in the search results. Add multiple `/species` filters to allow multiple species. Having no `/species` filters means all Pokémon are allowed.
 - `/author <name>`: Only allow sets from this author in the search results.
@@ -30,7 +30,7 @@ You can interact with the browsing service programmatically as well, the browsin
 
 ### Upload
 
-Uploading sets can only be done if you are signed into an account, by accessing the `/upload` route on the client (e.g `https://localhost:8080/upload`). To upload a set, simply provide a name, an import in PS format and a description of the set! You can delete sets later on by going to your profile, located on the `/profile` route on the client.
+Uploading sets can only be done if you are signed into an account, by accessing the `/upload` route on the client (e.g `http://localhost:8080/upload`). To upload a set, simply provide a name, an import in PS format and a description of the set! You can delete sets later on by going to your profile, located on the `/profile` route on the client.
 
 ## Note on Usage
 

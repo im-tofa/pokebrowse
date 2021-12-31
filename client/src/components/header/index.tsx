@@ -32,7 +32,7 @@ const Header: FunctionalComponent = () => {
           href=""
           onClick={(e) => {
             e.preventDefault();
-            fetch("https://localhost:4000/logout", {
+            fetch("http://localhost:4000/logout", {
               method: "POST",
               credentials: "include",
             })

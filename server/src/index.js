@@ -10,13 +10,13 @@ const {
   GraphQLList,
 } = require("graphql");
 const { DateTimeResolver } = require("graphql-scalars");
-const https = require("https");
+// const https = require("https");
 const fs = require("fs");
 const path = require("path");
-const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, "..", "configs", "key.pem")),
-  cert: fs.readFileSync(path.join(__dirname, "..", "configs", "cert.pem")),
-};
+// const httpsOptions = {
+//   key: fs.readFileSync(path.join(__dirname, "..", "configs", "key.pem")),
+//   cert: fs.readFileSync(path.join(__dirname, "..", "configs", "cert.pem")),
+// };
 
 // TODO: use helmet middleware to force https? not necessary though idt
 
@@ -203,7 +203,7 @@ var app = express();
 
 app.use(
   cors({
-    origin: "https://localhost:8080",
+    origin: "http://localhost:8080",
     credentials: true,
   })
 );
@@ -249,6 +249,8 @@ app.post("/set", authenticateToken, async (req, res, next) => {
     const name = req.body.name;
     const desc = req.body.desc;
 
+    console.log(set);
+
     if (!name) return next(ApiError.badRequest("Please name your set"));
     if (!desc || desc.length < 15)
       return next(ApiError.badRequest("Please describe your set a little"));
@@ -261,6 +263,8 @@ app.post("/set", authenticateToken, async (req, res, next) => {
       process.env.ACCESS_TOKEN_SECRET
     ).name;
 
+    console.log(author);
+
     const speedStat = calculateSpeedStat(
       toID(set.species),
       set.level,
@@ -269,7 +273,7 @@ app.post("/set", authenticateToken, async (req, res, next) => {
       set.ivs?.spe ? set.ivs?.spe : 31
     );
 
-    const dbq = `INSERT INTO sets(name, author, species, nature, ability, item, moves, evs, ivs, level, speed, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *`;
+    const dbq = `INSERT INTO sets(name, author, species, nature, ability, item, moves, evs, ivs, level, speed, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *;`;
     const results = await pool.query(dbq, [
       name,
       author,
@@ -286,6 +290,7 @@ app.post("/set", authenticateToken, async (req, res, next) => {
     ]);
     res.sendStatus(200);
   } catch (error) {
+    console.log(error);
     return next(ApiError.badRequest("Set import is malformed"));
   }
 });
@@ -332,8 +337,13 @@ app.use(
 );
 
 app.use(apiErrorHandler);
-https.createServer(httpsOptions, app).listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(
     `Running a GraphQL API server at http://localhost:${PORT}/graphql`
   );
 });
+// https.createServer(httpsOptions, app).listen(PORT, () => {
+//   console.log(
+//     `Running a GraphQL API server at http://localhost:${PORT}/graphql`
+//   );
+// });

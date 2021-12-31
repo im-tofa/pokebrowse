@@ -20,7 +20,7 @@ const SetManager: FunctionalComponent = () => {
   }>({ sets: [], next_cursor: null });
 
   const deleteSets = async () => {
-    const response = await fetch("https://localhost:3000/set", {
+    const response = await fetch("http://localhost:3000/set", {
       method: "DELETE",
       credentials: "include",
       headers: {
