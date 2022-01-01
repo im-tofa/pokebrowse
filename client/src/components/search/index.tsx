@@ -28,7 +28,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
   ) {
     event.preventDefault();
     if (event.code === "Enter") {
-      setUserInput(event.currentTarget.value);
+      setUserInput(currentInput);
     }
   }
 
@@ -79,7 +79,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
           class={`${style.btn}`}
           onClick={(event) => {
             event.preventDefault();
-            setUserInput(document.getElementById("cli").getAttribute("value"));
+            setUserInput(currentInput);
           }}>
           <i class="fa fa-plus" /> Add{" "}
         </button>
