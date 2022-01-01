@@ -56,4 +56,6 @@ You could, however, technically have a shared PostgreSQL database among your fri
 
 The source code for pokebrowse is distributed under the terms of the [MIT License](LICENSE).
 
+Functions located in [server/src/utils/ps-utils.js](server/src/utils/ps-utils.js) and [client/src/helpers/set.ts](client/src/helpers/set.ts) are adapted from the [Pokémon Showdown Client](https://github.com/smogon/pokemon-showdown-client), with permission from the copyright holder (Zarel) to distribute under an MIT license.
+
 Pokémon and Pokémon character names are trademarks of Nintendo.

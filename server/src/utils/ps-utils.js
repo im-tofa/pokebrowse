@@ -1,9 +1,4 @@
-/* 
-    natures, toID, importSet (aka importTeam) and parseExportedTeamLine are derived from   
-    the Pokémon Showdown client repository, with slight modifications:
-    https://github.com/smogon/pokemon-showdown-client/blob/master/src/panel-teambuilder.tsx
-    https://github.com/smogon/pokemon-showdown-client/blob/master/src/battle-dex-data.ts
-*/
+// taken from https://github.com/smogon/pokemon-showdown-client/blob/master/src/battle-dex.ts
 function toID(text) {
   if (text?.id) {
     text = text.id;
@@ -14,6 +9,7 @@ function toID(text) {
   return ("" + text).toLowerCase().replace(/[^a-z0-9]+/g, ""); // does not handle formes.
 }
 
+// adapted from https://github.com/smogon/pokemon-showdown-client/blob/master/src/panel-teamdropdown.tsx
 function importSet(buffer) {
   const lines = buffer.split("\n");
 
@@ -41,6 +37,7 @@ function importSet(buffer) {
   return sets;
 }
 
+// adapted from https://github.com/smogon/pokemon-showdown-client/blob/master/src/panel-teamdropdown.tsx
 function parseExportedTeamLine(line, isFirstLine, set) {
   if (isFirstLine) {
     let item;
@@ -149,6 +146,7 @@ const evConvert = {
   spe: "Spe",
 };
 
+// adapted from https://github.com/smogon/pokemon-showdown-client/blob/master/src/panel-teamdropdown.tsx
 function exportSet(set) {
   let text = "";
 
@@ -244,6 +242,7 @@ function exportSet(set) {
   return text;
 }
 
+// adapted from https://github.com/smogon/pokemon-showdown-client/blob/master/src/battle-dex-data.ts
 const natures = {
   adamant: {
     name: "Adamant",

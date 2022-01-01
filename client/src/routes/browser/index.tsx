@@ -21,7 +21,7 @@ import { Panel } from "../../components/panel";
 import Creator from "../../components/creator";
 import { Auth } from "../../components/auth";
 import LoginForm from "../../components/login";
-import { SETS } from "../../queries";
+import { SETS } from "../../helpers/queries";
 import { Set } from "../../helpers/types";
 
 interface Props {}

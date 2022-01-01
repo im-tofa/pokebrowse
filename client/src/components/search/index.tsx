@@ -5,7 +5,7 @@ import { FunctionalComponent, h } from "preact";
 import { useState } from "preact/hooks";
 
 import Filter from "./../../components/filter";
-import parseInput from "../../routes/browser/tokenizer";
+import parseInput from "../../helpers/tokenizer";
 
 interface SearchProps {
   fetchResults(

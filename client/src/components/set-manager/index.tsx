@@ -3,7 +3,7 @@ import { FunctionalComponent, h } from "preact";
 import { route } from "preact-router";
 import { useContext, useEffect, useState } from "preact/hooks";
 import { Results } from "../../components/results";
-import { SETS } from "../../queries";
+import { SETS } from "../../helpers/queries";
 import { AuthContext } from "../../helpers/token";
 import { Set } from "../../helpers/types";
 import style from "./style.css";

@@ -26,6 +26,7 @@ export function evToString(set: Set, isEv: boolean = true): string {
   return evs;
 }
 
+// adapted from https://github.com/smogon/pokemon-showdown-client/blob/master/src/panel-teamdropdown.tsx
 export function exportSet(set: any) {
   let text = "";
 
