@@ -4,9 +4,9 @@
   grid-template-rows: auto auto auto;
   font-size: 12px;
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   min-height: 300px;
-  padding: 5px;
+  padding: 0px;
   gap: 10px;
   border: solid;
   border-width: 0;
@@ -15,22 +15,13 @@
 .creator * {
   margin: 0;
 }
-.grid {
-  display: grid;
-  grid-template-columns: 100px auto;
-  gap: 5px;
-}
 
-.grid > * {
+.creator > * {
   padding: 5px;
 }
-.grid > label {
-  text-align: end;
-  /*align-self: center;*/ /* works on grid AND flex, not just flex :) */
-}
-.grid > textarea,
-.grid > input,
-.grid > button {
+.creator > textarea,
+.creator > input,
+.creator > button {
   /* border: none; */
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -38,7 +29,7 @@
   outline: none;
 }
 
-.grid > textarea {
+.creator > textarea {
   height: 100px;
   resize: vertical;
 }

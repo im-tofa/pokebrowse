@@ -81,41 +81,32 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
           <b style="color: red">{uploadError}</b>
         </div>
       )}
-      <div class={style.grid}>
-        <label for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => {
-            setName(e.currentTarget.value);
-          }}
-        />
-      </div>
-      <div class={style.grid}>
-        <label for="set">Import:</label>
-        <textarea
-          id="set"
-          value={config}
-          onChange={(e) => {
-            setConfig(e.currentTarget.value);
-          }}
-        />
-      </div>
-      <div class={style.grid}>
-        <label for="desc">Description:</label>
-        <textarea
-          id="desc"
-          value={desc}
-          onChange={(e) => {
-            setDesc(e.currentTarget.value);
-          }}
-        />
-      </div>
-      <div class={style.grid}>
-        <div />
-        <button type="submit">Submit!</button>
-      </div>
+      <input
+        type="text"
+        id="name"
+        value={name}
+        placeholder="Name"
+        onChange={(e) => {
+          setName(e.currentTarget.value);
+        }}
+      />
+      <textarea
+        id="set"
+        value={config}
+        placeholder="Import"
+        onChange={(e) => {
+          setConfig(e.currentTarget.value);
+        }}
+      />
+      <textarea
+        id="desc"
+        value={desc}
+        placeholder="Description"
+        onChange={(e) => {
+          setDesc(e.currentTarget.value);
+        }}
+      />
+      <button type="submit">Submit!</button>
     </form>
   );
 };

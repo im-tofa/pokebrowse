@@ -1,5 +1,12 @@
-.home {
-    padding: 56px 20px;
-    min-height: 100%;
-    width: 100%;
+.main {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  z-index: 100;
+  background: inherit;
+  padding: 10px;
 }

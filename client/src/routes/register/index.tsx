@@ -1,6 +1,6 @@
 import { FunctionalComponent, h } from "preact";
 import { Link, route } from "preact-router";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { Auth } from "../../components/auth";
 import style from "./style.css";
 
@@ -8,6 +8,10 @@ const Register: FunctionalComponent = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  // set title after first render
+  useEffect(() => {
+    document.title = "Register";
+  }, []);
   return (
     <Auth rerouteIfSignedIn="/profile">
       <div class={style.register}>

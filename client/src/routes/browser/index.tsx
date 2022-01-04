@@ -11,7 +11,7 @@
 
 import style from "./style.css";
 import { FunctionalComponent, h } from "preact";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { useLazyQuery } from "@apollo/client";
 import { SearchComponent } from "../../components/search";
 import { Results } from "../../components/results";
@@ -53,6 +53,11 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
       }
     }
   }
+
+  // set title after first render
+  useEffect(() => {
+    document.title = "Browse";
+  }, []);
 
   return (
     <main class={style.main}>
