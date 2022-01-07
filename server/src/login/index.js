@@ -17,7 +17,9 @@ require("dotenv").config({
 
 const PORT = process.env.PORT || 4000;
 const { Pool } = require("pg");
-const pool = new Pool();
+const pool = process.env.DATABASE_URL
+  ? new Pool({ connectionString: process.env.DATABASE_URL })
+  : new Pool();
 
 // const httpsOptions = {
 //   key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
@@ -28,7 +30,7 @@ const pool = new Pool();
 
 app.use(
   cors({
-    origin: "https://localhost:8080",
+    origin: "https://www.pokebrow.se:8080",
     credentials: true,
   })
 );

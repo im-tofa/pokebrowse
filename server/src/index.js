@@ -18,7 +18,7 @@ const path = require("path");
 //   cert: fs.readFileSync(path.join(__dirname, "..", "configs", "cert.pem")),
 // };
 
-const client_url = process.env.CLIENT_URL || "https://localhost:8080";
+const client_url = process.env.CLIENT_URL || "http://localhost:8080";
 // TODO: use helmet middleware to force https? not necessary though idt
 
 /* ENV VARIABLE SETUP */
@@ -28,7 +28,9 @@ require("dotenv").config({
 
 /* DATABASE SETUP */
 const { Pool, Client } = require("pg");
-const pool = new Pool();
+const pool = process.env.DATABASE_URL
+  ? new Pool({ connectionString: process.env.DATABASE_URL })
+  : new Pool();
 
 const pokedex = require("./pkmnstats");
 const { natures } = require("./utils/ps-utils");
