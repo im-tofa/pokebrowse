@@ -18,7 +18,10 @@ require("dotenv").config({
 const PORT = process.env.PORT || 4000;
 const { Pool } = require("pg");
 const pool = process.env.DATABASE_URL
-  ? new Pool({ connectionString: process.env.DATABASE_URL })
+  ? new Pool({
+      connectionString: process.env.DATABASE_URL,
+      ssl: { ca: process.env.CA_CERT },
+    })
   : new Pool();
 
 const client_url = process.env.CLIENT_URL || "http://localhost:8080";
