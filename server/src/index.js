@@ -18,6 +18,7 @@ const httpsOptions = {
   cert: fs.readFileSync(path.join(__dirname, "..", "configs", "cert.pem")),
 };
 
+const client_url = process.env.CLIENT_URL || "https://localhost:8080";
 // TODO: use helmet middleware to force https? not necessary though idt
 
 /* ENV VARIABLE SETUP */
@@ -203,7 +204,7 @@ var app = express();
 
 app.use(
   cors({
-    origin: "https://localhost:8080",
+    origin: client_url,
     credentials: true,
   })
 );
