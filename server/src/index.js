@@ -10,13 +10,13 @@ const {
   GraphQLList,
 } = require("graphql");
 const { DateTimeResolver } = require("graphql-scalars");
-const https = require("https");
+// const https = require("https");
 const fs = require("fs");
 const path = require("path");
-const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, "..", "configs", "key.pem")),
-  cert: fs.readFileSync(path.join(__dirname, "..", "configs", "cert.pem")),
-};
+// const httpsOptions = {
+//   key: fs.readFileSync(path.join(__dirname, "..", "configs", "key.pem")),
+//   cert: fs.readFileSync(path.join(__dirname, "..", "configs", "cert.pem")),
+// };
 
 const client_url = process.env.CLIENT_URL || "https://localhost:8080";
 // TODO: use helmet middleware to force https? not necessary though idt
@@ -333,8 +333,11 @@ app.use(
 );
 
 app.use(apiErrorHandler);
-https.createServer(httpsOptions, app).listen(PORT, () => {
-  console.log(
-    `Running a GraphQL API server at http://localhost:${PORT}/graphql`
-  );
+// https.createServer(httpsOptions, app).listen(PORT, () => {
+//   console.log(
+//     `Running a GraphQL API server at http://localhost:${PORT}/graphql`
+//   );
+// });
+app.listen(PORT, () => {
+  console.log(`server is running!`);
 });

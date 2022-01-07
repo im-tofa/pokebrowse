@@ -3,7 +3,7 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const app = express();
 const bcrypt = require("bcrypt");
-const https = require("https");
+// const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const jwt = require("jsonwebtoken");
@@ -15,15 +15,16 @@ require("dotenv").config({
   path: path.join(__dirname, "..", "..", "configs", ".env"),
 });
 
+const PORT = process.env.PORT || 4000;
 const { Pool } = require("pg");
 const pool = new Pool();
 
-const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
-  cert: fs.readFileSync(
-    path.join(__dirname, "..", "..", "configs", "cert.pem")
-  ),
-};
+// const httpsOptions = {
+//   key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
+//   cert: fs.readFileSync(
+//     path.join(__dirname, "..", "..", "configs", "cert.pem")
+//   ),
+// };
 
 app.use(
   cors({
@@ -198,5 +199,7 @@ function sendRefreshToken(res, refreshToken) {
   ]);
 }
 
-//app.listen(4000);
-https.createServer(httpsOptions, app).listen(4000);
+app.listen(PORT, () => {
+  console.log(`login server is running!`);
+});
+// https.createServer(httpsOptions, app).listen(4000);
