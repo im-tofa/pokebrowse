@@ -185,7 +185,7 @@ const schema = new GraphQLSchema({
             console.log(dbq);
             sets = (await pool.query(dbq, args)).rows;
           } catch (error) {
-            // console.error(dbq);
+            console.error(error);
             throw ApiError.badRequest(
               "Filter values are invalid, please fix the filters"
             );
