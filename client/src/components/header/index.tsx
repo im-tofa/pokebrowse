@@ -32,7 +32,7 @@ const Header: FunctionalComponent = () => {
           href=""
           onClick={(e) => {
             e.preventDefault();
-            fetch("https://www.pokebrow.se:4000/logout", {
+            fetch("https://www.pokebrow.se/auth/logout", {
               method: "POST",
               credentials: "include",
             })

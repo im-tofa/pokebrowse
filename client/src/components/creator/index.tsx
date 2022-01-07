@@ -21,7 +21,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
   const reroute = props.reroute ? props.reroute : "/browser";
 
   const upload = async () => {
-    const response = await fetch("https://www.pokebrow.se:3000/set", {
+    const response = await fetch("https://www.pokebrow.se/api/set", {
       method: "POST",
       credentials: "include",
       headers: {

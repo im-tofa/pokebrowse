@@ -19,7 +19,7 @@ const LoginForm: FunctionalComponent = () => {
         console.log("form submitted");
         //console.log(username, password);
         try {
-          const response = await fetch("https://www.pokebrow.se:4000/login", {
+          const response = await fetch("https://www.pokebrow.se/auth/login", {
             method: "POST",
             credentials: "include",
             headers: {

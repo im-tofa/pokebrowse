@@ -20,7 +20,7 @@ const SetManager: FunctionalComponent = () => {
   }>({ sets: [], next_cursor: null });
 
   const deleteSets = async () => {
-    const response = await fetch("https://www.pokebrow.se:3000/set", {
+    const response = await fetch("https://www.pokebrow.se/api/set", {
       method: "DELETE",
       credentials: "include",
       headers: {

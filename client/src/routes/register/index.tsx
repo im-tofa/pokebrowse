@@ -23,7 +23,7 @@ const Register: FunctionalComponent = () => {
             console.log("form submitted");
             try {
               const response = await fetch(
-                "https://www.pokebrow.se:4000/register",
+                "https://www.pokebrow.se/auth/register",
                 {
                   method: "POST",
                   // credentials: "include",

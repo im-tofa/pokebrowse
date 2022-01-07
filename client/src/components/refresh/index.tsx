@@ -21,7 +21,7 @@ const Refresh: FunctionalComponent<Props> = (props: Props) => {
   useEffect(() => {
     if (accessToken !== "") return;
     console.log("Attempting refresh ... ");
-    fetch("https://www.pokebrow.se:4000/token", {
+    fetch("https://www.pokebrow.se/auth/token", {
       method: "POST",
       credentials: "include",
     })
