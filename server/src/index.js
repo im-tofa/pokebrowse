@@ -341,5 +341,5 @@ app.use(apiErrorHandler);
 //   );
 // });
 app.listen(PORT, () => {
-  console.log(`server is running!`);
+  console.log(`server is running, taking requests from ${client_url}!`);
 });

@@ -21,6 +21,7 @@ const pool = process.env.DATABASE_URL
   ? new Pool({ connectionString: process.env.DATABASE_URL })
   : new Pool();
 
+const client_url = process.env.CLIENT_URL || "http://localhost:8080";
 // const httpsOptions = {
 //   key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
 //   cert: fs.readFileSync(
@@ -30,7 +31,7 @@ const pool = process.env.DATABASE_URL
 
 app.use(
   cors({
-    origin: "https://www.pokebrow.se:8080",
+    origin: client_url,
     credentials: true,
   })
 );
@@ -202,6 +203,6 @@ function sendRefreshToken(res, refreshToken) {
 }
 
 app.listen(PORT, () => {
-  console.log(`login server is running!`);
+  console.log(`login server is running, taking requests from ${client_url}!`);
 });
 // https.createServer(httpsOptions, app).listen(4000);
