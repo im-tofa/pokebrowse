@@ -30,7 +30,6 @@ require("dotenv").config({
 const { Pool, Client } = require("pg");
 const pool = process.env.DATABASE_URL
   ? new Pool({
-      connectionString: process.env.DATABASE_URL,
       ssl: { ca: process.env.CA_CERT },
     })
   : new Pool();
