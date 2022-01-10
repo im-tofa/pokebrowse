@@ -77,7 +77,9 @@ function offsetFromCursor(items, cursor, readField) {
 
 // you don't need priviliges to access the graphql data
 const client = new ApolloClient({
-  uri: "https://www.pokebrow.se/api/graphql",
+  uri:
+    (process.env.PROD_URL ? process.env.PROD_URL : "http://localhost:3000") +
+    "/graphql",
   cache: cache,
 });
 

@@ -32,10 +32,15 @@ const Header: FunctionalComponent = () => {
           href=""
           onClick={(e) => {
             e.preventDefault();
-            fetch("https://www.pokebrow.se/auth/logout", {
-              method: "POST",
-              credentials: "include",
-            })
+            fetch(
+              (process.env.PROD_LOGIN_URL
+                ? process.env.PROD_LOGIN_URL
+                : "http://localhost:4000") + "/logout",
+              {
+                method: "POST",
+                credentials: "include",
+              }
+            )
               .then(async (res) => {
                 console.log(res);
                 if (res.status !== 200) throw Error();

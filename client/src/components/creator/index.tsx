@@ -21,15 +21,19 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
   const reroute = props.reroute ? props.reroute : "/browser";
 
   const upload = async () => {
-    const response = await fetch("https://www.pokebrow.se/api/set", {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify({ set: config, name, desc }),
-    });
+    const response = await fetch(
+      (process.env.PROD_URL ? process.env.PROD_URL : "http://localhost:3000") +
+        "/set",
+      {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ set: config, name, desc }),
+      }
+    );
 
     if (response.status === 403 || response.status === 401)
       throw new Error(await response.json()); // if authentication error

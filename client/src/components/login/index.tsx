@@ -19,14 +19,19 @@ const LoginForm: FunctionalComponent = () => {
         console.log("form submitted");
         //console.log(username, password);
         try {
-          const response = await fetch("https://www.pokebrow.se/auth/login", {
-            method: "POST",
-            credentials: "include",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ username, password }),
-          });
+          const response = await fetch(
+            (process.env.PROD_LOGIN_URL
+              ? process.env.PROD_LOGIN_URL
+              : "http://localhost:4000") + "/login",
+            {
+              method: "POST",
+              credentials: "include",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ username, password }),
+            }
+          );
 
           if (!response.ok) {
             setLoginError(await response.json());
