@@ -6,7 +6,7 @@ A web application for uploading and browsing Pokémon sets.
 
 ## How to Run
 
-After setting up a PostgreSQL database [using the provided SQL file](server/src/db/schemas.sql) and performing the necessary [configuration](server/configs/README.md), run the following:
+After setting up a PostgreSQL database [using the provided SQL file](server/src/db/schemas.sql) and performing the necessary configuration following [these steps](server/configs/README.md) and [these steps](client/README.md), run the following:
 
 - `npm run build`, then `npm run serve` to start the client
 - `npm run start` to start the server
@@ -49,7 +49,8 @@ You could, however, technically have a shared PostgreSQL database among your fri
 - Iterate design of `/profile` route
 - Ensure a good enough level of security
 - Ensure GDPR conformity
-- Rate limiting, preventing spam
+- Remove cookie dependency from using sprites from PS
+- Rate limiting, preventing spam uploads
 - Migrate to full REST or full GraphQL: I initially wanted only GraphQL but had trouble with enabling JWT authentication on only some queries, so I used REST for authenticated routes instead. But everything should be possible via GraphQL, just need to figure out how. GraphQL is nice for its typechecking alone, even if the querying capabilities of GraphQL aren't especially beneficial in this version of the app.
 
 ## License
