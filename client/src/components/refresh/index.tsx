@@ -21,10 +21,15 @@ const Refresh: FunctionalComponent<Props> = (props: Props) => {
   useEffect(() => {
     if (accessToken !== "") return;
     console.log("Attempting refresh ... ");
-    fetch("https://localhost:4000/token", {
-      method: "POST",
-      credentials: "include",
-    })
+    fetch(
+      (process.env.PROD_LOGIN_URL
+        ? process.env.PROD_LOGIN_URL
+        : "http://localhost:4000") + "/token",
+      {
+        method: "POST",
+        credentials: "include",
+      }
+    )
       .then(async (res) => {
         const json = await res.json();
         if (res.status !== 200) throw new Error(json);

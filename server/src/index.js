@@ -10,14 +10,15 @@ const {
   GraphQLList,
 } = require("graphql");
 const { DateTimeResolver } = require("graphql-scalars");
-const https = require("https");
+// const https = require("https");
 const fs = require("fs");
 const path = require("path");
-const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, "..", "configs", "key.pem")),
-  cert: fs.readFileSync(path.join(__dirname, "..", "configs", "cert.pem")),
-};
+// const httpsOptions = {
+//   key: fs.readFileSync(path.join(__dirname, "..", "configs", "key.pem")),
+//   cert: fs.readFileSync(path.join(__dirname, "..", "configs", "cert.pem")),
+// };
 
+const client_url = process.env.CLIENT_URL || "http://localhost:8080";
 // TODO: use helmet middleware to force https? not necessary though idt
 
 /* ENV VARIABLE SETUP */
@@ -27,7 +28,11 @@ require("dotenv").config({
 
 /* DATABASE SETUP */
 const { Pool, Client } = require("pg");
-const pool = new Pool();
+const pool = process.env.DATABASE_URL
+  ? new Pool({
+      ssl: { ca: process.env.CA_CERT },
+    })
+  : new Pool();
 
 const pokedex = require("./pkmnstats");
 const { natures } = require("./utils/ps-utils");
@@ -182,7 +187,7 @@ const schema = new GraphQLSchema({
             console.log(dbq);
             sets = (await pool.query(dbq, args)).rows;
           } catch (error) {
-            // console.error(dbq);
+            console.error(error);
             throw ApiError.badRequest(
               "Filter values are invalid, please fix the filters"
             );
@@ -203,7 +208,7 @@ var app = express();
 
 app.use(
   cors({
-    origin: "https://localhost:8080",
+    origin: client_url,
     credentials: true,
   })
 );
@@ -332,8 +337,11 @@ app.use(
 );
 
 app.use(apiErrorHandler);
-https.createServer(httpsOptions, app).listen(PORT, () => {
-  console.log(
-    `Running a GraphQL API server at http://localhost:${PORT}/graphql`
-  );
+// https.createServer(httpsOptions, app).listen(PORT, () => {
+//   console.log(
+//     `Running a GraphQL API server at http://localhost:${PORT}/graphql`
+//   );
+// });
+app.listen(PORT, () => {
+  console.log(`server is running, taking requests from ${client_url}!`);
 });

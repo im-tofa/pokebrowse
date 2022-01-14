@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "^16.9.1",
+    "npm": "^7.21.1"
+  },
   "scripts": {
     "start": "node src/index.js",
     "startLogin": "node src/login/index.js",

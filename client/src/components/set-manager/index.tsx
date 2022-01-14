@@ -20,15 +20,19 @@ const SetManager: FunctionalComponent = () => {
   }>({ sets: [], next_cursor: null });
 
   const deleteSets = async () => {
-    const response = await fetch("https://localhost:3000/set", {
-      method: "DELETE",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify({ set_ids: selected }),
-    });
+    const response = await fetch(
+      (process.env.PROD_URL ? process.env.PROD_URL : "http://localhost:3000") +
+        "/set",
+      {
+        method: "DELETE",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ set_ids: selected }),
+      }
+    );
 
     if (response.status === 403 || response.status === 401)
       throw new Error(await response.json()); // if authentication error

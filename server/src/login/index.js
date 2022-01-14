@@ -3,7 +3,7 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const app = express();
 const bcrypt = require("bcrypt");
-const https = require("https");
+// const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const jwt = require("jsonwebtoken");
@@ -15,19 +15,25 @@ require("dotenv").config({
   path: path.join(__dirname, "..", "..", "configs", ".env"),
 });
 
+const PORT = process.env.PORT || 4000;
 const { Pool } = require("pg");
-const pool = new Pool();
+const pool = process.env.DATABASE_URL
+  ? new Pool({
+      ssl: { ca: process.env.CA_CERT },
+    })
+  : new Pool();
 
-const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
-  cert: fs.readFileSync(
-    path.join(__dirname, "..", "..", "configs", "cert.pem")
-  ),
-};
+const client_url = process.env.CLIENT_URL || "http://localhost:8080";
+// const httpsOptions = {
+//   key: fs.readFileSync(path.join(__dirname, "..", "..", "configs", "key.pem")),
+//   cert: fs.readFileSync(
+//     path.join(__dirname, "..", "..", "configs", "cert.pem")
+//   ),
+// };
 
 app.use(
   cors({
-    origin: "https://localhost:8080",
+    origin: client_url,
     credentials: true,
   })
 );
@@ -198,5 +204,7 @@ function sendRefreshToken(res, refreshToken) {
   ]);
 }
 
-//app.listen(4000);
-https.createServer(httpsOptions, app).listen(4000);
+app.listen(PORT, () => {
+  console.log(`login server is running, taking requests from ${client_url}!`);
+});
+// https.createServer(httpsOptions, app).listen(4000);

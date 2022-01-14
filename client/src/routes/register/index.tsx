@@ -22,14 +22,19 @@ const Register: FunctionalComponent = () => {
             e.preventDefault();
             console.log("form submitted");
             try {
-              const response = await fetch("https://localhost:4000/register", {
-                method: "POST",
-                // credentials: "include",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ username, password }),
-              });
+              const response = await fetch(
+                (process.env.PROD_LOGIN_URL
+                  ? process.env.PROD_LOGIN_URL
+                  : "http://localhost:4000") + "/register",
+                {
+                  method: "POST",
+                  // credentials: "include",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({ username, password }),
+                }
+              );
               route("/login", true);
             } catch (error) {
               console.log(error);
