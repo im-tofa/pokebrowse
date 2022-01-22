@@ -72,8 +72,8 @@
   grid-template-rows: 22px 22px 22px;
   grid-template-areas:
     "image author"
-    "image rating"
-    "image date  ";
+    "image date"
+    "image rating  ";
 
   align-items: center;
   padding-bottom: 5px;

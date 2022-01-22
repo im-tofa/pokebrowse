@@ -1,0 +1,2779 @@
+{
+  "bulbasaur": {},
+  "ivysaur": {
+    "Sun Sweeper": "Ivysaur @ Eviolite\nAbility: Chlorophyll\nEVs: 192 HP / 252 SpA / 64 Spe\nModest Nature\n- Growth\n- Solar Beam\n- Weather Ball\n- Sludge Bomb"
+  },
+  "venusaur": {
+    "Chlorophyll Sweeper": "Venusaur @ Life Orb\nAbility: Chlorophyll\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Growth\n- Giga Drain\n- Weather Ball\n- Sludge Bomb"
+  },
+  "venusaurmega": {
+    "Chlorophyll Sweeper": "Venusaur @ Life Orb\nAbility: Chlorophyll\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Growth\n- Giga Drain\n- Weather Ball\n- Sludge Bomb"
+  },
+  "venusaurgmax": {
+    "Chlorophyll Sweeper": "Venusaur @ Life Orb\nAbility: Chlorophyll\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Growth\n- Giga Drain\n- Weather Ball\n- Sludge Bomb"
+  },
+  "charmander": {
+    "Sun Wallbreaker": "Charmander @ Choice Scarf\nLevel: 5\nAbility: Solar Power\nEVs: 44 HP / 12 Def / 196 SpA / 236 Spe\nTimid Nature\n- Weather Ball\n- Overheat\n- Fire Blast\n- Sleep Talk"
+  },
+  "charmeleon": {
+    "Sun Sweeper": "Charmeleon @ Choice Scarf\nAbility: Solar Power\nEVs: 4 Def / 252 SpA / 252 Spe\nIVs: 29 HP / 0 Atk\nModest Nature\n- Fire Blast\n- Weather Ball\n- Ancient Power\n- Toxic"
+  },
+  "charizard": {
+    "Special Attacker": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Roost\n- Fire Blast\n- Hurricane\n- Defog",
+    "Defensive": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Toxic\n- Roost\n- Flamethrower\n- Defog",
+    "Dragon Dance": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Flare Blitz\n- Earthquake\n- Roost"
+  },
+  "charizardmegax": {
+    "Special Attacker": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Roost\n- Fire Blast\n- Hurricane\n- Defog",
+    "Defensive": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Toxic\n- Roost\n- Flamethrower\n- Defog",
+    "Dragon Dance": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Flare Blitz\n- Earthquake\n- Roost"
+  },
+  "charizardmegay": {
+    "Special Attacker": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Roost\n- Fire Blast\n- Hurricane\n- Defog",
+    "Defensive": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Toxic\n- Roost\n- Flamethrower\n- Defog",
+    "Dragon Dance": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Flare Blitz\n- Earthquake\n- Roost"
+  },
+  "charizardgmax": {
+    "Special Attacker": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Roost\n- Fire Blast\n- Hurricane\n- Defog",
+    "Defensive": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 248 HP / 8 SpA / 252 Spe\nTimid Nature\n- Toxic\n- Roost\n- Flamethrower\n- Defog",
+    "Dragon Dance": "Charizard @ Heavy-Duty Boots\nAbility: Blaze\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Flare Blitz\n- Earthquake\n- Roost"
+  },
+  "squirtle": {},
+  "wartortle": {
+    "Shell Smash Sweeper": "Wartortle @ Eviolite\nAbility: Torrent\nEVs: 176 HP / 252 SpA / 80 Spe\nModest Nature\n- Shell Smash\n- Hydro Pump\n- Ice Beam\n- Substitute",
+    "Utility Pivot": "Wartortle @ Eviolite\nAbility: Torrent\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Rapid Spin\n- Flip Turn\n- Scald\n- Toxic"
+  },
+  "blastoise": {
+    "Shell Smash": "Blastoise @ White Herb\nAbility: Torrent\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Shell Smash\n- Surf\n- Dark Pulse\n- Ice Beam"
+  },
+  "blastoisemega": {
+    "Shell Smash": "Blastoise @ White Herb\nAbility: Torrent\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Shell Smash\n- Surf\n- Dark Pulse\n- Ice Beam"
+  },
+  "blastoisegmax": {
+    "Shell Smash": "Blastoise @ White Herb\nAbility: Torrent\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Shell Smash\n- Surf\n- Dark Pulse\n- Ice Beam"
+  },
+  "caterpie": {},
+  "metapod": {},
+  "butterfree": {
+    "Quiver Dance": "Butterfree @ Leftovers\nAbility: Compound Eyes\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Quiver Dance\n- Substitute\n- Hurricane\n- Sleep Powder"
+  },
+  "butterfreegmax": {
+    "Quiver Dance": "Butterfree @ Leftovers\nAbility: Compound Eyes\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Quiver Dance\n- Substitute\n- Hurricane\n- Sleep Powder"
+  },
+  "weedle": {},
+  "kakuna": {},
+  "beedrill": {},
+  "beedrillmega": {},
+  "pidgey": {},
+  "pidgeotto": {},
+  "pidgeot": {},
+  "pidgeotmega": {},
+  "rattata": {},
+  "rattataalola": {},
+  "raticate": {},
+  "raticatealola": {},
+  "raticatealolatotem": {},
+  "spearow": {},
+  "fearow": {},
+  "ekans": {},
+  "arbok": {},
+  "pikachu": {
+    "Revenge Killer": "Pikachu @ Light Ball\nAbility: Static\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaughty Nature\n- Fake Out\n- Extreme Speed\n- Volt Switch\n- Knock Off"
+  },
+  "pikachucosplay": {},
+  "pikachurockstar": {},
+  "pikachubelle": {},
+  "pikachupopstar": {},
+  "pikachuphd": {},
+  "pikachulibre": {},
+  "pikachuoriginal": {},
+  "pikachuhoenn": {},
+  "pikachusinnoh": {},
+  "pikachuunova": {},
+  "pikachukalos": {},
+  "pikachualola": {},
+  "pikachupartner": {},
+  "pikachustarter": {},
+  "pikachugmax": {
+    "Revenge Killer": "Pikachu @ Light Ball\nAbility: Static\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaughty Nature\n- Fake Out\n- Extreme Speed\n- Volt Switch\n- Knock Off"
+  },
+  "pikachuworld": {},
+  "raichu": {
+    "Nasty Plot": "Raichu @ Life Orb\nAbility: Lightning Rod\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Thunderbolt\n- Focus Blast\n- Surf"
+  },
+  "raichualola": {
+    "Terrain Sweeper (Electric)": "Raichu-Alola @ Life Orb\nAbility: Surge Surfer\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Rising Voltage\n- Psychic\n- Focus Blast\n- Knock Off"
+  },
+  "sandshrew": {},
+  "sandshrewalola": {
+    "Hail Sweeper": "Sandshrew-Alola @ Wide Lens\nLevel: 5\nAbility: Slush Rush\nEVs: 36 HP / 236 Atk / 36 Def / 196 Spe\nJolly Nature\n- Triple Axel\n- Earthquake\n- Rapid Spin\n- Swords Dance"
+  },
+  "sandslash": {
+    "Offensive": "Sandslash @ Life Orb\nAbility: Sand Rush\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Earthquake\n- Rock Slide\n- Knock Off"
+  },
+  "sandslashalola": {
+    "Hail Sweeper": "Sandslash-Alola @ Wide Lens\nAbility: Slush Rush\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Triple Axel\n- Earthquake\n- Knock Off\n- Rapid Spin"
+  },
+  "nidoranf": {},
+  "nidorina": {},
+  "nidoqueen": {
+    "Offensive Entry Hazard Setter": "Nidoqueen @ Life Orb\nAbility: Sheer Force\nEVs: 4 HP / 252 SpA / 252 Spe\nModest Nature\n- Stealth Rock\n- Earth Power\n- Sludge Wave\n- Fire Blast"
+  },
+  "nidoranm": {},
+  "nidorino": {},
+  "nidoking": {
+    "Wallbreaker": "Nidoking @ Life Orb\nAbility: Sheer Force\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Sludge Wave\n- Earth Power\n- Thunderbolt\n- Ice Beam"
+  },
+  "clefairy": {
+    "Utility": "Clefairy @ Eviolite\nAbility: Magic Guard\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Moonblast\n- Soft-Boiled\n- Knock Off\n- Thunder Wave",
+    "WishPass": "Clefairy @ Eviolite\nAbility: Magic Guard\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Moonblast\n- Wish\n- Protect\n- Teleport"
+  },
+  "clefable": {
+    "Utility": "Clefable @ Leftovers\nAbility: Magic Guard\nEVs: 252 HP / 200 Def / 56 SpD\nCalm Nature\n- Moonblast\n- Soft-Boiled\n- Stealth Rock\n- Knock Off",
+    "Calm Mind": "Clefable @ Life Orb\nAbility: Magic Guard\nEVs: 252 HP / 196 Def / 60 Spe\nBold Nature\n- Calm Mind\n- Moonblast\n- Soft-Boiled\n- Thunder"
+  },
+  "vulpix": {
+    "Choice Item": "Vulpix @ Choice Scarf\nLevel: 5\nAbility: Drought\nEVs: 52 HP / 196 SpA / 236 Spe\nTimid Nature\n- Weather Ball\n- Overheat\n- Energy Ball\n- Hypnosis"
+  },
+  "vulpixalola": {},
+  "ninetales": {
+    "Nasty Plot": "Ninetales @ Heavy-Duty Boots\nAbility: Flash Fire\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Fire Blast\n- Energy Ball\n- Scorching Sands"
+  },
+  "ninetalesalola": {
+    "Hail Setter": "Ninetales-Alola @ Icy Rock\nAbility: Snow Warning\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Aurora Veil\n- Freeze-Dry\n- Encore\n- Pain Split",
+    "Aurora Veil": "Ninetales-Alola @ Light Clay\nAbility: Snow Warning\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Aurora Veil\n- Freeze-Dry\n- Hail\n- Hypnosis"
+  },
+  "jigglypuff": {},
+  "wigglytuff": {
+    "Defensive": "Wigglytuff @ Leftovers\nAbility: Competitive\nEVs: 48 HP / 208 Def / 252 SpD\nCalm Nature\n- Wish\n- Protect\n- Dazzling Gleam\n- Teleport"
+  },
+  "zubat": {},
+  "golbat": {
+    "Stallbreaker": "Golbat @ Eviolite\nAbility: Infiltrator\nEVs: 252 HP / 172 Def / 84 Spe\nJolly Nature\n- Super Fang\n- Taunt\n- Roost\n- Brave Bird",
+    "Defog": "Golbat @ Eviolite\nAbility: Infiltrator\nEVs: 252 HP / 172 Def / 84 Spe\nJolly Nature\n- Defog\n- Roost\n- U-turn\n- Brave Bird",
+    "Nasty Plot": "Golbat @ Eviolite\nAbility: Infiltrator\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Air Slash\n- Heat Wave\n- Roost"
+  },
+  "oddish": {
+    "Defensive": "Oddish @ Eviolite\nLevel: 5\nAbility: Run Away\nEVs: 76 HP / 236 Def / 76 SpD / 116 Spe\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Sleep Powder\n- Strength Sap"
+  },
+  "gloom": {
+    "Physical Wall": "Gloom @ Eviolite\nAbility: Stench\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Strength Sap\n- Giga Drain\n- Sludge Bomb\n- Moonblast",
+    "Sun Sweeper": "Gloom @ Eviolite\nAbility: Chlorophyll\nEVs: 40 HP / 252 SpA / 216 Spe\nModest Nature\n- Growth\n- Solar Beam\n- Sludge Bomb\n- Strength Sap"
+  },
+  "vileplume": {
+    "Defensive": "Vileplume @ Black Sludge\nAbility: Effect Spore\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Strength Sap\n- Corrosive Gas"
+  },
+  "paras": {},
+  "parasect": {},
+  "venonat": {},
+  "venomoth": {},
+  "diglett": {
+    "Air Balloon": "Diglett @ Air Balloon\nLevel: 5\nAbility: Arena Trap\nEVs: 116 HP / 156 Atk / 236 Spe\nJolly Nature\n- Earthquake\n- Final Gambit\n- Beat Up\n- Sucker Punch",
+    "Choice Scarf": "Diglett @ Choice Scarf\nLevel: 5\nAbility: Arena Trap\nEVs: 116 HP / 156 Atk / 236 Spe\nJolly Nature\n- Earthquake\n- Final Gambit\n- Beat Up\n- Earth Power",
+    "Eviolite": "Diglett @ Eviolite\nLevel: 5\nAbility: Arena Trap\nEVs: 116 HP / 156 Atk / 236 Spe\nJolly Nature\n- Earthquake\n- Final Gambit\n- Beat Up\n- Earth Power",
+    "Life Orb": "Diglett @ Life Orb\nLevel: 5\nAbility: Arena Trap\nEVs: 36 HP / 236 Atk / 236 Spe\nJolly Nature\n- Earthquake\n- Substitute\n- Beat Up\n- Rock Slide"
+  },
+  "diglettalola": {},
+  "dugtrio": {
+    "Trapper": "Dugtrio @ Choice Scarf\nAbility: Arena Trap\nEVs: 244 Atk / 140 SpD / 124 Spe\nAdamant Nature\n- Earthquake\n- Stone Edge\n- Memento\n- Toxic"
+  },
+  "dugtrioalola": {
+    "SubToxic": "Dugtrio-Alola @ Leftovers\nAbility: Tangling Hair\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Substitute\n- Toxic\n- Earthquake\n- Iron Head",
+    "Wallbreaker": "Dugtrio-Alola @ Life Orb\nAbility: Tangling Hair\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Earthquake\n- Iron Head\n- Sucker Punch\n- Toxic"
+  },
+  "meowth": {
+    "All-out Attacker": "Meowth @ Life Orb\nLevel: 5\nAbility: Technician\nEVs: 236 Atk / 36 SpA / 36 SpD / 196 Spe\nIVs: 19 HP\nNaughty Nature\n- Fake Out\n- Feint\n- Double-Edge\n- Water Pulse"
+  },
+  "meowthalola": {},
+  "meowthgalar": {},
+  "meowthgmax": {
+    "All-out Attacker": "Meowth @ Life Orb\nLevel: 5\nAbility: Technician\nEVs: 236 Atk / 36 SpA / 36 SpD / 196 Spe\nIVs: 19 HP\nNaughty Nature\n- Fake Out\n- Feint\n- Double-Edge\n- Water Pulse"
+  },
+  "persian": {
+    "Revenge Killer": "Persian @ Silk Scarf\nAbility: Technician\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Fake Out\n- Double-Edge\n- Knock Off\n- U-turn"
+  },
+  "persianalola": {
+    "Bulky Pivot": "Persian-Alola @ Heavy-Duty Boots\nAbility: Fur Coat\nEVs: 252 HP / 4 Def / 252 Spe\nJolly Nature\n- Knock Off\n- Parting Shot\n- Toxic\n- Foul Play"
+  },
+  "psyduck": {},
+  "golduck": {
+    "Choice Scarf": "Golduck @ Choice Scarf\nAbility: Cloud Nine\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Hydro Pump\n- Ice Beam\n- Psychic\n- Flip Turn",
+    "Choice Specs": "Golduck @ Choice Specs\nAbility: Cloud Nine\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Hydro Pump\n- Ice Beam\n- Psychic\n- Flip Turn",
+    "Rain Dance": "Golduck @ Life Orb\nAbility: Swift Swim\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Rain Dance\n- Hydro Pump\n- Ice Beam\n- Psychic"
+  },
+  "mankey": {},
+  "primeape": {},
+  "growlithe": {},
+  "arcanine": {
+    "Defensive Pivot": "Arcanine @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 248 HP / 196 Def / 64 Spe\nBold Nature\n- Flamethrower\n- Morning Sun\n- Teleport\n- Toxic"
+  },
+  "poliwag": {},
+  "poliwhirl": {},
+  "poliwrath": {
+    "Choice Band": "Poliwrath @ Choice Band\nAbility: Water Absorb\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Liquidation\n- Close Combat\n- Darkest Lariat\n- Earthquake",
+    "Defensive": "Poliwrath @ Leftovers\nAbility: Water Absorb\nEVs: 252 HP / 160 Def / 96 Spe\nBold Nature\n- Circle Throw\n- Scald\n- Rest\n- Sleep Talk"
+  },
+  "abra": {
+    "Shed Shell": "Abra @ Shed Shell\nLevel: 5\nAbility: Magic Guard\nEVs: 36 Atk / 236 SpA / 196 Spe\nHasty Nature\n- Psychic\n- Shadow Ball\n- Focus Punch\n- Substitute",
+    "Focus Sash": "Abra @ Focus Sash\nLevel: 5\nAbility: Magic Guard\nEVs: 76 Def / 236 SpA / 196 Spe\nTimid Nature\n- Psychic\n- Shadow Ball\n- Protect\n- Counter",
+    "Life Orb": "Abra @ Life Orb\nLevel: 5\nAbility: Magic Guard\nEVs: 116 Atk / 156 SpA / 196 Spe\nHasty Nature\n- Psychic\n- Shadow Ball\n- Submission\n- Substitute"
+  },
+  "kadabra": {
+    "Revenge Killer": "Kadabra @ Focus Sash\nAbility: Magic Guard\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Psychic\n- Dazzling Gleam\n- Shadow Ball\n- Counter",
+    "Life Orb Attacker": "Kadabra @ Life Orb\nAbility: Magic Guard\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Psychic\n- Dazzling Gleam\n- Shadow Ball\n- Substitute"
+  },
+  "alakazam": {
+    "Nasty Plot": "Alakazam @ Focus Sash\nAbility: Magic Guard\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Psychic\n- Focus Blast\n- Shadow Ball"
+  },
+  "alakazammega": {
+    "Nasty Plot": "Alakazam @ Focus Sash\nAbility: Magic Guard\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Psychic\n- Focus Blast\n- Shadow Ball"
+  },
+  "machop": {},
+  "machoke": {
+    "Physically Defensive": "Machoke @ Eviolite\nAbility: No Guard\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Dynamic Punch\n- Knock Off\n- Rest\n- Sleep Talk",
+    "Bulky Attacker": "Machoke @ Eviolite\nAbility: Guts\nEVs: 212 HP / 252 Atk / 44 Spe\nAdamant Nature\n- Close Combat\n- Knock Off\n- Bullet Punch\n- Earthquake",
+    "Flame Orb": "Machoke @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Close Combat\n- Knock Off\n- Bullet Punch\n- Facade"
+  },
+  "machamp": {
+    "Guts Wallbreaker": "Machamp @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Close Combat\n- Knock Off\n- Facade\n- Bullet Punch"
+  },
+  "machampgmax": {
+    "Guts Wallbreaker": "Machamp @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Close Combat\n- Knock Off\n- Facade\n- Bullet Punch"
+  },
+  "bellsprout": {},
+  "weepinbell": {},
+  "victreebel": {},
+  "tentacool": {
+    "Defensive Utility": "Tentacool @ Eviolite\nLevel: 5\nAbility: Liquid Ooze\nEVs: 196 HP / 236 Def / 36 SpA / 36 Spe\nCalm Nature\n- Rapid Spin\n- Scald\n- Sludge Bomb\n- Knock Off"
+  },
+  "tentacruel": {
+    "Defensive Spinner": "Tentacruel @ Black Sludge\nAbility: Liquid Ooze\nEVs: 252 HP / 112 Def / 144 Spe\nTimid Nature\n- Scald\n- Sludge Bomb\n- Knock Off\n- Rapid Spin"
+  },
+  "geodude": {},
+  "geodudealola": {},
+  "graveler": {},
+  "graveleralola": {},
+  "golem": {},
+  "golemalola": {},
+  "ponyta": {
+    "Eviolite": "Ponyta @ Eviolite\nLevel: 5\nAbility: Flame Body\nEVs: 76 Atk / 156 Def / 76 SpD / 196 Spe\nJolly Nature\n- Flare Blitz\n- High Horsepower\n- Will-O-Wisp\n- Morning Sun",
+    "Berry Juice": "Ponyta @ Berry Juice\nLevel: 5\nAbility: Flash Fire\nEVs: 236 Atk / 76 Def / 196 Spe\nJolly Nature\n- Flare Blitz\n- Flame Charge\n- High Horsepower\n- Wild Charge"
+  },
+  "ponytagalar": {
+    "Special Attacker": "Ponyta-Galar @ Eviolite\nLevel: 5\nAbility: Pastel Veil\nEVs: 236 SpA / 76 SpD / 196 Spe\nTimid Nature\n- Psychic\n- Mystical Fire\n- Protect\n- Calm Mind"
+  },
+  "rapidash": {
+    "Offensive Utility": "Rapidash @ Heavy-Duty Boots\nAbility: Flash Fire\nEVs: 252 HP / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- High Horsepower\n- Toxic\n- Morning Sun",
+    "Swords Dance": "Rapidash @ Heavy-Duty Boots\nAbility: Flash Fire\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Flare Blitz\n- Wild Charge\n- High Horsepower"
+  },
+  "rapidashgalar": {
+    "Terrain Sweeper": "Rapidash-Galar @ Grassy Seed\nAbility: Pastel Veil\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Calm Mind\n- Morning Sun\n- Stored Power\n- Dazzling Gleam"
+  },
+  "slowpoke": {
+    "Bulky Pivot": "Slowpoke @ Eviolite\nLevel: 5\nAbility: Regenerator\nEVs: 116 HP / 76 Def / 116 SpA / 196 SpD\nCalm Nature\n- Scald\n- Future Sight\n- Teleport\n- Slack Off"
+  },
+  "slowpokegalar": {},
+  "slowbro": {
+    "Defensive Pivot": "Slowbro @ Heavy-Duty Boots\nAbility: Regenerator\nEVs: 248 HP / 252 Def / 8 SpA\nIVs: 0 Atk / 0 Spe\nRelaxed Nature\n- Future Sight\n- Scald\n- Slack Off\n- Teleport"
+  },
+  "slowbromega": {
+    "Defensive Pivot": "Slowbro @ Heavy-Duty Boots\nAbility: Regenerator\nEVs: 248 HP / 252 Def / 8 SpA\nIVs: 0 Atk / 0 Spe\nRelaxed Nature\n- Future Sight\n- Scald\n- Slack Off\n- Teleport"
+  },
+  "slowbrogalar": {
+    "Assault Vest": "Slowbro-Galar @ Assault Vest\nAbility: Regenerator\nEVs: 252 HP / 16 SpA / 240 SpD\nQuiet Nature\n- Future Sight\n- Psyshock\n- Shell Side Arm\n- Flamethrower",
+    "Calm Mind": "Slowbro-Galar @ Shuca Berry\nAbility: Regenerator\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Calm Mind\n- Psyshock\n- Flamethrower\n- Slack Off",
+    "QCQD": "Slowbro-Galar @ Quick Claw\nAbility: Quick Draw\nEVs: 252 HP / 4 Def / 252 SpA\nModest Nature\n- Nasty Plot\n- Psyshock\n- Fire Blast\n- Ice Beam"
+  },
+  "magnemite": {
+    "SturdyJuice": "Magnemite @ Berry Juice\nLevel: 5\nAbility: Sturdy\nEVs: 36 Def / 236 SpA / 236 Spe\nTimid Nature\n- Volt Switch\n- Flash Cannon\n- Recycle\n- Endure",
+    "Choice Scarf": "Magnemite @ Choice Scarf\nLevel: 5\nAbility: Analytic\nEVs: 36 Def / 236 SpA / 236 Spe\nModest Nature\n- Volt Switch\n- Thunderbolt\n- Flash Cannon\n- Steel Beam"
+  },
+  "magneton": {
+    "Choice Specs": "Magneton @ Choice Specs\nAbility: Analytic\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Thunderbolt\n- Volt Switch\n- Flash Cannon\n- Tri Attack",
+    "Revenge Killer": "Magneton @ Heavy-Duty Boots\nAbility: Sturdy\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Flash Cannon\n- Thunder Wave"
+  },
+  "farfetchd": {},
+  "farfetchdgalar": {
+    "Swords Dance": "Move 1Swords DanceRaises the user's Attack by 2.TypeNormalMove 2Close CombatLowers the user's Defense and Sp. Def by 1.TypeFightingCategoryPhysicalPower120 BPAccuracy100%Move 3Brave BirdHas 33% recoil.TypeFlyingCategoryPhysicalPower120 BPAccuracy100%Move 4Knock Off1.5x damage if foe holds an item. Removes item.TypeDarkCategoryPhysicalPower65 BPAccuracy100%Item EvioliteIf holder's species can evolve, its Defense and Sp. Def are 1.5x.AbilityScrappyFighting, Normal moves hit Ghost. Immune to Intimidate.NatureJollyLevel5EVs20 HP236 Atk236 Spe",
+    "Choice Scarf": "Move 1Close CombatLowers the user's Defense and Sp. Def by 1.TypeFightingCategoryPhysicalPower120 BPAccuracy100%Move 2Brave BirdHas 33% recoil.TypeFlyingCategoryPhysicalPower120 BPAccuracy100%Move 3Knock Off1.5x damage if foe holds an item. Removes item.TypeDarkCategoryPhysicalPower65 BPAccuracy100%Move 4Poison Jab30% chance to poison the target.TypePoisonCategoryPhysicalPower80 BPAccuracy100%Final GambitDoes damage equal to the user's HP. User faints.TypeFightingCategorySpecialAccuracy100%Item Choice ScarfHolder's Speed is 1.5x, but it can only select the first move it executes.AbilityScrappyFighting, Normal moves hit Ghost. Immune to Intimidate.NatureJollyLevel5EVs20 HP236 Atk236 Spe"
+  },
+  "doduo": {},
+  "dodrio": {},
+  "seel": {},
+  "dewgong": {},
+  "grimer": {},
+  "grimeralola": {},
+  "muk": {},
+  "mukalola": {},
+  "shellder": {
+    "Shell Smash": "Shellder @ Eviolite\nLevel: 5\nAbility: Skill Link\nEVs: 36 HP / 236 Atk / 36 Def / 196 Spe\nJolly Nature\n- Shell Smash\n- Icicle Spear\n- Rock Blast\n- Liquidation"
+  },
+  "cloyster": {
+    "Shell Smash Sweeper": "Cloyster @ King's Rock\nAbility: Skill Link\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaive Nature\n- Shell Smash\n- Icicle Spear\n- Rock Blast\n- Hydro Pump"
+  },
+  "gastly": {
+    "Special Wallbreaker": "Gastly @ Choice Specs\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Shadow Ball\n- Sludge Bomb\n- Dazzling Gleam\n- Trick"
+  },
+  "haunter": {
+    "Substitute + 3 Attacks": "Haunter @ Life Orb\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Substitute\n- Shadow Ball\n- Sludge Bomb\n- Dazzling Gleam",
+    "Choice Scarf": "Haunter @ Choice Scarf\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Shadow Ball\n- Sludge Bomb\n- Dazzling Gleam\n- Trick"
+  },
+  "gengar": {
+    "Ghostium Z": "Gengar @ Ghostium Z\nAbility: Cursed Body\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Shadow Ball\n- Focus Blast\n- Substitute"
+  },
+  "gengarmega": {
+    "Ghostium Z": "Gengar @ Ghostium Z\nAbility: Cursed Body\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Shadow Ball\n- Focus Blast\n- Substitute"
+  },
+  "gengargmax": {
+    "Ghostium Z": "Gengar @ Ghostium Z\nAbility: Cursed Body\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Shadow Ball\n- Focus Blast\n- Substitute"
+  },
+  "onix": {
+    "Weak Armor": "Onix @ Eviolite\nLevel: 5\nAbility: Weak Armor\nEVs: 236 Atk / 76 SpD / 196 Spe\nJolly Nature\n- Earthquake\n- Rock Blast\n- Stealth Rock\n- Explosion",
+    "Sturdy": "Onix @ Berry Juice\nLevel: 5\nAbility: Sturdy\nEVs: 76 HP / 236 Atk / 196 Spe\nJolly Nature\n- Earthquake\n- Rock Blast\n- Stealth Rock\n- Explosion",
+    "Rock Head": "Onix @ Eviolite\nLevel: 5\nAbility: Rock Head\nEVs: 236 Atk / 76 SpD / 196 Spe\nJolly Nature\n- Head Smash\n- Earthquake\n- Stealth Rock\n- Dragon Dance"
+  },
+  "drowzee": {},
+  "hypno": {},
+  "krabby": {
+    "Wallbreaker": "Krabby @ Life Orb\nLevel: 5\nAbility: Sheer Force\nEVs: 236 Atk / 76 SpD / 196 Spe\nAdamant Nature\n- Liquidation\n- Knock Off\n- Superpower\n- Body Slam"
+  },
+  "kingler": {},
+  "kinglergmax": {},
+  "voltorb": {},
+  "electrode": {},
+  "exeggcute": {},
+  "exeggutor": {
+    "Future Sight Pivot": "Exeggutor @ Eject Pack\nAbility: Chlorophyll\nEVs: 120 HP / 252 SpA / 136 Spe\nModest Nature\n- Future Sight\n- Leaf Storm\n- Sleep Powder\n- Psychic",
+    "Sunny Day": "Exeggutor @ Life Orb\nAbility: Chlorophyll\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sunny Day\n- Psychic\n- Solar Beam\n- Sleep Powder"
+  },
+  "exeggutoralola": {},
+  "cubone": {},
+  "marowak": {
+    "Wallbreaker": "Marowak @ Thick Club\nAbility: Battle Armor\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Substitute\n- Earthquake\n- Knock Off\n- Fire Punch"
+  },
+  "marowakalola": {
+    "Wallbreaker": "Marowak-Alola @ Thick Club\nAbility: Lightning Rod\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Poltergeist\n- Fire Punch\n- Earthquake\n- Swords Dance"
+  },
+  "marowakalolatotem": {},
+  "hitmonlee": {
+    "Terrain Sweeper": "Hitmonlee @ Electric Seed\nAbility: Unburden\nEVs: 48 HP / 252 Atk / 208 Spe\nAdamant Nature\n- Bulk Up\n- Close Combat\n- Knock Off\n- Stone Edge"
+  },
+  "hitmonchan": {
+    "Assault Vest": "Hitmonchan @ Assault Vest\nAbility: Iron Fist\nEVs: 252 HP / 72 Atk / 136 SpD / 48 Spe\nCareful Nature\n- Rapid Spin\n- Drain Punch\n- Throat Chop\n- Mach Punch",
+    "Offensive": "Hitmonchan @ Heavy-Duty Boots\nAbility: Iron Fist\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Drain Punch\n- Throat Chop\n- Thunder Punch\n- Mach Punch"
+  },
+  "lickitung": {
+    "Defensive": "Lickitung @ Eviolite\nLevel: 5\nAbility: Oblivious\nEVs: 196 HP / 76 Def / 236 SpD\nImpish Nature\n- Wish\n- Protect\n- Body Slam\n- Knock Off"
+  },
+  "koffing": {
+    "Offensive": "Koffing @ Eviolite\nLevel: 5\nAbility: Neutralizing Gas\nEVs: 76 Def / 196 SpA / 76 SpD / 156 Spe\nBold Nature\n- Sludge Bomb\n- Fire Blast\n- Thunderbolt\n- Pain Split"
+  },
+  "weezing": {
+    "Defensive Utility": "Weezing @ Black Sludge\nAbility: Levitate\nEVs: 252 HP / 220 Def / 36 Spe\nBold Nature\n- Sludge Bomb\n- Will-O-Wisp\n- Toxic Spikes\n- Pain Split"
+  },
+  "weezinggalar": {
+    "Misty Terrain": "Weezing-Galar @ Terrain Extender\nAbility: Misty Surge\nEVs: 252 HP / 4 SpD / 252 Spe\nTimid Nature\n- Misty Explosion\n- Memento\n- Taunt\n- Misty Terrain",
+    "Defensive": "Weezing-Galar @ Black Sludge\nAbility: Neutralizing Gas\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Sludge Bomb\n- Strange Steam\n- Defog\n- Will-O-Wisp"
+  },
+  "rhyhorn": {},
+  "rhydon": {
+    "Stealth Rock": "Rhydon @ Eviolite\nAbility: Lightning Rod\nEVs: 4 HP / 252 Atk / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Earthquake\n- Stone Edge\n- Swords Dance",
+    "Choice Band": "Rhydon @ Choice Band\nAbility: Lightning Rod\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Earthquake\n- Stone Edge\n- Heat Crash\n- Megahorn"
+  },
+  "chansey": {
+    "Defensive": "Chansey @ Eviolite\nAbility: Natural Cure\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Seismic Toss\n- Toxic\n- Soft-Boiled\n- Teleport"
+  },
+  "tangela": {
+    "Physically Defensive": "Tangela @ Eviolite\nAbility: Regenerator\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Giga Drain\n- Knock Off\n- Sludge Bomb\n- Synthesis",
+    "Chlorophyll Sweeper": "Tangela @ Eviolite\nAbility: Chlorophyll\nEVs: 192 HP / 252 SpA / 64 Spe\nModest Nature\n- Growth\n- Giga Drain\n- Sludge Bomb\n- Knock Off",
+    "Offensive": "Tangela @ Eviolite\nAbility: Regenerator\nEVs: 80 HP / 252 SpA / 176 Spe\nModest Nature\n- Leaf Storm\n- Sludge Bomb\n- Knock Off\n- Sleep Powder"
+  },
+  "kangaskhan": {
+    "Dual Priority": "Kangaskhan @ Silk Scarf\nAbility: Scrappy\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Fake Out\n- Double-Edge\n- Earthquake\n- Sucker Punch"
+  },
+  "kangaskhanmega": {
+    "Dual Priority": "Kangaskhan @ Silk Scarf\nAbility: Scrappy\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Fake Out\n- Double-Edge\n- Earthquake\n- Sucker Punch"
+  },
+  "horsea": {},
+  "seadra": {
+    "Choice Specs": "Seadra @ Choice Specs\nAbility: Poison Point\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Surf\n- Hydro Pump\n- Ice Beam\n- Flip Turn"
+  },
+  "goldeen": {},
+  "seaking": {
+    "Choice Band": "Seaking @ Choice Band\nAbility: Lightning Rod\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Waterfall\n- Knock Off\n- Megahorn\n- Flip Turn"
+  },
+  "staryu": {
+    "Offensive": "Staryu @ Eviolite\nLevel: 5\nAbility: Analytic\nEVs: 156 Def / 116 SpA / 236 Spe\nTimid Nature\n- Hydro Pump\n- Thunderbolt\n- Ice Beam\n- Recover",
+    "Defensive": "Staryu @ Eviolite\nLevel: 5\nAbility: Natural Cure\nEVs: 116 HP / 156 Def / 236 Spe\nTimid Nature\n- Scald\n- Thunderbolt\n- Recover\n- Rapid Spin"
+  },
+  "starmie": {
+    "Wallbreaker": "Starmie @ Life Orb\nAbility: Analytic\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Hydro Pump\n- Thunderbolt\n- Ice Beam\n- Recover"
+  },
+  "mrmime": {
+    "Choice Scarf": "Mr. Mime @ Choice Scarf\nAbility: Soundproof\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Psychic\n- Dazzling Gleam\n- Trick\n- Healing Wish"
+  },
+  "mrmimegalar": {},
+  "scyther": {
+    "Offensive Pivot": "Scyther @ Heavy-Duty Boots\nAbility: Technician\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- U-turn\n- Dual Wingbeat\n- Knock Off"
+  },
+  "jynx": {
+    "Nasty Plot": "Jynx @ Heavy-Duty Boots\nAbility: Dry Skin\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Lovely Kiss\n- Ice Beam\n- Psyshock",
+    "Choice Scarf": "Jynx @ Choice Scarf\nAbility: Dry Skin\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Ice Beam\n- Psychic\n- Focus Blast\n- Trick",
+    "Choice Specs": "Jynx @ Choice Specs\nAbility: Dry Skin\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Ice Beam\n- Psyshock\n- Focus Blast\n- Trick"
+  },
+  "electabuzz": {
+    "Offensive Pivot": "Electabuzz @ Eviolite\nAbility: Static\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Psychic\n- Focus Blast",
+    "Choice Specs": "Electabuzz @ Choice Specs\nAbility: Static\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Psychic\n- Focus Blast"
+  },
+  "magmar": {
+    "Choice Specs": "Magmar @ Choice Specs\nAbility: Flame Body\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Lava Plume\n- Scorching Sands\n- Fire Blast\n- Psychic",
+    "Stallbreaker": "Magmar @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Lava Plume\n- Scorching Sands\n- Taunt\n- Fire Blast"
+  },
+  "pinsir": {
+    "Swords Dance": "Pinsir @ Pinsirite\nAbility: Hyper Cutter\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Return\n- Quick Attack\n- Close Combat"
+  },
+  "pinsirmega": {
+    "Swords Dance": "Pinsir @ Pinsirite\nAbility: Hyper Cutter\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Return\n- Quick Attack\n- Close Combat"
+  },
+  "tauros": {
+    "All-out Attacker": "Tauros @ Life Orb\nAbility: Sheer Force\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Body Slam\n- Close Combat\n- Throat Chop\n- Iron Head"
+  },
+  "magikarp": {},
+  "gyarados": {
+    "Dragon Dance Sweeper": "Gyarados @ Lum Berry\nAbility: Moxie\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Dragon Dance\n- Waterfall\n- Ice Fang\n- Power Whip"
+  },
+  "gyaradosmega": {
+    "Dragon Dance Sweeper": "Gyarados @ Lum Berry\nAbility: Moxie\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Dragon Dance\n- Waterfall\n- Ice Fang\n- Power Whip"
+  },
+  "lapras": {
+    "Defensive": "Lapras-Gmax @ Heavy-Duty Boots\nAbility: Water Absorb\nEVs: 248 HP / 8 Def / 252 SpD\nCareful Nature\n- Sheer Cold\n- Horn Drill\n- Rest\n- Freeze-Dry"
+  },
+  "laprasgmax": {
+    "Defensive": "Lapras-Gmax @ Heavy-Duty Boots\nAbility: Water Absorb\nEVs: 248 HP / 8 Def / 252 SpD\nCareful Nature\n- Sheer Cold\n- Horn Drill\n- Rest\n- Freeze-Dry"
+  },
+  "ditto": {
+    "Revenge Killer": "Ditto @ Choice Scarf\nAbility: Imposter\nEVs: 248 HP / 8 Atk / 252 Def\nIVs: 0 Spe\nRelaxed Nature\n- Transform"
+  },
+  "eevee": {},
+  "eeveestarter": {},
+  "eeveegmax": {},
+  "vaporeon": {
+    "Defensive": "Vaporeon @ Leftovers\nAbility: Water Absorb\nEVs: 252 HP / 216 Def / 40 SpD\nCalm Nature\n- Scald\n- Wish\n- Protect\n- Heal Bell"
+  },
+  "jolteon": {
+    "Utility": "Jolteon @ Heavy-Duty Boots\nAbility: Volt Absorb\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Shadow Ball\n- Toxic"
+  },
+  "flareon": {
+    "Specially Defensive": "Flareon @ Heavy-Duty Boots\nAbility: Flash Fire\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Wish\n- Protect\n- Flare Blitz\n- Toxic",
+    "Offensive": "Flareon @ Toxic Orb\nAbility: Guts\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Flare Blitz\n- Facade\n- Superpower\n- Quick Attack"
+  },
+  "porygon": {
+    "Choice Scarf": "Porygon @ Choice Scarf\nLevel: 5\nAbility: Download\nEVs: 36 Def / 236 SpA / 196 Spe\nTimid Nature\n- Tri Attack\n- Psychic\n- Ice Beam\n- Thunderbolt",
+    "Download": "Porygon @ Eviolite\nLevel: 5\nAbility: Download\nEVs: 36 Def / 236 SpA / 196 Spe\nTimid Nature\n- Tri Attack\n- Psychic\n- Ice Beam\n- Agility",
+    "Trace": "Porygon @ Eviolite\nLevel: 5\nAbility: Trace\nEVs: 236 HP / 196 Def / 76 SpD\nCalm Nature\n- Tri Attack\n- Ice Beam\n- Recover\n- Thunder Wave"
+  },
+  "omanyte": {
+    "Shell Smash Sweeper": "Omanyte @ Eviolite\nLevel: 5\nAbility: Shell Armor\nEVs: 76 HP / 196 SpA / 236 Spe\nModest Nature\n- Shell Smash\n- Hydro Pump\n- Ice Beam\n- Earth Power",
+    "Entry Hazard Setter": "Omanyte @ Eviolite\nLevel: 5\nAbility: Weak Armor\nEVs: 76 HP / 116 Def / 116 SpA / 156 Spe\nTimid Nature\n- Stealth Rock\n- Hydro Pump\n- Knock Off\n- Spikes"
+  },
+  "omastar": {
+    "Shell Smash": "Omastar @ Power Herb\nAbility: Weak Armor\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Shell Smash\n- Meteor Beam\n- Surf\n- Ice Beam",
+    "Lead": "Omastar @ Focus Sash\nAbility: Weak Armor\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Stealth Rock\n- Spikes\n- Scald\n- Shell Smash"
+  },
+  "kabuto": {
+    "Support": "Kabuto @ Eviolite\nLevel: 5\nAbility: Weak Armor\nEVs: 116 HP / 36 Atk / 36 Def / 156 SpD / 156 Spe\nCareful Nature\n- Rapid Spin\n- Stealth Rock\n- Knock Off\n- Rock Slide"
+  },
+  "kabutops": {
+    "Rain Sweeper": "Kabutops @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Swords Dance\n- Liquidation\n- Stone Edge\n- Superpower"
+  },
+  "aerodactyl": {
+    "Choice Band": "Aerodactyl @ Choice Band\nAbility: Unnerve\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stone Edge\n- Dual Wingbeat\n- Earthquake\n- Crunch",
+    "Lead": "Aerodactyl @ Focus Sash\nAbility: Unnerve\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stealth Rock\n- Taunt\n- Rock Blast\n- Earthquake"
+  },
+  "aerodactylmega": {
+    "Choice Band": "Aerodactyl @ Choice Band\nAbility: Unnerve\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stone Edge\n- Dual Wingbeat\n- Earthquake\n- Crunch",
+    "Lead": "Aerodactyl @ Focus Sash\nAbility: Unnerve\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stealth Rock\n- Taunt\n- Rock Blast\n- Earthquake"
+  },
+  "snorlax": {
+    "Curselax": "Snorlax @ Leftovers\nAbility: Thick Fat\nEVs: 12 HP / 244 Def / 252 SpD\nCareful Nature\n- Curse\n- Body Slam\n- Earthquake\n- Rest"
+  },
+  "snorlaxgmax": {
+    "Curselax": "Snorlax @ Leftovers\nAbility: Thick Fat\nEVs: 12 HP / 244 Def / 252 SpD\nCareful Nature\n- Curse\n- Body Slam\n- Earthquake\n- Rest"
+  },
+  "articuno": {
+    "Specially Defensive": "Articuno @ Heavy-Duty Boots\nAbility: Pressure\nEVs: 252 HP / 160 SpD / 96 Spe\nCareful Nature\n- Roost\n- Defog\n- Freeze-Dry\n- Brave Bird"
+  },
+  "articunogalar": {
+    "Heavy-Duty Boots": "Articuno-Galar @ Heavy-Duty Boots\nAbility: Competitive\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Future Sight\n- Hurricane\n- Recover\n- U-turn",
+    "Choice Specs": "Articuno-Galar @ Choice Specs\nAbility: Competitive\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Future Sight\n- Psyshock\n- Hurricane\n- Shadow Ball"
+  },
+  "zapdos": {
+    "Utility": "Zapdos @ Heavy-Duty Boots\nAbility: Static\nEVs: 248 HP / 220 Def / 40 Spe\nTimid Nature\n- Discharge\n- Hurricane\n- Roost\n- Defog",
+    "Offensive Rain Sweeper": "Zapdos @ Heavy-Duty Boots\nAbility: Static\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Thunder\n- Hurricane\n- Weather Ball\n- Roost"
+  },
+  "zapdosgalar": {
+    "Choice Band": "Zapdos-Galar @ Choice Band\nAbility: Defiant\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Brave Bird\n- Close Combat\n- Thunderous Kick\n- U-turn"
+  },
+  "moltres": {
+    "Offensive": "Moltres @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 88 HP / 168 SpA / 252 Spe\nTimid Nature\n- Flamethrower\n- Hurricane\n- U-turn\n- Roost",
+    "SubToxic": "Moltres @ Heavy-Duty Boots\nAbility: Pressure\nEVs: 152 HP / 132 SpD / 224 Spe\nTimid Nature\n- Mystical Fire\n- Toxic\n- Substitute\n- Roost"
+  },
+  "moltresgalar": {
+    "Double Dance": "Moltres-Galar @ Weakness Policy\nAbility: Berserk\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Nasty Plot\n- Fiery Wrath\n- Hurricane\n- Agility",
+    "RestTalk": "Moltres-Galar @ Heavy-Duty Boots\nAbility: Berserk\nEVs: 248 HP / 244 SpD / 16 Spe\nCalm Nature\n- Hurricane\n- Fiery Wrath\n- Rest\n- Sleep Talk"
+  },
+  "dratini": {},
+  "dragonair": {},
+  "dragonite": {
+    "Utility": "Dragonite @ Heavy-Duty Boots\nAbility: Multiscale\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\n- Ice Beam\n- Earthquake\n- Roost\n- Heal Bell",
+    "Defensive Dragon Dance": "Dragonite @ Heavy-Duty Boots\nAbility: Multiscale\nEVs: 248 HP / 52 Atk / 56 Def / 152 Spe\nAdamant Nature\n- Dragon Dance\n- Dual Wingbeat\n- Earthquake\n- Roost",
+    "Offensive Dragon Dance": "Dragonite @ Heavy-Duty Boots\nAbility: Multiscale\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Earthquake\n- Dual Wingbeat\n- Roost"
+  },
+  "mewtwo": {},
+  "mewtwomegax": {
+    "All-out Attacker": "Mewtwo @ Life Orb\nAbility: Pressure\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Psystrike\n- Ice Beam\n- Fire Blast\n- Nasty Plot"
+  },
+  "mewtwomegay": {
+    "All-out Attacker": "Mewtwo @ Life Orb\nAbility: Pressure\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Psystrike\n- Ice Beam\n- Fire Blast\n- Nasty Plot"
+  },
+  "mew": {
+    "Utility": "Mew @ Heavy-Duty Boots\nAbility: Synchronize\nEVs: 248 HP / 148 SpD / 112 Spe\nJolly Nature\n- Spikes\n- Knock Off\n- Taunt\n- Roost",
+    "Cosmic Power": "Mew @ Leftovers\nAbility: Synchronize\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Cosmic Power\n- Stored Power\n- Body Press\n- Roost",
+    "Suicide Lead": "Mew @ Red Card\nAbility: Synchronize\nEVs: 252 HP / 4 Atk / 252 Spe\nJolly Nature\n- Stealth Rock\n- Spikes\n- Taunt\n- Flare Blitz"
+  },
+  "chikorita": {},
+  "bayleef": {},
+  "meganium": {},
+  "cyndaquil": {},
+  "quilava": {},
+  "typhlosion": {},
+  "totodile": {},
+  "croconaw": {},
+  "feraligatr": {
+    "Dragon Dance": "Feraligatr @ Life Orb\nAbility: Sheer Force\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Dragon Dance\n- Waterfall\n- Ice Punch\n- Crunch"
+  },
+  "sentret": {},
+  "furret": {},
+  "hoothoot": {},
+  "noctowl": {},
+  "ledyba": {},
+  "ledian": {},
+  "spinarak": {},
+  "ariados": {},
+  "crobat": {
+    "Pivot": "Crobat @ Heavy-Duty Boots\nAbility: Infiltrator\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Brave Bird\n- Roost\n- U-turn\n- Defog"
+  },
+  "chinchou": {
+    "Offensive Pivot": "Chinchou @ Eviolite\nLevel: 5\nAbility: Volt Absorb\nEVs: 132 Def / 148 SpA / 228 Spe\nTimid Nature\n- Volt Switch\n- Ice Beam\n- Thunderbolt\n- Scald"
+  },
+  "lanturn": {
+    "Bulky Pivot": "Lanturn @ Leftovers\nAbility: Volt Absorb\nEVs: 40 HP / 172 Def / 16 SpA / 240 SpD / 40 Spe\nCalm Nature\n- Scald\n- Volt Switch\n- Toxic\n- Protect",
+    "Assault Vest": "Lanturn @ Assault Vest\nAbility: Volt Absorb\nEVs: 252 SpA / 136 SpD / 120 Spe\nModest Nature\n- Scald\n- Volt Switch\n- Ice Beam\n- Discharge"
+  },
+  "pichu": {},
+  "pichuspikyeared": {},
+  "cleffa": {},
+  "igglybuff": {},
+  "togepi": {},
+  "togetic": {
+    "Defog": "Togetic @ Eviolite\nAbility: Super Luck\nEVs: 248 HP / 252 Def / 8 SpD\nBold Nature\n- Defog\n- Roost\n- Dazzling Gleam\n- Flamethrower",
+    "Nasty Plot": "Togetic @ Eviolite\nAbility: Super Luck\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Dazzling Gleam\n- Flamethrower\n- Psyshock"
+  },
+  "natu": {
+    "Defensive": "Natu @ Eviolite\nLevel: 5\nAbility: Magic Bounce\nEVs: 236 Def / 76 SpD / 196 Spe\nTimid Nature\n- Psychic\n- Heat Wave\n- U-turn\n- Roost",
+    "Setup Sweeper": "Natu @ Eviolite\nLevel: 5\nAbility: Magic Bounce\nEVs: 36 HP / 236 Def / 36 SpA / 196 Spe\nTimid Nature\n- Stored Power\n- Heat Wave\n- Roost\n- Calm Mind",
+    "Dual Screens": "Natu @ Light Clay\nLevel: 5\nAbility: Magic Bounce\nEVs: 36 HP / 236 Def / 196 Spe\nTimid Nature\n- Reflect\n- Light Screen\n- Teleport\n- Thunder Wave"
+  },
+  "xatu": {
+    "Pivot": "Xatu @ Rocky Helmet\nAbility: Magic Bounce\nEVs: 252 HP / 240 Def / 16 Spe\nTimid Nature\n- Psychic\n- Night Shade\n- Roost\n- Teleport",
+    "Dual Screens": "Xatu @ Colbur Berry\nAbility: Magic Bounce\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Reflect\n- Light Screen\n- Teleport\n- Thunder Wave"
+  },
+  "mareep": {},
+  "flaaffy": {},
+  "ampharos": {},
+  "ampharosmega": {},
+  "bellossom": {
+    "Bulky Quiver Dance": "Bellossom @ Leftovers\nAbility: Chlorophyll\nEVs: 252 HP / 72 Def / 184 Spe\nTimid Nature\n- Quiver Dance\n- Strength Sap\n- Giga Drain\n- Moonblast"
+  },
+  "marill": {},
+  "azumarill": {
+    "Choice Band": "Azumarill @ Choice Band\nAbility: Huge Power\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Liquidation\n- Play Rough\n- Aqua Jet\n- Ice Punch",
+    "Belly Drum": "Azumarill @ Sitrus Berry\nAbility: Huge Power\nEVs: 4 HP / 252 Atk / 252 Spe\nAdamant Nature\n- Belly Drum\n- Aqua Jet\n- Play Rough\n- Knock Off",
+    "Assault Vest": "Azumarill @ Assault Vest\nAbility: Huge Power\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Liquidation\n- Play Rough\n- Aqua Jet\n- Knock Off"
+  },
+  "sudowoodo": {},
+  "politoed": {
+    "Rain Setter": "Politoed @ Damp Rock\nAbility: Drizzle\nEVs: 252 HP / 120 Def / 76 SpA / 56 Spe\nBold Nature\n- Scald\n- Encore\n- Toxic\n- Ice Beam"
+  },
+  "hoppip": {},
+  "skiploom": {},
+  "jumpluff": {},
+  "aipom": {},
+  "sunkern": {},
+  "sunflora": {},
+  "yanma": {},
+  "wooper": {},
+  "quagsire": {
+    "Unaware Wall": "Quagsire @ Heavy-Duty Boots\nAbility: Unaware\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Scald\n- Earthquake\n- Recover\n- Toxic"
+  },
+  "espeon": {},
+  "umbreon": {
+    "Defensive": "Umbreon @ Heavy-Duty Boots\nAbility: Synchronize\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Foul Play\n- Wish\n- Protect\n- Heal Bell"
+  },
+  "murkrow": {},
+  "slowking": {
+    "Defensive Pivot": "Slowking @ Colbur Berry\nAbility: Regenerator\nEVs: 248 HP / 252 Def / 8 SpD\nIVs: 0 Atk / 0 Spe\nRelaxed Nature\n- Scald\n- Psychic\n- Slack Off\n- Teleport"
+  },
+  "slowkinggalar": {
+    "Assault Vest": "Slowking-Galar @ Assault Vest\nAbility: Regenerator\nEVs: 252 HP / 12 Def / 124 SpA / 120 SpD\nCalm Nature\n- Future Sight\n- Sludge Bomb\n- Flamethrower\n- Scald"
+  },
+  "misdreavus": {},
+  "unown": {},
+  "wobbuffet": {},
+  "girafarig": {},
+  "pineco": {},
+  "forretress": {},
+  "dunsparce": {},
+  "gligar": {},
+  "steelix": {
+    "Defensive": "Steelix @ Leftovers\nAbility: Sturdy\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Stealth Rock\n- Earthquake\n- Heavy Slam\n- Toxic"
+  },
+  "steelixmega": {
+    "Defensive": "Steelix @ Leftovers\nAbility: Sturdy\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Stealth Rock\n- Earthquake\n- Heavy Slam\n- Toxic"
+  },
+  "snubbull": {},
+  "granbull": {},
+  "qwilfish": {
+    "Spikes": "Qwilfish @ Rocky Helmet\nAbility: Intimidate\nEVs: 252 HP / 4 Atk / 252 Spe\nJolly Nature\n- Spikes\n- Taunt\n- Waterfall\n- Thunder Wave"
+  },
+  "scizor": {
+    "Physically Defensive": "Scizor @ Heavy-Duty Boots\nAbility: Technician\nEVs: 248 HP / 172 Def / 88 SpD\nImpish Nature\n- Swords Dance\n- Bullet Punch\n- Knock Off\n- Roost",
+    "Offensive Swords Dance": "Scizor @ Life Orb\nAbility: Technician\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Bullet Punch\n- Knock Off\n- Sand Tomb"
+  },
+  "scizormega": {
+    "Physically Defensive": "Scizor @ Heavy-Duty Boots\nAbility: Technician\nEVs: 248 HP / 172 Def / 88 SpD\nImpish Nature\n- Swords Dance\n- Bullet Punch\n- Knock Off\n- Roost",
+    "Offensive Swords Dance": "Scizor @ Life Orb\nAbility: Technician\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Bullet Punch\n- Knock Off\n- Sand Tomb"
+  },
+  "shuckle": {
+    "Sticky Web": "Shuckle @ Mental Herb\nAbility: Sturdy\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Sticky Web\n- Stealth Rock\n- Encore\n- Final Gambit"
+  },
+  "heracross": {
+    "Guts Wallbreaker": "Heracross @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Facade\n- Knock Off\n- Megahorn",
+    "Choice Scarf": "Heracross @ Choice Scarf\nAbility: Moxie\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Megahorn\n- Knock Off\n- Stone Edge"
+  },
+  "heracrossmega": {
+    "Guts Wallbreaker": "Heracross @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Facade\n- Knock Off\n- Megahorn",
+    "Choice Scarf": "Heracross @ Choice Scarf\nAbility: Moxie\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Megahorn\n- Knock Off\n- Stone Edge"
+  },
+  "sneasel": {
+    "Choice Band": "Sneasel @ Choice Band\nAbility: Inner Focus\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Knock Off\n- Icicle Crash\n- Low Kick\n- Ice Shard",
+    "Swords Dance": "Sneasel @ Heavy-Duty Boots\nAbility: Inner Focus\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Icicle Crash\n- Knock Off\n- Ice Shard"
+  },
+  "teddiursa": {},
+  "ursaring": {},
+  "slugma": {},
+  "magcargo": {},
+  "swinub": {},
+  "piloswine": {
+    "Stealth Rock": "Piloswine @ Eviolite\nAbility: Thick Fat\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Stealth Rock\n- High Horsepower\n- Icicle Crash\n- Ice Shard",
+    "Choice Band": "Piloswine @ Choice Band\nAbility: Thick Fat\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Earthquake\n- Icicle Crash\n- Ice Shard\n- Superpower"
+  },
+  "corsola": {},
+  "corsolagalar": {
+    "Physical Wall": "Corsola-Galar @ Eviolite\nAbility: Cursed Body\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Night Shade\n- Strength Sap\n- Whirlpool\n- Stealth Rock",
+    "Calm Mind": "Corsola-Galar @ Eviolite\nAbility: Cursed Body\nEVs: 252 HP / 212 Def / 44 Spe\nBold Nature\n- Calm Mind\n- Strength Sap\n- Shadow Ball\n- Will-O-Wisp"
+  },
+  "remoraid": {},
+  "octillery": {},
+  "delibird": {},
+  "mantine": {
+    "Utility": "Mantine @ Heavy-Duty Boots\nAbility: Water Absorb\nEVs: 252 HP / 120 Def / 136 Spe\nBold Nature\n- Scald\n- Defog\n- Roost\n- Air Slash"
+  },
+  "skarmory": {
+    "Physical Wall": "Skarmory @ Rocky Helmet\nAbility: Sturdy\nEVs: 252 HP / 160 Def / 96 Spe\nImpish Nature\n- Body Press\n- Spikes\n- Roost\n- Whirlwind"
+  },
+  "houndour": {},
+  "houndoom": {},
+  "houndoommega": {},
+  "kingdra": {
+    "Choice Specs": "Kingdra @ Choice Specs\nAbility: Swift Swim\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Hydro Pump\n- Draco Meteor\n- Surf\n- Flip Turn"
+  },
+  "phanpy": {},
+  "donphan": {},
+  "porygon2": {
+    "Specially Defensive": "Porygon2 @ Eviolite\nAbility: Trace\nEVs: 248 HP / 8 Def / 252 SpD\nCalm Nature\n- Teleport\n- Recover\n- Ice Beam\n- Toxic"
+  },
+  "stantler": {},
+  "smeargle": {
+    "Sticky Web": "Smeargle @ Focus Sash\nAbility: Own Tempo\nEVs: 4 HP / 252 Def / 252 Spe\nJolly Nature\n- Sticky Web\n- Taunt\n- Nuzzle\n- Rapid Spin",
+    "Smash Pass": "Smeargle @ Focus Sash\nAbility: Moody\nEVs: 4 HP / 252 Def / 252 Spe\nJolly Nature\n- Baton Pass\n- Shell Smash\n- Spore\n- Taunt",
+    "Setup Sweeper": "Smeargle @ Leftovers\nAbility: Moody\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Spore\n- Shell Smash\n- Power Trip\n- Substitute"
+  },
+  "tyrogue": {},
+  "hitmontop": {
+    "Offensive": "Hitmontop @ Assault Vest\nAbility: Technician\nEVs: 112 HP / 252 Atk / 144 Spe\nAdamant Nature\n- Mach Punch\n- Triple Axel\n- Thief\n- Fake Out"
+  },
+  "smoochum": {},
+  "elekid": {
+    "Offensive": "Elekid @ Life Orb\nLevel: 5\nAbility: Vital Spirit\nEVs: 12 Atk / 236 SpA / 236 Spe\nNaive Nature\n- Volt Switch\n- Thunderbolt\n- Psychic\n- Ice Punch"
+  },
+  "magby": {
+    "Belly Drum Sweeper": "Magby @ Berry Juice\nLevel: 5\nAbility: Vital Spirit\nEVs: 236 Atk / 252 Spe\nIVs: 29 HP\nJolly Nature\n- Belly Drum\n- Fire Punch\n- Thunder Punch\n- Mach Punch"
+  },
+  "miltank": {
+    "Defensive": "Miltank @ Leftovers\nAbility: Thick Fat\nEVs: 252 HP / 252 SpD / 4 Spe\nCareful Nature\n- Stealth Rock\n- Milk Drink\n- Toxic\n- Seismic Toss"
+  },
+  "blissey": {
+    "Defensive": "Blissey @ Heavy-Duty Boots\nAbility: Natural Cure\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Seismic Toss\n- Soft-Boiled\n- Thunder Wave\n- Teleport"
+  },
+  "raikou": {
+    "Offensive Pivot": "Raikou @ Heavy-Duty Boots\nAbility: Pressure\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Volt Switch\n- Thunderbolt\n- Scald\n- Toxic",
+    "Calm Mind": "Raikou @ Leftovers\nAbility: Pressure\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Calm Mind\n- Thunderbolt\n- Scald\n- Shadow Ball"
+  },
+  "entei": {
+    "Wallbreaker": "Entei @ Choice Band\nAbility: Inner Focus\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Sacred Fire\n- Flare Blitz\n- Stone Edge\n- Extreme Speed"
+  },
+  "suicune": {
+    "Substitute + Calm Mind": "Suicune @ Leftovers\nAbility: Pressure\nEVs: 252 HP / 40 Def / 216 Spe\nTimid Nature\n- Substitute\n- Calm Mind\n- Scald\n- Protect",
+    "RestTalk": "Suicune @ Leftovers\nAbility: Pressure\nEVs: 252 HP / 240 Def / 16 Spe\nBold Nature\n- Rest\n- Sleep Talk\n- Scald\n- Calm Mind"
+  },
+  "larvitar": {},
+  "pupitar": {},
+  "tyranitar": {
+    "Specially Defensive": "Tyranitar @ Leftovers\nAbility: Sand Stream\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Stealth Rock\n- Rock Blast\n- Earthquake\n- Thunder Wave",
+    "Choice Band": "Tyranitar @ Choice Band\nAbility: Sand Stream\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Stone Edge\n- Crunch\n- Fire Punch\n- Ice Punch"
+  },
+  "tyranitarmega": {
+    "Specially Defensive": "Tyranitar @ Leftovers\nAbility: Sand Stream\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Stealth Rock\n- Rock Blast\n- Earthquake\n- Thunder Wave",
+    "Choice Band": "Tyranitar @ Choice Band\nAbility: Sand Stream\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Stone Edge\n- Crunch\n- Fire Punch\n- Ice Punch"
+  },
+  "lugia": {
+    "Great Wall (Defensive)": "Lugia @ Heavy-Duty Boots\nAbility: Multiscale\nEVs: 252 HP / 160 Def / 96 Spe\nBold Nature\n- Roost\n- Ice Beam\n- Whirlwind\n- Toxic"
+  },
+  "hooh": {
+    "Defensive": "Ho-Oh @ Heavy-Duty Boots\nAbility: Regenerator\nEVs: 248 HP / 208 Def / 52 SpD\nImpish Nature\n- Sacred Fire\n- Defog\n- Toxic\n- Whirlwind",
+    "Choice Band": "Ho-Oh @ Choice Band\nAbility: Regenerator\nEVs: 248 HP / 208 Atk / 52 SpD\nAdamant Nature\n- Sacred Fire\n- Brave Bird\n- Earthquake\n- Whirlwind"
+  },
+  "celebi": {
+    "Utility": "Celebi @ Heavy-Duty Boots\nAbility: Natural Cure\nEVs: 252 HP / 4 SpD / 252 Spe\nTimid Nature\n- Thunder Wave\n- U-turn\n- Recover\n- Psychic",
+    "Choice Scarf": "Celebi @ Choice Scarf\nAbility: Natural Cure\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Psychic\n- Trick\n- U-turn"
+  },
+  "treecko": {
+    "Sweeper": "Treecko @ Grassy Seed\nLevel: 5\nAbility: Unburden\nEVs: 36 HP / 236 Atk / 156 Def / 36 Spe\nAdamant Nature\n- Swords Dance\n- Bullet Seed\n- Drain Punch\n- Acrobatics"
+  },
+  "grovyle": {
+    "Unburden Sweeper": "Grovyle @ Grassy Seed\nAbility: Unburden\nEVs: 240 HP / 252 Atk / 16 Spe\nAdamant Nature\n- Swords Dance\n- Acrobatics\n- Leaf Blade\n- Substitute"
+  },
+  "sceptile": {},
+  "sceptilemega": {},
+  "torchic": {},
+  "combusken": {
+    "Specially Offensive": "Combusken @ Leftovers\nAbility: Speed Boost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Flamethrower\n- Protect\n- Toxic\n- Substitute",
+    "Swords Dance": "Combusken @ Eviolite\nAbility: Speed Boost\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Protect\n- Flare Blitz\n- Brick Break"
+  },
+  "blaziken": {
+    "Swords Dance": "Blaziken @ Life Orb\nAbility: Speed Boost\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Flare Blitz\n- Close Combat\n- Thunder Punch"
+  },
+  "blazikenmega": {
+    "Swords Dance": "Blaziken @ Life Orb\nAbility: Speed Boost\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Flare Blitz\n- Close Combat\n- Thunder Punch"
+  },
+  "mudkip": {},
+  "marshtomp": {
+    "Special Wall": "Marshtomp @ Eviolite\nAbility: Torrent\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Scald\n- Earthquake\n- Toxic\n- Stealth Rock"
+  },
+  "swampert": {
+    "Physically Defensive": "Swampert @ Leftovers\nAbility: Damp\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\n- Earthquake\n- Flip Turn\n- Toxic\n- Stealth Rock"
+  },
+  "swampertmega": {
+    "Physically Defensive": "Swampert @ Leftovers\nAbility: Damp\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\n- Earthquake\n- Flip Turn\n- Toxic\n- Stealth Rock"
+  },
+  "poochyena": {},
+  "mightyena": {},
+  "zigzagoon": {},
+  "zigzagoongalar": {},
+  "linoone": {
+    "Belly Drum": "Linoone @ Figy Berry\nAbility: Gluttony\nEVs: 60 HP / 252 Atk / 196 Spe\nAdamant Nature\n- Belly Drum\n- Extreme Speed\n- Stomping Tantrum\n- Seed Bomb"
+  },
+  "linoonegalar": {
+    "Eviolite Pivot": "Linoone-Galar @ Eviolite\nAbility: Quick Feet\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Double-Edge\n- Taunt\n- Parting Shot",
+    "Toxic Orb Pivot": "Linoone-Galar @ Toxic Orb\nAbility: Quick Feet\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Facade\n- Protect\n- Parting Shot"
+  },
+  "wurmple": {},
+  "silcoon": {},
+  "beautifly": {},
+  "cascoon": {},
+  "dustox": {},
+  "lotad": {},
+  "lombre": {},
+  "ludicolo": {
+    "Swift Swim": "Ludicolo @ Life Orb\nAbility: Swift Swim\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Weather Ball\n- Giga Drain\n- Ice Beam\n- Protect"
+  },
+  "seedot": {},
+  "nuzleaf": {},
+  "shiftry": {
+    "Sun Sweeper": "Shiftry @ Life Orb\nAbility: Chlorophyll\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Growth\n- Solar Blade\n- Knock Off\n- Low Kick"
+  },
+  "taillow": {},
+  "swellow": {},
+  "wingull": {
+    "Life Orb": "Wingull @ Life Orb\nLevel: 5\nAbility: Hydration\nEVs: 36 Def / 236 SpA / 236 Spe\nIVs: 0 HP\nTimid Nature\n- Hurricane\n- Scald\n- Substitute\n- Air Slash"
+  },
+  "pelipper": {
+    "Defensive": "Pelipper @ Damp Rock\nAbility: Drizzle\nEVs: 248 HP / 252 Def / 8 SpD\nBold Nature\n- Scald\n- Roost\n- U-turn\n- Defog"
+  },
+  "ralts": {},
+  "kirlia": {},
+  "gardevoir": {
+    "Choice Scarf": "Gardevoir @ Choice Scarf\nAbility: Trace\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Moonblast\n- Psychic\n- Trick\n- Healing Wish",
+    "Choice Specs": "Gardevoir @ Choice Specs\nAbility: Trace\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Moonblast\n- Psychic\n- Focus Blast\n- Shadow Ball"
+  },
+  "gardevoirmega": {
+    "Choice Scarf": "Gardevoir @ Choice Scarf\nAbility: Trace\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Moonblast\n- Psychic\n- Trick\n- Healing Wish",
+    "Choice Specs": "Gardevoir @ Choice Specs\nAbility: Trace\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Moonblast\n- Psychic\n- Focus Blast\n- Shadow Ball"
+  },
+  "surskit": {},
+  "masquerain": {},
+  "shroomish": {},
+  "breloom": {
+    "Technician Attacker": "Breloom @ Life Orb\nAbility: Technician\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Spore\n- Bullet Seed\n- Mach Punch\n- Rock Tomb",
+    "SubPunch": "Breloom @ Toxic Orb\nAbility: Poison Heal\nEVs: 140 HP / 232 Atk / 136 Spe\nAdamant Nature\n- Spore\n- Substitute\n- Seed Bomb\n- Focus Punch"
+  },
+  "slakoth": {},
+  "vigoroth": {},
+  "slaking": {},
+  "nincada": {},
+  "ninjask": {
+    "Swords Dance": "Ninjask\nAbility: Speed Boost\nEVs: 252 Atk / 88 Def / 168 Spe\nAdamant Nature\n- Acrobatics\n- U-turn\n- Protect\n- Swords Dance"
+  },
+  "shedinja": {
+    "Defensive Pivot": "Shedinja @ Heavy-Duty Boots\nAbility: Wonder Guard\nEVs: 252 Atk / 252 Spe\nIVs: 0 Def / 0 SpD\nLonely Nature\n- Toxic\n- Will-O-Wisp\n- Baton Pass\n- Shadow Sneak"
+  },
+  "whismur": {},
+  "loudred": {},
+  "exploud": {
+    "DAT LOUD": "Exploud @ Choice Specs\nAbility: Scrappy\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Boomburst\n- Overheat\n- Surf\n- Focus Blast"
+  },
+  "makuhita": {},
+  "hariyama": {},
+  "azurill": {},
+  "nosepass": {},
+  "skitty": {},
+  "delcatty": {},
+  "sableye": {
+    "Defensive Magic Bounce": "Sableye @ Sablenite\nAbility: Prankster\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Knock Off\n- Will-O-Wisp\n- Recover\n- Protect"
+  },
+  "sableyemega": {
+    "Defensive Magic Bounce": "Sableye @ Sablenite\nAbility: Prankster\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Knock Off\n- Will-O-Wisp\n- Recover\n- Protect"
+  },
+  "mawile": {
+    "Swords Dance": "Mawile @ Mawilite\nAbility: Intimidate\nEVs: 92 HP / 252 Atk / 164 Spe\nAdamant Nature\n- Swords Dance\n- Play Rough\n- Sucker Punch\n- Knock Off",
+    "All Out Attacker": "Mawile @ Mawilite\nAbility: Intimidate\nEVs: 92 HP / 252 Atk / 164 Spe\nAdamant Nature\n- Play Rough\n- Thunder Punch\n- Ice Punch\n- Fire Fang"
+  },
+  "mawilemega": {
+    "Swords Dance": "Mawile @ Mawilite\nAbility: Intimidate\nEVs: 92 HP / 252 Atk / 164 Spe\nAdamant Nature\n- Swords Dance\n- Play Rough\n- Sucker Punch\n- Knock Off",
+    "All Out Attacker": "Mawile @ Mawilite\nAbility: Intimidate\nEVs: 92 HP / 252 Atk / 164 Spe\nAdamant Nature\n- Play Rough\n- Thunder Punch\n- Ice Punch\n- Fire Fang"
+  },
+  "aron": {},
+  "lairon": {
+    "Choice Band": "Lairon @ Choice Band\nAbility: Rock Head\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Head Smash\n- Heavy Slam\n- Superpower\n- Stealth Rock"
+  },
+  "aggron": {
+    "Choice Band": "Aggron @ Choice Band\nAbility: Rock Head\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Head Smash\n- Heavy Slam\n- Aqua Tail\n- Earthquake",
+    "Specially Defensive": "Aggron @ Leftovers\nAbility: Rock Head\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Stealth Rock\n- Head Smash\n- Heavy Slam\n- Protect"
+  },
+  "aggronmega": {
+    "Choice Band": "Aggron @ Choice Band\nAbility: Rock Head\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Head Smash\n- Heavy Slam\n- Aqua Tail\n- Earthquake",
+    "Specially Defensive": "Aggron @ Leftovers\nAbility: Rock Head\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Stealth Rock\n- Head Smash\n- Heavy Slam\n- Protect"
+  },
+  "meditite": {},
+  "medicham": {
+    "Wallbreaker": "Medicham @ Medichamite\nAbility: Telepathy\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Fake Out\n- High Jump Kick\n- Zen Headbutt\n- Thunder Punch"
+  },
+  "medichammega": {
+    "Wallbreaker": "Medicham @ Medichamite\nAbility: Telepathy\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Fake Out\n- High Jump Kick\n- Zen Headbutt\n- Thunder Punch"
+  },
+  "electrike": {},
+  "manectric": {
+    "Choice Scarf": "Manectric @ Choice Scarf\nAbility: Lightning Rod\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Overheat\n- Switcheroo",
+    "Choice Specs": "Manectric @ Choice Specs\nAbility: Lightning Rod\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Overheat\n- Switcheroo",
+    "Toxic + Protect": "Manectric @ Leftovers\nAbility: Lightning Rod\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Toxic\n- Flamethrower\n- Protect"
+  },
+  "manectricmega": {
+    "Choice Scarf": "Manectric @ Choice Scarf\nAbility: Lightning Rod\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Overheat\n- Switcheroo",
+    "Choice Specs": "Manectric @ Choice Specs\nAbility: Lightning Rod\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Overheat\n- Switcheroo",
+    "Toxic + Protect": "Manectric @ Leftovers\nAbility: Lightning Rod\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Toxic\n- Flamethrower\n- Protect"
+  },
+  "plusle": {},
+  "minun": {},
+  "volbeat": {},
+  "illumise": {},
+  "roselia": {
+    "Offensive Spikes": "Roselia @ Eviolite\nAbility: Natural Cure\nEVs: 4 HP / 252 SpA / 252 Spe\nModest Nature\n- Spikes\n- Leaf Storm\n- Sludge Bomb\n- Sleep Powder",
+    "Specially Defensive": "Roselia @ Eviolite\nAbility: Natural Cure\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Spikes\n- Sludge Bomb\n- Giga Drain\n- Synthesis",
+    "Choice Specs": "Roselia @ Choice Specs\nAbility: Natural Cure\nEVs: 4 HP / 252 SpA / 252 Spe\nModest Nature\n- Leaf Storm\n- Sludge Bomb\n- Giga Drain\n- Shadow Ball"
+  },
+  "gulpin": {},
+  "swalot": {},
+  "carvanha": {
+    "Physical Sweeper": "Carvanha @ Life Orb\nLevel: 5\nAbility: Speed Boost\nEVs: 196 Atk / 36 SpD / 236 Spe\nIVs: 9 HP\nAdamant Nature\n- Liquidation\n- Crunch\n- Psychic Fangs\n- Protect"
+  },
+  "sharpedo": {
+    "Specially-based Mixed Cleaner": "Sharpedo @ Life Orb\nAbility: Speed Boost\nEVs: 4 Atk / 252 SpA / 252 Spe\nMild Nature\n- Hydro Pump\n- Dark Pulse\n- Close Combat\n- Protect",
+    "Physical Cleaner": "Sharpedo @ Life Orb\nAbility: Speed Boost\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Waterfall\n- Crunch\n- Close Combat\n- Protect"
+  },
+  "sharpedomega": {
+    "Specially-based Mixed Cleaner": "Sharpedo @ Life Orb\nAbility: Speed Boost\nEVs: 4 Atk / 252 SpA / 252 Spe\nMild Nature\n- Hydro Pump\n- Dark Pulse\n- Close Combat\n- Protect",
+    "Physical Cleaner": "Sharpedo @ Life Orb\nAbility: Speed Boost\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Waterfall\n- Crunch\n- Close Combat\n- Protect"
+  },
+  "wailmer": {},
+  "wailord": {},
+  "numel": {},
+  "camerupt": {},
+  "cameruptmega": {},
+  "torkoal": {
+    "Support": "Torkoal @ Heat Rock\nAbility: Drought\nEVs: 248 HP / 252 Def / 8 SpD\nBold Nature\n- Stealth Rock\n- Lava Plume\n- Body Press\n- Rapid Spin"
+  },
+  "spoink": {},
+  "grumpig": {},
+  "spinda": {},
+  "trapinch": {
+    "Trapper": "Trapinch @ Eviolite\nLevel: 5\nAbility: Arena Trap\nEVs: 76 HP / 116 Atk / 76 Def / 156 SpD / 36 Spe\nCareful Nature\n- Earthquake\n- Superpower\n- First Impression\n- Feint"
+  },
+  "vibrava": {
+    "Specially Defensive Pivot": "Vibrava @ Eviolite\nAbility: Levitate\nEVs: 248 HP / 8 Atk / 252 SpD\nCareful Nature\n- Earthquake\n- U-turn\n- Roost\n- Defog"
+  },
+  "flygon": {
+    "Dragon Dance": "Flygon @ Life Orb\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Earthquake\n- Outrage\n- Stone Edge",
+    "Defog": "Flygon @ Leftovers\nAbility: Levitate\nEVs: 172 HP / 112 Atk / 224 Spe\nJolly Nature\n- Earthquake\n- Defog\n- Roost\n- Toxic",
+    "Choice Scarf": "Flygon @ Choice Scarf\nAbility: Levitate\nEVs: 236 Atk / 20 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- U-turn\n- Stone Edge\n- Outrage",
+    "Choice Band": "Flygon @ Choice Band\nAbility: Levitate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Outrage\n- Stone Edge\n- U-turn"
+  },
+  "cacnea": {},
+  "cacturne": {},
+  "swablu": {},
+  "altaria": {
+    "Defog": "Altaria @ Heavy-Duty Boots\nAbility: Natural Cure\nEVs: 252 HP / 64 Def / 56 SpD / 136 Spe\nCalm Nature\n- Defog\n- Roost\n- Hurricane\n- Toxic"
+  },
+  "altariamega": {
+    "Defog": "Altaria @ Heavy-Duty Boots\nAbility: Natural Cure\nEVs: 252 HP / 64 Def / 56 SpD / 136 Spe\nCalm Nature\n- Defog\n- Roost\n- Hurricane\n- Toxic"
+  },
+  "zangoose": {},
+  "seviper": {},
+  "lunatone": {},
+  "solrock": {
+    "Stealth Rock": "Solrock @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 4 Atk / 252 Def\nImpish Nature\n- Stealth Rock\n- Morning Sun\n- Will-O-Wisp\n- Rock Slide"
+  },
+  "barboach": {},
+  "whiscash": {},
+  "corphish": {
+    "Wallbreaker": "Corphish @ Eviolite\nLevel: 5\nAbility: Adaptability\nEVs: 196 Atk / 76 Def / 236 Spe\nAdamant Nature\n- Crabhammer\n- Aqua Jet\n- Knock Off\n- Swords Dance"
+  },
+  "crawdaunt": {
+    "Swords Dance": "Crawdaunt @ Life Orb\nAbility: Adaptability\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Swords Dance\n- Crabhammer\n- Knock Off\n- Aqua Jet"
+  },
+  "baltoy": {},
+  "claydol": {
+    "Defensive": "Claydol @ Colbur Berry\nAbility: Levitate\nEVs: 252 HP / 240 Def / 16 Spe\nBold Nature\n- Stealth Rock\n- Toxic\n- Psychic\n- Teleport"
+  },
+  "lileep": {},
+  "cradily": {
+    "Defensive": "Cradily @ Leftovers\nAbility: Storm Drain\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Stealth Rock\n- Recover\n- Toxic\n- Giga Drain"
+  },
+  "anorith": {},
+  "armaldo": {
+    "Utility": "Armaldo @ Heavy-Duty Boots\nAbility: Battle Armor\nEVs: 252 HP / 92 Atk / 164 Spe\nAdamant Nature\n- Rapid Spin\n- Stone Edge\n- Knock Off\n- Earthquake",
+    "Swift Swim": "Armaldo @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Swords Dance\n- Stone Edge\n- Earthquake\n- X-Scissor"
+  },
+  "feebas": {},
+  "milotic": {
+    "Defensive": "Milotic @ Leftovers\nAbility: Marvel Scale\nEVs: 252 HP / 208 Def / 48 Spe\nBold Nature\n- Scald\n- Recover\n- Flip Turn\n- Toxic"
+  },
+  "castform": {},
+  "castformsunny": {},
+  "castformrainy": {},
+  "castformsnowy": {},
+  "kecleon": {},
+  "shuppet": {},
+  "banette": {},
+  "banettemega": {},
+  "duskull": {},
+  "dusclops": {
+    "Bulky Attacker": "Dusclops @ Eviolite\nAbility: Pressure\nEVs: 212 HP / 252 Atk / 44 Spe\nAdamant Nature\n- Poltergeist\n- Shadow Sneak\n- Power-Up Punch\n- Will-O-Wisp"
+  },
+  "tropius": {},
+  "chimecho": {},
+  "absol": {
+    "Choice Band": "Absol @ Choice Band\nAbility: Justified\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Sucker Punch\n- Close Combat\n- Iron Tail",
+    "Swords Dance": "Absol @ Life Orb\nAbility: Justified\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Knock Off\n- Sucker Punch\n- Iron Tail"
+  },
+  "absolmega": {
+    "Choice Band": "Absol @ Choice Band\nAbility: Justified\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Sucker Punch\n- Close Combat\n- Iron Tail",
+    "Swords Dance": "Absol @ Life Orb\nAbility: Justified\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Knock Off\n- Sucker Punch\n- Iron Tail"
+  },
+  "wynaut": {
+    "Trapper": "Wynaut @ Berry Juice\nLevel: 5\nAbility: Shadow Tag\nEVs: 76 HP / 52 Def / 52 SpD / 252 Spe\nJolly Nature\n- Counter\n- Mirror Coat\n- Encore\n- Destiny Bond"
+  },
+  "snorunt": {},
+  "glalie": {},
+  "glaliemega": {},
+  "spheal": {},
+  "sealeo": {},
+  "walrein": {
+    "Swords Dance": "Walrein @ Heavy-Duty Boots\nAbility: Thick Fat\nEVs: 120 HP / 252 Atk / 136 Spe\nAdamant Nature\n- Swords Dance\n- Waterfall\n- Icicle Spear\n- Earthquake"
+  },
+  "clamperl": {},
+  "huntail": {},
+  "gorebyss": {},
+  "relicanth": {
+    "Choice Band": "Relicanth @ Choice Band\nAbility: Rock Head\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Head Smash\n- Waterfall\n- Earthquake\n- Zen Headbutt"
+  },
+  "luvdisc": {},
+  "bagon": {},
+  "shelgon": {},
+  "salamence": {
+    "Special Attacker": "Salamence @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Draco Meteor\n- Hurricane\n- Flamethrower\n- Roost",
+    "Dragon Dance": "Salamence @ Heavy-Duty Boots\nAbility: Moxie\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Outrage\n- Dual Wingbeat\n- Earthquake",
+    "Defensive": "Salamence @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 248 HP / 8 Def / 252 Spe\nJolly Nature\n- Dual Wingbeat\n- Flamethrower\n- Roost\n- Defog"
+  },
+  "salamencemega": {
+    "Special Attacker": "Salamence @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Draco Meteor\n- Hurricane\n- Flamethrower\n- Roost",
+    "Dragon Dance": "Salamence @ Heavy-Duty Boots\nAbility: Moxie\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Outrage\n- Dual Wingbeat\n- Earthquake",
+    "Defensive": "Salamence @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 248 HP / 8 Def / 252 Spe\nJolly Nature\n- Dual Wingbeat\n- Flamethrower\n- Roost\n- Defog"
+  },
+  "beldum": {},
+  "metang": {
+    "Stealth Rock": "Metang @ Eviolite\nAbility: Clear Body\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Stealth Rock\n- Meteor Mash\n- Toxic\n- Bullet Punch"
+  },
+  "metagross": {
+    "Stealth Rock": "Metagross @ Leftovers\nAbility: Clear Body\nEVs: 252 HP / 124 Atk / 76 SpD / 56 Spe\nAdamant Nature\n- Stealth Rock\n- Meteor Mash\n- Earthquake\n- Toxic",
+    "Choice Band": "Metagross @ Choice Band\nAbility: Clear Body\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Meteor Mash\n- Earthquake\n- Bullet Punch\n- Zen Headbutt",
+    "Choice Scarf": "Metagross @ Choice Scarf\nAbility: Clear Body\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Meteor Mash\n- Earthquake\n- Ice Punch\n- Trick"
+  },
+  "metagrossmega": {
+    "Stealth Rock": "Metagross @ Leftovers\nAbility: Clear Body\nEVs: 252 HP / 124 Atk / 76 SpD / 56 Spe\nAdamant Nature\n- Stealth Rock\n- Meteor Mash\n- Earthquake\n- Toxic",
+    "Choice Band": "Metagross @ Choice Band\nAbility: Clear Body\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Meteor Mash\n- Earthquake\n- Bullet Punch\n- Zen Headbutt",
+    "Choice Scarf": "Metagross @ Choice Scarf\nAbility: Clear Body\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Meteor Mash\n- Earthquake\n- Ice Punch\n- Trick"
+  },
+  "regirock": {
+    "Stealth Rock": "Regirock @ Leftovers\nAbility: Clear Body\nEVs: 252 HP / 232 Def / 24 SpD\nImpish Nature\n- Stealth Rock\n- Rock Blast\n- Body Press\n- Toxic"
+  },
+  "regice": {
+    "Rock Polish": "Regice @ Heavy-Duty Boots\nAbility: Clear Body\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Rock Polish\n- Ice Beam\n- Thunderbolt\n- Focus Blast",
+    "RestTalk": "Regice @ Heavy-Duty Boots\nAbility: Clear Body\nEVs: 252 HP / 4 Def / 252 SpA\nModest Nature\n- Rest\n- Sleep Talk\n- Ice Beam\n- Thunderbolt"
+  },
+  "registeel": {
+    "Specially Defensive": "Registeel @ Leftovers\nAbility: Clear Body\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Stealth Rock\n- Toxic\n- Seismic Toss\n- Heavy Slam"
+  },
+  "latias": {
+    "Calm Mind": "Latias @ Latiasite\nAbility: Levitate\nEVs: 248 HP / 8 Def / 252 Spe\nTimid Nature\n- Calm Mind\n- Psyshock\n- Aura Sphere\n- Roost"
+  },
+  "latiasmega": {
+    "Calm Mind": "Latias @ Latiasite\nAbility: Levitate\nEVs: 248 HP / 8 Def / 252 Spe\nTimid Nature\n- Calm Mind\n- Psyshock\n- Aura Sphere\n- Roost"
+  },
+  "latios": {
+    "3 Attacks": "Latios @ Latiosite\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Psychic\n- Aura Sphere\n- Ice Beam\n- Roost"
+  },
+  "latiosmega": {
+    "3 Attacks": "Latios @ Latiosite\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Psychic\n- Aura Sphere\n- Ice Beam\n- Roost"
+  },
+  "kyogre": {
+    "Bulky Calm Mind": "Kyogre @ Leftovers\nAbility: Drizzle\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Calm Mind\n- Scald\n- Rest\n- Ice Beam",
+    "Choice Specs": "Kyogre @ Choice Specs\nAbility: Drizzle\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Water Spout\n- Origin Pulse\n- Ice Beam\n- Thunder",
+    "Choice Scarf": "Kyogre @ Choice Scarf\nAbility: Drizzle\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Water Spout\n- Origin Pulse\n- Ice Beam\n- Thunder",
+    "SubCM": "Kyogre @ Leftovers\nAbility: Drizzle\nEVs: 252 HP / 140 SpA / 116 Spe\nModest Nature\n- Substitute\n- Calm Mind\n- Surf\n- Thunder Wave"
+  },
+  "kyogreprimal": {
+    "Bulky Calm Mind": "Kyogre @ Leftovers\nAbility: Drizzle\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Calm Mind\n- Scald\n- Rest\n- Ice Beam",
+    "Choice Specs": "Kyogre @ Choice Specs\nAbility: Drizzle\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Water Spout\n- Origin Pulse\n- Ice Beam\n- Thunder",
+    "Choice Scarf": "Kyogre @ Choice Scarf\nAbility: Drizzle\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Water Spout\n- Origin Pulse\n- Ice Beam\n- Thunder",
+    "SubCM": "Kyogre @ Leftovers\nAbility: Drizzle\nEVs: 252 HP / 140 SpA / 116 Spe\nModest Nature\n- Substitute\n- Calm Mind\n- Surf\n- Thunder Wave"
+  },
+  "groudon": {
+    "Bulky Booster": "Groudon @ Leftovers\nAbility: Drought\nEVs: 240 HP / 252 Atk / 16 Spe\nAdamant Nature\n- Precipice Blades\n- Stone Edge\n- Bulk Up\n- Heat Crash",
+    "Double Dance": "Groudon @ Life Orb\nAbility: Drought\nEVs: 180 HP / 252 Atk / 76 Spe\nAdamant Nature\n- Precipice Blades\n- Stone Edge\n- Rock Polish\n- Swords Dance",
+    "Defensive": "Groudon @ Leftovers\nAbility: Drought\nEVs: 252 HP / 240 Def / 16 Spe\nImpish Nature\n- Precipice Blades\n- Stone Edge\n- Stealth Rock\n- Toxic"
+  },
+  "groudonprimal": {
+    "Bulky Booster": "Groudon @ Leftovers\nAbility: Drought\nEVs: 240 HP / 252 Atk / 16 Spe\nAdamant Nature\n- Precipice Blades\n- Stone Edge\n- Bulk Up\n- Heat Crash",
+    "Double Dance": "Groudon @ Life Orb\nAbility: Drought\nEVs: 180 HP / 252 Atk / 76 Spe\nAdamant Nature\n- Precipice Blades\n- Stone Edge\n- Rock Polish\n- Swords Dance",
+    "Defensive": "Groudon @ Leftovers\nAbility: Drought\nEVs: 252 HP / 240 Def / 16 Spe\nImpish Nature\n- Precipice Blades\n- Stone Edge\n- Stealth Rock\n- Toxic"
+  },
+  "rayquaza": {
+    "Dragon Dance": "Rayquaza @ Life Orb\nAbility: Air Lock\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Dragon Ascent\n- V-create\n- Dragon Dance\n- Extreme Speed",
+    "Swords Dance": "Rayquaza @ Life Orb\nAbility: Air Lock\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Dragon Ascent\n- V-create\n- Swords Dance\n- Extreme Speed",
+    "Choice Band": "Rayquaza @ Choice Band\nAbility: Air Lock\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Dragon Ascent\n- V-create\n- Dragon Claw\n- Extreme Speed"
+  },
+  "rayquazamega": {
+    "Dragon Dance": "Rayquaza @ Life Orb\nAbility: Air Lock\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Dragon Ascent\n- V-create\n- Dragon Dance\n- Extreme Speed",
+    "Swords Dance": "Rayquaza @ Life Orb\nAbility: Air Lock\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Dragon Ascent\n- V-create\n- Swords Dance\n- Extreme Speed",
+    "Choice Band": "Rayquaza @ Choice Band\nAbility: Air Lock\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Dragon Ascent\n- V-create\n- Dragon Claw\n- Extreme Speed"
+  },
+  "jirachi": {
+    "Choice Scarf": "Jirachi @ Choice Scarf\nAbility: Serene Grace\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Iron Head\n- U-turn\n- Trick\n- Healing Wish",
+    "Wish + Protect": "Jirachi @ Leftovers\nAbility: Serene Grace\nEVs: 252 HP / 16 SpD / 240 Spe\nJolly Nature\n- Wish\n- Protect\n- Iron Head\n- U-turn",
+    "Stealth Rock": "Jirachi @ Leftovers\nAbility: Serene Grace\nEVs: 252 HP / 16 SpD / 240 Spe\nJolly Nature\n- Iron Head\n- U-turn\n- Stealth Rock\n- Healing Wish"
+  },
+  "deoxys": {},
+  "deoxysattack": {
+    "Nasty Plot": "Deoxys-Attack @ Focus Sash\nAbility: Pressure\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Psychic\n- Thunder\n- Dark Pulse"
+  },
+  "deoxysdefense": {},
+  "deoxysspeed": {
+    "Lead": "Deoxys-Speed @ Focus Sash\nAbility: Pressure\nEVs: 248 HP / 8 Def / 252 Spe\nTimid Nature\n- Stealth Rock\n- Taunt\n- Spikes\n- Magic Coat"
+  },
+  "turtwig": {},
+  "grotle": {},
+  "torterra": {},
+  "chimchar": {},
+  "monferno": {},
+  "infernape": {
+    "Choice Band": "Infernape @ Choice Band\nAbility: Iron Fist\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Flare Blitz\n- U-turn\n- Mach Punch",
+    "Stealth Rock": "Infernape @ Life Orb\nAbility: Blaze\nEVs: 252 Atk / 4 SpA / 252 Spe\nHasty Nature\n- Overheat\n- Stealth Rock\n- U-turn\n- Close Combat"
+  },
+  "piplup": {},
+  "prinplup": {},
+  "empoleon": {},
+  "starly": {},
+  "staravia": {},
+  "staraptor": {
+    "Choice Band": "Staraptor @ Choice Band\nAbility: Reckless\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Brave Bird\n- Double-Edge\n- Close Combat\n- U-turn",
+    "Choice Scarf": "Staraptor @ Choice Scarf\nAbility: Reckless\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Brave Bird\n- Double-Edge\n- Close Combat\n- U-turn"
+  },
+  "bidoof": {},
+  "bibarel": {},
+  "kricketot": {},
+  "kricketune": {},
+  "shinx": {},
+  "luxio": {},
+  "luxray": {
+    "Defensive": "Luxray @ Rocky Helmet\nAbility: Intimidate\nEVs: 252 HP / 4 Atk / 252 Spe\nJolly Nature\n- Toxic\n- Protect\n- Volt Switch\n- Superpower",
+    "Guts": "Luxray @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Wild Charge\n- Facade\n- Crunch\n- Agility"
+  },
+  "budew": {},
+  "roserade": {
+    "Spikes": "Roserade @ Heavy-Duty Boots\nAbility: Natural Cure\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Spikes\n- Giga Drain\n- Sludge Bomb\n- Synthesis"
+  },
+  "cranidos": {},
+  "rampardos": {},
+  "shieldon": {},
+  "bastiodon": {},
+  "burmy": {},
+  "wormadam": {},
+  "wormadamsandy": {},
+  "wormadamtrash": {},
+  "mothim": {},
+  "combee": {},
+  "vespiquen": {
+    "Utility": "Vespiquen @ Heavy-Duty Boots\nAbility: Pressure\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Roost\n- Defog\n- U-turn\n- Air Slash"
+  },
+  "pachirisu": {},
+  "buizel": {},
+  "floatzel": {},
+  "cherubi": {},
+  "cherrim": {},
+  "cherrimsunshine": {},
+  "shellos": {
+    "Defensive": "Shellos @ Eviolite\nLevel: 5\nAbility: Sticky Hold\nEVs: 228 HP / 132 Def / 100 SpD / 4 Spe\nBold Nature\n- Scald\n- Recover\n- Clear Smog\n- Toxic"
+  },
+  "gastrodon": {
+    "Physically Defensive": "Gastrodon @ Heavy-Duty Boots\nAbility: Storm Drain\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Earth Power\n- Ice Beam\n- Recover\n- Toxic"
+  },
+  "ambipom": {},
+  "drifloon": {},
+  "drifblim": {
+    "Calm Mind": "Drifblim @ Sitrus Berry\nAbility: Unburden\nEVs: 12 HP / 244 SpA / 252 Spe\nModest Nature\n- Calm Mind\n- Substitute\n- Shadow Ball\n- Thunder",
+    "Defog": "Drifblim @ Heavy-Duty Boots\nAbility: Aftermath\nEVs: 200 HP / 252 Def / 56 Spe\nTimid Nature\n- Defog\n- Strength Sap\n- Will-O-Wisp\n- Hex"
+  },
+  "buneary": {},
+  "lopunny": {
+    "Offensive Pivot": "Lopunny @ Lopunnite\nAbility: Limber\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Fake Out\n- Close Combat\n- Return\n- U-turn",
+    "Power-Up Punch + Encore": "Lopunny @ Lopunnite\nAbility: Limber\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Power-Up Punch\n- Encore\n- Return\n- Close Combat"
+  },
+  "lopunnymega": {
+    "Offensive Pivot": "Lopunny @ Lopunnite\nAbility: Limber\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Fake Out\n- Close Combat\n- Return\n- U-turn",
+    "Power-Up Punch + Encore": "Lopunny @ Lopunnite\nAbility: Limber\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Power-Up Punch\n- Encore\n- Return\n- Close Combat"
+  },
+  "mismagius": {},
+  "honchkrow": {},
+  "glameow": {},
+  "purugly": {},
+  "chingling": {},
+  "stunky": {},
+  "skuntank": {
+    "Nasty Plot": "Skuntank @ Black Sludge\nAbility: Aftermath\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Sludge Bomb\n- Dark Pulse\n- Taunt",
+    "Defog": "Skuntank @ Black Sludge\nAbility: Aftermath\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Defog\n- Poison Jab\n- Sucker Punch\n- Taunt"
+  },
+  "bronzor": {},
+  "bronzong": {
+    "Specially Defensive": "Bronzong @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Stealth Rock\n- Heavy Slam\n- Earthquake\n- Toxic"
+  },
+  "bonsly": {},
+  "mimejr": {},
+  "happiny": {},
+  "chatot": {},
+  "spiritomb": {
+    "Choice Band": "Spiritomb @ Choice Band\nAbility: Infiltrator\nEVs: 252 HP / 252 Atk / 4 Def\nAdamant Nature\n- Poltergeist\n- Shadow Sneak\n- Sucker Punch\n- Trick",
+    "Calm Mind": "Spiritomb @ Leftovers\nAbility: Pressure\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Rest\n- Sleep Talk\n- Calm Mind\n- Dark Pulse"
+  },
+  "gible": {},
+  "gabite": {
+    "Physical Wall": "Gabite @ Eviolite\nAbility: Rough Skin\nEVs: 252 HP / 216 Def / 40 Spe\nJolly Nature\n- Stealth Rock\n- Toxic\n- Earthquake\n- Roar",
+    "Sweeper": "Gabite @ Eviolite\nAbility: Rough Skin\nEVs: 136 HP / 252 Atk / 120 Spe\nAdamant Nature\n- Scale Shot\n- Outrage\n- Earthquake\n- Iron Head",
+    "Choice Scarf": "Gabite @ Choice Scarf\nAbility: Rough Skin\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Earthquake\n- Outrage\n- Iron Head\n- Stealth Rock"
+  },
+  "garchomp": {
+    "Swords Dance": "Garchomp @ Leftovers\nAbility: Rough Skin\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Earthquake\n- Fire Fang\n- Scale Shot",
+    "Tank": "Garchomp @ Leftovers\nAbility: Rough Skin\nEVs: 252 HP / 136 Def / 120 Spe\nJolly Nature\n- Stealth Rock\n- Earthquake\n- Toxic\n- Protect"
+  },
+  "garchompmega": {
+    "Swords Dance": "Garchomp @ Leftovers\nAbility: Rough Skin\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Earthquake\n- Fire Fang\n- Scale Shot",
+    "Tank": "Garchomp @ Leftovers\nAbility: Rough Skin\nEVs: 252 HP / 136 Def / 120 Spe\nJolly Nature\n- Stealth Rock\n- Earthquake\n- Toxic\n- Protect"
+  },
+  "munchlax": {
+    "CurseLax": "Munchlax @ Berry Juice\nLevel: 5\nAbility: Thick Fat\nEVs: 76 Atk / 196 Def / 236 SpD\nCareful Nature\n- Curse\n- Facade\n- Fire Punch\n- Recycle"
+  },
+  "riolu": {},
+  "lucario": {
+    "Swords Dance": "Lucario @ Life Orb\nAbility: Inner Focus\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Close Combat\n- Extreme Speed\n- Meteor Mash"
+  },
+  "lucariomega": {
+    "Swords Dance": "Lucario @ Life Orb\nAbility: Inner Focus\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Close Combat\n- Extreme Speed\n- Meteor Mash"
+  },
+  "hippopotas": {},
+  "hippowdon": {
+    "Special Wall": "Hippowdon @ Leftovers\nAbility: Sand Stream\nEVs: 252 HP / 8 Atk / 248 SpD\nCareful Nature\n- Earthquake\n- Slack Off\n- Stealth Rock\n- Toxic"
+  },
+  "skorupi": {},
+  "drapion": {
+    "Swords Dance": "Drapion @ Black Sludge\nAbility: Battle Armor\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Knock Off\n- Poison Jab\n- Earthquake"
+  },
+  "croagunk": {
+    "Nasty Plot": "Croagunk @ Eviolite\nLevel: 5\nAbility: Dry Skin\nEVs: 116 Def / 188 SpA / 196 Spe\nModest Nature\n- Nasty Plot\n- Vacuum Wave\n- Sludge Wave\n- Focus Blast"
+  },
+  "toxicroak": {
+    "Swords Dance": "Toxicroak @ Life Orb\nAbility: Dry Skin\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Gunk Shot\n- Drain Punch\n- Sucker Punch"
+  },
+  "carnivine": {},
+  "finneon": {},
+  "lumineon": {},
+  "mantyke": {},
+  "snover": {
+    "Hail Setter": "Snover @ Icy Rock\nLevel: 5\nAbility: Snow Warning\nEVs: 36 HP / 20 Atk / 36 Def / 180 SpA / 36 SpD / 196 Spe\nNaive Nature\n- Blizzard\n- Giga Drain\n- Ice Shard\n- Protect"
+  },
+  "abomasnow": {
+    "Hail Support": "Abomasnow @ Icy Rock\nAbility: Snow Warning\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Blizzard\n- Giga Drain\n- Focus Blast\n- Aurora Veil",
+    "Choice Specs": "Abomasnow @ Choice Specs\nAbility: Snow Warning\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Blizzard\n- Leaf Storm\n- Focus Blast\n- Earth Power",
+    "Swords Dance": "Abomasnow @ Heavy-Duty Boots\nAbility: Snow Warning\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Swords Dance\n- Wood Hammer\n- Ice Shard\n- Earthquake"
+  },
+  "abomasnowmega": {
+    "Hail Support": "Abomasnow @ Icy Rock\nAbility: Snow Warning\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Blizzard\n- Giga Drain\n- Focus Blast\n- Aurora Veil",
+    "Choice Specs": "Abomasnow @ Choice Specs\nAbility: Snow Warning\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Blizzard\n- Leaf Storm\n- Focus Blast\n- Earth Power",
+    "Swords Dance": "Abomasnow @ Heavy-Duty Boots\nAbility: Snow Warning\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Swords Dance\n- Wood Hammer\n- Ice Shard\n- Earthquake"
+  },
+  "weavile": {
+    "Swords Dance": "Weavile @ Heavy-Duty Boots\nAbility: Pressure\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Triple Axel\n- Knock Off\n- Ice Shard",
+    "Choice Band": "Weavile @ Choice Band\nAbility: Pressure\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Knock Off\n- Triple Axel\n- Ice Shard\n- Low Kick"
+  },
+  "magnezone": {
+    "Iron Defense": "Magnezone @ Leftovers\nAbility: Magnet Pull\nEVs: 4 HP / 252 Def / 252 Spe\nTimid Nature\n- Iron Defense\n- Body Press\n- Thunderbolt\n- Toxic",
+    "Choice Specs": "Magnezone @ Choice Specs\nAbility: Magnet Pull\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Thunderbolt\n- Flash Cannon\n- Volt Switch\n- Toxic"
+  },
+  "lickilicky": {
+    "Specially Defensive": "Lickilicky @ Leftovers\nAbility: Oblivious\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Wish\n- Protect\n- Toxic\n- Knock Off"
+  },
+  "rhyperior": {
+    "Stealth Rock": "Rhyperior @ Leftovers\nAbility: Solid Rock\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Stone Edge\n- Earthquake\n- Stealth Rock\n- Swords Dance"
+  },
+  "tangrowth": {
+    "Assault Vest": "Tangrowth @ Assault Vest\nAbility: Regenerator\nEVs: 252 HP / 4 Def / 252 SpD\nSassy Nature\n- Giga Drain\n- Knock Off\n- Sludge Bomb\n- Earthquake",
+    "Physically Defensive": "Tangrowth @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\n- Giga Drain\n- Knock Off\n- Sludge Bomb\n- Synthesis"
+  },
+  "electivire": {},
+  "magmortar": {
+    "Wallbreaker": "Magmortar @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Fire Blast\n- Thunderbolt\n- Focus Blast\n- Scorching Sands"
+  },
+  "togekiss": {
+    "Nasty Plot": "Togekiss @ Heavy-Duty Boots\nAbility: Serene Grace\nEVs: 248 HP / 8 Def / 252 Spe\nTimid Nature\n- Nasty Plot\n- Air Slash\n- Flamethrower\n- Roost",
+    "Utility": "Togekiss @ Heavy-Duty Boots\nAbility: Serene Grace\nEVs: 248 HP / 8 Def / 252 Spe\nTimid Nature\n- Air Slash\n- Heal Bell\n- Flamethrower\n- Roost"
+  },
+  "yanmega": {},
+  "leafeon": {
+    "Swords Dance": "Leafeon @ Life Orb\nAbility: Chlorophyll\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Leaf Blade\n- Knock Off\n- Synthesis",
+    "Choice": "Leafeon @ Choice Scarf\nAbility: Chlorophyll\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Leaf Blade\n- Knock Off\n- Toxic\n- Double-Edge"
+  },
+  "glaceon": {
+    "Choice Specs": "Glaceon @ Choice Specs\nAbility: Snow Cloak\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Ice Beam\n- Freeze-Dry\n- Shadow Ball\n- Water Pulse",
+    "Cleric": "Glaceon @ Heavy-Duty Boots\nAbility: Snow Cloak\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Wish\n- Protect\n- Heal Bell\n- Freeze-Dry"
+  },
+  "gliscor": {
+    "Swords Dance": "Gliscor @ Toxic Orb\nAbility: Poison Heal\nEVs: 244 HP / 52 Def / 192 SpD / 20 Spe\nJolly Nature\n- Swords Dance\n- Roost\n- Earthquake\n- Facade"
+  },
+  "mamoswine": {
+    "Wallbreaker": "Mamoswine @ Life Orb\nAbility: Thick Fat\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Icicle Crash\n- Earthquake\n- Ice Shard\n- Knock Off"
+  },
+  "porygonz": {
+    "Choice Scarf": "Porygon-Z @ Choice Scarf\nAbility: Adaptability\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Tri Attack\n- Shadow Ball\n- Trick\n- Ice Beam"
+  },
+  "gallade": {
+    "Swords Dance": "Gallade @ Life Orb\nAbility: Justified\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Close Combat\n- Zen Headbutt\n- Knock Off"
+  },
+  "gallademega": {
+    "Swords Dance": "Gallade @ Life Orb\nAbility: Justified\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Close Combat\n- Zen Headbutt\n- Knock Off"
+  },
+  "probopass": {},
+  "dusknoir": {
+    "Tank": "Dusknoir @ Assault Vest\nAbility: Frisk\nEVs: 212 HP / 252 Atk / 44 Spe\nAdamant Nature\n- Poltergeist\n- Earthquake\n- Shadow Sneak\n- Power-Up Punch"
+  },
+  "froslass": {
+    "Choice Band": "Froslass @ Choice Band\nAbility: Cursed Body\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Poltergeist\n- Triple Axel\n- Trick\n- Spikes",
+    "Spikes": "Froslass @ Heavy-Duty Boots\nAbility: Cursed Body\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Spikes\n- Taunt\n- Ice Beam\n- Shadow Ball"
+  },
+  "rotom": {
+    "Choice Scarf": "Rotom @ Choice Scarf\nAbility: Levitate\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Shadow Ball\n- Trick",
+    "Defog": "Rotom @ Colbur Berry\nAbility: Levitate\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Defog\n- Volt Switch\n- Hex\n- Will-O-Wisp"
+  },
+  "rotomheat": {
+    "Pivot": "Rotom-Heat @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Overheat\n- Volt Switch\n- Toxic\n- Pain Split",
+    "Nasty Plot": "Rotom-Heat @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Overheat\n- Discharge\n- Pain Split"
+  },
+  "rotomwash": {
+    "Pivot": "Rotom-Wash @ Leftovers\nAbility: Levitate\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Volt Switch\n- Hydro Pump\n- Pain Split\n- Will-O-Wisp",
+    "Choice Scarf": "Rotom-Wash @ Choice Scarf\nAbility: Levitate\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Hydro Pump\n- Volt Switch\n- Defog\n- Trick"
+  },
+  "rotomfrost": {
+    "Nasty Plot": "Rotom-Frost @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Blizzard\n- Volt Switch\n- Pain Split",
+    "Offensive Defog": "Rotom-Frost @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Volt Switch\n- Blizzard\n- Defog\n- Pain Split"
+  },
+  "rotomfan": {
+    "Nasty Plot": "Rotom-Fan @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Discharge\n- Air Slash\n- Pain Split",
+    "Utility": "Rotom-Fan @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Defog\n- Volt Switch\n- Air Slash\n- Pain Split",
+    "Choice Scarf": "Rotom-Fan @ Choice Scarf\nAbility: Levitate\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Volt Switch\n- Air Slash\n- Will-O-Wisp\n- Trick"
+  },
+  "rotommow": {
+    "Choice Scarf": "Rotom-Mow @ Choice Scarf\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Volt Switch\n- Trick\n- Defog",
+    "Nasty Plot": "Rotom-Mow @ Leftovers\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Leaf Storm\n- Volt Switch\n- Pain Split",
+    "Utility": "Rotom-Mow @ Leftovers\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Volt Switch\n- Defog\n- Pain Split"
+  },
+  "uxie": {
+    "Defensive Stealth Rock": "Uxie @ Colbur Berry\nAbility: Levitate\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Stealth Rock\n- Psychic\n- Knock Off\n- U-turn"
+  },
+  "mesprit": {
+    "Choice Scarf": "Mesprit @ Choice Scarf\nAbility: Levitate\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Psychic\n- Dazzling Gleam\n- U-turn\n- Healing Wish",
+    "Nasty Plot": "Mesprit @ Colbur Berry\nAbility: Levitate\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Psychic\n- Dazzling Gleam\n- Shadow Ball",
+    "Offensive Stealth Rock": "Mesprit @ Colbur Berry\nAbility: Levitate\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Stealth Rock\n- Psychic\n- Dazzling Gleam\n- U-turn",
+    "Choice Specs": "Mesprit @ Choice Specs\nAbility: Levitate\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Psychic\n- Dazzling Gleam\n- Shadow Ball\n- U-turn"
+  },
+  "azelf": {
+    "Nasty Plot": "Azelf @ Expert Belt\nAbility: Levitate\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Psyshock\n- Fire Blast\n- Energy Ball",
+    "Offensive Pivot": "Azelf @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 4 Atk / 252 SpA / 252 Spe\nTimid Nature\n- Psychic\n- Knock Off\n- U-turn\n- Flamethrower"
+  },
+  "dialga": {
+    "Support": "Dialga @ Leftovers\nAbility: Pressure\nEVs: 252 HP / 240 SpD / 16 Spe\nCalm Nature\n- Stealth Rock\n- Draco Meteor\n- Thunder\n- Toxic",
+    "Choice Specs": "Dialga @ Choice Specs\nAbility: Pressure\nEVs: 4 HP / 252 SpA / 252 Spe\nModest Nature\n- Draco Meteor\n- Power Gem\n- Thunder\n- Fire Blast"
+  },
+  "palkia": {
+    "Special Attacker": "Palkia @ Lustrous Orb\nAbility: Pressure\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Hydro Pump\n- Spacial Rend\n- Thunder\n- Fire Blast",
+    "Bulk Up": "Palkia @ Leftovers\nAbility: Pressure\nEVs: 96 HP / 160 Atk / 252 Spe\nJolly Nature\n- Bulk Up\n- Substitute\n- Scale Shot\n- Liquidation"
+  },
+  "heatran": {
+    "Specially Defensive": "Heatran @ Leftovers\nAbility: Flash Fire\nEVs: 252 HP / 232 SpD / 24 Spe\nCalm Nature\n- Magma Storm\n- Earth Power\n- Taunt\n- Toxic",
+    "Offensive": "Heatran @ Leftovers\nAbility: Flash Fire\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Magma Storm\n- Earth Power\n- Taunt\n- Toxic"
+  },
+  "regigigas": {
+    "Spore Sweeper": "Regigigas @ Toxic Orb\nAbility: Poison Heal\nEVs: 252 HP / 252 Atk / 252 Def / 252 SpD / 252 Spe\nAdamant Nature\n- Facade\n- Knock Off\n- Precipice Blades\n- Dragon Dance",
+    "Poison Heal All-out Attacker": "Regigigas @ Toxic Orb\nAbility: Poison Heal\nEVs: 252 HP / 252 Atk / 252 Def / 252 SpD / 252 Spe\nAdamant Nature\n- Facade\n- Dragon Dance\n- Glacial Lance\n- V-create"
+  },
+  "giratina": {
+    "Defog": "Giratina @ Leftovers\nAbility: Pressure\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Defog\n- Toxic\n- Will-O-Wisp\n- Rest"
+  },
+  "giratinaorigin": {
+    "Special Attacker": "Giratina-Origin @ Griseous Orb\nAbility: Levitate\nEVs: 12 Atk / 216 Def / 252 SpA / 28 Spe\nQuiet Nature\n- Hex\n- Draco Meteor\n- Shadow Sneak\n- Will-O-Wisp",
+    "Physical Attacker": "Giratina-Origin @ Griseous Orb\nAbility: Levitate\nEVs: 176 HP / 252 Atk / 4 Def / 76 Spe\nAdamant Nature\n- Poltergeist\n- Stone Edge\n- Shadow Sneak\n- Defog"
+  },
+  "cresselia": {
+    "Lunar Dance": "Cresselia @ Choice Scarf\nAbility: Levitate\nEVs: 252 HP / 148 SpD / 108 Spe\nCalm Nature\n- Ice Beam\n- Lunar Dance\n- Trick\n- Moonlight"
+  },
+  "phione": {},
+  "manaphy": {
+    "Stallbreaker": "Manaphy @ Waterium Z\nAbility: Hydration\nEVs: 248 HP / 240 SpA / 20 Spe\nModest Nature\n- Tail Glow\n- Surf\n- Energy Ball\n- Rest"
+  },
+  "darkrai": {},
+  "shaymin": {},
+  "shayminsky": {},
+  "arceus": {
+    "Extreme Killer": "Arceus @ Life Orb\nAbility: Multitype\nEVs: 228 Atk / 28 SpA / 252 Spe\nNaughty Nature\n- Swords Dance\n- Extreme Speed\n- Earthquake\n- Ice Beam"
+  },
+  "arceusbug": {},
+  "arceusdark": {
+    "Calm Mind": "Arceus-Dark @ Dread Plate\nAbility: Multitype\nEVs: 248 HP / 136 Def / 124 Spe\nBold Nature\n- Calm Mind\n- Judgment\n- Refresh\n- Recover",
+    "Perish Trap": "Arceus-Dark @ Dread Plate\nAbility: Multitype\nEVs: 248 HP / 136 Def / 124 Spe\nBold Nature\n- Judgment\n- Recover\n- Whirlpool\n- Perish Song",
+    "Support": "Arceus-Dark @ Dread Plate\nAbility: Multitype\nEVs: 248 HP / 136 Def / 124 Spe\nBold Nature\n- Judgment\n- Recover\n- Refresh\n- Defog"
+  },
+  "arceusdragon": {},
+  "arceuselectric": {},
+  "arceusfairy": {
+    "Specially Defensive": "Arceus-Fairy @ Pixie Plate\nAbility: Multitype\nEVs: 248 HP / 172 SpD / 88 Spe\nCalm Nature\n- Judgment\n- Recover\n- Will-O-Wisp\n- Defog"
+  },
+  "arceusfighting": {},
+  "arceusfire": {},
+  "arceusflying": {},
+  "arceusghost": {
+    "Swords Dance": "Arceus-Ghost @ Spooky Plate\nAbility: Multitype\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Swords Dance\n- Shadow Force\n- Brick Break\n- Stone Edge",
+    "Calm Mind": "Arceus-Ghost @ Spooky Plate\nAbility: Multitype\nEVs: 252 HP / 240 Def / 16 Spe\nBold Nature\n- Calm Mind\n- Judgment\n- Refresh\n- Recover"
+  },
+  "arceusgrass": {},
+  "arceusground": {
+    "Defensive": "Arceus-Ground @ Earth Plate\nAbility: Multitype\nEVs: 252 HP / 240 Def / 16 Spe\nBold Nature\n- Judgment\n- Refresh\n- Recover\n- Ice Beam",
+    "Swords Dance": "Arceus-Ground @ Earth Plate\nAbility: Multitype\nEVs: 228 Atk / 28 SpA / 252 Spe\nAdamant Nature\n- Swords Dance\n- Earthquake\n- Stone Edge\n- Ice Beam"
+  },
+  "arceusice": {},
+  "arceuspoison": {
+    "Specially Defensive": "Arceus-Poison @ Toxic Plate\nAbility: Multitype\nEVs: 244 HP / 176 SpD / 88 Spe\nCalm Nature\n- Sludge Bomb\n- Ice Beam\n- Psych Up\n- Recover"
+  },
+  "arceuspsychic": {},
+  "arceusrock": {},
+  "arceussteel": {},
+  "arceuswater": {
+    "Support": "Arceus-Water @ Splash Plate\nAbility: Multitype\nEVs: 252 HP / 240 Def / 16 Spe\nBold Nature\n- Judgment\n- Toxic\n- Refresh\n- Recover",
+    "Calm Mind": "Arceus-Water @ Splash Plate\nAbility: Multitype\nEVs: 248 HP / 136 Def / 124 Spe\nBold Nature\n- Calm Mind\n- Judgment\n- Refresh\n- Recover",
+    "Perish Trapper": "Arceus-Water @ Splash Plate\nAbility: Multitype\nEVs: 248 HP / 244 Def / 16 Spe\nBold Nature\n- Whirlpool\n- Perish Song\n- Recover\n- Refresh"
+  },
+  "victini": {
+    "Mixed Attacker": "Victini @ Heavy-Duty Boots\nAbility: Victory Star\nEVs: 252 Atk / 4 SpA / 252 Spe\nJolly Nature\n- V-create\n- Bolt Strike\n- Glaciate\n- U-turn"
+  },
+  "snivy": {},
+  "servine": {},
+  "serperior": {
+    "Substitute Attacker": "Serperior @ Leftovers\nAbility: Contrary\nEVs: 56 HP / 200 SpA / 252 Spe\nTimid Nature\n- Leaf Storm\n- Hidden Power Fire\n- Substitute\n- Glare"
+  },
+  "tepig": {},
+  "pignite": {},
+  "emboar": {},
+  "oshawott": {},
+  "dewott": {},
+  "samurott": {},
+  "patrat": {},
+  "watchog": {},
+  "lillipup": {},
+  "herdier": {},
+  "stoutland": {
+    "Choice Band": "Stoutland @ Choice Band\nAbility: Scrappy\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Strength\n- Facade\n- Superpower\n- Play Rough"
+  },
+  "purrloin": {},
+  "liepard": {
+    "Breaker": "Liepard @ Choice Band\nAbility: Prankster\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Play Rough\n- U-turn\n- Copycat",
+    "Nasty Plot": "Liepard @ Leftovers\nAbility: Prankster\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Dark Pulse\n- Substitute\n- Attract",
+    "Utility": "Liepard @ Heavy-Duty Boots\nAbility: Prankster\nEVs: 252 HP / 4 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- U-turn\n- Foul Play\n- Encore"
+  },
+  "pansage": {},
+  "simisage": {},
+  "pansear": {},
+  "simisear": {},
+  "panpour": {},
+  "simipour": {},
+  "munna": {},
+  "musharna": {
+    "Calm Mind": "Musharna @ Colbur Berry\nAbility: Synchronize\nEVs: 248 HP / 252 Def / 8 SpD\nBold Nature\n- Calm Mind\n- Psyshock\n- Moonblast\n- Moonlight",
+    "Future Sight": "Musharna @ Colbur Berry\nAbility: Synchronize\nEVs: 248 HP / 252 SpA / 8 SpD\nModest Nature\n- Future Sight\n- Moonblast\n- Moonlight\n- Hypnosis"
+  },
+  "pidove": {},
+  "tranquill": {},
+  "unfezant": {
+    "Defog": "Unfezant @ Heavy-Duty Boots\nAbility: Super Luck\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Defog\n- Roost\n- Brave Bird\n- U-turn",
+    "Choice Scarf": "Unfezant @ Choice Scarf\nAbility: Super Luck\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Brave Bird\n- U-turn\n- Toxic\n- Defog"
+  },
+  "blitzle": {},
+  "zebstrika": {},
+  "roggenrola": {},
+  "boldore": {},
+  "gigalith": {
+    "Specially Defensive": "Gigalith @ Leftovers\nAbility: Sand Stream\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Stealth Rock\n- Rock Blast\n- Earthquake\n- Protect"
+  },
+  "woobat": {},
+  "swoobat": {
+    "SubSalac": "Swoobat @ Salac Berry\nAbility: Simple\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Substitute\n- Calm Mind\n- Stored Power\n- Heat Wave"
+  },
+  "drilbur": {
+    "Offensive Rapid Spin": "Drilbur @ Berry Juice\nLevel: 5\nAbility: Mold Breaker\nEVs: 76 Atk / 116 Def / 76 SpD / 212 Spe\nJolly Nature\n- Rapid Spin\n- Earthquake\n- Rock Slide\n- Swords Dance"
+  },
+  "excadrill": {
+    "Specially Defensive": "Excadrill @ Leftovers\nAbility: Mold Breaker\nEVs: 4 HP / 252 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Iron Head\n- Rapid Spin\n- Toxic",
+    "Suicide Lead": "Excadrill @ Focus Sash\nAbility: Mold Breaker\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Rock Tomb\n- Rapid Spin\n- Stealth Rock",
+    "Offensive": "Excadrill @ Leftovers\nAbility: Mold Breaker\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Iron Head\n- Rapid Spin\n- Swords Dance"
+  },
+  "audino": {
+    "Wish": "Audino @ Heavy-Duty Boots\nAbility: Regenerator\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Wish\n- Protect\n- Knock Off\n- Heal Bell"
+  },
+  "audinomega": {
+    "Wish": "Audino @ Heavy-Duty Boots\nAbility: Regenerator\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Wish\n- Protect\n- Knock Off\n- Heal Bell"
+  },
+  "timburr": {
+    "Bulky Attacker": "Timburr @ Eviolite\nLevel: 5\nAbility: Iron Fist\nEVs: 76 HP / 196 Atk / 236 Def\nAdamant Nature\n- Drain Punch\n- Knock Off\n- Mach Punch\n- Defog",
+    "Bulk Up": "Timburr @ Eviolite\nLevel: 5\nAbility: Guts\nEVs: 76 HP / 36 Atk / 156 Def / 236 SpD\nCareful Nature\n- Bulk Up\n- Drain Punch\n- Mach Punch\n- Knock Off"
+  },
+  "gurdurr": {
+    "Defog": "Gurdurr @ Eviolite\nAbility: Guts\nEVs: 252 HP / 56 Atk / 200 Def\nAdamant Nature\n- Defog\n- Drain Punch\n- Knock Off\n- Mach Punch",
+    "Flame Orb": "Gurdurr @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Close Combat\n- Knock Off\n- Facade\n- Mach Punch"
+  },
+  "conkeldurr": {
+    "Guts Wallbreaker": "Conkeldurr @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Drain Punch\n- Facade\n- Knock Off\n- Mach Punch"
+  },
+  "tympole": {},
+  "palpitoad": {
+    "Stealth Rock": "Palpitoad @ Eviolite\nAbility: Water Absorb\nEVs: 252 HP / 252 Def / 4 SpA\nBold Nature\n- Stealth Rock\n- Earth Power\n- Scald\n- Toxic"
+  },
+  "seismitoad": {
+    "Rain Wallbreaker": "Seismitoad @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Liquidation\n- Earthquake\n- Ice Punch"
+  },
+  "throh": {
+    "RestTalk": "Throh @ Leftovers\nAbility: Guts\nEVs: 240 HP / 56 Def / 212 SpD\nCareful Nature\n- Circle Throw\n- Knock Off\n- Rest\n- Sleep Talk",
+    "Flame Orb Attacker": "Throh @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Superpower\n- Earthquake\n- Knock Off\n- Poison Jab",
+    "Substitute + Bulk Up": "Throh @ Leftovers\nAbility: Mold Breaker\nEVs: 252 HP / 176 SpD / 80 Spe\nCareful Nature\n- Substitute\n- Bulk Up\n- Storm Throw\n- Knock Off"
+  },
+  "sawk": {
+    "Choice Attacker": "Sawk @ Choice Band\nAbility: Mold Breaker\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Close Combat\n- Earthquake\n- Knock Off\n- Poison Jab",
+    "Sturdy Boots": "Sawk @ Heavy-Duty Boots\nAbility: Sturdy\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Close Combat\n- Knock Off\n- Poison Jab\n- Earthquake"
+  },
+  "sewaddle": {},
+  "swadloon": {},
+  "leavanny": {},
+  "venipede": {},
+  "whirlipede": {},
+  "scolipede": {
+    "Swords Dance": "Scolipede @ Life Orb\nAbility: Speed Boost\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Megahorn\n- Poison Jab\n- Earthquake"
+  },
+  "cottonee": {
+    "Memento": "Cottonee @ Eviolite\nLevel: 5\nAbility: Prankster\nEVs: 36 HP / 36 Def / 140 SpA / 36 SpD / 228 Spe\nTimid Nature\n- Memento\n- Knock Off\n- Dazzling Gleam\n- Encore"
+  },
+  "whimsicott": {
+    "Offensive": "Whimsicott @ Choice Specs\nAbility: Infiltrator\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Moonblast\n- Energy Ball\n- U-turn\n- Switcheroo",
+    "Utility": "Whimsicott @ Heavy-Duty Boots\nAbility: Prankster\nEVs: 252 HP / 4 SpD / 252 Spe\nTimid Nature\n- Moonblast\n- Knock Off\n- U-turn\n- Defog",
+    "SubSeed": "Whimsicott @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 4 SpD / 252 Spe\nTimid Nature\n- Substitute\n- Leech Seed\n- Moonblast\n- Psychic"
+  },
+  "petilil": {},
+  "lilligant": {
+    "Quiver Dance": "Lilligant @ Life Orb\nAbility: Chlorophyll\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Quiver Dance\n- Sleep Powder\n- Giga Drain\n- Pollen Puff",
+    "Choice Specs": "Lilligant @ Choice Specs\nAbility: Chlorophyll\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Giga Drain\n- Pollen Puff\n- Healing Wish"
+  },
+  "basculin": {
+    "All-out Attacker": "Basculin @ Life Orb\nAbility: Adaptability\nEVs: 252 Atk / 4 SpA / 252 Spe\nJolly Nature\n- Liquidation\n- Flip Turn\n- Superpower\n- Psychic Fangs",
+    "Choice Specs": "Basculin @ Choice Specs\nAbility: Adaptability\nEVs: 4 Atk / 252 SpA / 252 Spe\nNaive Nature\n- Hydro Pump\n- Ice Beam\n- Flip Turn\n- Toxic"
+  },
+  "basculinbluestriped": {},
+  "sandile": {},
+  "krokorok": {
+    "KrokoRocks (Stealth Rock Lead)": "Krokorok @ Eviolite\nAbility: Intimidate\nEVs: 252 HP / 152 Def / 104 Spe\nJolly Nature\n- Stealth Rock\n- Taunt\n- Knock Off\n- Earthquake",
+    "Choice Scarf": "Krokorok @ Choice Scarf\nAbility: Moxie\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Knock Off\n- Earthquake\n- Stone Edge\n- Stealth Rock"
+  },
+  "krookodile": {
+    "Stealth Rock": "Krookodile @ Leftovers\nAbility: Intimidate\nEVs: 252 HP / 4 Atk / 252 Spe\nJolly Nature\n- Earthquake\n- Knock Off\n- Stealth Rock\n- Toxic",
+    "Choice Scarf": "Krookodile @ Choice Scarf\nAbility: Intimidate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Knock Off\n- Stone Edge\n- Close Combat",
+    "Choice Band": "Krookodile @ Choice Band\nAbility: Intimidate\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Earthquake\n- Knock Off\n- Stone Edge\n- Close Combat"
+  },
+  "darumaka": {},
+  "darumakagalar": {
+    "Choice Scarf": "Darumaka-Galar @ Choice Scarf\nLevel: 5\nAbility: Hustle\nEVs: 36 HP / 196 Atk / 76 Def / 196 Spe\nAdamant Nature\n- Ice Punch\n- Superpower\n- U-turn\n- Zen Headbutt"
+  },
+  "darmanitan": {
+    "Heavy-Duty Boots": "Darmanitan @ Heavy-Duty Boots\nAbility: Sheer Force\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- U-turn\n- Earthquake\n- Toxic",
+    "Choice Scarf": "Darmanitan @ Choice Scarf\nAbility: Sheer Force\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- U-turn\n- Rock Slide\n- Trick"
+  },
+  "darmanitanzen": {
+    "Heavy-Duty Boots": "Darmanitan @ Heavy-Duty Boots\nAbility: Sheer Force\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- U-turn\n- Earthquake\n- Toxic",
+    "Choice Scarf": "Darmanitan @ Choice Scarf\nAbility: Sheer Force\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Flare Blitz\n- U-turn\n- Rock Slide\n- Trick"
+  },
+  "darmanitangalar": {
+    "Choice Scarf": "Darmanitan-Galar @ Choice Scarf\nAbility: Gorilla Tactics\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- U-turn\n- Icicle Crash\n- Flare Blitz\n- Rock Slide",
+    "Belly Drum": "Darmanitan-Galar @ Salac Berry\nAbility: Zen Mode\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Belly Drum\n- Substitute\n- Icicle Crash\n- Earthquake"
+  },
+  "darmanitangalarzen": {
+    "Choice Scarf": "Darmanitan-Galar @ Choice Scarf\nAbility: Gorilla Tactics\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- U-turn\n- Icicle Crash\n- Flare Blitz\n- Rock Slide",
+    "Belly Drum": "Darmanitan-Galar @ Salac Berry\nAbility: Zen Mode\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Belly Drum\n- Substitute\n- Icicle Crash\n- Earthquake"
+  },
+  "maractus": {},
+  "dwebble": {
+    "Suicide Lead": "Dwebble @ Berry Juice\nLevel: 5\nAbility: Sturdy\nEVs: 236 Atk / 236 Spe\nJolly Nature\n- Stealth Rock\n- Spikes\n- Knock Off\n- Rock Blast",
+    "Shell Smash Sweeper": "Dwebble @ Berry Juice\nLevel: 5\nAbility: Sturdy\nEVs: 236 Atk / 236 Spe\nAdamant Nature\n- Shell Smash\n- Rock Blast\n- Earthquake\n- Knock Off"
+  },
+  "crustle": {
+    "Shell Smash": "Crustle @ Heavy-Duty Boots\nAbility: Sturdy\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Shell Smash\n- Stone Edge\n- X-Scissor\n- Earthquake",
+    "Lead": "Crustle @ Focus Sash\nAbility: Weak Armor\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stealth Rock\n- Spikes\n- Stone Edge\n- Earthquake"
+  },
+  "scraggy": {},
+  "scrafty": {
+    "Bulk Up": "Scrafty @ Leftovers\nAbility: Shed Skin\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Bulk Up\n- Knock Off\n- Drain Punch\n- Rest",
+    "Dragon Dance": "Scrafty @ Lum Berry\nAbility: Moxie\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Dragon Dance\n- Close Combat\n- Knock Off\n- Iron Head"
+  },
+  "sigilyph": {
+    "Life Orb Attacker": "Sigilyph @ Life Orb\nAbility: Magic Guard\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Psychic\n- Heat Wave\n- Roost\n- Calm Mind"
+  },
+  "yamask": {},
+  "yamaskgalar": {},
+  "cofagrigus": {
+    "Defensive": "Cofagrigus @ Chesto Berry\nAbility: Mummy\nEVs: 248 HP / 240 Def / 20 Spe\nBold Nature\n- Iron Defense\n- Body Press\n- Toxic Spikes\n- Rest"
+  },
+  "tirtouga": {
+    "Defensive": "Tirtouga @ Eviolite\nLevel: 5\nAbility: Solid Rock\nEVs: 164 HP / 52 Atk / 92 Def / 156 SpD / 20 Spe\nCareful Nature\n- Stealth Rock\n- Stone Edge\n- Liquidation\n- Aqua Jet",
+    "Shell Smash": "Tirtouga @ Eviolite\nLevel: 5\nAbility: Solid Rock\nEVs: 4 HP / 132 Atk / 92 Def / 76 SpD / 180 Spe\nJolly Nature\n- Shell Smash\n- Waterfall\n- Stone Edge\n- Zen Headbutt"
+  },
+  "carracosta": {
+    "Shell Smash": "Carracosta @ Heavy-Duty Boots\nAbility: Sturdy\nEVs: 252 Atk / 4 Def / 252 Spe\nNaughty Nature\n- Shell Smash\n- Stone Edge\n- Aqua Jet\n- Hydro Pump"
+  },
+  "archen": {
+    "Offensive": "Archen @ Berry Juice\nLevel: 5\nAbility: Defeatist\nEVs: 180 Atk / 76 Def / 4 SpA / 196 Spe\nJolly Nature\n- Acrobatics\n- Head Smash\n- Earthquake\n- Aqua Tail"
+  },
+  "archeops": {
+    "Heavy-Duty Boots": "Archeops @ Heavy-Duty Boots\nAbility: Defeatist\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Stone Edge\n- Earthquake\n- U-turn\n- Roost",
+    "Suicide Lead": "Archeops @ Focus Sash\nAbility: Defeatist\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Head Smash\n- Earthquake\n- Taunt\n- Stealth Rock"
+  },
+  "trubbish": {},
+  "garbodor": {
+    "Defensive": "Garbodor @ Rocky Helmet\nAbility: Aftermath\nEVs: 80 HP / 252 Def / 176 Spe\nImpish Nature\n- Gunk Shot\n- Spikes\n- Stomping Tantrum\n- Pain Split"
+  },
+  "garbodorgmax": {
+    "Defensive": "Garbodor @ Rocky Helmet\nAbility: Aftermath\nEVs: 80 HP / 252 Def / 176 Spe\nImpish Nature\n- Gunk Shot\n- Spikes\n- Stomping Tantrum\n- Pain Split"
+  },
+  "zorua": {},
+  "zoroark": {
+    "Choice Scarf": "Zoroark @ Choice Scarf\nAbility: Illusion\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Throat Chop\n- Trick\n- Sucker Punch\n- U-turn",
+    "Nasty Plot": "Zoroark @ Heavy-Duty Boots\nAbility: Illusion\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Dark Pulse\n- Flamethrower\n- Sludge Bomb"
+  },
+  "minccino": {},
+  "cinccino": {
+    "All Out Attacker": "Cinccino @ Protective Pads\nAbility: Skill Link\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Tail Slap\n- Triple Axel\n- Knock Off\n- U-turn"
+  },
+  "gothita": {},
+  "gothorita": {
+    "Nasty Plot": "Gothorita @ Eviolite\nAbility: Competitive\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Nasty Plot\n- Psychic\n- Dark Pulse\n- Thunderbolt"
+  },
+  "gothitelle": {
+    "Trapper": "Gothitelle @ Leftovers\nAbility: Shadow Tag\nEVs: 252 HP / 156 Def / 100 Spe\nBold Nature\n- Charm\n- Cosmic Power\n- Taunt\n- Rest"
+  },
+  "solosis": {},
+  "duosion": {
+    "Defensive Sweeper": "Duosion @ Eviolite\nAbility: Magic Guard\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Acid Armor\n- Calm Mind\n- Recover\n- Stored Power",
+    "Future Sight": "Duosion @ Eviolite\nAbility: Regenerator\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Future Sight\n- Psychic\n- Recover\n- Toxic"
+  },
+  "reuniclus": {
+    "Defensive Calm Mind": "Reuniclus @ Leftovers\nAbility: Magic Guard\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Calm Mind\n- Psyshock\n- Focus Blast\n- Recover",
+    "Assault Vest": "Reuniclus @ Assault Vest\nAbility: Regenerator\nEVs: 248 HP / 24 SpA / 236 SpD\nModest Nature\n- Psyshock\n- Future Sight\n- Focus Blast\n- Shadow Ball"
+  },
+  "ducklett": {},
+  "swanna": {},
+  "vanillite": {},
+  "vanillish": {},
+  "vanilluxe": {
+    "Choice Specs": "Vanilluxe @ Choice Specs\nAbility: Snow Warning\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Blizzard\n- Freeze-Dry\n- Flash Cannon\n- Aurora Veil",
+    "Hail Setter": "Vanilluxe @ Icy Rock\nAbility: Snow Warning\nEVs: 4 Atk / 252 SpA / 252 Spe\nNaive Nature\n- Aurora Veil\n- Blizzard\n- Freeze-Dry\n- Explosion"
+  },
+  "deerling": {},
+  "sawsbuck": {},
+  "emolga": {},
+  "karrablast": {},
+  "escavalier": {
+    "Swords Dance": "Escavalier @ Leftovers\nAbility: Shell Armor\nEVs: 92 HP / 252 Atk / 164 Spe\nAdamant Nature\n- Swords Dance\n- Iron Head\n- Close Combat\n- Knock Off",
+    "Specially Defensive": "Escavalier @ Leftovers\nAbility: Shell Armor\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Iron Head\n- Knock Off\n- Toxic\n- Protect"
+  },
+  "foongus": {
+    "Defensive Pivot": "Foongus @ Eviolite\nLevel: 5\nAbility: Regenerator\nEVs: 124 HP / 156 Def / 156 SpD\nBold Nature\n- Spore\n- Giga Drain\n- Sludge Bomb\n- Synthesis"
+  },
+  "amoonguss": {
+    "Defensive": "Amoonguss @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 220 Def / 36 SpD\nBold Nature\n- Giga Drain\n- Sludge Bomb\n- Foul Play\n- Spore"
+  },
+  "frillish": {
+    "Special Tank": "Frillish @ Eviolite\nLevel: 5\nAbility: Cursed Body\nEVs: 156 HP / 116 Def / 156 SpD / 36 Spe\nTimid Nature\n- Scald\n- Hex\n- Will-O-Wisp\n- Recover"
+  },
+  "jellicent": {
+    "Defensive Utility": "Jellicent @ Colbur Berry\nAbility: Cursed Body\nEVs: 252 HP / 224 Def / 32 Spe\nBold Nature\n- Recover\n- Taunt\n- Will-O-Wisp\n- Hex"
+  },
+  "alomomola": {
+    "Wish Support": "Alomomola @ Rocky Helmet\nAbility: Regenerator\nEVs: 40 HP / 216 Def / 252 SpD\nBold Nature\n- Scald\n- Wish\n- Protect\n- Toxic"
+  },
+  "joltik": {},
+  "galvantula": {
+    "Offensive Support": "Galvantula @ Heavy-Duty Boots\nAbility: Compound Eyes\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Sticky Web\n- Volt Switch\n- Bug Buzz\n- Thunder"
+  },
+  "ferroseed": {
+    "Defensive": "Ferroseed @ Eviolite\nAbility: Iron Barbs\nEVs: 252 HP / 252 Def / 4 SpD\nIVs: 0 Spe\nRelaxed Nature\n- Spikes\n- Gyro Ball\n- Leech Seed\n- Protect"
+  },
+  "ferrothorn": {
+    "Utility": "Ferrothorn @ Leftovers\nAbility: Iron Barbs\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Spikes\n- Knock Off\n- Leech Seed\n- Power Whip"
+  },
+  "klink": {},
+  "klang": {
+    "Sleepy Gears": "Klang @ Eviolite\nAbility: Clear Body\nEVs: 252 HP / 120 SpD / 136 Spe\nCareful Nature\n- Rest\n- Sleep Talk\n- Gear Grind\n- Shift Gear",
+    "Offensive Shift Gear": "Klang @ Eviolite\nAbility: Clear Body\nEVs: 120 HP / 252 Atk / 136 Spe\nAdamant Nature\n- Shift Gear\n- Gear Grind\n- Wild Charge\n- Substitute"
+  },
+  "klinklang": {
+    "Shift Gear": "Klinklang @ Leftovers\nAbility: Clear Body\nEVs: 160 HP / 252 Atk / 96 Spe\nJolly Nature\n- Shift Gear\n- Gear Grind\n- Wild Charge\n- Substitute"
+  },
+  "tynamo": {},
+  "eelektrik": {},
+  "eelektross": {},
+  "elgyem": {},
+  "beheeyem": {
+    "Bulky Pivot": "Beheeyem @ Colbur Berry\nAbility: Analytic\nEVs: 248 HP / 252 Def / 8 SpA\nBold Nature\n- Psychic\n- Thunderbolt\n- Recover\n- Teleport",
+    "Choice Specs": "Beheeyem @ Choice Specs\nAbility: Analytic\nEVs: 252 HP / 252 SpA / 4 SpD\nModest Nature\n- Psyshock\n- Shadow Ball\n- Thunderbolt\n- Teleport",
+    "Offensive Trick Room": "Beheeyem @ Life Orb\nAbility: Analytic\nEVs: 252 HP / 252 SpA / 4 SpD\nIVs: 0 Spe\nQuiet Nature\n- Trick Room\n- Psychic\n- Thunderbolt\n- Recover"
+  },
+  "litwick": {},
+  "lampent": {
+    "Choice Scarf": "Lampent @ Choice Scarf\nAbility: Flash Fire\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fire Blast\n- Shadow Ball\n- Trick\n- Calm Mind",
+    "Substitute + Calm Mind": "Lampent @ Eviolite\nAbility: Flash Fire\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Calm Mind\n- Flamethrower\n- Shadow Ball\n- Substitute"
+  },
+  "chandelure": {
+    "Wallbreaker": "Chandelure @ Heavy-Duty Boots\nAbility: Flash Fire\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Fire Blast\n- Shadow Ball\n- Toxic\n- Energy Ball"
+  },
+  "axew": {},
+  "fraxure": {
+    "Choice Band": "Fraxure @ Choice Band\nAbility: Mold Breaker\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Outrage\n- Dragon Claw\n- Superpower\n- First Impression",
+    "Setup": "Fraxure @ Eviolite\nAbility: Mold Breaker\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Outrage\n- Superpower\n- Poison Jab"
+  },
+  "haxorus": {
+    "Choice Band": "Haxorus @ Choice Band\nAbility: Mold Breaker\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- First Impression\n- Earthquake\n- Close Combat\n- Rock Slide"
+  },
+  "cubchoo": {},
+  "beartic": {
+    "Hail Sweeper": "Beartic @ Choice Band\nAbility: Slush Rush\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Icicle Crash\n- Superpower\n- Liquidation\n- Throat Chop"
+  },
+  "cryogonal": {
+    "Specially Defensive": "Cryogonal @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 252 HP / 48 SpD / 208 Spe\nTimid Nature\n- Rapid Spin\n- Recover\n- Freeze-Dry\n- Toxic"
+  },
+  "shelmet": {},
+  "accelgor": {
+    "Offensive Spiker": "Accelgor @ Heavy-Duty Boots\nAbility: Sticky Hold\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Spikes\n- Bug Buzz\n- Focus Blast\n- Sludge Bomb",
+    "Wallbreaker": "Accelgor @ Choice Specs\nAbility: Sticky Hold\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Bug Buzz\n- Focus Blast\n- Sludge Bomb\n- Energy Ball"
+  },
+  "stunfisk": {
+    "Mixed Wall": "Stunfisk @ Leftovers\nAbility: Static\nEVs: 252 HP / 172 Def / 84 SpD\nCalm Nature\n- Stealth Rock\n- Discharge\n- Earth Power\n- Toxic"
+  },
+  "stunfiskgalar": {
+    "Defensive Stealth Rock": "Stunfisk-Galar @ Leftovers\nAbility: Mimicry\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Stealth Rock\n- Earthquake\n- Yawn\n- Stone Edge"
+  },
+  "mienfoo": {
+    "Bulky Pivot": "Mienfoo @ Eviolite\nLevel: 5\nAbility: Regenerator\nEVs: 196 Def / 36 SpD / 236 Spe\nJolly Nature\n- High Jump Kick\n- Knock Off\n- U-turn\n- Fake Out",
+    "Choice Scarf": "Mienfoo @ Choice Scarf\nLevel: 5\nAbility: Reckless\nEVs: 236 Atk / 36 Def / 236 Spe\nJolly Nature\n- High Jump Kick\n- U-turn\n- Knock Off\n- Close Combat"
+  },
+  "mienshao": {
+    "Offensive Pivot": "Mienshao @ Life Orb\nAbility: Regenerator\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Close Combat\n- Knock Off\n- U-turn\n- Stone Edge",
+    "Choice Scarf": "Mienshao @ Choice Scarf\nAbility: Regenerator\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Close Combat\n- Knock Off\n- U-turn\n- Stone Edge"
+  },
+  "druddigon": {
+    "Defensive": "Druddigon @ Rocky Helmet\nAbility: Rough Skin\nEVs: 248 HP / 8 Atk / 252 Def\nImpish Nature\n- Dragon Tail\n- Stealth Rock\n- Glare\n- Earthquake"
+  },
+  "golett": {},
+  "golurk": {
+    "Choice Band": "Golurk @ Choice Band\nAbility: No Guard\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Poltergeist\n- Earthquake\n- Heat Crash\n- Darkest Lariat"
+  },
+  "pawniard": {
+    "Bulky Attacker": "Pawniard @ Berry Juice\nLevel: 5\nAbility: Defiant\nEVs: 156 Atk / 36 Def / 116 SpD / 196 Spe\nJolly Nature\n- Knock Off\n- Iron Head\n- Sucker Punch\n- Stealth Rock"
+  },
+  "bisharp": {
+    "Swords Dance": "Bisharp @ Life Orb\nAbility: Defiant\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Knock Off\n- Sucker Punch\n- Iron Head",
+    "Choice Band": "Bisharp @ Choice Band\nAbility: Defiant\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Knock Off\n- Sucker Punch\n- Iron Head\n- Beat Up"
+  },
+  "bouffalant": {
+    "Substitute + Swords Dance": "Bouffalant @ Leftovers\nAbility: Sap Sipper\nEVs: 248 HP / 202 SpD / 56 Spe\nAdamant Nature\n- Substitute\n- Swords Dance\n- Body Slam\n- Throat Chop"
+  },
+  "rufflet": {
+    "Bulk Up": "Rufflet @ Eviolite\nAbility: Hustle\nEVs: 248 HP / 156 SpD / 104 Spe\nJolly Nature\n- Bulk Up\n- Aerial Ace\n- Roost\n- Substitute",
+    "Choice Band": "Rufflet @ Choice Band\nAbility: Hustle\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Brave Bird\n- Close Combat\n- Aerial Ace\n- U-turn"
+  },
+  "braviary": {
+    "Offensive": "Braviary @ Heavy-Duty Boots\nAbility: Defiant\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Bulk Up\n- Brave Bird\n- Close Combat\n- Roost"
+  },
+  "vullaby": {
+    "Specially Defensive": "Vullaby @ Eviolite\nAbility: Overcoat\nEVs: 248 HP / 8 Def / 252 SpD\nCareful Nature\n- Roost\n- Defog\n- Knock Off\n- Brave Bird"
+  },
+  "mandibuzz": {
+    "Specially Defensive": "Mandibuzz @ Heavy-Duty Boots\nAbility: Overcoat\nEVs: 248 HP / 164 SpD / 96 Spe\nCareful Nature\n- Foul Play\n- Knock Off\n- U-turn\n- Roost"
+  },
+  "heatmor": {
+    "Mixed Attacker": "Heatmor @ Heavy-Duty Boots\nAbility: Flash Fire\nEVs: 252 Atk / 4 SpA / 252 Spe\nAdamant Nature\n- Fire Lash\n- Knock Off\n- Sucker Punch\n- Giga Drain",
+    "Special Attacker": "Heatmor @ Heavy-Duty Boots\nAbility: Flash Fire\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fire Blast\n- Giga Drain\n- Knock Off\n- Scorching Sands",
+    "Choice Scarf": "Heatmor @ Choice Scarf\nAbility: Flash Fire\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Fire Blast\n- Knock Off\n- Giga Drain\n- Focus Blast"
+  },
+  "durant": {
+    "Life Orb Attacker (Steel)": "Durant @ Life Orb\nAbility: Hustle\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- First Impression\n- Superpower\n- Rock Slide\n- Iron Head"
+  },
+  "deino": {},
+  "zweilous": {
+    "Substitute": "Zweilous @ Leftovers\nAbility: Hustle\nEVs: 144 HP / 252 Atk / 112 Spe\nAdamant Nature\n- Crunch\n- Body Slam\n- Substitute\n- Zen Headbutt"
+  },
+  "hydreigon": {
+    "Nasty Plot": "Hydreigon @ Leftovers\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Dark Pulse\n- Draco Meteor\n- Roost",
+    "Choice Scarf": "Hydreigon @ Choice Scarf\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Dark Pulse\n- Draco Meteor\n- U-turn\n- Defog",
+    "Utility": "Hydreigon @ Leftovers\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Dark Pulse\n- Draco Meteor\n- Taunt\n- Roost",
+    "Three Attacks": "Hydreigon @ Life Orb\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Dark Pulse\n- Draco Meteor\n- Flash Cannon\n- Roost",
+    "Choice Specs": "Hydreigon @ Choice Specs\nAbility: Levitate\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Dark Pulse\n- Draco Meteor\n- Flash Cannon\n- U-turn"
+  },
+  "larvesta": {
+    "Defensive Pivot": "Larvesta @ Eviolite\nLevel: 5\nAbility: Flame Body\nEVs: 76 HP / 236 Def / 196 Spe\nJolly Nature\n- Flare Blitz\n- U-turn\n- Will-O-Wisp\n- Morning Sun"
+  },
+  "volcarona": {
+    "Bulky Quiver Dance": "Volcarona @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 248 HP / 156 Def / 16 SpA / 88 Spe\nTimid Nature\n- Quiver Dance\n- Roost\n- Flamethrower\n- Psychic",
+    "Offensive Quiver Dance": "Volcarona @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Quiver Dance\n- Flamethrower\n- Bug Buzz\n- Psychic"
+  },
+  "cobalion": {
+    "Offensive Utility": "Cobalion @ Rocky Helmet\nAbility: Justified\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stealth Rock\n- Close Combat\n- Iron Head\n- Volt Switch",
+    "Swords Dance": "Cobalion @ Rocky Helmet\nAbility: Justified\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Close Combat\n- Iron Head\n- Stone Edge"
+  },
+  "terrakion": {
+    "Choice Band": "Terrakion @ Choice Band\nAbility: Justified\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Close Combat\n- Stone Edge\n- Earthquake\n- Megahorn"
+  },
+  "virizion": {
+    "Choice Scarf (Grass)": "Virizion @ Choice Scarf\nAbility: Justified\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Close Combat\n- Stone Edge\n- Megahorn\n- Sunny Day"
+  },
+  "tornadus": {
+    "Nasty Plot": "Tornadus @ Heavy-Duty Boots\nAbility: Defiant\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Hurricane\n- Weather Ball\n- Focus Blast"
+  },
+  "tornadustherian": {
+    "Nasty Plot": "Tornadus-Therian @ Heavy-Duty Boots\nAbility: Regenerator\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Hurricane\n- Focus Blast\n- Knock Off",
+    "Defog": "Tornadus-Therian @ Heavy-Duty Boots\nAbility: Regenerator\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Hurricane\n- Knock Off\n- U-turn\n- Defog"
+  },
+  "thundurus": {
+    "Dynamax Sweeper": "Thundurus @ Life Orb\nLevel: 50\nAbility: Defiant\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Fly\n- Wild Charge\n- Bulk Up\n- Taunt",
+    "Prankster Support": "Thundurus @ Sitrus Berry\nLevel: 50\nAbility: Prankster\nEVs: 252 HP / 76 Def / 4 SpA / 4 SpD / 172 Spe\nTimid Nature\n- Substitute\n- Thunder Wave\n- Thunderbolt\n- Grass Knot"
+  },
+  "thundurustherian": {
+    "Nasty Plot": "Thundurus-Therian @ Heavy-Duty Boots\nAbility: Volt Absorb\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Thunderbolt\n- Psychic\n- Focus Blast",
+    "Pivot": "Thundurus-Therian @ Heavy-Duty Boots\nAbility: Volt Absorb\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Volt Switch\n- Focus Blast\n- Knock Off\n- Psychic"
+  },
+  "reshiram": {
+    "Life Orb": "Reshiram @ Life Orb\nAbility: Turboblaze\nEVs: 4 Atk / 252 SpA / 252 Spe\nNaive Nature\n- Blue Flare\n- Draco Meteor\n- Roost\n- Stone Edge"
+  },
+  "zekrom": {
+    "Dragon Dance": "Zekrom @ Life Orb\nAbility: Teravolt\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Bolt Strike\n- Dragon Claw\n- Roost"
+  },
+  "landorus": {
+    "Wallbreaker": "Landorus @ Life Orb\nAbility: Sheer Force\nEVs: 4 Atk / 252 SpA / 252 Spe\nNaive Nature\n- Earth Power\n- Rock Slide\n- Knock Off\n- Superpower"
+  },
+  "landorustherian": {
+    "Defensive": "Landorus-Therian @ Leftovers\nAbility: Intimidate\nEVs: 252 HP / 164 Def / 92 Spe\nImpish Nature\n- Stealth Rock\n- Earthquake\n- U-turn\n- Toxic",
+    "Swords Dance": "Landorus-Therian @ Leftovers\nAbility: Intimidate\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Earthquake\n- Stone Edge\n- Substitute"
+  },
+  "kyurem": {
+    "Choice Specs (Ice)": "Kyurem @ Choice Specs\nAbility: Pressure\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Freeze-Dry\n- Draco Meteor\n- Ice Beam\n- Earth Power",
+    "Choice Specs (Dragon)": "Kyurem @ Choice Specs\nAbility: Pressure\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Freeze-Dry\n- Ice Beam\n- Draco Meteor\n- Earth Power"
+  },
+  "kyuremblack": {
+    "Dragon Dance": "Kyurem-Black @ Life Orb\nAbility: Teravolt\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Icicle Spear\n- Roost\n- Fusion Bolt"
+  },
+  "kyuremwhite": {
+    "Special Attacker": "Kyurem-White @ Choice Specs\nAbility: Turboblaze\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Draco Meteor\n- Ice Beam\n- Freeze-Dry\n- Fusion Flare"
+  },
+  "keldeo": {
+    "Choice Specs": "Keldeo @ Choice Specs\nAbility: Justified\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Hydro Pump\n- Secret Sword\n- Scald\n- Icy Wind",
+    "Calm Mind": "Keldeo @ Leftovers\nAbility: Justified\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Calm Mind\n- Scald\n- Secret Sword\n- Substitute"
+  },
+  "keldeoresolute": {},
+  "meloetta": {},
+  "meloettapirouette": {},
+  "genesect": {
+    "Choice Scarf": "Genesect @ Choice Scarf\nAbility: Download\nEVs: 252 Atk / 4 SpA / 252 Spe\nHasty Nature\n- U-turn\n- Iron Head\n- Ice Beam\n- Flamethrower"
+  },
+  "genesectdouse": {},
+  "genesectshock": {},
+  "genesectburn": {},
+  "genesectchill": {},
+  "chespin": {},
+  "quilladin": {},
+  "chesnaught": {},
+  "fennekin": {},
+  "braixen": {},
+  "delphox": {},
+  "froakie": {},
+  "frogadier": {},
+  "greninja": {
+    "Choice Specs": "Greninja @ Choice Specs\nAbility: Battle Bond\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Hydro Pump\n- Dark Pulse\n- Water Shuriken\n- Spikes"
+  },
+  "greninjaash": {
+    "Choice Specs": "Greninja @ Choice Specs\nAbility: Battle Bond\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Hydro Pump\n- Dark Pulse\n- Water Shuriken\n- Spikes"
+  },
+  "bunnelby": {
+    "Wallbreaker": "Bunnelby @ Eviolite\nLevel: 5\nAbility: Huge Power\nEVs: 52 HP / 228 Atk / 228 Spe\nAdamant Nature\n- Strength\n- Earthquake\n- Quick Attack\n- Stone Edge"
+  },
+  "diggersby": {
+    "Swords Dance": "Diggersby @ Life Orb\nAbility: Huge Power\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Quick Attack\n- Earthquake\n- Fire Punch",
+    "Choice Scarf": "Diggersby @ Choice Scarf\nAbility: Huge Power\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Body Slam\n- Earthquake\n- U-turn\n- Spikes"
+  },
+  "fletchling": {},
+  "fletchinder": {
+    "Defensive Support": "Fletchinder @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 248 HP / 128 Def / 132 Spe\nTimid Nature\n- Flamethrower\n- Roost\n- Taunt\n- Will-O-Wisp"
+  },
+  "talonflame": {
+    "Defensive Utility": "Talonflame @ Heavy-Duty Boots\nAbility: Flame Body\nEVs: 248 HP / 52 Def / 208 Spe\nJolly Nature\n- Brave Bird\n- Roost\n- Will-O-Wisp\n- U-turn"
+  },
+  "scatterbug": {},
+  "spewpa": {},
+  "vivillon": {
+    "Quiver Dance": "Vivillon @ Leftovers\nAbility: Compound Eyes\nEVs: 136 Def / 120 SpA / 252 Spe\nTimid Nature\n- Sleep Powder\n- Substitute\n- Quiver Dance\n- Hurricane"
+  },
+  "vivillonfancy": {},
+  "vivillonpokeball": {},
+  "litleo": {},
+  "pyroar": {},
+  "flabebe": {},
+  "floette": {},
+  "floetteeternal": {},
+  "florges": {},
+  "skiddo": {},
+  "gogoat": {},
+  "pancham": {},
+  "pangoro": {
+    "Wallbreaker": "Pangoro @ Choice Band\nAbility: Scrappy\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Knock Off\n- Close Combat\n- Iron Head\n- Drain Punch"
+  },
+  "furfrou": {},
+  "espurr": {},
+  "meowstic": {},
+  "meowsticf": {
+    "Nasty Plot": "Meowstic-F @ Colbur Berry\nAbility: Competitive\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Psychic\n- Thunderbolt\n- Protect"
+  },
+  "honedge": {},
+  "doublade": {
+    "Swords Dance": "Doublade @ Eviolite\nAbility: No Guard\nEVs: 220 HP / 252 Atk / 36 Spe\nAdamant Nature\n- Swords Dance\n- Shadow Sneak\n- Shadow Claw\n- Close Combat"
+  },
+  "aegislash": {
+    "SubToxic": "Aegislash @ Leftovers\nAbility: Stance Change\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Shadow Ball\n- Toxic\n- Substitute\n- King's Shield",
+    "Choice Specs": "Aegislash @ Choice Specs\nAbility: Stance Change\nEVs: 8 Atk / 248 SpA / 252 Spe\nRash Nature\n- Shadow Ball\n- Flash Cannon\n- Close Combat\n- Shadow Sneak",
+    "Swords Dance": "Aegislash @ Weakness Policy\nAbility: Stance Change\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Shadow Claw\n- Shadow Sneak\n- Close Combat",
+    "Autotomize": "Aegislash @ Weakness Policy\nAbility: Stance Change\nEVs: 4 Atk / 252 SpA / 252 Spe\nHasty Nature\n- Autotomize\n- Shadow Ball\n- Flash Cannon\n- Close Combat",
+    "King's Shield + Toxic": "Aegislash @ Leftovers\nAbility: Stance Change\nEVs: 252 HP / 8 Atk / 248 SpA\nQuiet Nature\n- Shadow Ball\n- Close Combat\n- Toxic\n- King's Shield"
+  },
+  "aegislashblade": {
+    "SubToxic": "Aegislash @ Leftovers\nAbility: Stance Change\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Shadow Ball\n- Toxic\n- Substitute\n- King's Shield",
+    "Choice Specs": "Aegislash @ Choice Specs\nAbility: Stance Change\nEVs: 8 Atk / 248 SpA / 252 Spe\nRash Nature\n- Shadow Ball\n- Flash Cannon\n- Close Combat\n- Shadow Sneak",
+    "Swords Dance": "Aegislash @ Weakness Policy\nAbility: Stance Change\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Shadow Claw\n- Shadow Sneak\n- Close Combat",
+    "Autotomize": "Aegislash @ Weakness Policy\nAbility: Stance Change\nEVs: 4 Atk / 252 SpA / 252 Spe\nHasty Nature\n- Autotomize\n- Shadow Ball\n- Flash Cannon\n- Close Combat",
+    "King's Shield + Toxic": "Aegislash @ Leftovers\nAbility: Stance Change\nEVs: 252 HP / 8 Atk / 248 SpA\nQuiet Nature\n- Shadow Ball\n- Close Combat\n- Toxic\n- King's Shield"
+  },
+  "spritzee": {
+    "Nasty Plot": "Spritzee @ Berry Juice\nLevel: 5\nAbility: Aroma Veil\nEVs: 132 HP / 36 Def / 252 SpA / 76 SpD\nModest Nature\n- Nasty Plot\n- Moonblast\n- Psychic\n- Trick Room",
+    "Defensive": "Spritzee @ Eviolite\nLevel: 5\nAbility: Aroma Veil\nEVs: 212 HP / 196 Def / 12 SpA / 76 SpD / 12 Spe\nBold Nature\n- Moonblast\n- Wish\n- Protect\n- Covet"
+  },
+  "aromatisse": {
+    "Defensive": "Aromatisse @ Leftovers\nAbility: Aroma Veil\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Moonblast\n- Wish\n- Protect\n- Heal Bell"
+  },
+  "swirlix": {
+    "Grassy Seed": "Swirlix @ Grassy Seed\nAbility: Unburden\nEVs: 104 Def / 252 SpA / 152 Spe\nModest Nature\n- Calm Mind\n- Draining Kiss\n- Flamethrower\n- Thunderbolt"
+  },
+  "slurpuff": {
+    "Sticky Web Lead": "Slurpuff @ Focus Sash\nAbility: Unburden\nEVs: 252 SpA / 252 Spe\nIVs: 0 HP / 0 Def / 0 SpD\nNaive Nature\n- Sticky Web\n- Magic Coat\n- Misty Explosion\n- Yawn"
+  },
+  "inkay": {},
+  "malamar": {
+    "Contrary Stallbreaker": "Malamar @ Leftovers\nAbility: Contrary\nEVs: 248 HP / 8 Def / 252 SpD\nCareful Nature\n- Superpower\n- Knock Off\n- Rest\n- Sleep Talk"
+  },
+  "binacle": {},
+  "barbaracle": {
+    "Shell Smash": "Barbaracle @ Life Orb\nAbility: Tough Claws\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Shell Smash\n- Liquidation\n- Stone Edge\n- Grass Knot"
+  },
+  "skrelp": {
+    "Special Attacker": "Skrelp @ Eviolite\nLevel: 5\nAbility: Adaptability\nEVs: 116 HP / 116 Def / 196 SpA / 36 SpD / 36 Spe\nModest Nature\n- Sludge Wave\n- Hydro Pump\n- Toxic Spikes\n- Thunderbolt"
+  },
+  "dragalge": {
+    "Utility": "Dragalge @ Heavy-Duty Boots\nAbility: Adaptability\nEVs: 252 HP / 124 SpA / 132 Spe\nModest Nature\n- Draco Meteor\n- Sludge Bomb\n- Flip Turn\n- Scald"
+  },
+  "clauncher": {},
+  "clawitzer": {},
+  "helioptile": {},
+  "heliolisk": {
+    "All-out Attacker": "Heliolisk @ Choice Specs\nAbility: Dry Skin\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Hyper Voice\n- Volt Switch\n- Dark Pulse",
+    "Choice Scarf": "Heliolisk @ Choice Scarf\nAbility: Dry Skin\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Hyper Voice\n- Grass Knot\n- Volt Switch"
+  },
+  "tyrunt": {
+    "Dragon Dance": "Tyrunt @ Eviolite\nLevel: 5\nAbility: Strong Jaw\nEVs: 204 Atk / 76 SpD / 212 Spe\nJolly Nature\n- Dragon Dance\n- Rock Blast\n- Close Combat\n- Psychic Fangs"
+  },
+  "tyrantrum": {
+    "Choice Band": "Tyrantrum @ Choice Band\nAbility: Rock Head\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Head Smash\n- Dragon Claw\n- Crunch\n- Close Combat",
+    "Setup Sweeper": "Tyrantrum @ Lum Berry\nAbility: Rock Head\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Scale Shot\n- Head Smash\n- Close Combat"
+  },
+  "amaura": {
+    "Choice Scarf": "Amaura @ Choice Scarf\nLevel: 5\nAbility: Snow Warning\nEVs: 60 HP / 220 SpA / 228 Spe\nTimid Nature\n- Blizzard\n- Freeze-Dry\n- Thunderbolt\n- Earth Power",
+    "Screens Setter": "Amaura @ Light Clay\nLevel: 5\nAbility: Snow Warning\nEVs: 60 HP / 220 SpA / 228 Spe\nTimid Nature\n- Aurora Veil\n- Blizzard\n- Thunderbolt\n- Earth Power"
+  },
+  "aurorus": {
+    "Hail Setter": "Aurorus @ Focus Sash\nAbility: Snow Warning\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Blizzard\n- Stealth Rock\n- Earth Power\n- Encore"
+  },
+  "sylveon": {
+    "Utility": "Sylveon @ Leftovers\nAbility: Pixilate\nEVs: 252 HP / 188 Def / 68 SpD\nCalm Nature\n- Hyper Voice\n- Wish\n- Protect\n- Heal Bell",
+    "Choice Specs": "Sylveon @ Choice Specs\nAbility: Pixilate\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Hyper Voice\n- Mystical Fire\n- Psyshock\n- Heal Bell"
+  },
+  "hawlucha": {
+    "Unburden Sweeper": "Hawlucha @ Grassy Seed\nAbility: Unburden\nEVs: 252 Atk / 132 SpD / 124 Spe\nAdamant Nature\n- Swords Dance\n- Acrobatics\n- Close Combat\n- Taunt"
+  },
+  "dedenne": {},
+  "carbink": {
+    "Stealth Rock": "Carbink @ Leftovers\nAbility: Clear Body\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Stealth Rock\n- Body Press\n- Toxic\n- Protect"
+  },
+  "goomy": {},
+  "sliggoo": {},
+  "goodra": {
+    "All-out Attacker": "Goodra @ Expert Belt\nAbility: Sap Sipper\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Draco Meteor\n- Fire Blast\n- Thunderbolt\n- Sludge Bomb"
+  },
+  "klefki": {
+    "Spikes": "Klefki @ Leftovers\nAbility: Prankster\nEVs: 252 HP / 240 SpD / 16 Spe\nCalm Nature\n- Spikes\n- Dazzling Gleam\n- Thunder Wave\n- Toxic"
+  },
+  "phantump": {},
+  "trevenant": {
+    "Choice Band": "Trevenant @ Choice Band\nAbility: Natural Cure\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Poltergeist\n- Wood Hammer\n- Horn Leech\n- Earthquake"
+  },
+  "pumpkaboo": {},
+  "pumpkaboosmall": {},
+  "pumpkaboolarge": {},
+  "pumpkaboosuper": {},
+  "gourgeist": {
+    "Wallbreaker": "Gourgeist @ Colbur Berry\nAbility: Frisk\nEVs: 252 Atk / 4 SpA / 252 Spe\nJolly Nature\n- Power Whip\n- Poltergeist\n- Shadow Sneak\n- Synthesis",
+    "Choice Scarf": "Gourgeist @ Choice Scarf\nAbility: Frisk\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaive Nature\n- Power Whip\n- Poltergeist\n- Fire Blast\n- Explosion",
+    "Nasty Plot": "Gourgeist @ Colbur Berry\nAbility: Frisk\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Giga Drain\n- Fire Blast\n- Shadow Ball"
+  },
+  "gourgeistsmall": {
+    "Offensive": "Gourgeist-Small @ Life Orb\nAbility: Frisk\nEVs: 252 Atk / 4 Def / 252 Spe\nNaive Nature\n- Power Whip\n- Poltergeist\n- Rock Slide\n- Fire Blast",
+    "Choice Scarf": "Gourgeist-Small @ Choice Scarf\nAbility: Frisk\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Power Whip\n- Poltergeist\n- Rock Slide\n- Trick",
+    "Nasty Plot": "Gourgeist-Small @ Life Orb\nAbility: Frisk\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Shadow Ball\n- Fire Blast\n- Giga Drain"
+  },
+  "gourgeistlarge": {},
+  "gourgeistsuper": {
+    "Physically Defensive": "Gourgeist-Super @ Colbur Berry\nAbility: Insomnia\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Synthesis\n- Will-O-Wisp\n- Skill Swap\n- Foul Play",
+    "Choice Band": "Gourgeist-Super @ Choice Band\nAbility: Frisk\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Power Whip\n- Poltergeist\n- Shadow Sneak\n- Rock Slide"
+  },
+  "bergmite": {},
+  "avalugg": {
+    "Physical Wall": "Avalugg @ Heavy-Duty Boots\nAbility: Sturdy\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Icicle Spear\n- Body Press\n- Rapid Spin\n- Recover"
+  },
+  "noibat": {},
+  "noivern": {
+    "Offensive Utility": "Noivern @ Heavy-Duty Boots\nAbility: Infiltrator\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Draco Meteor\n- Flamethrower\n- Roost\n- U-turn"
+  },
+  "xerneas": {
+    "Geomancy": "Xerneas @ Power Herb\nAbility: Fairy Aura\nEVs: 168 Def / 252 SpA / 88 Spe\nModest Nature\n- Geomancy\n- Moonblast\n- Thunder\n- Substitute",
+    "Defensive": "Xerneas @ Leftovers\nAbility: Fairy Aura\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Moonblast\n- Rest\n- Sleep Talk\n- Aromatherapy"
+  },
+  "xerneasneutral": {},
+  "yveltal": {
+    "Fast Utility": "Yveltal @ Heavy-Duty Boots\nAbility: Dark Aura\nEVs: 16 HP / 240 SpD / 252 Spe\nJolly Nature\n- Knock Off\n- Taunt\n- Defog\n- Roost",
+    "Specially Defensive": "Yveltal @ Heavy-Duty Boots\nAbility: Dark Aura\nEVs: 248 HP / 72 Def / 184 SpD\nCareful Nature\n- Knock Off\n- U-turn\n- Defog\n- Roost",
+    "Hone Claws": "Yveltal @ Life Orb\nAbility: Dark Aura\nEVs: 252 Atk / 72 SpD / 184 Spe\nAdamant Nature\n- Hone Claws\n- Knock Off\n- Sucker Punch\n- Acrobatics",
+    "Special Attacker": "Yveltal @ Life Orb\nAbility: Dark Aura\nEVs: 4 Atk / 252 SpA / 252 Spe\nHasty Nature\n- Dark Pulse\n- Oblivion Wing\n- Taunt\n- Sucker Punch",
+    "Choice Scarf": "Yveltal @ Choice Scarf\nAbility: Dark Aura\nEVs: 252 HP / 72 SpD / 184 Spe\nJolly Nature\n- Foul Play\n- Roost\n- U-turn\n- Defog",
+    "Choice Band": "Yveltal @ Choice Band\nAbility: Dark Aura\nEVs: 252 Atk / 72 SpD / 184 Spe\nAdamant Nature\n- Knock Off\n- Dual Wingbeat\n- U-turn\n- Sucker Punch"
+  },
+  "zygarde": {
+    "Dragon Dance": "Zygarde @ Leftovers\nAbility: Power Construct\nEVs: 16 HP / 224 Atk / 36 Def / 232 Spe\nImpish Nature\n- Thousand Arrows\n- Dragon Dance\n- Substitute\n- Glare",
+    "Defensive Coil": "Zygarde @ Leftovers\nAbility: Power Construct\nEVs: 208 HP / 244 Def / 56 Spe\nImpish Nature\n- Thousand Arrows\n- Coil\n- Rest\n- Glare",
+    "Demon Zygarde": "Zygarde @ Leftovers\nAbility: Power Construct\nEVs: 80 HP / 220 Atk / 112 Def / 96 Spe\nAdamant Nature\n- Thousand Waves\n- Coil\n- Scale Shot\n- Rest"
+  },
+  "zygarde10": {
+    "Choice Band": "Zygarde-10% @ Choice Band\nAbility: Aura Break\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Thousand Arrows\n- Extreme Speed\n- Outrage\n- Toxic"
+  },
+  "zygardecomplete": {
+    "Dragon Dance": "Zygarde @ Leftovers\nAbility: Power Construct\nEVs: 16 HP / 224 Atk / 36 Def / 232 Spe\nImpish Nature\n- Thousand Arrows\n- Dragon Dance\n- Substitute\n- Glare",
+    "Defensive Coil": "Zygarde @ Leftovers\nAbility: Power Construct\nEVs: 208 HP / 244 Def / 56 Spe\nImpish Nature\n- Thousand Arrows\n- Coil\n- Rest\n- Glare",
+    "Demon Zygarde": "Zygarde @ Leftovers\nAbility: Power Construct\nEVs: 80 HP / 220 Atk / 112 Def / 96 Spe\nAdamant Nature\n- Thousand Waves\n- Coil\n- Scale Shot\n- Rest"
+  },
+  "diancie": {
+    "Stealth Rock": "Diancie @ Leftovers\nAbility: Clear Body\nEVs: 252 HP / 56 SpD / 200 Spe\nCareful Nature\n- Stealth Rock\n- Diamond Storm\n- Body Press\n- Heal Bell"
+  },
+  "dianciemega": {
+    "Stealth Rock": "Diancie @ Leftovers\nAbility: Clear Body\nEVs: 252 HP / 56 SpD / 200 Spe\nCareful Nature\n- Stealth Rock\n- Diamond Storm\n- Body Press\n- Heal Bell"
+  },
+  "hoopa": {},
+  "hoopaunbound": {
+    "Choice Band": "Hoopa-Unbound @ Choice Band\nAbility: Magician\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Hyperspace Fury\n- Gunk Shot\n- Drain Punch\n- Fire Punch"
+  },
+  "volcanion": {
+    "Wallbreaker": "Volcanion @ Heavy-Duty Boots\nAbility: Water Absorb\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Steam Eruption\n- Fire Blast\n- Protect\n- Toxic"
+  },
+  "rowlet": {},
+  "dartrix": {
+    "Swords Dance": "Dartrix @ Eviolite\nAbility: Long Reach\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Swords Dance\n- Brave Bird\n- Knock Off\n- Sucker Punch",
+    "Defog": "Dartrix @ Eviolite\nAbility: Long Reach\nEVs: 248 HP / 8 Atk / 252 Def\nImpish Nature\n- Defog\n- Brave Bird\n- Knock Off\n- Synthesis"
+  },
+  "decidueye": {
+    "All-out Attacker": "Decidueye @ Choice Band\nAbility: Long Reach\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Poltergeist\n- Leaf Blade\n- U-turn\n- Shadow Sneak",
+    "Choice Specs": "Decidueye @ Choice Specs\nAbility: Overgrow\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Shadow Ball\n- Giga Drain\n- U-turn",
+    "Swords Dance": "Decidueye @ Spell Tag\nAbility: Long Reach\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Spirit Shackle\n- Leaf Blade\n- Shadow Sneak"
+  },
+  "litten": {},
+  "torracat": {
+    "Bulky Pivot": "Torracat @ Eviolite\nAbility: Intimidate\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- U-turn\n- Taunt\n- Overheat\n- Will-O-Wisp"
+  },
+  "incineroar": {
+    "Specially Defensive": "Incineroar @ Heavy-Duty Boots\nAbility: Intimidate\nEVs: 252 HP / 20 Atk / 236 SpD\nSassy Nature\n- Knock Off\n- Overheat\n- Toxic\n- U-turn"
+  },
+  "popplio": {},
+  "brionne": {},
+  "primarina": {
+    "Choice Specs": "Primarina @ Choice Specs\nAbility: Torrent\nEVs: 4 HP / 252 SpA / 252 Spe\nModest Nature\n- Hydro Pump\n- Moonblast\n- Psychic\n- Scald",
+    "RestTalk": "Primarina @ Leftovers\nAbility: Torrent\nEVs: 252 HP / 132 Def / 124 SpD\nCalm Nature\n- Moonblast\n- Scald\n- Rest\n- Sleep Talk",
+    "Substitute + Calm Mind": "Primarina @ Leftovers\nAbility: Torrent\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Calm Mind\n- Substitute\n- Draining Kiss\n- Scald"
+  },
+  "pikipek": {},
+  "trumbeak": {},
+  "toucannon": {},
+  "yungoos": {},
+  "gumshoos": {},
+  "gumshoostotem": {},
+  "grubbin": {},
+  "charjabug": {
+    "Sticky Web": "Charjabug @ Eviolite\nAbility: Battery\nEVs: 252 HP / 4 Atk / 252 Def\nImpish Nature\n- Sticky Web\n- Skitter Smack\n- Volt Switch\n- Toxic"
+  },
+  "vikavolt": {
+    "Offensive Pivot": "Vikavolt @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 56 HP / 252 SpA / 200 Spe\nModest Nature\n- Sticky Web\n- Volt Switch\n- Bug Buzz\n- Roost",
+    "Agility": "Vikavolt @ Heavy-Duty Boots\nAbility: Levitate\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Agility\n- Thunderbolt\n- Bug Buzz\n- Energy Ball"
+  },
+  "vikavolttotem": {},
+  "crabrawler": {},
+  "crabominable": {},
+  "oricorio": {},
+  "oricoriopompom": {},
+  "oricoriopau": {},
+  "oricoriosensu": {},
+  "cutiefly": {},
+  "ribombee": {
+    "Quiver Dance": "Ribombee @ Heavy-Duty Boots\nAbility: Shield Dust\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Quiver Dance\n- Moonblast\n- Psychic\n- Roost",
+    "Choice Specs": "Ribombee @ Choice Specs\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Moonblast\n- Bug Buzz\n- Psychic\n- U-turn",
+    "Offensive Support": "Ribombee @ Heavy-Duty Boots\nAbility: Shield Dust\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Sticky Web\n- Moonblast\n- Stun Spore\n- U-turn"
+  },
+  "ribombeetotem": {},
+  "rockruff": {},
+  "lycanroc": {
+    "All-out Attacker": "Lycanroc @ Life Orb\nAbility: Sand Rush\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stone Edge\n- Close Combat\n- Psychic Fangs\n- Accelerock"
+  },
+  "lycanrocmidnight": {
+    "Swords Dance": "Lycanroc-Midnight @ Life Orb\nAbility: No Guard\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Stone Edge\n- Close Combat\n- Sucker Punch",
+    "Choice Scarf": "Lycanroc-Midnight @ Choice Scarf\nAbility: No Guard\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Stone Edge\n- Close Combat\n- Play Rough\n- Stomping Tantrum"
+  },
+  "lycanrocdusk": {
+    "All-out Attacker": "Lycanroc-Dusk @ Life Orb\nAbility: Tough Claws\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Stone Edge\n- Close Combat\n- Crunch\n- Accelerock"
+  },
+  "wishiwashi": {
+    "Defensive": "Wishiwashi @ Leftovers\nAbility: Schooling\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Rest\n- Sleep Talk\n- Scald\n- U-turn",
+    "ToxTect": "Wishiwashi @ Leftovers\nAbility: Schooling\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Scald\n- Toxic\n- U-turn\n- Protect"
+  },
+  "wishiwashischool": {
+    "Defensive": "Wishiwashi @ Leftovers\nAbility: Schooling\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Rest\n- Sleep Talk\n- Scald\n- U-turn",
+    "ToxTect": "Wishiwashi @ Leftovers\nAbility: Schooling\nEVs: 252 HP / 4 Def / 252 SpD\nCalm Nature\n- Scald\n- Toxic\n- U-turn\n- Protect"
+  },
+  "mareanie": {
+    "Wall": "Mareanie @ Eviolite\nLevel: 5\nAbility: Regenerator\nEVs: 116 HP / 12 Atk / 180 Def / 12 SpA / 180 SpD\nBold Nature\n- Scald\n- Sludge Bomb\n- Knock Off\n- Recover"
+  },
+  "toxapex": {
+    "The Pex": "Toxapex @ Rocky Helmet\nAbility: Regenerator\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Knock Off\n- Recover\n- Haze\n- Toxic Spikes"
+  },
+  "mudbray": {
+    "Stealth Rock": "Mudbray @ Eviolite\nLevel: 5\nAbility: Stamina\nEVs: 116 HP / 196 Atk / 36 Def / 156 Spe\nAdamant Nature\n- Stealth Rock\n- Earthquake\n- Heavy Slam\n- Close Combat",
+    "Choice Scarf": "Mudbray @ Choice Scarf\nLevel: 5\nAbility: Stamina\nEVs: 36 HP / 196 Atk / 36 Def / 236 Spe\nAdamant Nature\n- Earthquake\n- Close Combat\n- Heavy Slam\n- Rock Slide",
+    "RestTalk": "Mudbray @ Eviolite\nLevel: 5\nAbility: Stamina\nEVs: 116 HP / 116 Atk / 36 Def / 236 SpD\nCareful Nature\n- Rest\n- Sleep Talk\n- Earthquake\n- Heavy Slam"
+  },
+  "mudsdale": {
+    "Defensive": "Mudsdale @ Leftovers\nAbility: Stamina\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Toxic\n- Smack Down"
+  },
+  "dewpider": {},
+  "araquanid": {
+    "Sticky Web": "Araquanid @ Heavy-Duty Boots\nAbility: Water Bubble\nEVs: 188 HP / 252 Atk / 68 Spe\nAdamant Nature\n- Sticky Web\n- Liquidation\n- Leech Life\n- Magic Coat"
+  },
+  "araquanidtotem": {},
+  "fomantis": {},
+  "lurantis": {
+    "Defog": "Lurantis @ Leftovers\nAbility: Contrary\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Defog\n- Synthesis\n- Leaf Storm\n- Superpower"
+  },
+  "lurantistotem": {},
+  "morelull": {},
+  "shiinotic": {
+    "Defensive Strength Sap": "Shiinotic @ Leftovers\nAbility: Effect Spore\nEVs: 248 HP / 176 Def / 84 SpD\nCalm Nature\n- Spore\n- Strength Sap\n- Giga Drain\n- Moonblast"
+  },
+  "salandit": {},
+  "salazzle": {
+    "Nasty Plot": "Salazzle @ Focus Sash\nAbility: Oblivious\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Nasty Plot\n- Flamethrower\n- Sludge Wave\n- Overheat"
+  },
+  "salazzletotem": {},
+  "stufful": {},
+  "bewear": {
+    "Swords Dance": "Bewear @ Chople Berry\nAbility: Fluffy\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Double-Edge\n- Drain Punch\n- Darkest Lariat",
+    "Choice Band": "Bewear @ Choice Band\nAbility: Fluffy\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Close Combat\n- Double-Edge\n- Drain Punch\n- Darkest Lariat"
+  },
+  "bounsweet": {},
+  "steenee": {},
+  "tsareena": {
+    "Rapid Spin": "Tsareena @ Heavy-Duty Boots\nAbility: Queenly Majesty\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Rapid Spin\n- Power Whip\n- Knock Off\n- Triple Axel"
+  },
+  "comfey": {
+    "Calm Mind": "Comfey @ Leftovers\nAbility: Natural Cure\nEVs: 252 HP / 232 Def / 24 Spe\nBold Nature\n- Calm Mind\n- Draining Kiss\n- Substitute\n- Leech Seed",
+    "Defog": "Comfey @ Heavy-Duty Boots\nAbility: Natural Cure\nEVs: 252 HP / 232 Def / 24 Spe\nBold Nature\n- Defog\n- Dazzling Gleam\n- U-turn\n- Synthesis"
+  },
+  "oranguru": {},
+  "passimian": {
+    "Choice Scarf": "Passimian @ Choice Scarf\nAbility: Defiant\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Close Combat\n- Knock Off\n- U-turn\n- Rock Slide"
+  },
+  "wimpod": {},
+  "golisopod": {
+    "Revenge Killer": "Golisopod @ Heavy-Duty Boots\nAbility: Emergency Exit\nEVs: 172 HP / 252 Atk / 84 Spe\nAdamant Nature\n- First Impression\n- Spikes\n- Liquidation\n- Knock Off"
+  },
+  "sandygast": {},
+  "palossand": {
+    "Defensive": "Palossand @ Colbur Berry\nAbility: Water Compaction\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Stealth Rock\n- Earth Power\n- Shadow Ball\n- Shore Up"
+  },
+  "pyukumuku": {
+    "Unaware Trapper": "Pyukumuku @ Leftovers\nAbility: Unaware\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Toxic\n- Block\n- Soak\n- Rest"
+  },
+  "typenull": {
+    "Defensive Pivot": "Type: Null @ Eviolite\nAbility: Battle Armor\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- U-turn\n- Toxic\n- Rest\n- Sleep Talk"
+  },
+  "silvally": {
+    "Choice Scarf": "Silvally @ Choice Scarf\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Multi-Attack\n- U-turn\n- Explosion\n- Crunch",
+    "Choice Band": "Silvally @ Choice Band\nAbility: RKS System\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaive Nature\n- Multi-Attack\n- U-turn\n- Crunch\n- Flamethrower",
+    "Mixed Attacker": "Silvally @ Life Orb\nAbility: RKS System\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaive Nature\n- Swords Dance\n- Multi-Attack\n- Crunch\n- Flamethrower"
+  },
+  "silvallybug": {
+    "Swords Dance": "Silvally-Bug @ Bug Memory\nAbility: RKS System\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Multi-Attack\n- Psychic Fangs\n- U-turn"
+  },
+  "silvallydark": {
+    "Swords Dance": "Silvally-Dark @ Dark Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Multi-Attack\n- Iron Head\n- Flame Charge"
+  },
+  "silvallydragon": {
+    "Swords Dance": "Silvally-Dragon @ Dragon Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Multi-Attack\n- Iron Head\n- Flame Charge"
+  },
+  "silvallyelectric": {
+    "Mixed Wallbreaker": "Silvally-Electric @ Electric Memory\nAbility: RKS System\nEVs: 4 Atk / 252 SpA / 252 Spe\nNaive Nature\n- Work Up\n- Multi-Attack\n- Surf\n- Flamethrower"
+  },
+  "silvallyfairy": {
+    "Utility": "Silvally-Fairy @ Fairy Memory\nAbility: RKS System\nEVs: 252 HP / 96 Def / 160 Spe\nJolly Nature\n- Multi-Attack\n- Parting Shot\n- Defog\n- Flamethrower",
+    "Swords Dance": "Silvally-Fairy @ Fairy Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Multi-Attack\n- Flame Charge\n- Rock Slide"
+  },
+  "silvallyfighting": {
+    "All Out Attacker": "Silvally-Fighting @ Fighting Memory\nAbility: RKS System\nEVs: 4 Atk / 252 SpA / 252 Spe\nNaive Nature\n- Multi-Attack\n- Ice Beam\n- Thunderbolt\n- U-turn"
+  },
+  "silvallyfire": {},
+  "silvallyflying": {
+    "Mixed Wallbreaker": "Silvally-Flying @ Flying Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Multi-Attack\n- Flame Charge\n- Surf"
+  },
+  "silvallyghost": {
+    "Swords Dance": "Silvally-Ghost @ Ghost Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Multi-Attack\n- Flame Charge\n- Explosion"
+  },
+  "silvallygrass": {},
+  "silvallyground": {
+    "Swords Dance": "Silvally-Ground @ Ground Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Multi-Attack\n- Flame Charge\n- Rock Slide"
+  },
+  "silvallyice": {
+    "Swords Dance": "Silvally-Ice @ Ice Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Multi-Attack\n- Flame Charge\n- Psychic Fangs",
+    "Work Up": "Silvally-Ice @ Ice Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaive Nature\n- Work Up\n- Multi-Attack\n- Thunderbolt\n- Flamethrower"
+  },
+  "silvallypoison": {
+    "Work Up": "Silvally-Poison @ Poison Memory\nAbility: RKS System\nEVs: 4 Atk / 252 SpA / 252 Spe\nNaive Nature\n- Work Up\n- Multi-Attack\n- Flamethrower\n- Grass Pledge",
+    "Defog": "Silvally-Poison @ Poison Memory\nAbility: RKS System\nEVs: 252 HP / 80 Def / 176 Spe\nJolly Nature\n- Multi-Attack\n- Flamethrower\n- Defog\n- U-turn"
+  },
+  "silvallypsychic": {
+    "Swords Dance": "Silvally-Psychic @ Psychic Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Multi-Attack\n- Flame Charge\n- U-turn"
+  },
+  "silvallyrock": {
+    "Swords Dance": "Silvally-Rock @ Rock Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Multi-Attack\n- U-turn\n- Ice Beam",
+    "Offensive Defog": "Silvally-Rock @ Rock Memory\nAbility: RKS System\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Defog\n- Multi-Attack\n- Ice Beam\n- U-turn"
+  },
+  "silvallysteel": {
+    "Utlity": "Silvally-Steel @ Steel Memory\nAbility: RKS System\nEVs: 252 HP / 120 SpD / 136 Spe\nJolly Nature\n- Defog\n- Multi-Attack\n- Flamethrower\n- Parting Shot"
+  },
+  "silvallywater": {
+    "Defensive Defog": "Silvally-Water @ Water Memory\nAbility: RKS System\nEVs: 248 HP / 92 Def / 168 Spe\nIVs: 0 Atk\nBold Nature\n- Defog\n- Parting Shot\n- Surf\n- Ice Beam"
+  },
+  "minior": {},
+  "miniormeteor": {},
+  "komala": {},
+  "turtonator": {
+    "Shell Smash": "Turtonator @ Heavy-Duty Boots\nAbility: Shell Armor\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Shell Smash\n- Fire Blast\n- Draco Meteor\n- Flash Cannon"
+  },
+  "togedemaru": {
+    "Choice Scarf": "Togedemaru @ Choice Scarf\nAbility: Lightning Rod\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Zing Zap\n- Iron Head\n- U-turn\n- Toxic",
+    "Wish Passer": "Togedemaru @ Heavy-Duty Boots\nAbility: Lightning Rod\nEVs: 252 HP / 248 SpD / 8 Spe\nCareful Nature\n- Wish\n- Spiky Shield\n- Iron Head\n- U-turn"
+  },
+  "togedemarutotem": {},
+  "mimikyu": {
+    "Swords Dance": "Mimikyu @ Life Orb\nAbility: Disguise\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Play Rough\n- Shadow Sneak\n- Shadow Claw"
+  },
+  "mimikyubusted": {
+    "Swords Dance": "Mimikyu @ Life Orb\nAbility: Disguise\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Play Rough\n- Shadow Sneak\n- Shadow Claw"
+  },
+  "mimikyutotem": {},
+  "mimikyubustedtotem": {},
+  "bruxish": {},
+  "drampa": {},
+  "dhelmise": {
+    "Specially Defensive": "Dhelmise\nAbility: Steelworker\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Power Whip\n- Poltergeist\n- Rapid Spin\n- Synthesis"
+  },
+  "jangmoo": {},
+  "hakamoo": {
+    "Substitute + Dragon Dance": "Hakamo-o @ Eviolite\nAbility: Bulletproof\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Dragon Dance\n- Substitute\n- Dragon Claw\n- Drain Punch"
+  },
+  "kommoo": {
+    "Defensive": "Kommo-o @ Leftovers\nAbility: Bulletproof\nEVs: 252 HP / 148 Def / 40 SpD / 68 Spe\nImpish Nature\n- Body Press\n- Earthquake\n- Stealth Rock\n- Toxic"
+  },
+  "kommoototem": {},
+  "tapukoko": {
+    "Offensive Pivot": "Tapu Koko @ Heavy-Duty Boots\nAbility: Electric Surge\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Dazzling Gleam\n- U-turn\n- Roost"
+  },
+  "tapulele": {
+    "Choice Specs": "Tapu Lele @ Choice Specs\nAbility: Psychic Surge\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Psyshock\n- Moonblast\n- Focus Blast\n- Psychic",
+    "Choice Scarf": "Tapu Lele @ Choice Scarf\nAbility: Psychic Surge\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Psyshock\n- Moonblast\n- Focus Blast\n- Future Sight",
+    "Calm Mind": "Tapu Lele @ Leftovers\nAbility: Psychic Surge\nEVs: 8 Def / 248 SpA / 252 Spe\nTimid Nature\n- Calm Mind\n- Psyshock\n- Moonblast\n- Thunderbolt"
+  },
+  "tapubulu": {
+    "Swords Dance": "Tapu Bulu @ Life Orb\nAbility: Grassy Surge\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- Horn Leech\n- Stone Edge\n- Zen Headbutt",
+    "Defensive": "Tapu Bulu @ Heavy-Duty Boots\nAbility: Grassy Surge\nEVs: 252 HP / 120 Def / 136 Spe\nImpish Nature\n- Horn Leech\n- Dazzling Gleam\n- Toxic\n- Synthesis"
+  },
+  "tapufini": {
+    "Choice Scarf": "Tapu Fini @ Choice Scarf\nAbility: Misty Surge\nEVs: 248 HP / 44 SpD / 216 Spe\nTimid Nature\n- Scald\n- Moonblast\n- Trick\n- Taunt",
+    "Whirlpool": "Tapu Fini @ Leftovers\nAbility: Misty Surge\nEVs: 252 HP / 216 Def / 40 SpD\nCalm Nature\n- Whirlpool\n- Moonblast\n- Nature's Madness\n- Taunt",
+    "Calm Mind": "Tapu Fini @ Leftovers\nAbility: Misty Surge\nEVs: 252 HP / 116 Def / 140 Spe\nBold Nature\n- Calm Mind\n- Taunt\n- Scald\n- Draining Kiss"
+  },
+  "cosmog": {},
+  "cosmoem": {},
+  "solgaleo": {
+    "Specially Defensive": "Solgaleo @ Leftovers\nAbility: Full Metal Body\nEVs: 252 HP / 4 Def / 252 SpD\nCareful Nature\n- Sunsteel Strike\n- Morning Sun\n- Knock Off\n- Teleport"
+  },
+  "lunala": {
+    "Defensive": "Lunala @ Heavy-Duty Boots\nAbility: Shadow Shield\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Ice Beam\n- Roost\n- Will-O-Wisp\n- Roar",
+    "Power Herb": "Lunala @ Power Herb\nAbility: Shadow Shield\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Meteor Beam\n- Roost\n- Ice Beam\n- Moongeist Beam"
+  },
+  "nihilego": {
+    "Stealth Rock Utility": "Nihilego @ Black Sludge\nAbility: Beast Boost\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Stealth Rock\n- Power Gem\n- Sludge Wave\n- Knock Off",
+    "Meteor Beam Sweeper": "Nihilego @ Power Herb\nAbility: Beast Boost\nEVs: 80 HP / 176 SpA / 252 Spe\nTimid Nature\n- Meteor Beam\n- Sludge Wave\n- Thunderbolt\n- Grass Knot"
+  },
+  "buzzwole": {
+    "Offensive Tank": "Buzzwole @ Rocky Helmet\nAbility: Beast Boost\nEVs: 152 HP / 168 Atk / 188 Spe\nAdamant Nature\n- Close Combat\n- Ice Punch\n- Roost\n- Leech Life"
+  },
+  "pheromosa": {
+    "Choice Band": "Pheromosa @ Choice Band\nAbility: Beast Boost\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- U-turn\n- Close Combat\n- Throat Chop\n- Triple Axel"
+  },
+  "xurkitree": {
+    "Offensive Pivot": "Xurkitree @ Heavy-Duty Boots\nAbility: Beast Boost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Grass Knot\n- Dazzling Gleam",
+    "Choice Scarf": "Xurkitree @ Choice Scarf\nAbility: Beast Boost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Thunderbolt\n- Volt Switch\n- Energy Ball\n- Dazzling Gleam"
+  },
+  "celesteela": {
+    "Defensive": "Celesteela @ Leftovers\nAbility: Beast Boost\nEVs: 252 HP / 4 Def / 252 SpD\nSassy Nature\n- Heavy Slam\n- Flamethrower\n- Leech Seed\n- Protect",
+    "Autotomize": "Celesteela @ Power Herb\nAbility: Beast Boost\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Autotomize\n- Air Slash\n- Fire Blast\n- Meteor Beam"
+  },
+  "kartana": {
+    "Paper Cut": "Kartana @ Life Orb\nAbility: Beast Boost\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Leaf Blade\n- Knock Off\n- Sacred Sword",
+    "Paper Press": "Kartana @ Choice Band\nAbility: Beast Boost\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Leaf Blade\n- Smart Strike\n- Knock Off\n- Sacred Sword",
+    "Paper Plane": "Kartana @ Choice Scarf\nAbility: Beast Boost\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Leaf Blade\n- Knock Off\n- Sacred Sword\n- Smart Strike"
+  },
+  "guzzlord": {
+    "Choice Band": "Guzzlord @ Choice Band\nAbility: Beast Boost\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Knock Off\n- Heavy Slam\n- Earthquake\n- Outrage",
+    "Physically Defensive": "Guzzlord @ Leftovers\nAbility: Beast Boost\nEVs: 252 Def / 104 SpD / 152 Spe\nImpish Nature\n- Protect\n- Toxic\n- Knock Off\n- Earthquake"
+  },
+  "necrozma": {
+    "Autotomize": "Necrozma @ Power Herb\nAbility: Prism Armor\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Autotomize\n- Photon Geyser\n- Meteor Beam\n- Heat Wave",
+    "Offensive Stealth Rock": "Necrozma @ Power Herb\nAbility: Prism Armor\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Stealth Rock\n- Photon Geyser\n- Meteor Beam\n- Heat Wave",
+    "Dragon Dance": "Necrozma @ Lum Berry\nAbility: Prism Armor\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Dragon Dance\n- Photon Geyser\n- Earthquake\n- X-Scissor"
+  },
+  "necrozmaduskmane": {
+    "Specially Defensive": "Necrozma-Dusk Mane @ Leftovers\nAbility: Prism Armor\nEVs: 252 HP / 136 SpD / 120 Spe\nCareful Nature\n- Stealth Rock\n- Moonlight\n- Iron Head\n- Thunder Wave",
+    "Bulky Booster": "Necrozma-Dusk Mane @ Leftovers\nAbility: Prism Armor\nEVs: 136 HP / 252 Atk / 120 Spe\nAdamant Nature\n- Iron Head\n- Knock Off\n- Swords Dance\n- Moonlight",
+    "Offensive Dragon Dance": "Necrozma-Dusk Mane @ Weakness Policy\nAbility: Prism Armor\nEVs: 80 HP / 252 Atk / 176 Spe\nAdamant Nature\n- Sunsteel Strike\n- Stone Edge\n- Earthquake\n- Dragon Dance",
+    "Physically Defensive": "Necrozma-Dusk Mane @ Rocky Helmet\nAbility: Prism Armor\nEVs: 252 HP / 136 Def / 120 Spe\nImpish Nature\n- Stealth Rock\n- Moonlight\n- Sunsteel Strike\n- Earthquake",
+    "Choice Band": "Necrozma-Dusk Mane @ Choice Band\nAbility: Prism Armor\nEVs: 136 HP / 252 Atk / 120 Spe\nAdamant Nature\n- Sunsteel Strike\n- Knock Off\n- Moonlight\n- Photon Geyser"
+  },
+  "necrozmadawnwings": {
+    "Trick Room": "Necrozma-Dawn Wings @ Power Herb\nAbility: Prism Armor\nEVs: 252 HP / 252 SpA / 4 SpD\nIVs: 0 Spe\nQuiet Nature\n- Trick Room\n- Moongeist Beam\n- Heat Wave\n- Meteor Beam"
+  },
+  "necrozmaultra": {
+    "Specially Defensive": "Necrozma-Dusk Mane @ Leftovers\nAbility: Prism Armor\nEVs: 252 HP / 136 SpD / 120 Spe\nCareful Nature\n- Stealth Rock\n- Moonlight\n- Iron Head\n- Thunder Wave",
+    "Bulky Booster": "Necrozma-Dusk Mane @ Leftovers\nAbility: Prism Armor\nEVs: 136 HP / 252 Atk / 120 Spe\nAdamant Nature\n- Iron Head\n- Knock Off\n- Swords Dance\n- Moonlight",
+    "Offensive Dragon Dance": "Necrozma-Dusk Mane @ Weakness Policy\nAbility: Prism Armor\nEVs: 80 HP / 252 Atk / 176 Spe\nAdamant Nature\n- Sunsteel Strike\n- Stone Edge\n- Earthquake\n- Dragon Dance",
+    "Physically Defensive": "Necrozma-Dusk Mane @ Rocky Helmet\nAbility: Prism Armor\nEVs: 252 HP / 136 Def / 120 Spe\nImpish Nature\n- Stealth Rock\n- Moonlight\n- Sunsteel Strike\n- Earthquake",
+    "Choice Band": "Necrozma-Dusk Mane @ Choice Band\nAbility: Prism Armor\nEVs: 136 HP / 252 Atk / 120 Spe\nAdamant Nature\n- Sunsteel Strike\n- Knock Off\n- Moonlight\n- Photon Geyser"
+  },
+  "magearna": {
+    "Physically Defensive": "Magearna @ Leftovers\nAbility: Soul-Heart\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Fleur Cannon\n- Volt Switch\n- Pain Split\n- Heal Bell"
+  },
+  "magearnaoriginal": {},
+  "marshadow": {
+    "Life Orb Attacker": "Marshadow @ Life Orb\nAbility: Technician\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Poltergeist\n- Close Combat\n- Shadow Sneak\n- Rock Tomb",
+    "Choice Band": "Marshadow @ Choice Band\nAbility: Technician\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Poltergeist\n- Close Combat\n- Shadow Sneak\n- Rock Tomb"
+  },
+  "poipole": {},
+  "naganadel": {
+    "Nasty Plot": "Naganadel @ Life Orb\nAbility: Beast Boost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Draco Meteor\n- Sludge Wave\n- Nasty Plot\n- Fire Blast"
+  },
+  "stakataka": {
+    "Defensive Stealth Rock": "Stakataka @ Leftovers\nAbility: Beast Boost\nEVs: 252 HP / 4 Def / 252 SpD\nIVs: 0 Spe\nSassy Nature\n- Stealth Rock\n- Gyro Ball\n- Body Press\n- Toxic"
+  },
+  "blacephalon": {
+    "Choice Specs": "Blacephalon @ Choice Specs\nAbility: Beast Boost\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Shadow Ball\n- Flamethrower\n- Overheat\n- Trick"
+  },
+  "zeraora": {
+    "Bulk Up": "Zeraora @ Heavy-Duty Boots\nAbility: Volt Absorb\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Bulk Up\n- Plasma Fists\n- Knock Off\n- Close Combat",
+    "Offensive Pivot": "Zeraora @ Heavy-Duty Boots\nAbility: Volt Absorb\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Plasma Fists\n- Knock Off\n- Close Combat\n- Toxic"
+  },
+  "meltan": {},
+  "melmetal": {
+    "Three Attacks + Thunder Wave": "Melmetal @ Protective Pads\nAbility: Iron Fist\nEVs: 40 HP / 252 Atk / 104 SpD / 112 Spe\nAdamant Nature\n- Double Iron Bash\n- Superpower\n- Thunder Punch\n- Thunder Wave",
+    "Protect": "Melmetal @ Leftovers\nAbility: Iron Fist\nEVs: 252 Atk / 244 SpD / 12 Spe\nAdamant Nature\n- Protect\n- Double Iron Bash\n- Earthquake\n- Toxic",
+    "Choice Band": "Melmetal @ Choice Band\nAbility: Iron Fist\nEVs: 32 HP / 252 Atk / 224 Spe\nAdamant Nature\n- Double Iron Bash\n- Earthquake\n- Superpower\n- Thunder Punch",
+    "Assault Vest": "Melmetal @ Assault Vest\nAbility: Iron Fist\nEVs: 128 HP / 116 Atk / 252 SpD / 12 Spe\nCareful Nature\n- Double Iron Bash\n- Earthquake\n- Ice Punch\n- Thunder Punch"
+  },
+  "melmetalgmax": {
+    "Three Attacks + Thunder Wave": "Melmetal @ Protective Pads\nAbility: Iron Fist\nEVs: 40 HP / 252 Atk / 104 SpD / 112 Spe\nAdamant Nature\n- Double Iron Bash\n- Superpower\n- Thunder Punch\n- Thunder Wave",
+    "Protect": "Melmetal @ Leftovers\nAbility: Iron Fist\nEVs: 252 Atk / 244 SpD / 12 Spe\nAdamant Nature\n- Protect\n- Double Iron Bash\n- Earthquake\n- Toxic",
+    "Choice Band": "Melmetal @ Choice Band\nAbility: Iron Fist\nEVs: 32 HP / 252 Atk / 224 Spe\nAdamant Nature\n- Double Iron Bash\n- Earthquake\n- Superpower\n- Thunder Punch",
+    "Assault Vest": "Melmetal @ Assault Vest\nAbility: Iron Fist\nEVs: 128 HP / 116 Atk / 252 SpD / 12 Spe\nCareful Nature\n- Double Iron Bash\n- Earthquake\n- Ice Punch\n- Thunder Punch"
+  },
+  "grookey": {
+    "Offensive": "Grookey @ Life Orb\nLevel: 5\nAbility: Grassy Surge\nEVs: 236 Atk / 36 Def / 236 Spe\nJolly Nature\n- Grassy Glide\n- Knock Off\n- Drain Punch\n- Protect"
+  },
+  "thwackey": {
+    "Swords Dance": "Thwackey @ Eviolite\nAbility: Grassy Surge\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Swords Dance\n- U-turn\n- Grassy Glide\n- Knock Off",
+    "Choice Band": "Thwackey @ Choice Band\nAbility: Grassy Surge\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Grassy Glide\n- Knock Off\n- Wood Hammer\n- U-turn"
+  },
+  "rillaboom": {
+    "Swords Dance": "Rillaboom @ Life Orb\nAbility: Grassy Surge\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Swords Dance\n- Grassy Glide\n- Knock Off\n- Superpower",
+    "Choice Band": "Rillaboom @ Choice Band\nAbility: Grassy Surge\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Grassy Glide\n- Knock Off\n- Wood Hammer\n- U-turn"
+  },
+  "rillaboomgmax": {
+    "Swords Dance": "Rillaboom @ Life Orb\nAbility: Grassy Surge\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Swords Dance\n- Grassy Glide\n- Knock Off\n- Superpower",
+    "Choice Band": "Rillaboom @ Choice Band\nAbility: Grassy Surge\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Grassy Glide\n- Knock Off\n- Wood Hammer\n- U-turn"
+  },
+  "scorbunny": {
+    "All-out Attacker": "Scorbunny @ Berry Juice\nLevel: 5\nAbility: Libero\nEVs: 36 HP / 188 Atk / 36 Def / 36 SpD / 204 Spe\nJolly Nature\n- Blaze Kick\n- Gunk Shot\n- U-turn\n- High Jump Kick"
+  },
+  "raboot": {
+    "Choice Band": "Raboot @ Choice Band\nAbility: Libero\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Flare Blitz\n- High Jump Kick\n- Sucker Punch\n- U-turn",
+    "Bulk Up": "Raboot @ Eviolite\nAbility: Libero\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Bulk Up\n- Flare Blitz\n- Sucker Punch\n- High Jump Kick"
+  },
+  "cinderace": {
+    "Offensive Utility": "Cinderace @ Heavy-Duty Boots\nAbility: Libero\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Pyro Ball\n- Court Change\n- Sucker Punch\n- U-turn"
+  },
+  "cinderacegmax": {
+    "Offensive Utility": "Cinderace @ Heavy-Duty Boots\nAbility: Libero\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Pyro Ball\n- Court Change\n- Sucker Punch\n- U-turn"
+  },
+  "sobble": {
+    "Dual Screens": "Sobble @ Light Clay\nLevel: 5\nAbility: Torrent\nEVs: 36 HP / 116 Def / 36 SpA / 116 SpD / 196 Spe\nTimid Nature\n- Reflect\n- Light Screen\n- Surf\n- U-turn"
+  },
+  "drizzile": {},
+  "inteleon": {},
+  "inteleongmax": {},
+  "skwovet": {},
+  "greedent": {},
+  "rookidee": {},
+  "corvisquire": {},
+  "corviknight": {
+    "Defog": "Corviknight @ Leftovers\nAbility: Pressure\nEVs: 252 HP / 168 Def / 88 SpD\nImpish Nature\n- Body Press\n- U-turn\n- Defog\n- Roost"
+  },
+  "corviknightgmax": {
+    "Defog": "Corviknight @ Leftovers\nAbility: Pressure\nEVs: 252 HP / 168 Def / 88 SpD\nImpish Nature\n- Body Press\n- U-turn\n- Defog\n- Roost"
+  },
+  "blipbug": {},
+  "dottler": {},
+  "orbeetle": {
+    "Support (Psychic)": "Orbeetle @ Light Clay\nAbility: Frisk\nEVs: 252 HP / 4 SpD / 252 Spe\nTimid Nature\n- Reflect\n- Light Screen\n- Sticky Web\n- U-turn"
+  },
+  "orbeetlegmax": {
+    "Support (Psychic)": "Orbeetle @ Light Clay\nAbility: Frisk\nEVs: 252 HP / 4 SpD / 252 Spe\nTimid Nature\n- Reflect\n- Light Screen\n- Sticky Web\n- U-turn"
+  },
+  "nickit": {},
+  "thievul": {
+    "Choice Specs": "Thievul @ Choice Specs\nAbility: Stakeout\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Dark Pulse\n- Psychic\n- Parting Shot\n- Burning Jealousy"
+  },
+  "gossifleur": {},
+  "eldegoss": {
+    "Mixed Wall": "Eldegoss @ Heavy-Duty Boots\nAbility: Regenerator\nEVs: 252 HP / 160 Def / 96 Spe\nBold Nature\n- Rapid Spin\n- Giga Drain\n- Pollen Puff\n- Sleep Powder"
+  },
+  "wooloo": {},
+  "dubwool": {
+    "Cotton Guard": "Dubwool @ Leftovers\nAbility: Fluffy\nEVs: 104 HP / 252 Def / 152 Spe\nImpish Nature\n- Cotton Guard\n- Body Press\n- Rest\n- Sleep Talk"
+  },
+  "chewtle": {},
+  "drednaw": {
+    "Stealth Rock": "Drednaw @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Liquidation\n- Stone Edge\n- Earthquake",
+    "Rain Dance": "Drednaw @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Rain Dance\n- Liquidation\n- Stone Edge\n- Earthquake",
+    "Swords Dance": "Drednaw @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Liquidation\n- Stone Edge\n- Earthquake",
+    "Choice Scarf": "Drednaw @ Choice Scarf\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Liquidation\n- Stone Edge\n- Earthquake\n- Rock Blast"
+  },
+  "drednawgmax": {
+    "Stealth Rock": "Drednaw @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Stealth Rock\n- Liquidation\n- Stone Edge\n- Earthquake",
+    "Rain Dance": "Drednaw @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Rain Dance\n- Liquidation\n- Stone Edge\n- Earthquake",
+    "Swords Dance": "Drednaw @ Life Orb\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Liquidation\n- Stone Edge\n- Earthquake",
+    "Choice Scarf": "Drednaw @ Choice Scarf\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Liquidation\n- Stone Edge\n- Earthquake\n- Rock Blast"
+  },
+  "yamper": {},
+  "boltund": {
+    "All-out Attacker": "Boltund @ Life Orb\nAbility: Strong Jaw\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Thunder Fang\n- Fire Fang\n- Play Rough\n- Psychic Fangs"
+  },
+  "rolycoly": {},
+  "carkol": {
+    "Specially Defensive Spinner": "Carkol @ Eviolite\nAbility: Flame Body\nEVs: 248 HP / 8 Def / 252 SpD\nCareful Nature\n- Rapid Spin\n- Heat Crash\n- Spikes\n- Will-O-Wisp"
+  },
+  "coalossal": {
+    "Support (Rock)": "Coalossal @ Leftovers\nAbility: Flame Body\nEVs: 252 HP / 4 Def / 252 SpD\nSassy Nature\n- Spikes\n- Fire Blast\n- Heavy Slam\n- Rapid Spin"
+  },
+  "coalossalgmax": {
+    "Support (Rock)": "Coalossal @ Leftovers\nAbility: Flame Body\nEVs: 252 HP / 4 Def / 252 SpD\nSassy Nature\n- Spikes\n- Fire Blast\n- Heavy Slam\n- Rapid Spin"
+  },
+  "applin": {},
+  "flapple": {
+    "Wallbreaker": "Flapple @ Choice Band\nAbility: Hustle\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Grav Apple\n- Outrage\n- U-turn\n- Sucker Punch"
+  },
+  "flapplegmax": {
+    "Wallbreaker": "Flapple @ Choice Band\nAbility: Hustle\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Grav Apple\n- Outrage\n- U-turn\n- Sucker Punch"
+  },
+  "appletun": {
+    "Choice Specs": "Appletun @ Choice Specs\nAbility: Thick Fat\nEVs: 20 HP / 252 SpA / 236 Spe\nModest Nature\n- Draco Meteor\n- Apple Acid\n- Dragon Pulse\n- Giga Drain",
+    "Tank": "Appletun @ Leftovers\nAbility: Thick Fat\nEVs: 92 HP / 252 SpA / 164 Spe\nModest Nature\n- Draco Meteor\n- Apple Acid\n- Recover\n- Body Press",
+    "Physically Defensive": "Appletun @ Heavy-Duty Boots\nAbility: Thick Fat\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Apple Acid\n- Dragon Pulse\n- Leech Seed"
+  },
+  "appletungmax": {
+    "Choice Specs": "Appletun @ Choice Specs\nAbility: Thick Fat\nEVs: 20 HP / 252 SpA / 236 Spe\nModest Nature\n- Draco Meteor\n- Apple Acid\n- Dragon Pulse\n- Giga Drain",
+    "Tank": "Appletun @ Leftovers\nAbility: Thick Fat\nEVs: 92 HP / 252 SpA / 164 Spe\nModest Nature\n- Draco Meteor\n- Apple Acid\n- Recover\n- Body Press",
+    "Physically Defensive": "Appletun @ Heavy-Duty Boots\nAbility: Thick Fat\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Recover\n- Apple Acid\n- Dragon Pulse\n- Leech Seed"
+  },
+  "silicobra": {},
+  "sandaconda": {
+    "Stealth Rock": "Sandaconda @ Rocky Helmet\nAbility: Shed Skin\nEVs: 252 HP / 168 Def / 88 Spe\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Glare\n- Rest",
+    "Defensive Coil": "Sandaconda @ Leftovers\nAbility: Shed Skin\nEVs: 252 HP / 168 SpD / 88 Spe\nCareful Nature\n- Coil\n- Stone Edge\n- Earthquake\n- Rest"
+  },
+  "sandacondagmax": {
+    "Stealth Rock": "Sandaconda @ Rocky Helmet\nAbility: Shed Skin\nEVs: 252 HP / 168 Def / 88 Spe\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Glare\n- Rest",
+    "Defensive Coil": "Sandaconda @ Leftovers\nAbility: Shed Skin\nEVs: 252 HP / 168 SpD / 88 Spe\nCareful Nature\n- Coil\n- Stone Edge\n- Earthquake\n- Rest"
+  },
+  "cramorant": {
+    "Defog": "Cramorant @ Heavy-Duty Boots\nAbility: Gulp Missile\nEVs: 248 HP / 8 Def / 252 Spe\nTimid Nature\n- Defog\n- Roost\n- Surf\n- Brave Bird"
+  },
+  "cramorantgulping": {
+    "Defog": "Cramorant @ Heavy-Duty Boots\nAbility: Gulp Missile\nEVs: 248 HP / 8 Def / 252 Spe\nTimid Nature\n- Defog\n- Roost\n- Surf\n- Brave Bird"
+  },
+  "cramorantgorging": {
+    "Defog": "Cramorant @ Heavy-Duty Boots\nAbility: Gulp Missile\nEVs: 248 HP / 8 Def / 252 Spe\nTimid Nature\n- Defog\n- Roost\n- Surf\n- Brave Bird"
+  },
+  "arrokuda": {
+    "All-out Attacker": "Arrokuda @ Life Orb\nLevel: 5\nAbility: Swift Swim\nEVs: 252 Atk / 228 Spe\nIVs: 17 HP\nJolly Nature\n- Liquidation\n- Close Combat\n- Psychic Fangs\n- Aqua Jet"
+  },
+  "barraskewda": {
+    "Choice Band": "Barraskewda @ Choice Band\nAbility: Swift Swim\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Liquidation\n- Close Combat\n- Flip Turn\n- Aqua Jet"
+  },
+  "toxel": {},
+  "toxtricity": {
+    "Choice Specs": "Toxtricity @ Choice Specs\nAbility: Punk Rock\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Boomburst\n- Overdrive\n- Volt Switch\n- Snarl"
+  },
+  "toxtricitylowkey": {},
+  "toxtricitygmax": {
+    "Choice Specs": "Toxtricity @ Choice Specs\nAbility: Punk Rock\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Boomburst\n- Overdrive\n- Volt Switch\n- Snarl"
+  },
+  "toxtricitylowkeygmax": {},
+  "sizzlipede": {},
+  "centiskorch": {
+    "Wallbreaker": "Centiskorch @ Heavy-Duty Boots\nAbility: Flash Fire\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Fire Lash\n- Leech Life\n- Power Whip\n- Knock Off"
+  },
+  "centiskorchgmax": {
+    "Wallbreaker": "Centiskorch @ Heavy-Duty Boots\nAbility: Flash Fire\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Fire Lash\n- Leech Life\n- Power Whip\n- Knock Off"
+  },
+  "clobbopus": {},
+  "grapploct": {
+    "Bulk Up": "Grapploct @ Leftovers\nAbility: Technician\nEVs: 252 HP / 84 Atk / 160 Def / 12 SpD\nAdamant Nature\n- Bulk Up\n- Drain Punch\n- Brutal Swing\n- Sucker Punch"
+  },
+  "sinistea": {},
+  "sinisteaantique": {},
+  "polteageist": {
+    "Shell Smash": "Polteageist @ White Herb\nAbility: Cursed Body\nEVs: 28 HP / 32 Def / 252 SpA / 196 Spe\nTimid Nature\n- Shell Smash\n- Shadow Ball\n- Strength Sap\n- Giga Drain"
+  },
+  "polteageistantique": {},
+  "hatenna": {},
+  "hattrem": {
+    "RestTalk": "Hattrem @ Eviolite\nAbility: Magic Bounce\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Rest\n- Sleep Talk\n- Psychic\n- Mystical Fire",
+    "Support": "Hattrem @ Eviolite\nAbility: Magic Bounce\nEVs: 252 HP / 48 Def / 196 SpA / 12 Spe\nModest Nature\n- Psychic\n- Giga Drain\n- Mystical Fire\n- Healing Wish",
+    "Choice Specs": "Hattrem @ Choice Specs\nAbility: Magic Bounce\nEVs: 4 Def / 252 SpA / 252 Spe\nModest Nature\n- Psychic\n- Mystical Fire\n- Dazzling Gleam\n- Healing Wish"
+  },
+  "hatterene": {
+    "Calm Mind": "Hatterene @ Leftovers\nAbility: Magic Bounce\nEVs: 252 HP / 244 Def / 12 Spe\nBold Nature\n- Calm Mind\n- Draining Kiss\n- Psyshock\n- Mystical Fire"
+  },
+  "hatterenegmax": {
+    "Calm Mind": "Hatterene @ Leftovers\nAbility: Magic Bounce\nEVs: 252 HP / 244 Def / 12 Spe\nBold Nature\n- Calm Mind\n- Draining Kiss\n- Psyshock\n- Mystical Fire"
+  },
+  "impidimp": {},
+  "morgrem": {
+    "Screens": "Morgrem @ Light Clay\nAbility: Prankster\nEVs: 188 HP / 192 SpA / 128 Spe\nModest Nature\n- Light Screen\n- Reflect\n- Thunder Wave\n- Dazzling Gleam",
+    "Nasty Plot": "Morgrem @ Eviolite\nAbility: Pickpocket\nEVs: 8 Atk / 248 SpA / 252 Spe\nTimid Nature\n- Nasty Plot\n- Dazzling Gleam\n- Dark Pulse\n- Sucker Punch"
+  },
+  "grimmsnarl": {
+    "Dual Screens": "Grimmsnarl @ Light Clay\nAbility: Prankster\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Reflect\n- Light Screen\n- Play Rough\n- Taunt"
+  },
+  "grimmsnarlgmax": {
+    "Dual Screens": "Grimmsnarl @ Light Clay\nAbility: Prankster\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Reflect\n- Light Screen\n- Play Rough\n- Taunt"
+  },
+  "obstagoon": {
+    "Guts Wallbreaker": "Obstagoon @ Flame Orb\nAbility: Guts\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Facade\n- Knock Off\n- Close Combat\n- Switcheroo"
+  },
+  "perrserker": {
+    "Choice Band": "Perrserker @ Choice Band\nAbility: Tough Claws\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Iron Head\n- Close Combat\n- Seed Bomb\n- U-turn",
+    "Assault Vest": "Perrserker @ Assault Vest\nAbility: Tough Claws\nEVs: 252 HP / 172 SpD / 84 Spe\nAdamant Nature\n- Iron Head\n- Close Combat\n- Seed Bomb\n- U-turn"
+  },
+  "cursola": {
+    "Weak Armor Breaker": "Cursola @ Power Herb\nAbility: Weak Armor\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Shadow Ball\n- Meteor Beam\n- Burning Jealousy\n- Endure",
+    "Choice Specs": "Cursola @ Choice Specs\nAbility: Weak Armor\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Shadow Ball\n- Ice Beam\n- Hydro Pump\n- Burning Jealousy"
+  },
+  "sirfetchd": {
+    "Wallbreaker": "Sirfetch'd @ Choice Band\nAbility: Scrappy\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Knock Off\n- First Impression\n- Brave Bird"
+  },
+  "mrrime": {
+    "Rapid Spin": "Mr. Rime @ Heavy-Duty Boots\nAbility: Screen Cleaner\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Rapid Spin\n- Ice Beam\n- Psychic\n- Focus Blast",
+    "Choice Specs": "Mr. Rime @ Choice Specs\nAbility: Screen Cleaner\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Ice Beam\n- Psychic\n- Focus Blast\n- Shadow Ball",
+    "Specially Defensive": "Mr. Rime @ Heavy-Duty Boots\nAbility: Screen Cleaner\nEVs: 252 HP / 160 SpD / 96 Spe\nCalm Nature\n- Slack Off\n- Rapid Spin\n- Freeze-Dry\n- Toxic"
+  },
+  "runerigus": {
+    "Defensive": "Runerigus @ Leftovers\nAbility: Wandering Spirit\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Stealth Rock\n- Earthquake\n- Will-O-Wisp\n- Toxic Spikes",
+    "Bulky Setup Sweeper": "Runerigus @ Leftovers\nAbility: Wandering Spirit\nEVs: 252 HP / 252 Def / 4 SpD\nImpish Nature\n- Iron Defense\n- Amnesia\n- Rest\n- Body Press"
+  },
+  "milcery": {},
+  "alcremie": {
+    "Offensive": "Alcremie @ Heavy-Duty Boots\nAbility: Aroma Veil\nEVs: 252 HP / 72 SpA / 184 Spe\nTimid Nature\n- Dazzling Gleam\n- Mystical Fire\n- Recover\n- Calm Mind",
+    "Bulky Booster": "Alcremie @ Chesto Berry\nAbility: Aroma Veil\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Acid Armor\n- Calm Mind\n- Rest\n- Stored Power",
+    "Three Attacks": "Alcremie @ Life Orb\nAbility: Aroma Veil\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Dazzling Gleam\n- Mystical Fire\n- Psychic\n- Recover"
+  },
+  "alcremiegmax": {
+    "Offensive": "Alcremie @ Heavy-Duty Boots\nAbility: Aroma Veil\nEVs: 252 HP / 72 SpA / 184 Spe\nTimid Nature\n- Dazzling Gleam\n- Mystical Fire\n- Recover\n- Calm Mind",
+    "Bulky Booster": "Alcremie @ Chesto Berry\nAbility: Aroma Veil\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Acid Armor\n- Calm Mind\n- Rest\n- Stored Power",
+    "Three Attacks": "Alcremie @ Life Orb\nAbility: Aroma Veil\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Dazzling Gleam\n- Mystical Fire\n- Psychic\n- Recover"
+  },
+  "falinks": {
+    "All-out Attacker": "Falinks @ Life Orb\nAbility: Defiant\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- First Impression\n- Throat Chop\n- Zen Headbutt",
+    "Swords Dance": "Falinks @ Lum Berry\nAbility: Defiant\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Swords Dance\n- Close Combat\n- Throat Chop\n- Zen Headbutt",
+    "No Retreat": "Falinks @ Shed Shell\nAbility: Defiant\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- No Retreat\n- Close Combat\n- Throat Chop\n- Zen Headbutt"
+  },
+  "pincurchin": {
+    "Terrain Setter": "Pincurchin @ Terrain Extender\nAbility: Electric Surge\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Rising Voltage\n- Spikes\n- Recover\n- Memento",
+    "Defensive": "Pincurchin @ Leftovers\nAbility: Lightning Rod\nEVs: 252 HP / 252 Def / 4 SpD\nBold Nature\n- Discharge\n- Scald\n- Spikes\n- Recover",
+    "Choice Specs": "Pincurchin @ Choice Specs\nAbility: Electric Surge\nEVs: 252 HP / 4 Def / 252 SpA\nModest Nature\n- Rising Voltage\n- Scald\n- Thunderbolt\n- Toxic Spikes"
+  },
+  "snom": {},
+  "frosmoth": {
+    "Quiver Dance": "Frosmoth @ Heavy-Duty Boots\nAbility: Ice Scales\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Quiver Dance\n- Substitute\n- Ice Beam\n- Giga Drain"
+  },
+  "stonjourner": {
+    "Choice Scarf": "Stonjourner @ Choice Scarf\nAbility: Power Spot\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Stone Edge\n- Heat Crash\n- Earthquake\n- Self-Destruct",
+    "Choice Band": "Stonjourner @ Choice Band\nAbility: Power Spot\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Stone Edge\n- Heat Crash\n- Earthquake\n- Rock Slide",
+    "Stealth Rock / Rock Polish": "Stonjourner @ Life Orb\nAbility: Power Spot\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Stealth Rock\n- Stone Edge\n- Heat Crash\n- Earthquake"
+  },
+  "eiscue": {
+    "Belly Drum": "Eiscue @ Salac Berry\nAbility: Ice Face\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Belly Drum\n- Icicle Crash\n- Reversal\n- Substitute"
+  },
+  "eiscuenoice": {
+    "Belly Drum": "Eiscue @ Salac Berry\nAbility: Ice Face\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Belly Drum\n- Icicle Crash\n- Reversal\n- Substitute"
+  },
+  "indeedee": {
+    "Choice Specs": "Indeedee @ Choice Specs\nAbility: Psychic Surge\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Expanding Force\n- Mystical Fire\n- Hyper Voice\n- Trick",
+    "Choice Scarf": "Indeedee @ Choice Scarf\nAbility: Psychic Surge\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Expanding Force\n- Mystical Fire\n- Hyper Voice\n- Trick"
+  },
+  "indeedeef": {
+    "Choice Specs": "Indeedee-F @ Choice Specs\nAbility: Psychic Surge\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Expanding Force\n- Mystical Fire\n- Dazzling Gleam\n- Trick",
+    "Choice Scarf": "Indeedee-F @ Choice Scarf\nAbility: Psychic Surge\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Expanding Force\n- Mystical Fire\n- Dazzling Gleam\n- Healing Wish"
+  },
+  "morpeko": {
+    "Offensive Support": "Morpeko @ Heavy-Duty Boots\nAbility: Hunger Switch\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Aura Wheel\n- Parting Shot\n- Super Fang\n- Protect",
+    "Wallbreaker": "Morpeko @ Choice Band\nAbility: Hunger Switch\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Aura Wheel\n- Crunch\n- Psychic Fangs\n- Parting Shot",
+    "Offensive Substitute": "Morpeko @ Leftovers\nAbility: Hunger Switch\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Substitute\n- Aura Wheel\n- Parting Shot\n- Protect"
+  },
+  "morpekohangry": {
+    "Offensive Support": "Morpeko @ Heavy-Duty Boots\nAbility: Hunger Switch\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Aura Wheel\n- Parting Shot\n- Super Fang\n- Protect",
+    "Wallbreaker": "Morpeko @ Choice Band\nAbility: Hunger Switch\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Aura Wheel\n- Crunch\n- Psychic Fangs\n- Parting Shot",
+    "Offensive Substitute": "Morpeko @ Leftovers\nAbility: Hunger Switch\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Substitute\n- Aura Wheel\n- Parting Shot\n- Protect"
+  },
+  "cufant": {
+    "Bulky Attacker": "Cufant @ Eviolite\nLevel: 5\nAbility: Sheer Force\nEVs: 20 HP / 196 Atk / 204 Def / 44 SpD / 36 Spe\nAdamant Nature\n- Iron Head\n- Play Rough\n- Power Whip\n- High Horsepower"
+  },
+  "copperajah": {
+    "Assault Vest": "Copperajah @ Assault Vest\nAbility: Heavy Metal\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Heavy Slam\n- Power Whip\n- Stone Edge\n- Superpower",
+    "Stealth Rock": "Copperajah @ Leftovers\nAbility: Heavy Metal\nEVs: 156 HP / 16 Atk / 252 SpD / 84 Spe\nAdamant Nature\n- Stealth Rock\n- Heavy Slam\n- Power Whip\n- Rock Slide"
+  },
+  "copperajahgmax": {
+    "Assault Vest": "Copperajah @ Assault Vest\nAbility: Heavy Metal\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Heavy Slam\n- Power Whip\n- Stone Edge\n- Superpower",
+    "Stealth Rock": "Copperajah @ Leftovers\nAbility: Heavy Metal\nEVs: 156 HP / 16 Atk / 252 SpD / 84 Spe\nAdamant Nature\n- Stealth Rock\n- Heavy Slam\n- Power Whip\n- Rock Slide"
+  },
+  "dracozolt": {
+    "Substitute + Fire Spin": "Dracozolt @ Leftovers\nAbility: Sand Rush\nEVs: 184 Atk / 140 SpA / 184 Spe\nLonely Nature\n- Bolt Beak\n- Draco Meteor\n- Substitute\n- Fire Spin",
+    "Life Orb": "Dracozolt @ Life Orb\nAbility: Sand Rush\nEVs: 148 Atk / 176 SpA / 184 Spe\nNaughty Nature\n- Bolt Beak\n- Draco Meteor\n- Earthquake\n- Fire Blast"
+  },
+  "arctozolt": {
+    "Substitute": "Arctozolt @ Heavy-Duty Boots\nAbility: Slush Rush\nEVs: 252 Atk / 4 SpA / 252 Spe\nNaive Nature\n- Substitute\n- Bolt Beak\n- Blizzard\n- Low Kick"
+  },
+  "dracovish": {
+    "Choice Attacker": "Dracovish @ Choice Band\nAbility: Strong Jaw\nEVs: 252 Atk / 4 Def / 252 Spe\nAdamant Nature\n- Fishious Rend\n- Outrage\n- Psychic Fangs\n- Crunch"
+  },
+  "arctovish": {},
+  "duraludon": {
+    "Expert Belt": "Duraludon @ Expert Belt\nAbility: Light Metal\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Draco Meteor\n- Flash Cannon\n- Dark Pulse\n- Thunderbolt",
+    "Eject Pack": "Duraludon @ Eject Pack\nAbility: Light Metal\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Draco Meteor\n- Flash Cannon\n- Dark Pulse\n- Stealth Rock"
+  },
+  "duraludongmax": {
+    "Expert Belt": "Duraludon @ Expert Belt\nAbility: Light Metal\nEVs: 252 SpA / 4 SpD / 252 Spe\nModest Nature\n- Draco Meteor\n- Flash Cannon\n- Dark Pulse\n- Thunderbolt",
+    "Eject Pack": "Duraludon @ Eject Pack\nAbility: Light Metal\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Draco Meteor\n- Flash Cannon\n- Dark Pulse\n- Stealth Rock"
+  },
+  "dreepy": {},
+  "drakloak": {
+    "Fast Utility": "Drakloak @ Eviolite\nAbility: Infiltrator\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Will-O-Wisp\n- Hex\n- Fire Blast\n- U-turn",
+    "Choice Specs": "Drakloak @ Choice Specs\nAbility: Infiltrator\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Draco Meteor\n- Shadow Ball\n- Fire Blast\n- U-turn"
+  },
+  "dragapult": {
+    "Choice Specs": "Dragapult @ Choice Specs\nAbility: Infiltrator\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Shadow Ball\n- Draco Meteor\n- U-turn\n- Flamethrower",
+    "Offensive Pivot": "Dragapult @ Heavy-Duty Boots\nAbility: Infiltrator\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Hex\n- Draco Meteor\n- U-turn\n- Thunder Wave"
+  },
+  "zacian": {
+    "Choice Scarf": "Zacian @ Choice Scarf\nAbility: Intrepid Sword\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Play Rough\n- Close Combat\n- Crunch\n- Wild Charge"
+  },
+  "zaciancrowned": {
+    "Wallbreaker": "Zacian-Crowned @ Rusted Sword\nAbility: Intrepid Sword\nEVs: 184 HP / 252 Atk / 72 Spe\nAdamant Nature\n- Behemoth Blade\n- Wild Charge\n- Close Combat\n- Assurance"
+  },
+  "zamazenta": {
+    "Choice Band": "Zamazenta @ Choice Band\nAbility: Dauntless Shield\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Close Combat\n- Crunch\n- Psychic Fangs\n- Wild Charge"
+  },
+  "zamazentacrowned": {
+    "Howl": "Zamazenta-Crowned @ Rusted Shield\nAbility: Dauntless Shield\nEVs: 24 HP / 252 Atk / 232 Spe\nAdamant Nature\n- Howl\n- Behemoth Bash\n- Close Combat\n- Wild Charge"
+  },
+  "eternatus": {
+    "Specially Defensive": "Eternatus @ Black Sludge\nAbility: Pressure\nEVs: 240 HP / 252 SpD / 16 Spe\nTimid Nature\n- Dynamax Cannon\n- Recover\n- Flamethrower\n- Toxic",
+    "Offensive": "Eternatus @ Life Orb\nAbility: Pressure\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Dynamax Cannon\n- Recover\n- Flamethrower\n- Sludge Bomb"
+  },
+  "eternatuseternamax": {},
+  "kubfu": {},
+  "urshifu": {
+    "Choice Band": "Urshifu @ Choice Band\nAbility: Unseen Fist\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Wicked Blow\n- Close Combat\n- U-turn\n- Sucker Punch"
+  },
+  "urshifurapidstrike": {
+    "Choice Band": "Urshifu-Rapid-Strike @ Choice Band\nAbility: Unseen Fist\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Surging Strikes\n- Close Combat\n- Aqua Jet\n- U-turn"
+  },
+  "urshifugmax": {
+    "Choice Band": "Urshifu @ Choice Band\nAbility: Unseen Fist\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Wicked Blow\n- Close Combat\n- U-turn\n- Sucker Punch"
+  },
+  "urshifurapidstrikegmax": {
+    "Choice Band": "Urshifu-Rapid-Strike @ Choice Band\nAbility: Unseen Fist\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Surging Strikes\n- Close Combat\n- Aqua Jet\n- U-turn"
+  },
+  "zarude": {
+    "Offensive Pivot": "Zarude @ Heavy-Duty Boots\nAbility: Leaf Guard\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Power Whip\n- Darkest Lariat\n- U-turn\n- Jungle Healing",
+    "Choice Scarf": "Zarude @ Choice Scarf\nAbility: Leaf Guard\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Power Whip\n- Darkest Lariat\n- Jungle Healing\n- U-turn"
+  },
+  "zarudedada": {},
+  "regieleki": {
+    "Screens Lead": "Regieleki @ Light Clay\nAbility: Transistor\nEVs: 96 HP / 252 Atk / 160 Spe\nAdamant Nature\n- Reflect\n- Light Screen\n- Rapid Spin\n- Explosion"
+  },
+  "regidrago": {
+    "Dragon Dance": "Regidrago @ Leftovers\nAbility: Dragon's Maw\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Dragon Dance\n- Outrage\n- Thunder Fang\n- Substitute",
+    "Choice Band": "Regidrago @ Choice Band\nAbility: Dragon's Maw\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Outrage\n- Scale Shot\n- Hammer Arm\n- Thunder Fang"
+  },
+  "glastrier": {
+    "Swords Dance": "Glastrier @ Heavy-Duty Boots\nAbility: Chilling Neigh\nEVs: 252 Atk / 4 SpD / 252 Spe\nJolly Nature\n- Swords Dance\n- Icicle Crash\n- High Horsepower\n- Close Combat"
+  },
+  "spectrier": {
+    "Substitute": "Spectrier @ Leftovers\nAbility: Grim Neigh\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Substitute\n- Hex\n- Nasty Plot\n- Will-O-Wisp"
+  },
+  "calyrex": {
+    "Choice Specs": "Calyrex @ Choice Specs\nAbility: Unnerve\nEVs: 252 SpA / 4 SpD / 252 Spe\nTimid Nature\n- Leaf Storm\n- Psychic\n- Pollen Puff\n- Trick"
+  },
+  "calyrexice": {
+    "SubSeed": "Calyrex-Ice @ Leftovers\nAbility: As One (Glastrier)\nEVs: 252 Atk / 4 Def / 252 Spe\nJolly Nature\n- Substitute\n- Glacial Lance\n- Swords Dance\n- Leech Seed",
+    "Choice Band": "Calyrex-Ice @ Choice Band\nAbility: As One (Glastrier)\nEVs: 252 Atk / 4 SpD / 252 Spe\nAdamant Nature\n- Glacial Lance\n- High Horsepower\n- Trick\n- Aromatherapy"
+  },
+  "calyrexshadow": {
+    "Choice Specs": "Calyrex-Shadow @ Choice Specs\nAbility: As One (Spectrier)\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Astral Barrage\n- Psyshock\n- Trick\n- Aromatherapy",
+    "Choice Scarf": "Calyrex-Shadow @ Choice Scarf\nAbility: As One (Spectrier)\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Astral Barrage\n- Psyshock\n- Trick\n- Aromatherapy",
+    "Substitute + Leech Seed": "Calyrex-Shadow @ Leftovers\nAbility: As One (Spectrier)\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Astral Barrage\n- Substitute\n- Leech Seed\n- Nasty Plot",
+    "Nasty Plot": "Calyrex-Shadow @ Focus Sash\nAbility: As One (Spectrier)\nEVs: 4 Def / 252 SpA / 252 Spe\nTimid Nature\n- Astral Barrage\n- Nasty Plot\n- Psyshock\n- Draining Kiss"
+  }
+}

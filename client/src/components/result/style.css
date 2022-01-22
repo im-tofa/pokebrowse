@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
+  text-transform: capitalize;
   margin-bottom: 10px;
 }
 .name > button {
@@ -13,6 +13,14 @@
 }
 .name > button {
   cursor: pointer;
+}
+
+.name > a {
+  text-decoration: none;
+  transition: opacity 300ms, transform 300ms;
+}
+.name > a:hover {
+  text-decoration: underline;
 }
 /* includes item icon */
 .image {
@@ -68,8 +76,8 @@
   grid-template-areas:
     "name  name  name name"
     "image author ability moves"
-    "image rating nature moves"
-    "image date  nature moves"
+    "image date nature moves"
+    "image rating  nature moves"
     "desc desc desc desc";
 
   align-items: stretch;
@@ -100,8 +108,8 @@
     grid-template-areas:
       "name  name   name    name name "
       "image author ability evs  moves"
-      "image rating nature  ivs  moves"
-      "image date   nature  ivs  moves"
+      "image date nature  ivs  moves"
+      "image rating   nature  ivs  moves"
       "desc  desc   desc    desc desc ";
   }
   .evs,

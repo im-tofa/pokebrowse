@@ -13,8 +13,14 @@ interface ResultProps {
   setChosen(s: string): void;
 }
 
+import * as dex from "../../../../server/src/pkmnstats";
+import { toID } from "../../../../server/src/utils/ps-utils";
+
 const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const set = props.set;
+  const speciesNormalized = dex[set.species].forme
+    ? toID(dex[set.species].baseSpecies) + "-" + toID(dex[set.species].forme)
+    : toID(dex[set.species].name);
   return (
     <div
       class={style.popup}
@@ -41,7 +47,7 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
             {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
             <img
               class={style.img}
-              src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species}.gif`}
+              src={`https://play.pokemonshowdown.com/sprites/gen5ani/${speciesNormalized}.gif`}
               onError={(event) => {
                 if (
                   event.currentTarget.src ===
@@ -50,12 +56,12 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
                   return;
                 if (
                   event.currentTarget.src ===
-                  `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`
+                  `https://play.pokemonshowdown.com/sprites/gen5/${speciesNormalized}.png`
                 ) {
                   event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/0.png`;
                   return;
                 }
-                event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`;
+                event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${speciesNormalized}.png`;
               }}></img>
             <img
               class={style.icon}
@@ -79,21 +85,23 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
             <b>Uploaded on:</b>{" "}
             {new Date(set.set_uploaded_on).toLocaleDateString()}
           </div>
-          <div class={style.rating}>
-            <b>Rating:</b> <i class="fas fa-star" />
-            <i class="fas fa-star" />
-            <i class="fas fa-star" />
-            <i class="far fa-star" />
-            <i class="far fa-star" />
-          </div>
-        </div>
-        <div class={style.description}>
-          <h4>Description</h4>
-          <div>{set.description}</div>
+          <div class={style.rating}></div>
         </div>
         <div class={style.import}>
           <h4>Import</h4>
           <div>{exportSet(set)}</div>
+        </div>
+        <div class={style.description}>
+          <h4>More info</h4>
+          <span>
+            <a
+              href={`https://www.smogon.com/dex/ss/pokemon/${speciesNormalized}/${set.set_id}`}
+              target="_blank"
+              onClick={(e) => {
+                e.stopPropagation();
+              }}>{`Guide on Smogon Strategy Pokédex`}</a>
+            .
+          </span>
         </div>
       </div>
     </div>

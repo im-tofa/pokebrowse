@@ -11,13 +11,25 @@ interface ResultProps {
   onClick?: h.JSX.MouseEventHandler<HTMLLIElement>;
 }
 
+import * as dex from "../../../../server/src/pkmnstats";
+import { toID } from "../../../../server/src/utils/ps-utils";
 const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const set = props.set;
   const onClick = props.onClick;
+  const speciesNormalized = dex[set.species].forme
+    ? toID(dex[set.species].baseSpecies) + "-" + toID(dex[set.species].forme)
+    : toID(dex[set.species].name);
   return (
     <li class={`${style.result}`} onClick={onClick}>
       <div class={`${style.name}`}>
-        <div>{set.name ? set.name : set.species}</div>
+        <a
+          href={`https://www.smogon.com/dex/ss/pokemon/${speciesNormalized}/#${set.set_id}`}
+          target="_blank"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}>
+          {dex[set.species].name + (set.name ? " - " + set.name : "")}
+        </a>
       </div>
       <div class={`${style.wrapper} ${style.image}`}>
         {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
@@ -25,7 +37,7 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         {/* NOTE that forme names are not properly formatted here and won't work */}
         <img
           class={style.img}
-          src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species}.gif`}
+          src={`https://play.pokemonshowdown.com/sprites/gen5ani/${speciesNormalized}.gif`}
           onError={(event) => {
             if (
               event.currentTarget.src ===
@@ -34,12 +46,12 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
               return;
             if (
               event.currentTarget.src ===
-              `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`
+              `https://play.pokemonshowdown.com/sprites/gen5/${speciesNormalized}.png`
             ) {
               event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/0.png`;
               return;
             }
-            event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`;
+            event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${speciesNormalized}.png`;
           }}></img>
         <img
           class={style.icon}
@@ -60,11 +72,11 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         By <i>{set.author}</i>
       </div>
       <div class={`${style.rating}`}>
-        <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
+        {/* <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
         <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
         <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
         <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
-        <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
+        <FontAwesomeIcon icon={farStar}></FontAwesomeIcon> */}
       </div>
       <div class={`${style.date}`}>
         <i>{new Date(set.set_uploaded_on).toLocaleDateString()}</i>
@@ -87,10 +99,6 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         {set.moves.map((move) => (
           <div>{move}</div>
         ))}
-      </div>
-      <div class={`${style.description}`}>
-        <b>Description: </b>
-        {set.description}
       </div>
     </li>
   );

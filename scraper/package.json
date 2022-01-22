@@ -1,0 +1,29 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "type": "commonjs",
+  "allowSyntheticDefaultImports": true,
+  "scripts": {
+    "start": "ts-node index.ts",
+    "dev": "ts-node-dev index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/im-tofa/pokebrowse.git"
+  },
+  "author": "im-tofa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/im-tofa/pokebrowse/issues"
+  },
+  "homepage": "https://github.com/im-tofa/pokebrowse#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "puppeteer": "^13.0.1",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8"
+  }
+}
