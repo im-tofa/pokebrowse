@@ -59,7 +59,17 @@ const Header: FunctionalComponent = () => {
   );
   return (
     <header class={`${style.header}`}>
-      <h1>{`UwU`}</h1>
+      <img
+        class={style.icon}
+        src={`https://play.pokemonshowdown.com/sprites/gen5ani/rotom.gif`}
+        onError={(event) => {
+          if (
+            event.currentTarget.src ===
+            `https://play.pokemonshowdown.com/sprites/itemicons/0.png`
+          )
+            return;
+          event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/itemicons/0.png`;
+        }}></img>
       <nav>{links}</nav>
     </header>
   );

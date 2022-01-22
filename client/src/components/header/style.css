@@ -1,5 +1,5 @@
 .header {
-  width: 100px;
+  width: 85px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,9 +12,9 @@
   z-index: 50;
 }
 
-.header > h1 {
+.header > img {
   margin: 0;
-  padding: 15px;
+  padding: 10px 10px 0 10px;
   font-weight: 400;
   font-size: large;
   color: inherit;
@@ -31,7 +31,7 @@
 .header > nav > a {
   height: 56px;
   line-height: 56px;
-  padding: 0 15px;
+  padding: 0 10px;
   min-width: 50px;
   background: rgba(255, 255, 255, 0);
   text-decoration: none;
