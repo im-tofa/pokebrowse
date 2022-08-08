@@ -7,7 +7,7 @@ import { Set } from "../../helpers/types";
 import { evToString } from "../../helpers/set";
 
 interface ResultProps {
-  set: Set;
+  set: any;
   onClick?: h.JSX.MouseEventHandler<HTMLLIElement>;
 }
 
@@ -17,7 +17,7 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   return (
     <li class={`${style.result}`} onClick={onClick}>
       <div class={`${style.name}`}>
-        <div>{set.name ? set.name : set.species}</div>
+        <div>{set.name ? set.name : set.importable.species.name}</div>
       </div>
       <div class={`${style.wrapper} ${style.image}`}>
         {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
@@ -25,7 +25,7 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         {/* NOTE that forme names are not properly formatted here and won't work */}
         <img
           class={style.img}
-          src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species}.gif`}
+          src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.importable.species.id}.gif`}
           onError={(event) => {
             if (
               event.currentTarget.src ===
@@ -34,16 +34,16 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
               return;
             if (
               event.currentTarget.src ===
-              `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`
+              `https://play.pokemonshowdown.com/sprites/gen5/${set.importable.species.id}.png`
             ) {
               event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/0.png`;
               return;
             }
-            event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`;
+            event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.importable.species.id}.png`;
           }}></img>
         <img
           class={style.icon}
-          src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item
+          src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.importable.item
             .toLowerCase()
             .split(" ")
             .join("-")}.png`}
@@ -57,7 +57,7 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           }}></img>
       </div>
       <div class={`${style.author}`}>
-        By <i>{set.author}</i>
+        By <i>{set.author.username}</i>
       </div>
       <div class={`${style.rating}`}>
         <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
@@ -67,24 +67,26 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
       </div>
       <div class={`${style.date}`}>
-        <i>{new Date(set.set_uploaded_on).toLocaleDateString()}</i>
+        <i>{new Date(set.created).toLocaleDateString()}</i>
       </div>
-      <div class={`${style.ability}`}>{set.ability}</div>
+      <div class={`${style.ability}`}>{set.importable.ability}</div>
       <div class={`${style.nature}`}>
-        <i>{set.nature}</i> Nature
+        <i>{set.importable.nature}</i> Nature
       </div>
-      {set.evs ? (
-        <div class={`${style.evs}`}>EVs: {evToString(set)}</div>
+      {set.importable.evs ? (
+        <div class={`${style.evs}`}>EVs: {evToString(set.importable)}</div>
       ) : (
         <div class={`${style.evs}`}></div>
       )}
-      {set.ivs ? (
-        <div class={`${style.ivs}`}>IVs: {evToString(set, false)}</div>
+      {set.importable.ivs ? (
+        <div class={`${style.ivs}`}>
+          IVs: {evToString(set.importable, false)}
+        </div>
       ) : (
         <div class={`${style.ivs}`}></div>
       )}
       <div class={`${style.moves}`}>
-        {set.moves.map((move) => (
+        {set.importable.moves.map((move) => (
           <div>{move}</div>
         ))}
       </div>

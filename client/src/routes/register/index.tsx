@@ -23,9 +23,7 @@ const Register: FunctionalComponent = () => {
             console.log("form submitted");
             try {
               const response = await fetch(
-                (process.env.PROD_LOGIN_URL
-                  ? process.env.PROD_LOGIN_URL
-                  : "http://localhost:4000") + "/register",
+                process.env.LOGIN_URL + "/register",
                 {
                   method: "POST",
                   // credentials: "include",

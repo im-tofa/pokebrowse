@@ -5,10 +5,8 @@ export default {
     config.node.process = "mock";
     config.plugins.push(
       new DefinePlugin({
-        "process.env.LOGIN_URL": JSON.stringify(
-          "https://www.pokebrow.se/login"
-        ),
-        "process.env.URL": JSON.stringify("https://www.pokebrow.se/api"),
+        "process.env.LOGIN_URL": JSON.stringify("http://localhost:8080"),
+        "process.env.URL": JSON.stringify("http://localhost:8080/api"),
       })
     );
   },

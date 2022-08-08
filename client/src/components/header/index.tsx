@@ -4,6 +4,7 @@ import { useContext } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import { Auth } from "../auth";
 import style from "./style.css";
+import Cookies from "js-cookie";
 
 const Header: FunctionalComponent = () => {
   const { accessToken, setAccessToken } = useContext(AuthContext);
@@ -32,24 +33,22 @@ const Header: FunctionalComponent = () => {
           href=""
           onClick={(e) => {
             e.preventDefault();
-            fetch(
-              (process.env.PROD_LOGIN_URL
-                ? process.env.PROD_LOGIN_URL
-                : "http://localhost:4000") + "/logout",
-              {
-                method: "POST",
-                credentials: "include",
-              }
-            )
+            fetch(process.env.LOGIN_URL + "/logout", {
+              method: "POST",
+              headers: {
+                "X-XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
+              },
+            })
               .then(async (res) => {
                 console.log(res);
                 if (res.status !== 200) throw Error();
-                const json = await res.json();
-                setAccessToken("");
+                localStorage.removeItem("user");
+                setAccessToken(null);
               })
               .catch((err) => {
                 console.error(err);
-                setAccessToken("");
+                localStorage.removeItem("user");
+                setAccessToken(null);
               });
           }}>
           Sign out

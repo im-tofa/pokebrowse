@@ -9,7 +9,7 @@ import { Set } from "../../helpers/types";
 import { exportSet } from "../../helpers/set";
 
 interface ResultProps {
-  set: Set;
+  set: any;
   setChosen(s: string): void;
 }
 
@@ -41,7 +41,7 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
             {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
             <img
               class={style.img}
-              src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species}.gif`}
+              src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.importable.species.id}.gif`}
               onError={(event) => {
                 if (
                   event.currentTarget.src ===
@@ -50,16 +50,16 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
                   return;
                 if (
                   event.currentTarget.src ===
-                  `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`
+                  `https://play.pokemonshowdown.com/sprites/gen5/${set.importable.species.id}.png`
                 ) {
                   event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/0.png`;
                   return;
                 }
-                event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`;
+                event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.importable.species.id}.png`;
               }}></img>
             <img
               class={style.icon}
-              src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item
+              src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.importable.item
                 .toLowerCase()
                 .split(" ")
                 .join("-")}.png`}
@@ -73,11 +73,10 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
               }}></img>
           </div>
           <div class={style.author}>
-            <b>Author:</b> {set.author}
+            <b>Author:</b> {set.author.username}
           </div>
           <div class={style.date}>
-            <b>Uploaded on:</b>{" "}
-            {new Date(set.set_uploaded_on).toLocaleDateString()}
+            <b>Uploaded on:</b> {new Date(set.created).toLocaleDateString()}
           </div>
           <div class={style.rating}>
             <b>Rating:</b> <i class="fas fa-star" />
@@ -93,7 +92,7 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         </div>
         <div class={style.import}>
           <h4>Import</h4>
-          <div>{exportSet(set)}</div>
+          <div>{exportSet(set.importable)}</div>
         </div>
       </div>
     </div>
