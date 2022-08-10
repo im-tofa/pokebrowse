@@ -1,10 +1,10 @@
 import { createContext } from "preact";
 
 type AuthType = {
-  accessToken: string | null;
-  setAccessToken(s: string | null): void;
+  authenticated: boolean | null | undefined;
+  setAuthenticated(b: boolean | null | undefined): void;
 };
 export const AuthContext = createContext({
-  accessToken: "",
-  setAccessToken: (s: string | null) => {},
+  authenticated: undefined,
+  setAuthenticated: (b: boolean | null | undefined) => {},
 } as AuthType);

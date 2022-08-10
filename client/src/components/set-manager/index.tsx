@@ -5,6 +5,7 @@ import { Results } from "../../components/results";
 import { SETS } from "../../helpers/queries";
 import { AuthContext } from "../../helpers/token";
 import { Set } from "../../helpers/types";
+import { useSetsQuery } from "../query";
 import style from "./style.css";
 
 const SetManager: FunctionalComponent = () => {
@@ -72,29 +73,24 @@ const SetManager: FunctionalComponent = () => {
       const author = JSON.parse(
         atob(accessToken ? accessToken.split(".")[1] : "")
       ).name;
-      // fetchResults({ variables: { author } });
+      // fetchResults({ variables: { author } }); // TODO fetchData for author
     }
   }, [accessToken]);
 
-  const fetchData = (url, more = true) => {
-    fetch(url, {
-      method: "GET",
-    })
-      .then(async (res) => {
-        console.log(res);
-        if (res.status !== 200) throw Error();
-        const json = await res.json();
-        setResults({
-          count: json.count,
-          sets: more ? [...results.sets, ...json.results] : [...json.results],
-          next: json.next,
-          previous: json.previous,
-        });
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
+  const {
+    fetchData,
+    results: { loading, error, data },
+  } = useSetsQuery();
+
+  if (loading) {
+  } else {
+    if (error) {
+    } else {
+      if (data !== undefined) {
+        setResults(data);
+      }
+    }
+  }
 
   return (
     <div class={style.manager}>
@@ -121,7 +117,6 @@ const SetManager: FunctionalComponent = () => {
               } catch (error) {
                 console.log(error);
 
-                // reset token; this will trigger Refresh context to attempt refetch
                 setAccessToken("");
                 setRetry(true);
                 return;

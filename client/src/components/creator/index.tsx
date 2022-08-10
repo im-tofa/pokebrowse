@@ -11,7 +11,7 @@ interface Props {
 
 // TODO: Rewrite to use function for retrying instead
 const Creator: FunctionalComponent<Props> = (props: Props) => {
-  const { accessToken, setAccessToken } = useContext(AuthContext);
+  const { authenticated, setAuthenticated } = useContext(AuthContext);
   const [retry, setRetry] = useState(false);
   const [uploadError, setUploadError] = useState("");
   const [config, setConfig] = useState("");
@@ -41,20 +41,6 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
     window.location.reload();
   };
 
-  useEffect(() => {
-    if (accessToken !== "" && retry) {
-      setRetry(false);
-      upload()
-        .then(() => {
-          console.log("form submitted");
-        })
-        .catch((error) => {
-          console.log(error);
-          route("/login", true);
-        });
-    }
-  }, [accessToken, retry]);
-
   return (
     <form
       class={style.creator}
@@ -68,8 +54,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
         } catch (error) {
           console.log(error);
 
-          // reset token; this will trigger Refresh context to attempt refetch
-          setAccessToken("");
+          setAuthenticated(false);
           setRetry(true);
           return;
         }

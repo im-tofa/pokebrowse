@@ -7,7 +7,7 @@ import style from "./style.css";
 import Cookies from "js-cookie";
 
 const Header: FunctionalComponent = () => {
-  const { accessToken, setAccessToken } = useContext(AuthContext);
+  const { authenticated, setAuthenticated } = useContext(AuthContext);
 
   const links = (
     <Fragment>
@@ -43,12 +43,12 @@ const Header: FunctionalComponent = () => {
                 console.log(res);
                 if (res.status !== 200) throw Error();
                 localStorage.removeItem("user");
-                setAccessToken(null);
+                setAuthenticated(false);
               })
               .catch((err) => {
                 console.error(err);
                 localStorage.removeItem("user");
-                setAccessToken(null);
+                setAuthenticated(false);
               });
           }}>
           Sign out
