@@ -12,6 +12,7 @@
 import style from "./style.css";
 import { FunctionalComponent, h } from "preact";
 import { useEffect, useState } from "preact/hooks";
+import { useLazyQuery } from "@apollo/client";
 import { SearchComponent } from "../../components/search";
 import { Results } from "../../components/results";
 import { Link } from "preact-router";
@@ -22,7 +23,6 @@ import { Auth } from "../../components/auth";
 import LoginForm from "../../components/login";
 import { SETS } from "../../helpers/queries";
 import { Set } from "../../helpers/types";
-import { useSetsQuery } from "../../components/query";
 
 interface Props {}
 
@@ -44,17 +44,35 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
     </Panel>
   );
 
-  const {
-    fetchData,
-    results: { loading, error, data },
-  } = useSetsQuery();
+  const fetchData = (url, more = true) => {
+    fetch(url, {
+      method: "GET",
+    })
+      .then(async (res) => {
+        console.log(res);
+        if (res.status !== 200) throw Error();
+        const json = await res.json();
+        setResults({
+          count: json.count,
+          sets: more ? [...results.sets, ...json.results] : [...json.results],
+          next: json.next,
+          previous: json.previous,
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  const [fetchResults, { loading, error, data, fetchMore }] =
+    useLazyQuery(SETS);
 
   if (loading) {
   } else {
     if (error) {
     } else {
       if (data !== undefined) {
-        setResults(data);
+        setResults(data.sets);
       }
     }
   }

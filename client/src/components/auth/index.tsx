@@ -20,15 +20,15 @@ interface Props {
  * @returns Returns a rendered Auth component
  */
 const Auth: FunctionalComponent<Props> = (props: Props) => {
-  const { authenticated, setAuthenticated } = useContext(AuthContext);
+  const { accessToken, setAccessToken } = useContext(AuthContext);
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
-      setAuthenticated(true);
+      setAccessToken("true");
     }
   }, []);
   // check if access token exists
-  if (!authenticated) {
+  if (accessToken === null) {
     // if not authenticated version is provided, return it
     if (props.notAuth) return <Fragment>{props.notAuth}</Fragment>;
 

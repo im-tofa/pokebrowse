@@ -38,6 +38,21 @@ I recommend that you only use the server and client locally for now (e.g on loca
 
 You could, however, technically have a shared PostgreSQL database among your friends if you want to share sets with each other, just make sure to [configure the database](server/configs/README.md)!
 
+## TODO list
+
+- HTTPS connection between server and database
+- Allow rating sets (must be signed in)
+- More filter types (typing, rating, intended checks and counters)
+- Refactor server (better code structure, split logic into reasonable files)
+- Allow editing (only the description!) your uploaded sets
+- Better design of `/upload` route
+- Iterate design of `/profile` route
+- Ensure a good enough level of security
+- Ensure GDPR conformity
+- Remove cookie dependency from using sprites from PS
+- Rate limiting, preventing spam uploads
+- Migrate to full REST or full GraphQL: I initially wanted only GraphQL but had trouble with enabling JWT authentication on only some queries, so I used REST for authenticated routes instead. But everything should be possible via GraphQL, just need to figure out how. GraphQL is nice for its typechecking alone, even if the querying capabilities of GraphQL aren't especially beneficial in this version of the app.
+
 ## License
 
 The source code for pokebrowse is distributed under the terms of the [MIT License](LICENSE).
