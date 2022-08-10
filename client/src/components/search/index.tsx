@@ -1,5 +1,6 @@
 import style from "./style.css";
 
+import { QueryLazyOptions, OperationVariables } from "@apollo/client";
 import { FunctionalComponent, h } from "preact";
 import { useState } from "preact/hooks";
 
@@ -7,7 +8,9 @@ import Filter from "./../../components/filter";
 import parseInput from "../../helpers/tokenizer";
 
 interface SearchProps {
-  fetchResults(url: string, more: boolean): void;
+  fetchResults(
+    options?: QueryLazyOptions<OperationVariables> | undefined
+  ): void;
 }
 
 const SearchComponent: FunctionalComponent<SearchProps> = (
@@ -127,17 +130,15 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
           class={`${style.btn}`}
           onClick={(e) => {
             e.preventDefault();
-            const queryString = new URLSearchParams({
-              ...(species.length !== 0 && { species: species[0] }), // TODO should not be able to add multiple species at all
-              ...(author && { author: author }),
-              ...(speed && { speed: speed.toString() }),
-              ...(date && { createdAfter: date }),
-              limit: "5",
+            fetchResults({
+              variables: {
+                species: species,
+                author: author,
+                speed: speed,
+                date: date,
+                cursor: 0,
+              },
             });
-            fetchResults(
-              process.env.URL + "/sets?" + queryString.toString(),
-              false
-            );
           }}>
           <i class="fa fa-search" /> Search
         </button>

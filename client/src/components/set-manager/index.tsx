@@ -1,3 +1,4 @@
+import { useLazyQuery, useApolloClient } from "@apollo/client";
 import { FunctionalComponent, h } from "preact";
 import { route } from "preact-router";
 import { useContext, useEffect, useState } from "preact/hooks";
@@ -9,15 +10,14 @@ import style from "./style.css";
 
 const SetManager: FunctionalComponent = () => {
   const { accessToken, setAccessToken } = useContext(AuthContext);
+  const client = useApolloClient();
   const [retry, setRetry] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
   const [errorMessage, setErrorMessage] = useState("");
-  const [results, setResults] = useState({
-    sets: [],
-    next: null,
-    previous: null,
-    count: 0,
-  });
+  const [results, setResults] = useState<{
+    sets: Set[];
+    next_cursor: number | null;
+  }>({ sets: [], next_cursor: null });
 
   const deleteSets = async () => {
     const response = await fetch(
@@ -49,7 +49,8 @@ const SetManager: FunctionalComponent = () => {
 
     // clear selection, clear cache, re-fetch results
     setSelected([]);
-    // fetchResults({ variables: { author } });
+    client.clearStore(); // NOTE: A bit extreme, maybe be more precise in the cache updates
+    fetchResults({ variables: { author } });
   };
 
   useEffect(() => {
@@ -72,29 +73,18 @@ const SetManager: FunctionalComponent = () => {
       const author = JSON.parse(
         atob(accessToken ? accessToken.split(".")[1] : "")
       ).name;
-      // fetchResults({ variables: { author } });
+      fetchResults({ variables: { author } });
     }
   }, [accessToken]);
 
-  const fetchData = (url, more = true) => {
-    fetch(url, {
-      method: "GET",
-    })
-      .then(async (res) => {
-        console.log(res);
-        if (res.status !== 200) throw Error();
-        const json = await res.json();
-        setResults({
-          count: json.count,
-          sets: more ? [...results.sets, ...json.results] : [...json.results],
-          next: json.next,
-          previous: json.previous,
-        });
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
+  const [fetchResults, { loading, error, data, fetchMore }] =
+    useLazyQuery(SETS);
+
+  if (loading) return <div>Loading...</div>;
+  else {
+    if (error) return <div>Error</div>;
+    else if (data !== undefined) setResults(data.sets);
+  }
 
   return (
     <div class={style.manager}>
@@ -138,9 +128,7 @@ const SetManager: FunctionalComponent = () => {
       )}
       <Results
         results={results}
-        fetchMore={() => {
-          if (results.next) fetchData(results.next, true);
-        }}
+        fetchMore={fetchMore}
         editable={true}
         selected={selected}
         setSelected={setSelected}

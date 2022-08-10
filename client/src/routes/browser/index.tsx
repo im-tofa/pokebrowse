@@ -27,13 +27,10 @@ import { Set } from "../../helpers/types";
 interface Props {}
 
 const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
-  const [results, setResults] = useState({
-    sets: [],
-    next: null,
-    previous: null,
-    count: 0,
-  });
-
+  const [results, setResults] = useState<{
+    sets: Set[];
+    next_cursor: number | null;
+  }>({ sets: [], next_cursor: null });
   const signIn = (
     <Panel>
       <h2>Sign In</h2>
@@ -43,26 +40,6 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
       </small>
     </Panel>
   );
-
-  const fetchData = (url, more = true) => {
-    fetch(url, {
-      method: "GET",
-    })
-      .then(async (res) => {
-        console.log(res);
-        if (res.status !== 200) throw Error();
-        const json = await res.json();
-        setResults({
-          count: json.count,
-          sets: more ? [...results.sets, ...json.results] : [...json.results],
-          next: json.next,
-          previous: json.previous,
-        });
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
 
   const [fetchResults, { loading, error, data, fetchMore }] =
     useLazyQuery(SETS);
@@ -85,13 +62,13 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
   return (
     <main class={style.main}>
       <div class={style.setbrowser}>
-        <SearchComponent fetchResults={fetchData} />
+        <SearchComponent fetchResults={fetchResults} />
         {error && (
           <div>
             <b style="color: red">{error.message}</b>
           </div>
         )}
-        <Results results={results} fetchMore={fetchData} />
+        <Results results={results} fetchMore={fetchMore} />
       </div>
       <Sidebar>
         <Auth notAuth={signIn}>

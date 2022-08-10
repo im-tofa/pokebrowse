@@ -1,9 +1,9 @@
+import { useApolloClient } from "@apollo/client";
 import { FunctionalComponent, h } from "preact";
 import { route } from "preact-router";
 import { useContext, useEffect, useState } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import style from "./style.css";
-import Cookies from "js-cookie";
 
 interface Props {
   reroute?: string;
@@ -13,6 +13,7 @@ interface Props {
 const Creator: FunctionalComponent<Props> = (props: Props) => {
   const { accessToken, setAccessToken } = useContext(AuthContext);
   const [retry, setRetry] = useState(false);
+  const client = useApolloClient();
   const [uploadError, setUploadError] = useState("");
   const [config, setConfig] = useState("");
   const [name, setName] = useState("");
@@ -20,15 +21,19 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
   const reroute = props.reroute ? props.reroute : "/browser";
 
   const upload = async () => {
-    const response = await fetch(process.env.URL + "/sets", {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        "X-XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
-      },
-      body: JSON.stringify({ set: config, name, desc }),
-    });
+    const response = await fetch(
+      (process.env.PROD_URL ? process.env.PROD_URL : "http://localhost:3000") +
+        "/set",
+      {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ set: config, name, desc }),
+      }
+    );
 
     if (response.status === 403 || response.status === 401)
       throw new Error(await response.json()); // if authentication error
@@ -38,6 +43,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
     }
 
     setUploadError("");
+    client.clearStore();
     window.location.reload();
   };
 

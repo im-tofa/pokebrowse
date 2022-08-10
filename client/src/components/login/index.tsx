@@ -3,7 +3,6 @@ import { Link, route } from "preact-router";
 import { useContext, useEffect, useState } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import style from "./style.css";
-import Cookies from "js-cookie";
 
 const LoginForm: FunctionalComponent = () => {
   const { accessToken, setAccessToken } = useContext(AuthContext);
@@ -18,28 +17,32 @@ const LoginForm: FunctionalComponent = () => {
       onSubmit={async (e) => {
         e.preventDefault();
         console.log("form submitted");
-        const form = new FormData(e.currentTarget);
         //console.log(username, password);
         try {
-          const response = await fetch(process.env.LOGIN_URL + "/login", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-              "X-XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
-            },
-            body: new URLSearchParams(
-              new FormData(e.currentTarget) as any
-            ).toString(),
-          });
+          const response = await fetch(
+            (process.env.PROD_LOGIN_URL
+              ? process.env.PROD_LOGIN_URL
+              : "http://localhost:4000") + "/login",
+            {
+              method: "POST",
+              credentials: "include",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ username, password }),
+            }
+          );
 
           if (!response.ok) {
             setLoginError(await response.json());
             return;
           }
+
+          const json = await response.json();
           setLoginError("");
-          localStorage.setItem("user", "signedIn");
-          setAccessToken("true");
-          route("/browser", true);
+          setAccessToken(json.accessToken);
+          return;
+          // route("/upload", true);
         } catch (error) {
           console.log("Error: ");
           console.log(error);
