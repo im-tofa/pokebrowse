@@ -3,6 +3,7 @@ import { useContext, useEffect } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import { route } from "preact-router";
 import Cookies from "js-cookie";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // /login and /register
 interface Props {
@@ -20,15 +21,10 @@ interface Props {
  * @returns Returns a rendered Auth component
  */
 const Auth: FunctionalComponent<Props> = (props: Props) => {
-  const { authenticated, setAuthenticated } = useContext(AuthContext);
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
-  useEffect(() => {
-    if (localStorage.getItem("user")) {
-      setAuthenticated(true);
-    }
-  }, []);
   // check if access token exists
-  if (!authenticated) {
+  if (!isAuthenticated) {
     // if not authenticated version is provided, return it
     if (props.notAuth) return <Fragment>{props.notAuth}</Fragment>;
 

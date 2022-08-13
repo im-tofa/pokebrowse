@@ -5,6 +5,8 @@ import { AuthContext } from "../../helpers/token";
 import { Auth } from "../auth";
 import style from "./style.css";
 import Cookies from "js-cookie";
+import LoginButton from "../login-button/login-button";
+import LogoutButton from "../logout-button/logout-button";
 
 const Header: FunctionalComponent = () => {
   const { authenticated, setAuthenticated } = useContext(AuthContext);
@@ -22,37 +24,8 @@ const Header: FunctionalComponent = () => {
           Profile
         </Link>
       </Auth>
-      <Auth
-        notAuth={
-          <Link activeClassName={style.active} href="/login">
-            Sign in
-          </Link>
-        }>
-        <Link
-          activeClassName={style.active}
-          href=""
-          onClick={(e) => {
-            e.preventDefault();
-            fetch(process.env.LOGIN_URL + "/logout", {
-              method: "POST",
-              headers: {
-                "X-XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
-              },
-            })
-              .then(async (res) => {
-                console.log(res);
-                if (res.status !== 200) throw Error();
-                localStorage.removeItem("user");
-                setAuthenticated(false);
-              })
-              .catch((err) => {
-                console.error(err);
-                localStorage.removeItem("user");
-                setAuthenticated(false);
-              });
-          }}>
-          Sign out
-        </Link>
+      <Auth notAuth={<LoginButton />}>
+        <LogoutButton />
       </Auth>
     </Fragment>
   );

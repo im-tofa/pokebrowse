@@ -12,6 +12,7 @@ import Header from "./header";
 import style from "./style.css";
 import { AuthContext } from "../helpers/token";
 import Uploader from "../routes/upload";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 const App: FunctionalComponent = () => {
   const [authenticated, setAuthenticated] = useState<
@@ -19,7 +20,10 @@ const App: FunctionalComponent = () => {
   >(undefined);
 
   return (
-    <AuthContext.Provider value={{ authenticated, setAuthenticated }}>
+    <Auth0Provider
+      domain="dev-gnh7bcs1.eu.auth0.com"
+      clientId="XfhFHObJfac7bUPLdK58zqaZGxsY4N3O"
+      redirectUri={window.location.origin}>
       <div id="preact_root" class={style.preact_root}>
         <Header />
         <Router>
@@ -32,7 +36,7 @@ const App: FunctionalComponent = () => {
           <NotFoundPage default />
         </Router>
       </div>
-    </AuthContext.Provider>
+    </Auth0Provider>
   );
 };
 
