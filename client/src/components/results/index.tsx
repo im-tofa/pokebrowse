@@ -25,6 +25,7 @@ const Results: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const setSelected = props.setSelected;
   const fetchMore = props.fetchMore;
   const sets = props.results.sets;
+  const totalCount = props.results.count;
   const next_cursor = props.results.next_cursor;
   const editable = props.editable;
 
@@ -48,7 +49,7 @@ const Results: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         <Popup set={getSet(chosen)!} setChosen={setChosen} />
       )}
       <ul class={style.scrollable}>
-        {sets.length ? (
+        {totalCount && sets?.length ? (
           <InfiniteScroll
             dataLength={sets.length}
             next={() => fetchMore(props.results.next)}

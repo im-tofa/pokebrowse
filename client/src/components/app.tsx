@@ -23,16 +23,14 @@ const App: FunctionalComponent = () => {
     <Auth0Provider
       domain="dev-gnh7bcs1.eu.auth0.com"
       clientId="XfhFHObJfac7bUPLdK58zqaZGxsY4N3O"
-      redirectUri={window.location.origin}>
+      redirectUri={window.location.origin}
+      audience={"https://api.pokebrow.se"}
+      scope="openid profile">
       <div id="preact_root" class={style.preact_root}>
         <Header />
         <Router>
-          <Route path="/" component={Home} />
-          <Route path="/register/" component={Register} />
-          <Route path="/login/" component={Login} />
-          <Route path="/browser/" component={SetBrowser} />
+          <Route path="/" component={SetBrowser} />
           <Route path="/upload/" component={Uploader} />
-          <Route path="/profile/" component={Profile} />
           <NotFoundPage default />
         </Router>
       </div>

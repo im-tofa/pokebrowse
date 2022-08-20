@@ -16,22 +16,6 @@ const Profile: FunctionalComponent = () => {
     <Auth rerouteIfSignedOut="/login">
       <main class={style.main}>
         <SetManager />
-        <Sidebar>
-          <Panel>
-            <h2>Delete Sets</h2>
-            <div>
-              Select items by clicking on them (they will be highlighted in
-              blue). Then, press the delete button that appears in order to
-              delete your sets.
-              <br /> <br />
-              <b>WARNING:</b> Deleting a set is an irreversible action!
-            </div>
-          </Panel>
-          <Panel>
-            <h2>Upload Set</h2>
-            <Creator reroute="/profile" />
-          </Panel>
-        </Sidebar>
       </main>
     </Auth>
   );

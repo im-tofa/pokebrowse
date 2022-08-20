@@ -14,14 +14,10 @@ import { FunctionalComponent, h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { SearchComponent } from "../../components/search";
 import { Results } from "../../components/results";
-import { Link } from "preact-router";
 import { Sidebar } from "../../components/sidebar";
 import { Panel } from "../../components/panel";
 import Creator from "../../components/creator";
 import { Auth } from "../../components/auth";
-import LoginForm from "../../components/login";
-import { SETS } from "../../helpers/queries";
-import { Set } from "../../helpers/types";
 import { useSetsQuery } from "../../components/query";
 
 interface Props {}
@@ -33,16 +29,6 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
     previous: null,
     count: 0,
   });
-
-  const signIn = (
-    <Panel>
-      <h2>Sign In</h2>
-      <LoginForm />
-      <small>
-        No account? <Link href="/register">Sign up</Link>!
-      </small>
-    </Panel>
-  );
 
   const {
     fetchData,
@@ -70,19 +56,11 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
         <SearchComponent fetchResults={fetchData} />
         {error && (
           <div>
-            <b style="color: red">{error.message}</b>
+            <b style="color: red">{error}</b>
           </div>
         )}
         <Results results={results} fetchMore={fetchData} />
       </div>
-      <Sidebar>
-        <Auth notAuth={signIn}>
-          <Panel>
-            <h2>Upload a Set</h2>
-            <Creator />
-          </Panel>
-        </Auth>
-      </Sidebar>
     </main>
   );
 };

@@ -5,13 +5,25 @@ import { faStar as fasStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import { Set } from "../../helpers/types";
 import { evToString } from "../../helpers/set";
+import { useAuth0 } from "@auth0/auth0-react";
 
 interface ResultProps {
   set: any;
   onClick?: h.JSX.MouseEventHandler<HTMLLIElement>;
 }
 
+function toID(text) {
+  if (text?.id) {
+    text = text.id;
+  } else if (text?.userid) {
+    text = text.userid;
+  }
+  if (typeof text !== "string" && typeof text !== "number") return "";
+  return ("" + text).toLowerCase().replace(/[^a-z0-9]+/g, ""); // does not handle formes.
+}
+
 const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
+  const { getAccessTokenSilently } = useAuth0();
   const set = props.set;
   const onClick = props.onClick;
   return (
@@ -25,7 +37,9 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         {/* NOTE that forme names are not properly formatted here and won't work */}
         <img
           class={style.img}
-          src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.importable.species.id}.gif`}
+          src={`https://play.pokemonshowdown.com/sprites/gen5ani/${toID(
+            set.importable.species.name
+          )}.gif`}
           onError={(event) => {
             if (
               event.currentTarget.src ===
@@ -34,12 +48,16 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
               return;
             if (
               event.currentTarget.src ===
-              `https://play.pokemonshowdown.com/sprites/gen5/${set.importable.species.id}.png`
+              `https://play.pokemonshowdown.com/sprites/gen5/${toID(
+                set.importable.species.name
+              )}.png`
             ) {
               event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/0.png`;
               return;
             }
-            event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.importable.species.id}.png`;
+            event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${toID(
+              set.importable.species.name
+            )}.png`;
           }}></img>
         <img
           class={style.icon}
@@ -57,14 +75,10 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           }}></img>
       </div>
       <div class={`${style.author}`}>
-        By <i>{set.author.username}</i>
+        By: <i>{set.author}</i>
       </div>
       <div class={`${style.rating}`}>
-        <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
-        <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
-        <FontAwesomeIcon icon={fasStar}></FontAwesomeIcon>
-        <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
-        <FontAwesomeIcon icon={farStar}></FontAwesomeIcon>
+        <i> Likes: {`${set.likes ? set.likes.length : 0}`}</i>
       </div>
       <div class={`${style.date}`}>
         <i>{new Date(set.created).toLocaleDateString()}</i>
@@ -93,6 +107,25 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
       <div class={`${style.description}`}>
         <b>Description: </b>
         {set.description}
+      </div>
+      <div
+        onClick={async (e) => {
+          e.preventDefault();
+          const token = await getAccessTokenSilently({
+            audience: "https://api.pokebrow.se",
+            scope: "profile",
+          });
+
+          fetch(process.env.URL + "/sets/" + set.id + "/likes", {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }).catch((e) => {
+            console.error(e);
+          });
+        }}>
+        LIKE
       </div>
     </li>
   );

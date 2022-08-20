@@ -27,7 +27,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
         "Content-Type": "application/json",
         "X-XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
       },
-      body: JSON.stringify({ set: config, name, desc }),
+      body: JSON.stringify({ importable: config, desc }),
     });
 
     if (response.status === 403 || response.status === 401)

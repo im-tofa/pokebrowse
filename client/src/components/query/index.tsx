@@ -18,14 +18,21 @@ const useSetsQuery = () => {
         if (res.status !== 200) throw Error();
         const json = await res.json();
         setData({
-          count: json.count,
-          sets: more ? [...data.sets, ...json.results] : [...json.results],
-          next: json.next,
-          previous: json.previous,
+          count: json?.count,
+          sets: more
+            ? json?.results
+              ? [...data.sets, ...json.results]
+              : data.sets
+            : json?.results
+            ? [...json.results]
+            : [],
+          next: json?.next,
+          previous: json?.previous,
         });
         setError("");
       })
       .catch((err) => {
+        console.log("useSetsQuery()");
         console.error(err);
         setData(undefined);
         setError(err);
