@@ -2,7 +2,6 @@ import { FunctionalComponent, h, Fragment } from "preact";
 import { useContext, useEffect, useState } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import { route } from "preact-router";
-import Cookies from "js-cookie";
 import { useAuth0 } from "@auth0/auth0-react";
 
 // /login and /register
