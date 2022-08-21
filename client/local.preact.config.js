@@ -9,7 +9,7 @@ export default {
         "process.env.OAUTH_CLIENTID": JSON.stringify(
           "XfhFHObJfac7bUPLdK58zqaZGxsY4N3O"
         ),
-        "process.env.URL": JSON.stringify("http://localhost:8082/api/v1"),
+        "process.env.URL": JSON.stringify("http://localhost:8080/api/v1"),
       })
     );
   },

@@ -1,11 +1,15 @@
 import style from "./style.css";
 import { FunctionalComponent, h } from "preact";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar as fasStar } from "@fortawesome/free-solid-svg-icons";
-import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
+import {
+  faStar as fasStar,
+  faThumbsUp as fasThumbsUp,
+} from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp as farThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { Set } from "../../helpers/types";
 import { evToString } from "../../helpers/set";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useState } from "preact/hooks";
 
 interface ResultProps {
   set: any;
@@ -25,6 +29,9 @@ function toID(text) {
 const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const { getAccessTokenSilently, isAuthenticated, user } = useAuth0();
   const set = props.set;
+  const [liked, setLiked] = useState(
+    isAuthenticated && user && set.likes?.includes(user.name)
+  );
   const alreadyLiked =
     isAuthenticated && user && set.likes?.includes(user.name);
   const onClick = props.onClick;
@@ -80,7 +87,41 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         By: <i>{set.author}</i>
       </div>
       <div class={`${style.rating}`}>
-        <i> Likes: {`${set.likes ? set.likes.length : 0}`}</i>
+        <i
+          onClick={async (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const token = await getAccessTokenSilently({
+              audience: "https://api.pokebrow.se",
+              scope: "profile",
+            });
+
+            fetch(process.env.URL + "/sets/" + set.id + "/likes", {
+              method: alreadyLiked ? "DELETE" : "PUT",
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            })
+              .then((res) => {
+                if (res.status === 200) setLiked(!liked); // if already liked, unlike
+              })
+              .catch((e) => {
+                console.error(e);
+              });
+          }}>
+          {`${
+            set.likes
+              ? alreadyLiked
+                ? set.likes.length + (liked ? 0 : -1)
+                : set.likes.length + (liked ? 1 : 0)
+              : 0 + (liked ? 1 : 0)
+          }`}{" "}
+          <span
+            class={user.name === set.author ? style.disabled : style.enabled}>
+            <FontAwesomeIcon icon={liked ? fasThumbsUp : farThumbsUp} />{" "}
+          </span>
+        </i>
       </div>
       <div class={`${style.date}`}>
         <i>{new Date(set.created).toLocaleDateString()}</i>
@@ -110,28 +151,6 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         <b>Description: </b>
         {set.description}
       </div>
-      {isAuthenticated && user.name !== set.author && (
-        <div
-          onClick={async (e) => {
-            e.preventDefault();
-
-            const token = await getAccessTokenSilently({
-              audience: "https://api.pokebrow.se",
-              scope: "profile",
-            });
-
-            fetch(process.env.URL + "/sets/" + set.id + "/likes", {
-              method: alreadyLiked ? "DELETE" : "PUT",
-              headers: {
-                Authorization: `Bearer ${token}`,
-              },
-            }).catch((e) => {
-              console.error(e);
-            });
-          }}>
-          {alreadyLiked ? "Unlike" : "Like"}
-        </div>
-      )}
     </li>
   );
 };
