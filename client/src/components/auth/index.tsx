@@ -1,5 +1,5 @@
 import { FunctionalComponent, h, Fragment } from "preact";
-import { useContext, useEffect } from "preact/hooks";
+import { useContext, useEffect, useState } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import { route } from "preact-router";
 import Cookies from "js-cookie";
@@ -22,6 +22,11 @@ interface Props {
 const Auth: FunctionalComponent<Props> = (props: Props) => {
   const { isAuthenticated, loginWithRedirect, isLoading } = useAuth0();
 
+  const [origin, setOrigin] = useState("");
+  useEffect(() => {
+    setOrigin(window.location.origin);
+  }, []);
+
   // check if access token exists
   if (!isAuthenticated) {
     // if not authenticated version is provided, return it
@@ -32,7 +37,7 @@ const Auth: FunctionalComponent<Props> = (props: Props) => {
     // otherwise, try to authenticate and redirect if desired
     if (props.authAndRedirect) {
       localStorage.setItem("redirectPath", props.authAndRedirect);
-      loginWithRedirect({ redirectUri: window.location.origin + "/callback" });
+      loginWithRedirect({ redirectUri: origin + "/callback" });
       return;
     }
 

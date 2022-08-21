@@ -4,7 +4,6 @@ import { useContext } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import { Auth } from "../auth";
 import style from "./style.css";
-import Cookies from "js-cookie";
 import LoginButton from "../login-button";
 import LogoutButton from "../logout-button";
 

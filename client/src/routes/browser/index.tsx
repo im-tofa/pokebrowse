@@ -14,10 +14,6 @@ import { FunctionalComponent, h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { SearchComponent } from "../../components/search";
 import { Results } from "../../components/results";
-import { Sidebar } from "../../components/sidebar";
-import { Panel } from "../../components/panel";
-import Creator from "../../components/creator";
-import { Auth } from "../../components/auth";
 import { useSetsQuery } from "../../components/query";
 
 interface Props {}

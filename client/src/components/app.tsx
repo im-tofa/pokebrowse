@@ -1,5 +1,5 @@
-import { FunctionalComponent, h } from "preact";
-import { useState } from "preact/hooks";
+import { Fragment, FunctionalComponent, h } from "preact";
+import { useEffect, useState } from "preact/hooks";
 import { Route, Router } from "preact-router";
 
 import Profile from "../routes/profile";
@@ -16,11 +16,16 @@ const App: FunctionalComponent = () => {
     boolean | null | undefined
   >(undefined);
 
+  const [origin, setOrigin] = useState("");
+  useEffect(() => {
+    setOrigin(window.location.origin);
+  }, []);
+
   return (
     <Auth0Provider
       domain={process.env.OAUTH_DOMAIN}
       clientId={process.env.OAUTH_CLIENTID}
-      redirectUri={window.location.origin + "/callback"}
+      redirectUri={origin + "/callback"}
       audience={"https://api.pokebrow.se"}
       scope="openid profile">
       <div id="preact_root" class={style.preact_root}>

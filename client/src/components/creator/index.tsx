@@ -1,9 +1,6 @@
 import { FunctionalComponent, h } from "preact";
-import { getCurrentUrl, route } from "preact-router";
-import { useContext, useEffect, useState } from "preact/hooks";
-import { AuthContext } from "../../helpers/token";
+import { useEffect, useState } from "preact/hooks";
 import style from "./style.css";
-import Cookies from "js-cookie";
 import { useAuth0 } from "@auth0/auth0-react";
 
 interface Props {
@@ -19,6 +16,11 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
   const [desc, setDesc] = useState("");
   const [goodAgainst, setGoodAgainst] = useState("");
   const [badAgainst, setBadAgainst] = useState("");
+
+  const [location, setLocation] = useState(null);
+  useEffect(() => {
+    setLocation(window.location);
+  }, []);
 
   const upload = async () => {
     const token = await getAccessTokenSilently({
@@ -62,7 +64,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
     }
 
     setUploadError("");
-    window.location.reload();
+    location.reload();
   };
 
   return (
