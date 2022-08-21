@@ -28,7 +28,7 @@
   justify-content: flex-start;
 }
 
-.header > nav > a {
+.header > nav > * {
   height: 56px;
   line-height: 56px;
   padding: 0 10px;
@@ -37,17 +37,19 @@
   text-decoration: none;
   color: inherit;
   will-change: background-color;
+  border: none;
+  font-size: medium;
 }
 
-.header > nav > a:last-child {
+.header > nav > *:last-child {
   margin-top: auto;
 }
 
-.header nav a:hover,
-.header nav a:active {
+.header nav *:hover,
+.header nav *:active {
   color: #aaaaaa;
 }
 
-.header nav a.active {
+.header nav *.active {
   font-weight: bold;
 }

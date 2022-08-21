@@ -1,9 +1,10 @@
 import { FunctionalComponent, h } from "preact";
-import { route } from "preact-router";
+import { getCurrentUrl, route } from "preact-router";
 import { useContext, useEffect, useState } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import style from "./style.css";
 import Cookies from "js-cookie";
+import { useAuth0 } from "@auth0/auth0-react";
 
 interface Props {
   reroute?: string;
@@ -11,34 +12,57 @@ interface Props {
 
 // TODO: Rewrite to use function for retrying instead
 const Creator: FunctionalComponent<Props> = (props: Props) => {
-  const { authenticated, setAuthenticated } = useContext(AuthContext);
-  const [retry, setRetry] = useState(false);
+  const { getAccessTokenSilently } = useAuth0();
   const [uploadError, setUploadError] = useState("");
   const [config, setConfig] = useState("");
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
-  const reroute = props.reroute ? props.reroute : "/browser";
+  const [goodAgainst, setGoodAgainst] = useState("");
+  const [badAgainst, setBadAgainst] = useState("");
 
   const upload = async () => {
-    const response = await fetch(process.env.URL + "/sets", {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        "X-XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
-      },
-      body: JSON.stringify({ importable: config, desc }),
+    const token = await getAccessTokenSilently({
+      audience: "https://api.pokebrow.se",
+      scope: "profile",
     });
 
-    if (response.status === 403 || response.status === 401)
-      throw new Error(await response.json()); // if authentication error
+    const response = await fetch(process.env.URL + "/sets", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        title: name,
+        description: desc,
+        importable: config,
+        goodAgainst: goodAgainst.replace(/\s+/g, "").split(","),
+        badAgainst: badAgainst.replace(/\s+/g, "").split(","),
+      }),
+    });
+
+    // const response = await fetch(process.env.URL + "/sets", {
+    //   method: "POST",
+    //   credentials: "include",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     "X-XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
+    //   },
+    //   body: JSON.stringify({ importable: config, desc }),
+    // });
+
+    const json = await response.json();
+    console.log(json);
+    if (response.status === 403 || response.status === 401) {
+      throw new Error(json.error); // if authentication error
+    }
     if (response.status !== 200) {
-      setUploadError(await response.json());
+      setUploadError(json.error);
       return;
     }
 
     setUploadError("");
-    window.location.reload();
+    route(getCurrentUrl(), true);
   };
 
   return (
@@ -46,17 +70,11 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
       class={style.creator}
       onSubmit={async (e) => {
         e.preventDefault();
-        if (retry) return; // prevent double click/spam
-
         try {
           await upload();
           console.log("form submitted");
         } catch (error) {
           console.log(error);
-
-          setAuthenticated(false);
-          setRetry(true);
-          return;
         }
       }}>
       {uploadError && (
@@ -66,9 +84,10 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
       )}
       <input
         type="text"
-        id="name"
+        id="title"
         value={name}
-        placeholder="Name"
+        placeholder="Title"
+        required
         onChange={(e) => {
           setName(e.currentTarget.value);
         }}
@@ -77,6 +96,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
         id="set"
         value={config}
         placeholder="Import"
+        required
         onChange={(e) => {
           setConfig(e.currentTarget.value);
         }}
@@ -85,8 +105,27 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
         id="desc"
         value={desc}
         placeholder="Description"
+        required
         onChange={(e) => {
           setDesc(e.currentTarget.value);
+        }}
+      />
+      <input
+        type="text"
+        id="goodAgainst"
+        value={goodAgainst}
+        placeholder="Good against (comma-separated list of at most 3 Pokemon)"
+        onChange={(e) => {
+          setGoodAgainst(e.currentTarget.value);
+        }}
+      />
+      <input
+        type="text"
+        id="badAgainst"
+        value={badAgainst}
+        placeholder="Bad against (comma-separated list of at most 3 Pokemon)"
+        onChange={(e) => {
+          setBadAgainst(e.currentTarget.value);
         }}
       />
       <button type="submit">Submit!</button>

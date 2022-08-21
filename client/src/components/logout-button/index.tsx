@@ -1,12 +1,14 @@
 import { Fragment, FunctionalComponent, h } from "preact";
 import { useAuth0 } from "@auth0/auth0-react";
 
+import style from "./style.css";
+
 const LogoutButton = () => {
-  const { logout } = useAuth0();
+  const { logout, isLoading } = useAuth0();
 
   return (
     <button onClick={() => logout({ returnTo: window.location.origin })}>
-      Log Out
+      {isLoading || "Sign out"}
     </button>
   );
 };

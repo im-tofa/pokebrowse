@@ -23,8 +23,10 @@ function toID(text) {
 }
 
 const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
-  const { getAccessTokenSilently } = useAuth0();
+  const { getAccessTokenSilently, isAuthenticated, user } = useAuth0();
   const set = props.set;
+  const alreadyLiked =
+    isAuthenticated && user && set.likes?.includes(user.name);
   const onClick = props.onClick;
   return (
     <li class={`${style.result}`} onClick={onClick}>
@@ -108,25 +110,28 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         <b>Description: </b>
         {set.description}
       </div>
-      <div
-        onClick={async (e) => {
-          e.preventDefault();
-          const token = await getAccessTokenSilently({
-            audience: "https://api.pokebrow.se",
-            scope: "profile",
-          });
+      {isAuthenticated && user.name !== set.author && (
+        <div
+          onClick={async (e) => {
+            e.preventDefault();
 
-          fetch(process.env.URL + "/sets/" + set.id + "/likes", {
-            method: "PUT",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }).catch((e) => {
-            console.error(e);
-          });
-        }}>
-        LIKE
-      </div>
+            const token = await getAccessTokenSilently({
+              audience: "https://api.pokebrow.se",
+              scope: "profile",
+            });
+
+            fetch(process.env.URL + "/sets/" + set.id + "/likes", {
+              method: alreadyLiked ? "DELETE" : "PUT",
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }).catch((e) => {
+              console.error(e);
+            });
+          }}>
+          {alreadyLiked ? "Unlike" : "Like"}
+        </div>
+      )}
     </li>
   );
 };

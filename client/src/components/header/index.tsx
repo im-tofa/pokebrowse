@@ -5,15 +5,13 @@ import { AuthContext } from "../../helpers/token";
 import { Auth } from "../auth";
 import style from "./style.css";
 import Cookies from "js-cookie";
-import LoginButton from "../login-button/login-button";
-import LogoutButton from "../logout-button/logout-button";
+import LoginButton from "../login-button";
+import LogoutButton from "../logout-button";
 
 const Header: FunctionalComponent = () => {
-  const { authenticated, setAuthenticated } = useContext(AuthContext);
-
   const links = (
     <Fragment>
-      <Link activeClassName={style.active} href="/browser">
+      <Link activeClassName={style.active} href="/">
         Browse
       </Link>
       <Link activeClassName={style.active} href="/upload">

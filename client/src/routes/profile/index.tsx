@@ -1,21 +1,21 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import { FunctionalComponent, h } from "preact";
+import { getCurrentUrl } from "preact-router";
 import { useEffect } from "preact/hooks";
 import { Auth } from "../../components/auth";
-import Creator from "../../components/creator";
-import { Panel } from "../../components/panel";
-import { SetManager } from "../../components/set-manager";
-import { Sidebar } from "../../components/sidebar";
 import style from "./style.css";
 
 const Profile: FunctionalComponent = () => {
+  const { user, isAuthenticated, loginWithRedirect } = useAuth0();
   // set title after first render
   useEffect(() => {
     document.title = "Profile";
   }, []);
+
   return (
-    <Auth rerouteIfSignedOut="/login">
+    <Auth authAndRedirect={getCurrentUrl()}>
       <main class={style.main}>
-        <SetManager />
+        <div>Hello, {user.name}!</div>
       </main>
     </Auth>
   );
