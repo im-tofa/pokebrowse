@@ -1,12 +1,5 @@
 import style from "./style.css";
 import { FunctionalComponent, h } from "preact";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faStar as fasStar,
-  faThumbsUp as fasThumbsUp,
-} from "@fortawesome/free-solid-svg-icons";
-import { faThumbsUp as farThumbsUp } from "@fortawesome/free-regular-svg-icons";
-import { Set } from "../../helpers/types";
 import { evToString } from "../../helpers/set";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "preact/hooks";
@@ -118,8 +111,12 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
               : 0 + (liked ? 1 : 0)
           }`}{" "}
           <span
-            class={user.name === set.author ? style.disabled : style.enabled}>
-            <FontAwesomeIcon icon={liked ? fasThumbsUp : farThumbsUp} />{" "}
+            class={
+              !isAuthenticated || user?.name === set.author
+                ? style.disabled
+                : style.enabled
+            }>
+            <div class={liked ? "fas fa-thumbs-up" : "far fa-thumbs-up"}></div>
           </span>
         </i>
       </div>
