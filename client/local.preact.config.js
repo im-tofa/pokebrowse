@@ -5,7 +5,10 @@ export default {
     config.node.process = "mock";
     config.plugins.push(
       new DefinePlugin({
-        "process.env.LOGIN_URL": JSON.stringify("http://localhost:8082"),
+        "process.env.OAUTH_DOMAIN": JSON.stringify("dev-gnh7bcs1.eu.auth0.com"),
+        "process.env.OAUTH_CLIENTID": JSON.stringify(
+          "XfhFHObJfac7bUPLdK58zqaZGxsY4N3O"
+        ),
         "process.env.URL": JSON.stringify("http://localhost:8082/api/v1"),
       })
     );

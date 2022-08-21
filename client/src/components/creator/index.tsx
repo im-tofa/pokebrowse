@@ -62,7 +62,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
     }
 
     setUploadError("");
-    route(getCurrentUrl(), true);
+    window.location.reload();
   };
 
   return (

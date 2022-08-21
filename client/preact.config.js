@@ -5,10 +5,11 @@ export default {
     config.node.process = "mock";
     config.plugins.push(
       new DefinePlugin({
-        "process.env.LOGIN_URL": JSON.stringify(
-          "https://www.pokebrow.se/login"
+        "process.env.OAUTH_DOMAIN": JSON.stringify("pokebrowse.eu.auth0.com"),
+        "process.env.OAUTH_CLIENTID": JSON.stringify(
+          "Rt7s2NMMH0PSNSobbNOMQykcK4429xr2"
         ),
-        "process.env.URL": JSON.stringify("https://www.pokebrow.se/api"),
+        "process.env.URL": JSON.stringify("https://api.pokebrow.se/api/v1"),
       })
     );
   },

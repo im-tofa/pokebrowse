@@ -18,8 +18,8 @@ const App: FunctionalComponent = () => {
 
   return (
     <Auth0Provider
-      domain="dev-gnh7bcs1.eu.auth0.com"
-      clientId="XfhFHObJfac7bUPLdK58zqaZGxsY4N3O"
+      domain={process.env.OAUTH_DOMAIN}
+      clientId={process.env.OAUTH_CLIENTID}
       redirectUri={window.location.origin + "/callback"}
       audience={"https://api.pokebrow.se"}
       scope="openid profile">
