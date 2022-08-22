@@ -21,6 +21,8 @@ const App: FunctionalComponent = () => {
     setOrigin(window.location.origin);
   }, []);
 
+  if (!origin) return <div id="preact_root" class={style.preact_root}></div>;
+
   return (
     <Auth0Provider
       domain={process.env.OAUTH_DOMAIN}

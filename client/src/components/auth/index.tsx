@@ -26,6 +26,8 @@ const Auth: FunctionalComponent<Props> = (props: Props) => {
     setOrigin(window.location.origin);
   }, []);
 
+  if (!origin) return <Fragment />;
+
   // check if access token exists
   if (!isAuthenticated) {
     // if not authenticated version is provided, return it

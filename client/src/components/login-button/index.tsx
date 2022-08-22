@@ -12,6 +12,8 @@ const LoginButton = () => {
     setOrigin(window.location.origin);
   }, []);
 
+  if (!origin) return <Fragment />;
+
   return (
     <button
       onClick={() => {

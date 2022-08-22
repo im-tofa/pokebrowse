@@ -12,6 +12,8 @@ const LogoutButton = () => {
     setOrigin(window.location.origin);
   }, []);
 
+  if (!origin) return <Fragment />;
+
   return (
     <button onClick={() => logout({ returnTo: origin })}>
       {isLoading || "Sign out"}
