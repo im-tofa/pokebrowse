@@ -43,7 +43,7 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
 
   // set title after first render
   useEffect(() => {
-    document.title = "Browse";
+    document.title = "Browse | Pokebrowse";
   }, []);
 
   return (

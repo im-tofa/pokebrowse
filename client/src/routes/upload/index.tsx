@@ -8,7 +8,7 @@ import style from "./style.css";
 const Uploader: FunctionalComponent = () => {
   // set title after first render
   useEffect(() => {
-    document.title = "Upload";
+    document.title = "Upload | Pokebrowse";
   }, []);
   return (
     <Auth authAndRedirect={getCurrentUrl()}>

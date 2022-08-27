@@ -9,7 +9,7 @@ const Profile: FunctionalComponent = () => {
   const { user, isAuthenticated, loginWithRedirect } = useAuth0();
   // set title after first render
   useEffect(() => {
-    document.title = "Profile";
+    document.title = "Profile | Pokebrowse";
   }, []);
 
   return (
