@@ -23,10 +23,10 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const { getAccessTokenSilently, isAuthenticated, user } = useAuth0();
   const set = props.set;
   const [liked, setLiked] = useState(
-    isAuthenticated && user && set.likes?.includes(user.name)
+    isAuthenticated && user && set.likes?.includes(user.username)
   );
   const alreadyLiked =
-    isAuthenticated && user && set.likes?.includes(user.name);
+    isAuthenticated && user && set.likes?.includes(user.username);
   const onClick = props.onClick;
   return (
     <li class={`${style.result}`} onClick={onClick}>
@@ -112,7 +112,7 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           }`}{" "}
           <span
             class={
-              !isAuthenticated || user?.name === set.author.username
+              !isAuthenticated || user?.username === set.author.username
                 ? style.disabled
                 : style.enabled
             }>
