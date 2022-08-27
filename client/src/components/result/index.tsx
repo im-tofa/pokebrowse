@@ -25,12 +25,16 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const [liked, setLiked] = useState(
     isAuthenticated &&
       user &&
-      set.likes?.filter((e) => e.username == user.username).length != 0
+      (set.likes
+        ? set.likes.filter((e) => e.username == user.username).length != 0
+        : false)
   );
   const alreadyLiked =
     isAuthenticated &&
     user &&
-    set.likes?.filter((e) => e.username == user.username).length != 0;
+    (set.likes
+      ? set.likes.filter((e) => e.username == user.username).length != 0
+      : false);
   const onClick = props.onClick;
   return (
     <li class={`${style.result}`} onClick={onClick}>
