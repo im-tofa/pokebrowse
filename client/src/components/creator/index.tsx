@@ -25,7 +25,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
   const upload = async () => {
     const token = await getAccessTokenSilently({
       audience: "https://api.pokebrow.se",
-      scope: "profile",
+      scope: "openid",
     });
 
     const response = await fetch(process.env.URL + "/sets", {

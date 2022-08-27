@@ -73,7 +73,7 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
               }}></img>
           </div>
           <div class={style.author}>
-            <b>Author:</b> {set.author}
+            <b>Author:</b> {set.author.username}
           </div>
           <div class={style.date}>
             <b>Uploaded on:</b> {new Date(set.created).toLocaleDateString()}

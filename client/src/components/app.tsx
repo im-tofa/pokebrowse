@@ -29,7 +29,7 @@ const App: FunctionalComponent = () => {
       clientId={process.env.OAUTH_CLIENTID}
       redirectUri={origin + "/callback"}
       audience={"https://api.pokebrow.se"}
-      scope="openid profile">
+      scope="openid">
       <div id="preact_root" class={style.preact_root}>
         <Header />
         <Router>

@@ -77,7 +77,7 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           }}></img>
       </div>
       <div class={`${style.author}`}>
-        By: <i>{set.author}</i>
+        By: <i>{set.author.username}</i>
       </div>
       <div class={`${style.rating}`}>
         <i
@@ -87,7 +87,7 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
 
             const token = await getAccessTokenSilently({
               audience: "https://api.pokebrow.se",
-              scope: "profile",
+              scope: "openid",
             });
 
             fetch(process.env.URL + "/sets/" + set.id + "/likes", {
@@ -112,7 +112,7 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           }`}{" "}
           <span
             class={
-              !isAuthenticated || user?.name === set.author
+              !isAuthenticated || user?.name === set.author.username
                 ? style.disabled
                 : style.enabled
             }>
