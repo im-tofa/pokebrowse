@@ -12,6 +12,7 @@ const Profile: FunctionalComponent = () => {
     document.title = "Profile | Pokebrowse";
   }, []);
 
+  console.log(user);
   return (
     <Auth authAndRedirect={getCurrentUrl()}>
       <main class={style.main}>
