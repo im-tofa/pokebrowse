@@ -54,7 +54,7 @@ const tokenizer = {
   DATE: /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/,
   INTLIT: /[1-9]\d*/,
   WHITESPACE: /\s+/,
-  WORD: /[a-zA-Z]+/,
+  WORD: /[a-zA-Z\-]+/,
   CMD: /\/(species|author|speed|date|type)/,
 };
 

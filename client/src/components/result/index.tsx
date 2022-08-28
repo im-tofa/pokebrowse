@@ -15,8 +15,22 @@ function toID(text) {
   } else if (text?.userid) {
     text = text.userid;
   }
+
+  const splitText = text.split("-");
+  let forme = undefined;
+  if (
+    splitText &&
+    splitText.length > 0 &&
+    ["galar", "alola", "therian", "resolute"].includes(
+      splitText[splitText.length - 1].toLowerCase()
+    )
+  ) {
+    forme = splitText.pop().toLowerCase();
+  }
   if (typeof text !== "string" && typeof text !== "number") return "";
-  return ("" + text).toLowerCase().replace(/[^a-z0-9]+/g, ""); // does not handle formes.
+
+  let id = ("" + splitText.join("-")).toLowerCase().replace(/[^a-z0-9]+/g, "");
+  return forme ? id + "-" + forme : id; // does not handle formes.
 }
 
 const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
@@ -39,7 +53,13 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   return (
     <li class={`${style.result}`} onClick={onClick}>
       <div class={`${style.name}`}>
-        <div>{set.name ? set.name : set.importable.species.name}</div>
+        <div>
+          {set.title
+            ? set.title
+            : set.importable.nickname
+            ? set.importable.nickname
+            : set.importable.species.name}
+        </div>
       </div>
       <div class={`${style.wrapper} ${style.image}`}>
         {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
@@ -160,4 +180,4 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   );
 };
 
-export { Result };
+export { Result, toID };

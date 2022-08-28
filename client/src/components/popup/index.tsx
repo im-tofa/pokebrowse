@@ -7,6 +7,7 @@ import { FunctionalComponent, h } from "preact";
 /* custom types */
 import { Set } from "../../helpers/types";
 import { exportSet } from "../../helpers/set";
+import { toID } from "../result";
 
 interface ResultProps {
   set: any;
@@ -41,7 +42,9 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
             {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
             <img
               class={style.img}
-              src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.importable.species.id}.gif`}
+              src={`https://play.pokemonshowdown.com/sprites/gen5ani/${toID(
+                set.importable.species.name
+              )}.gif`}
               onError={(event) => {
                 if (
                   event.currentTarget.src ===
@@ -50,12 +53,16 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
                   return;
                 if (
                   event.currentTarget.src ===
-                  `https://play.pokemonshowdown.com/sprites/gen5/${set.importable.species.id}.png`
+                  `https://play.pokemonshowdown.com/sprites/gen5/${toID(
+                    set.importable.species.name
+                  )}.png`
                 ) {
                   event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/0.png`;
                   return;
                 }
-                event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.importable.species.id}.png`;
+                event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${toID(
+                  set.importable.species.name
+                )}.png`;
               }}></img>
             <img
               class={style.icon}

@@ -38,8 +38,10 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
         title: name,
         description: desc,
         importable: config,
-        goodAgainst: goodAgainst.replace(/\s+/g, "").split(","),
-        badAgainst: badAgainst.replace(/\s+/g, "").split(","),
+        goodAgainst: goodAgainst
+          ? goodAgainst.replace(/\s+/g, "").split(",")
+          : [],
+        badAgainst: badAgainst ? badAgainst.replace(/\s+/g, "").split(",") : [],
       }),
     });
 
