@@ -58,8 +58,11 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
             ? set.title
             : set.importable.nickname
             ? set.importable.nickname
-            : set.importable.species.name}
+            : set.importable.species.name}{" "}
         </div>
+        <span style="width: max-content; float: right; color: red;">
+          {set.isPublic ? "" : "[Private]"}
+        </span>
       </div>
       <div class={`${style.wrapper} ${style.image}`}>
         {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
