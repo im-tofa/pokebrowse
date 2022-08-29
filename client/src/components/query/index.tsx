@@ -1,6 +1,8 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "preact/hooks";
 
 const useSetsQuery = () => {
+  const { isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
   const [data, setData] = useState({
     sets: [],
     next: null,
@@ -9,10 +11,20 @@ const useSetsQuery = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const fetchData = (url: string, more: boolean = true) => {
+  const fetchData = async (url: string, more: boolean = true) => {
     setLoading(true);
+    const token =
+      !isLoading &&
+      isAuthenticated &&
+      (await getAccessTokenSilently({
+        audience: "https://api.pokebrow.se",
+        scope: "profile",
+      }));
     fetch(url, {
       method: "GET",
+      headers: {
+        ...(token && { Authorization: `Bearer ${token}` }),
+      },
     })
       .then(async (res) => {
         if (res.status !== 200) throw Error();

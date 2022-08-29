@@ -14,8 +14,9 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
   const [config, setConfig] = useState("");
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
-  const [goodAgainst, setGoodAgainst] = useState("");
-  const [badAgainst, setBadAgainst] = useState("");
+  const [isPublic, setIsPublic] = useState(false);
+  // const [goodAgainst, setGoodAgainst] = useState("");
+  // const [badAgainst, setBadAgainst] = useState("");
 
   const [location, setLocation] = useState(null);
   useEffect(() => {
@@ -38,10 +39,11 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
         title: name,
         description: desc,
         importable: config,
-        goodAgainst: goodAgainst
-          ? goodAgainst.replace(/\s+/g, "").split(",")
-          : [],
-        badAgainst: badAgainst ? badAgainst.replace(/\s+/g, "").split(",") : [],
+        isPublic: isPublic,
+        // goodAgainst: goodAgainst
+        //   ? goodAgainst.replace(/\s+/g, "").split(",")
+        //   : [],
+        // badAgainst: badAgainst ? badAgainst.replace(/\s+/g, "").split(",") : [],
       }),
     });
 
@@ -114,7 +116,17 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
           setDesc(e.currentTarget.value);
         }}
       />
-      <input
+      <span>
+        <input
+          type="checkbox"
+          checked={isPublic}
+          onChange={(e) => {
+            setIsPublic(e.currentTarget.checked);
+          }}
+        />{" "}
+        <label>Public?</label>
+      </span>
+      {/* <input
         type="text"
         id="goodAgainst"
         value={goodAgainst}
@@ -131,7 +143,7 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
         onChange={(e) => {
           setBadAgainst(e.currentTarget.value);
         }}
-      />
+      /> */}
       <button type="submit">Submit!</button>
     </form>
   );

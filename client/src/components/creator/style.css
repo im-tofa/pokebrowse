@@ -15,7 +15,6 @@
 .creator * {
   margin: 0;
 }
-
 .creator > * {
   padding: 5px;
 }
@@ -27,6 +26,16 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   outline: none;
+}
+
+.creator > span {
+  display: flex;
+  width: 100%;
+  border: 0;
+  outline: none;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
 }
 
 .creator > textarea {
