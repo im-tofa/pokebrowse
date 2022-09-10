@@ -21,9 +21,17 @@ function toID(text) {
   if (
     splitText &&
     splitText.length > 0 &&
-    ["galar", "alola", "therian", "resolute"].includes(
-      splitText[splitText.length - 1].toLowerCase()
-    )
+    [
+      "galar",
+      "alola",
+      "therian",
+      "resolute",
+      "wash",
+      "heat",
+      "mow",
+      "frost",
+      "fan",
+    ].includes(splitText[splitText.length - 1].toLowerCase())
   ) {
     forme = splitText.pop().toLowerCase();
   }
