@@ -16,16 +16,13 @@ const PrivacyPolicy: FunctionalComponent = () => {
           <li>How do we collect your data?</li>
           <li>How will we use your data?</li>
           <li>How do we store your data?</li>
-          <li>Marketing</li>
           <li>What are your data protection rights?</li>
           <li>What are cookies?</li>
           <li>How do we use cookies?</li>
           <li>What types of cookies do we use?</li>
           <li>How to manage your cookies</li>
-          <li>Privacy policies of other websites</li>
           <li>Changes to our privacy policy</li>
           <li>How to contact us</li>
-          <li>How to contact the appropriate authorities</li>
         </ul>
       </p>
       <h2>What data do we collect?</h2>
