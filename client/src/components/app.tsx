@@ -10,6 +10,7 @@ import style from "./style.css";
 import Uploader from "../routes/upload";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Redirect from "../routes/redirect";
+import PrivacyPolicy from "../routes/privacypolicy";
 
 const App: FunctionalComponent = () => {
   const [authenticated, setAuthenticated] = useState<
@@ -37,6 +38,7 @@ const App: FunctionalComponent = () => {
           <Route path="/upload" component={Uploader} />
           <Route path="/profile" component={Profile} />
           <Route path="/callback" component={Redirect} />
+          <Route path="/privacypolicy" component={PrivacyPolicy} />
           <NotFoundPage default />
         </Router>
       </div>

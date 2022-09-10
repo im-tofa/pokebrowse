@@ -21,6 +21,9 @@ const Header: FunctionalComponent = () => {
           Profile
         </Link>
       </Auth>
+      <Link activeClassName={style.active} href="/privacypolicy">
+        Policy
+      </Link>
       <Auth notAuth={<LoginButton />}>
         <LogoutButton />
       </Auth>
