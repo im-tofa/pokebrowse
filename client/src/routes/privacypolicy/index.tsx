@@ -1,8 +1,12 @@
 import { FunctionalComponent, h } from "preact";
 import { Link } from "preact-router/match";
+import { useEffect } from "preact/hooks";
 import style from "./style.css";
 
 const PrivacyPolicy: FunctionalComponent = () => {
+  useEffect(() => {
+    document.title = "Privacy | Pokebrowse";
+  }, []);
   return (
     <div style="padding: 0 1em 0 1em; overflow-y: scroll">
       <h1>Privacy Policy</h1>
@@ -58,13 +62,13 @@ const PrivacyPolicy: FunctionalComponent = () => {
       </p>
       <h2>How do we store your data?</h2>
       <p>
-        Pokebrowse securely stores your username and uploaded Pokémon sets and
-        in a relational database located in the EU. All communication with the
-        database is encrypted with SSL. Your IP address is stored in-memory on a
-        server for 7 days to mitigate abuse of the service. Once this time
-        period has expired, your IP address is deleted from memory. If you
-        create an account, your account information is securely stored in an
-        EU-hosted database managed by Auth0 on behalf of Pokebrowse.
+        Pokebrowse securely stores your uploaded Pokémon sets in a relational
+        database located in the EU. All communication with the database is
+        encrypted. Your IP address is stored in-memory on a server for 7 days to
+        mitigate abuse of the service. Once this time period has expired, your
+        IP address is deleted from memory. If you create an account, your
+        account information is securely stored in an EU-hosted database managed
+        by Auth0 on behalf of Pokebrowse.
       </p>
       <h2>What are your data protection rights?</h2>
       <p>

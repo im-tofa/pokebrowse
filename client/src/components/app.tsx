@@ -1,6 +1,6 @@
 import { Fragment, FunctionalComponent, h } from "preact";
 import { useEffect, useState } from "preact/hooks";
-import { Route, Router } from "preact-router";
+import { Link, Route, Router } from "preact-router";
 
 import Profile from "../routes/profile";
 import SetBrowser from "../routes/browser";
@@ -41,6 +41,7 @@ const App: FunctionalComponent = () => {
           <Route path="/privacypolicy" component={PrivacyPolicy} />
           <NotFoundPage default />
         </Router>
+        <Link href="/privacypolicy">Privacy Policy</Link>
       </div>
     </Auth0Provider>
   );
