@@ -32,7 +32,7 @@ const App: FunctionalComponent = () => {
       audience={"https://api.pokebrow.se"}
       useRefreshTokens
       cacheLocation="localstorage"
-      scope="openid">
+      scope="openid profile">
       <div id="preact_root" class={style.preact_root}>
         <Header />
         <Router>
