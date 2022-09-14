@@ -52,7 +52,7 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
         <SearchComponent fetchResults={fetchData} />
         {error && (
           <div style="padding: 0.5em 0 0 0.5em;">
-            <span style="color: red">Error: {error.message}</span>
+            <span style="color: red">Error: {error}</span>
           </div>
         )}
         <Results results={results} fetchMore={fetchData} />

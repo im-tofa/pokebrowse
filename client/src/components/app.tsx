@@ -30,6 +30,8 @@ const App: FunctionalComponent = () => {
       clientId={process.env.OAUTH_CLIENTID}
       redirectUri={origin + "/callback"}
       audience={"https://api.pokebrow.se"}
+      useRefreshTokens
+      cacheLocation="localstorage"
       scope="openid">
       <div id="preact_root" class={style.preact_root}>
         <Header />

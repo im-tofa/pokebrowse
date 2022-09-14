@@ -15,13 +15,12 @@
 .header > img {
   margin: 0;
   padding: 10px 10px 0 10px;
-  font-weight: 400;
-  font-size: large;
-  color: inherit;
-  text-align: center;
+  height: 56px;
+  object-fit: cover;
 }
 
 .header > nav {
+  position: relative;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -42,7 +41,8 @@
 }
 
 .header > nav > *:last-child {
-  margin-top: auto;
+  position: absolute;
+  bottom: 0;
 }
 
 .header nav *:hover,

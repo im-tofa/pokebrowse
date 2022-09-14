@@ -47,7 +47,7 @@ const useSetsQuery = () => {
         console.log("useSetsQuery()");
         console.error(err);
         setData(undefined);
-        setError(err);
+        setError(err.message);
       })
       .finally(() => {
         setLoading(false);
