@@ -18,8 +18,24 @@ interface ResultProps {
 const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const set = props.set;
   const [height, setHeight] = useState(undefined);
-  useEffect(() => {
+  const handleWindowSizeChange = () => {
     setHeight(window.innerHeight);
+  };
+  const [notify, setNotify] = useState(false);
+
+  const animate = () => {
+    // Button begins to shake
+    setNotify(true);
+
+    // Buttons stops to shake after 2 seconds
+    setTimeout(() => setNotify(false), 2000);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
   }, []);
   return (
     <div
@@ -36,7 +52,7 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           e.stopPropagation();
         }}>
         <button
-          class={style.btn}
+          class={`${style.btn} ${style.clickable}`}
           onClick={(e) => {
             e.preventDefault();
             props.setChosen("");
@@ -100,7 +116,24 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           <div>{set.description}</div>
         </div>
         <div class={style.import}>
-          <h4>Import</h4>
+          <h4>
+            Import{" "}
+            <button
+              class={style.clickable}
+              onClick={() => {
+                navigator.clipboard.writeText(exportSet(set.importable));
+                animate();
+              }}>
+              <i class="fa fa-clone"></i>
+            </button>
+            <i
+              class={
+                notify
+                  ? `${style.checkmark} ${style.notify} fa fa-check`
+                  : `${style.checkmark} fa fa-check`
+              }
+            />
+          </h4>
           <div>{exportSet(set.importable)}</div>
         </div>
       </div>
