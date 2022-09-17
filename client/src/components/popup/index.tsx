@@ -8,6 +8,7 @@ import { FunctionalComponent, h } from "preact";
 import { Set } from "../../helpers/types";
 import { exportSet } from "../../helpers/set";
 import { toID } from "../result";
+import { useEffect, useState } from "preact/hooks";
 
 interface ResultProps {
   set: any;
@@ -16,9 +17,14 @@ interface ResultProps {
 
 const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const set = props.set;
+  const [height, setHeight] = useState(undefined);
+  useEffect(() => {
+    setHeight(window.innerHeight);
+  }, []);
   return (
     <div
       class={style.popup}
+      style={height ? `height: ${height}` : ``}
       onClick={(e) => {
         e.preventDefault();
         props.setChosen("");
