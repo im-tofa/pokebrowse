@@ -78,7 +78,7 @@ const SearchComponent: FunctionalComponent<SearchProps> = (
             event.preventDefault();
             setUserInput(currentInput);
           }}>
-          <i class="fa fa-plus" /> Add{" "}
+          <i class="fa fa-plus" /> <span class={style.hidden}>Add</span>
         </button>
       </div>
       <div class={style.query}>

@@ -16,11 +16,11 @@ const Header: FunctionalComponent = () => {
       <Link activeClassName={style.active} href="/upload">
         Upload
       </Link>
-      <Auth notAuth={<Fragment />}>
+      {/* <Auth notAuth={<Fragment />}>
         <Link activeClassName={style.active} href="/profile">
           Profile
         </Link>
-      </Auth>
+      </Auth> */}
       <Auth notAuth={<LoginButton />}>
         <LogoutButton />
       </Auth>

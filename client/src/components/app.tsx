@@ -38,7 +38,7 @@ const App: FunctionalComponent = () => {
         <Router>
           <Route path="/" component={SetBrowser} />
           <Route path="/upload" component={Uploader} />
-          <Route path="/profile" component={Profile} />
+          {/* <Route path="/profile" component={Profile} /> */}
           <Route path="/callback" component={Redirect} />
           <Route path="/privacypolicy" component={PrivacyPolicy} />
           <NotFoundPage default />
