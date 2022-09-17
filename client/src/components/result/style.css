@@ -60,7 +60,6 @@
 .description {
   grid-area: desc;
   margin-top: 5px;
-  font-size: small;
 }
 .result {
   display: grid;
