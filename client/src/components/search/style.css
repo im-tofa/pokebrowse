@@ -5,18 +5,18 @@
   top: 0;
   left: 0;
   background: #ffffff;
-  padding: 10px;
+  padding: 0.625rem;
   padding-bottom: 0;
   z-index: 1;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.1);
 }
 .cli {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 5px;
-  padding: 5px;
-  border-radius: 20px;
+  gap: 0.3125rem;
+  padding: 0.3125rem;
+  border-radius: 1.25rem;
   border-style: solid;
   border-width: 0;
   background-color: #f2f2f2;
@@ -25,7 +25,7 @@
 }
 .btn {
   font-size: medium;
-  padding: 5px;
+  padding: 0.3125rem;
   border: none;
   background: inherit;
   color: #444444;
@@ -40,14 +40,14 @@
   outline: none;
   border: none;
   background: inherit;
-  padding: 5px;
+  padding: 0.3125rem;
   border-radius: 0;
-  border-right: solid 1px rgba(0, 0, 0, 0.3);
+  border-right: solid 0.0625rem rgba(0, 0, 0, 0.3);
 }
 .query {
   display: grid;
   grid-template-columns: 1fr auto;
-  padding: 5px;
+  padding: 0.3125rem;
 }
 .chosen {
   display: flex;
@@ -55,7 +55,7 @@
   align-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 5px;
+  gap: 0.3125rem;
   overflow-x: auto;
 }
 .chosen > * {
@@ -67,7 +67,7 @@
   display: none;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 25rem) {
   .hidden {
     display: inline;
   }

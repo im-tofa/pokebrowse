@@ -1,12 +1,12 @@
 .header {
-  width: 85px;
+  width: 5.3125rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
   padding: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 0.0625rem solid rgba(0, 0, 0, 0.1);
   background: #252427;
   color: #fff;
   z-index: 50;
@@ -14,8 +14,8 @@
 
 .header > img {
   margin: 0;
-  padding: 10px 10px 0 10px;
-  height: 56px;
+  padding: 0.625rem 0.625rem 0 0.625rem;
+  height: 3.5rem;
   object-fit: cover;
 }
 
@@ -28,12 +28,12 @@
 }
 
 .header > nav > * {
-  height: 56px;
-  line-height: 56px;
-  padding: 0 10px;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  padding: 0 0.625rem;
   width: 100%;
   text-align: left;
-  min-width: 50px;
+  min-width: 3.125rem;
   background: rgba(255, 255, 255, 0);
   text-decoration: none;
   color: inherit;
