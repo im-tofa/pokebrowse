@@ -24,7 +24,7 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   return (
     <div
       class={style.popup}
-      style={height ? `height: ${height}` : ``}
+      style={height ? `height: ${height}px` : ``}
       onClick={(e) => {
         e.preventDefault();
         props.setChosen("");
