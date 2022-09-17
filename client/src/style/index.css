@@ -19,9 +19,3 @@ body {
 #app {
   height: 100%;
 }
-
-@media screen and (max-width: 480px) {
-  body {
-    -webkit-text-size-adjust: 100%; /* iPhone Safari adjust font-size sometimes... This helps prevent auto-adjust */
-  }
-}
