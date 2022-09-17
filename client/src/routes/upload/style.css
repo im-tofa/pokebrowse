@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 500px;
-  min-height: 100vh;
+  min-height: 100%;
 }
 /* override child styling */
 .upload > * {
