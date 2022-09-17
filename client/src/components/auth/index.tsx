@@ -29,6 +29,9 @@ const Auth: FunctionalComponent<Props> = (props: Props) => {
   if (!origin) return <Fragment />;
 
   // check if access token exists
+  console.log(
+    "isLoading: " + isLoading + ", isAuthenticated: " + isAuthenticated
+  );
   if (!isAuthenticated) {
     // if not authenticated version is provided, return it
     if (props.notAuth) return <Fragment>{props.notAuth}</Fragment>;
