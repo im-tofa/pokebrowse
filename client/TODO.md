@@ -10,3 +10,6 @@
   - ~~change name of accessToken context to "authenticated", a true/false/null/undefined value.~~
   - ~~change login & auth to use Auth0~~
 - fix frontend responsiveness
+  - ~~auth~~
+  - Set popup (copy to clipboard)
+  - Descriptions in IOS are differently sized??
