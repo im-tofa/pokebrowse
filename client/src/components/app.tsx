@@ -8,22 +8,24 @@ import NotFoundPage from "../routes/notfound";
 import Header from "./header";
 import style from "./style.css";
 import Uploader from "../routes/upload";
-import { Auth0Provider } from "@auth0/auth0-react";
+import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import Redirect from "../routes/redirect";
 import PrivacyPolicy from "../routes/privacypolicy";
+import VerificationPopup from "./verification-popup";
 
 const App: FunctionalComponent = () => {
-  const [authenticated, setAuthenticated] = useState<
-    boolean | null | undefined
-  >(undefined);
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
   const [origin, setOrigin] = useState("");
   useEffect(() => {
     setOrigin(window.location.origin);
-  }, []);
+  }, [isLoading]);
 
   if (!origin) return <div id="preact_root" class={style.preact_root}></div>;
 
+  console.log("isLoading: " + isLoading);
+  console.log("isAuthenticated: " + isAuthenticated);
+  console.log("email_verified: " + user?.email_verified);
   return (
     <Auth0Provider
       domain={process.env.OAUTH_DOMAIN}
@@ -34,15 +36,18 @@ const App: FunctionalComponent = () => {
       cacheLocation="localstorage"
       scope="openid profile">
       <div id="preact_root" class={style.preact_root}>
-        <Header />
-        <Router>
-          <Route path="/" component={SetBrowser} />
-          <Route path="/upload" component={Uploader} />
-          {/* <Route path="/profile" component={Profile} /> */}
-          <Route path="/callback" component={Redirect} />
-          <Route path="/privacypolicy" component={PrivacyPolicy} />
-          <NotFoundPage default />
-        </Router>
+        <VerificationPopup />
+        <div class={style.content}>
+          <Header />
+          <Router>
+            <Route path="/" component={SetBrowser} />
+            <Route path="/upload" component={Uploader} />
+            {/* <Route path="/profile" component={Profile} /> */}
+            <Route path="/callback" component={Redirect} />
+            <Route path="/privacypolicy" component={PrivacyPolicy} />
+            <NotFoundPage default />
+          </Router>
+        </div>
         <Link href="/privacypolicy">Privacy Policy</Link>
       </div>
     </Auth0Provider>

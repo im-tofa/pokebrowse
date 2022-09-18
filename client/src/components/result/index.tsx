@@ -151,7 +151,9 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           }`}{" "}
           <span
             class={
-              !isAuthenticated || user?.username === set.author.username
+              !isAuthenticated ||
+              user?.username === set.author.username ||
+              !user?.email_verified
                 ? style.disabled
                 : style.enabled
             }>

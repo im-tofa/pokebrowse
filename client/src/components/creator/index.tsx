@@ -57,13 +57,16 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
     //   body: JSON.stringify({ importable: config, desc }),
     // });
 
-    const json = await response.json();
-    console.log(json);
-    if (response.status === 403 || response.status === 401) {
-      throw new Error(json.error); // if authentication error
-    }
-    if (response.status !== 200) {
-      setUploadError(json.error);
+    try {
+      if (response.status !== 200) {
+        const body = await response.text();
+        setUploadError(body);
+        return;
+      }
+      const json = await response.json();
+      console.log(json);
+    } catch (err) {
+      setUploadError("Something went wrong");
       return;
     }
 
