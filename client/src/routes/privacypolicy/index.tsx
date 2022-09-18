@@ -57,18 +57,22 @@ const PrivacyPolicy: FunctionalComponent = () => {
         <ul>
           <li>Persist Pokémon sets so they can be browsed by others</li>
           <li>Allow users to create accounts and upload Pokémon sets</li>
-          <li>Mitigate abuse of the service</li>
+          <li>
+            Mitigate abuse of the service. Your email is not shared with other
+            users.
+          </li>
         </ul>
       </p>
       <h2>How do we store your data?</h2>
       <p>
-        Pokebrowse securely stores your uploaded Pokémon sets in a relational
-        database located in the EU. All communication with the database is
-        encrypted. Your IP address is stored in-memory on a server for 7 days to
-        mitigate abuse of the service. Once this time period has expired, your
-        IP address is deleted from memory. If you create an account, your
-        account information is securely stored in an EU-hosted database managed
-        by Auth0 on behalf of Pokebrowse.
+        Pokebrowse securely stores your uploaded Pokémon sets in a database
+        located in the EU. All communication with the database is encrypted.
+        Your IP address is stored in-memory on a server for 7 days to mitigate
+        abuse of the service. Once this time period has expired, your IP address
+        is deleted from memory. If you create an account, your account
+        information is securely stored in an EU-hosted database managed by Auth0
+        on behalf of Pokebrowse. Your email is only used for signup purposes and
+        resetting your password, and it is not shared with any other users.
       </p>
       <h2>What are your data protection rights?</h2>
       <p>
@@ -132,7 +136,7 @@ const PrivacyPolicy: FunctionalComponent = () => {
       <h2>Changes to our privacy policy</h2>
       <p>
         Pokebrowse keeps its privacy policy under regular review and places any
-        updates on this web page. This privacy policy was last updated on 10
+        updates on this web page. This privacy policy was last updated on 18
         September 2022.
       </p>
       <h2>How to contact us</h2>
