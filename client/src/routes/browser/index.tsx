@@ -12,7 +12,6 @@
 import style from "./style.css";
 import { FunctionalComponent, h } from "preact";
 import { useEffect, useState } from "preact/hooks";
-import { useLazyQuery } from "@apollo/client";
 import { SearchComponent } from "../../components/search";
 import { Results } from "../../components/results";
 import { useSetsQuery } from "../../components/query";
@@ -37,7 +36,7 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
     if (error) {
     } else {
       if (data !== undefined) {
-        setResults(data.sets);
+        setResults(data);
       }
     }
   }
@@ -50,13 +49,13 @@ const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
   return (
     <main class={style.main}>
       <div class={style.setbrowser}>
-        <SearchComponent fetchResults={fetchResults} />
+        <SearchComponent fetchResults={fetchData} />
         {error && (
           <div style="padding: 0.5em 0 0 0.5em;">
             <span style="color: red">Error: {error}</span>
           </div>
         )}
-        <Results results={results} fetchMore={fetchMore} />
+        <Results results={results} fetchMore={fetchData} />
       </div>
     </main>
   );

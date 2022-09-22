@@ -26,21 +26,6 @@ Browsing can be done by anyone, even if they are not signed in, by accessing the
 
 Uploading sets can only be done if you are signed into an account, by accessing the `/upload` route on the client (e.g `http://localhost:8081/upload`). To upload a set, simply provide a name, an import in PS format and a description of the set, then click upload! <!-- You can delete sets later on by going to your profile, located on the `/profile` route on the client.-->
 
-## TODO list
-
-- HTTPS connection between server and database
-- Allow rating sets (must be signed in)
-- More filter types (typing, rating, intended checks and counters)
-- Refactor server (better code structure, split logic into reasonable files)
-- Allow editing (only the description!) your uploaded sets
-- Better design of `/upload` route
-- Iterate design of `/profile` route
-- Ensure a good enough level of security
-- Ensure GDPR conformity
-- Remove cookie dependency from using sprites from PS
-- Rate limiting, preventing spam uploads
-- Migrate to full REST or full GraphQL: I initially wanted only GraphQL but had trouble with enabling JWT authentication on only some queries, so I used REST for authenticated routes instead. But everything should be possible via GraphQL, just need to figure out how. GraphQL is nice for its typechecking alone, even if the querying capabilities of GraphQL aren't especially beneficial in this version of the app.
-
 ## License
 
 The source code for pokebrowse is distributed under the terms of the [MIT License](LICENSE).

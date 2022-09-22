@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "preact/hooks";
 
 interface ResultProps {
-  set: Set;
+  set: any;
   onClick?: h.JSX.MouseEventHandler<HTMLLIElement>;
 }
 
@@ -102,7 +102,7 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           }}></img>
         <img
           class={style.icon}
-          src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item
+          src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.importable.item
             .toLowerCase()
             .split(" ")
             .join("-")}.png`}
@@ -162,24 +162,26 @@ const Result: FunctionalComponent<ResultProps> = (props: ResultProps) => {
         </i>
       </div>
       <div class={`${style.date}`}>
-        <i>{new Date(set.set_uploaded_on).toLocaleDateString()}</i>
+        <i>{new Date(set.created).toLocaleDateString()}</i>
       </div>
-      <div class={`${style.ability}`}>{set.ability}</div>
+      <div class={`${style.ability}`}>{set.importable.ability}</div>
       <div class={`${style.nature}`}>
-        <i>{set.nature}</i> Nature
+        <i>{set.importable.nature}</i> Nature
       </div>
-      {set.evs ? (
-        <div class={`${style.evs}`}>EVs: {evToString(set)}</div>
+      {set.importable.evs ? (
+        <div class={`${style.evs}`}>EVs: {evToString(set.importable)}</div>
       ) : (
         <div class={`${style.evs}`}></div>
       )}
-      {set.ivs ? (
-        <div class={`${style.ivs}`}>IVs: {evToString(set, false)}</div>
+      {set.importable.ivs ? (
+        <div class={`${style.ivs}`}>
+          IVs: {evToString(set.importable, false)}
+        </div>
       ) : (
         <div class={`${style.ivs}`}></div>
       )}
       <div class={`${style.moves}`}>
-        {set.moves.map((move) => (
+        {set.importable.moves.map((move) => (
           <div>{move}</div>
         ))}
       </div>

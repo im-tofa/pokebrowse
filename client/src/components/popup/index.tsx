@@ -11,7 +11,7 @@ import { toID } from "../result";
 import { useEffect, useState } from "preact/hooks";
 
 interface ResultProps {
-  set: Set;
+  set: any;
   setChosen(s: string): void;
 }
 
@@ -88,7 +88,7 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
               }}></img>
             <img
               class={style.icon}
-              src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item
+              src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.importable.item
                 .toLowerCase()
                 .split(" ")
                 .join("-")}.png`}
@@ -102,11 +102,10 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
               }}></img>
           </div>
           <div class={style.author}>
-            <b>Author:</b> {set.author}
+            <b>Author:</b> {set.author.username}
           </div>
           <div class={style.date}>
-            <b>Uploaded on:</b>{" "}
-            {new Date(set.set_uploaded_on).toLocaleDateString()}
+            <b>Uploaded on:</b> {new Date(set.created).toLocaleDateString()}
           </div>
           <div class={style.rating}>
             <b>Likes:</b> {`${set.likes ? set.likes.length : 0}`}

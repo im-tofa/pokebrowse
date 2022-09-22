@@ -6,12 +6,13 @@ import { FunctionalComponent, h } from "preact";
 
 /* custom types */
 import { Set } from "../../helpers/types";
-import { StateUpdater, useState } from "preact/hooks";
+import { StateUpdater, useEffect, useState } from "preact/hooks";
 import { Popup } from "../popup";
 import { Result } from "../result";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 interface ResultProps {
-  results: { next_cursor: number | null; sets: Set[] };
+  results: any;
   fetchMore: any; // too lazy to write out the type
   editable?: boolean;
   selected?: string[];
@@ -28,14 +29,22 @@ const Results: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const next_cursor = props.results.next_cursor;
   const editable = props.editable;
 
-  const getSet = (id: string) =>
-    sets.find((set) => set.set_id === parseInt(id));
+  useEffect(() => {
+    const root = document.getElementById("results_scrollable");
+    if (props.results.next && root.scrollHeight <= root.clientHeight) {
+      fetchMore(props.results.next);
+    }
+  }, [props.results]);
+
+  const getSet = (id: string) => sets.find((set) => set.id === parseInt(id));
   return (
     <div
       class={style.results}
-      onScroll={(e) => {
-        e.preventDefault();
-      }}>
+      id="results_scrollable"
+      // onScroll={(e) => {
+      //   e.preventDefault();
+      // }}
+    >
       {chosen && !editable && (
         <Popup set={getSet(chosen)!} setChosen={setChosen} />
       )}
@@ -78,18 +87,6 @@ const Results: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           <div></div>
         )}
       </ul>
-      {next_cursor && (
-        <button
-          class={style.more}
-          onClick={(e) => {
-            e.preventDefault();
-            console.log(next_cursor);
-            if (next_cursor && fetchMore)
-              fetchMore({ variables: { cursor: next_cursor } });
-          }}>
-          <i class="fa fa-chevron-down" />
-        </button>
-      )}
     </div>
   );
 };
