@@ -1,3 +1,4 @@
+import { useApolloClient } from "@apollo/client";
 import { FunctionalComponent, h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import style from "./style.css";
@@ -73,6 +74,20 @@ const Creator: FunctionalComponent<Props> = (props: Props) => {
     setUploadError("");
     location.reload();
   };
+
+  useEffect(() => {
+    if (accessToken !== "" && retry) {
+      setRetry(false);
+      upload()
+        .then(() => {
+          console.log("form submitted");
+        })
+        .catch((error) => {
+          console.log(error);
+          route("/login", true);
+        });
+    }
+  }, [accessToken, retry]);
 
   return (
     <form

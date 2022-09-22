@@ -9,7 +9,7 @@ const evConvert = {
   spe: "Spe",
 };
 
-export function evToString(set: any, isEv: boolean = true): string {
+export function evToString(set: Set, isEv: boolean = true): string {
   let evs = "";
   const key = isEv ? "evs" : "ivs";
   for (const ev in set[key]) {
@@ -32,9 +32,9 @@ export function exportSet(set: any) {
 
   // core
   if (set.name && set.name !== set.species) {
-    text += `${set.name} (${set.species.name})`;
+    text += `${set.name} (${set.species})`;
   } else {
-    text += `${set.species.name}`;
+    text += `${set.species}`;
   }
   if (set.gender === "M") text += ` (M)`;
   if (set.gender === "F") text += ` (F)`;
@@ -44,6 +44,18 @@ export function exportSet(set: any) {
   text += `  \n`;
   if (set.ability) {
     text += `Ability: ${set.ability}  \n`;
+  }
+  if (set.moves) {
+    for (let move of set.moves) {
+      if (move.substr(0, 13) === "Hidden Power ") {
+        const hpType = move.slice(13);
+        move = move.slice(0, 13);
+        move = `${move}[${hpType}]`;
+      }
+      if (move) {
+        text += `- ${move}  \n`;
+      }
+    }
   }
 
   // stats
@@ -106,17 +118,6 @@ export function exportSet(set: any) {
     text += `Gigantamax: Yes  \n`;
   }
 
-  if (set.moves) {
-    for (let move of set.moves) {
-      if (move.substr(0, 13) === "Hidden Power ") {
-        const hpType = move.slice(13);
-        move = move.slice(0, 13);
-        move = `${move}[${hpType}]`; // TODO check that Hidden Power works as expected
-      }
-      if (move) {
-        text += `- ${move}  \n`;
-      }
-    }
-  }
+  text += `\n`;
   return text;
 }
