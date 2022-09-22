@@ -12,72 +12,51 @@
 import style from "./style.css";
 import { FunctionalComponent, h } from "preact";
 import { useEffect, useState } from "preact/hooks";
-import { useLazyQuery } from "@apollo/client";
 import { SearchComponent } from "../../components/search";
 import { Results } from "../../components/results";
-import { Link } from "preact-router";
-import { Sidebar } from "../../components/sidebar";
-import { Panel } from "../../components/panel";
-import Creator from "../../components/creator";
-import { Auth } from "../../components/auth";
-import LoginForm from "../../components/login";
-import { SETS } from "../../helpers/queries";
-import { Set } from "../../helpers/types";
+import { useSetsQuery } from "../../components/query";
 
 interface Props {}
 
 const SetBrowser: FunctionalComponent<Props> = (props: Props) => {
-  const [results, setResults] = useState<{
-    sets: Set[];
-    next_cursor: number | null;
-  }>({ sets: [], next_cursor: null });
-  const signIn = (
-    <Panel>
-      <h2>Sign In</h2>
-      <LoginForm />
-      <small>
-        No account? <Link href="/register">Sign up</Link>!
-      </small>
-    </Panel>
-  );
+  const [results, setResults] = useState({
+    sets: [],
+    next: null,
+    previous: null,
+    count: 0,
+  });
 
-  const [fetchResults, { loading, error, data, fetchMore }] =
-    useLazyQuery(SETS);
+  const {
+    fetchData,
+    results: { loading, error, data },
+  } = useSetsQuery();
 
   if (loading) {
   } else {
     if (error) {
     } else {
       if (data !== undefined) {
-        setResults(data.sets);
+        setResults(data);
       }
     }
   }
 
   // set title after first render
   useEffect(() => {
-    document.title = "Browse";
+    document.title = "Browse | Pokebrowse";
   }, []);
 
   return (
     <main class={style.main}>
       <div class={style.setbrowser}>
-        <SearchComponent fetchResults={fetchResults} />
+        <SearchComponent fetchResults={fetchData} />
         {error && (
-          <div>
-            <b style="color: red">{error.message}</b>
+          <div style="padding: 0.5em 0 0 0.5em;">
+            <span style="color: red">Error: {error}</span>
           </div>
         )}
-        <Results results={results} fetchMore={fetchMore} />
+        <Results results={results} fetchMore={fetchData} />
       </div>
-      <Sidebar>
-        <Auth notAuth={signIn}>
-          <Panel>
-            <h2>Upload a Set</h2>
-            <Creator />
-          </Panel>
-        </Auth>
-      </Sidebar>
     </main>
   );
 };

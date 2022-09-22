@@ -4,56 +4,25 @@ import { useContext } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import { Auth } from "../auth";
 import style from "./style.css";
+import LoginButton from "../login-button";
+import LogoutButton from "../logout-button";
 
 const Header: FunctionalComponent = () => {
-  const { accessToken, setAccessToken } = useContext(AuthContext);
-
   const links = (
     <Fragment>
-      <Link activeClassName={style.active} href="/browser">
+      <Link activeClassName={style.active} href="/">
         Browse
       </Link>
       <Link activeClassName={style.active} href="/upload">
         Upload
       </Link>
-      <Auth notAuth={<Fragment />}>
+      {/* <Auth notAuth={<Fragment />}>
         <Link activeClassName={style.active} href="/profile">
           Profile
         </Link>
-      </Auth>
-      <Auth
-        notAuth={
-          <Link activeClassName={style.active} href="/login">
-            Sign in
-          </Link>
-        }>
-        <Link
-          activeClassName={style.active}
-          href=""
-          onClick={(e) => {
-            e.preventDefault();
-            fetch(
-              (process.env.PROD_LOGIN_URL
-                ? process.env.PROD_LOGIN_URL
-                : "http://localhost:4000") + "/logout",
-              {
-                method: "POST",
-                credentials: "include",
-              }
-            )
-              .then(async (res) => {
-                console.log(res);
-                if (res.status !== 200) throw Error();
-                const json = await res.json();
-                setAccessToken("");
-              })
-              .catch((err) => {
-                console.error(err);
-                setAccessToken("");
-              });
-          }}>
-          Sign out
-        </Link>
+      </Auth> */}
+      <Auth notAuth={<LoginButton />}>
+        <LogoutButton />
       </Auth>
     </Fragment>
   );

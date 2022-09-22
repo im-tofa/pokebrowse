@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 0.3125rem;
   background: rgba(0, 0, 0, 0.3);
   z-index: 100;
 }
@@ -16,22 +16,14 @@
   margin: 0;
 }
 .btn {
-  font-size: medium;
   position: absolute;
   top: 0;
   right: 0;
   align-self: flex-end;
   width: max-content;
-  border: none;
-  color: #444444;
-  background: none;
-  padding: 4px;
-  width: 26px;
-  height: 26px;
-}
-.btn:hover {
-  cursor: pointer;
-  color: gray;
+  padding: 0.25rem;
+  width: 1.625rem;
+  height: 1.625rem;
 }
 .author {
   grid-area: author;
@@ -54,8 +46,8 @@
   grid-area: image;
 }
 .img {
-  width: 66px;
-  height: 66px;
+  width: 4.125rem;
+  height: 4.125rem;
   object-fit: contain;
 }
 
@@ -63,41 +55,58 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .metadata {
   display: grid;
-  grid-template-columns: 66px auto;
-  grid-template-rows: 22px 22px 22px;
+  grid-template-columns: 4.125rem auto;
+  grid-template-rows: 1.375rem 1.375rem 1.375rem;
   grid-template-areas:
     "image author"
     "image rating"
     "image date  ";
 
   align-items: center;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 0.3125rem;
+  border-bottom: 0.0625rem solid #aaaaaa;
 }
 .import {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.3125rem;
   white-space: pre-line;
 }
 .import > div {
   font-family: monospace;
 }
+.clickable {
+  font-size: medium;
+  color: #444444;
+  border: none;
+  background: none;
+}
+.clickable:hover {
+  cursor: pointer;
+  color: gray;
+}
+.checkmark {
+  visibility: hidden;
+  margin-left: 0.5rem;
+}
+.notify {
+  visibility: visible;
+}
 .description {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.3125rem;
   white-space: normal;
 }
 .details {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 
   position: relative;
   top: 0;
@@ -105,14 +114,14 @@
   background: #ffffff;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 1.25rem;
   overflow: auto;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
-@media (min-width: 400px) {
+@media (min-width: 25rem) {
   .details {
-    width: 400px;
-    height: 600px;
+    width: 25rem;
+    height: 37.5rem;
     max-height: 100%;
   }
 }

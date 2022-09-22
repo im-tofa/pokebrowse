@@ -1,13 +1,13 @@
 import { FunctionalComponent, h, Fragment } from "preact";
-import { useContext } from "preact/hooks";
+import { useContext, useEffect, useState } from "preact/hooks";
 import { AuthContext } from "../../helpers/token";
 import { route } from "preact-router";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // /login and /register
 interface Props {
   notAuth?: h.JSX.Element; // this is mainly used for panels, in order to reroute.
-  rerouteIfSignedOut?: string; // this is mainly used when accessing authenticated routes, in order to reroute.
-  rerouteIfSignedIn?: string; // mainly used for /login and /register
+  authAndRedirect?: string;
   children?: any;
 }
 
@@ -19,25 +19,33 @@ interface Props {
  * @returns Returns a rendered Auth component
  */
 const Auth: FunctionalComponent<Props> = (props: Props) => {
-  const { accessToken } = useContext(AuthContext);
+  const { isAuthenticated, loginWithRedirect, isLoading } = useAuth0();
+
+  const [origin, setOrigin] = useState("");
+  useEffect(() => {
+    setOrigin(window.location.origin);
+  }, []);
+
+  if (!origin) return <Fragment />;
 
   // check if access token exists
-  if (accessToken === null) {
+  console.log(
+    "isLoading: " + isLoading + ", isAuthenticated: " + isAuthenticated
+  );
+  if (!isAuthenticated) {
     // if not authenticated version is provided, return it
     if (props.notAuth) return <Fragment>{props.notAuth}</Fragment>;
 
-    // otherwise, try to reroute if logged out, if desired
-    if (props.rerouteIfSignedOut) route(props.rerouteIfSignedOut, true);
+    if (isLoading) return <div> Loading ... </div>;
 
-    // otherwise, if reroute is desired only if logged in, return original children
-    if (props.rerouteIfSignedIn) return <Fragment>{props.children}</Fragment>;
+    // otherwise, try to authenticate and redirect if desired
+    if (props.authAndRedirect) {
+      localStorage.setItem("redirectPath", props.authAndRedirect);
+      loginWithRedirect({ redirectUri: origin + "/callback" });
+      return;
+    }
 
-    return <Fragment />;
-  }
-
-  // if it does, reroute if desired
-  if (props.rerouteIfSignedIn) {
-    route(props.rerouteIfSignedIn, true);
+    // fall back to empty element
     return <Fragment />;
   }
 

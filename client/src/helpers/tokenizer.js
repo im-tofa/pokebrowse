@@ -54,8 +54,8 @@ const tokenizer = {
   DATE: /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/,
   INTLIT: /[1-9]\d*/,
   WHITESPACE: /\s+/,
-  WORD: /[a-zA-Z]+/,
-  CMD: /\/(species|author|speed|date)/,
+  WORD: /[a-zA-Z\-]+/,
+  CMD: /\/(species|author|speed|date|type)/,
 };
 
 const parseInput = (input) => {
@@ -99,6 +99,31 @@ const parseInput = (input) => {
           case "/author":
             i++;
             key = "author";
+            inputType = "text";
+            if (i < tokens.length) {
+              while (i < tokens.length) {
+                if (tokens[i].type === "WORD") {
+                  val += tokens[i].token + " ";
+                } else {
+                  console.log(
+                    "got token of type '" +
+                      tokens[i].type +
+                      "'; expected a word (e.g finchinator)"
+                  );
+                  return null;
+                }
+                i++;
+              }
+            } else {
+              console.log(
+                "command ended early; expected a word (e.g finchinator)"
+              );
+            }
+            val = val.toLowerCase().trim();
+            break;
+          case "/type":
+            i++;
+            key = "type";
             inputType = "text";
             if (i < tokens.length) {
               while (i < tokens.length) {

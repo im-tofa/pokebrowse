@@ -5,13 +5,13 @@
   align-items: center;
   min-width: max-content;
   border: solid;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   border-width: 0;
   background-color: #f2f2f2;
   font-size: small;
 
-  padding: 5px;
-  gap: 5px;
+  padding: 0.3125rem;
+  gap: 0.3125rem;
 }
 
 .filter > * {

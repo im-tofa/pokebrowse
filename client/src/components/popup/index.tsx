@@ -7,17 +7,40 @@ import { FunctionalComponent, h } from "preact";
 /* custom types */
 import { Set } from "../../helpers/types";
 import { exportSet } from "../../helpers/set";
+import { toID } from "../result";
+import { useEffect, useState } from "preact/hooks";
 
 interface ResultProps {
-  set: Set;
+  set: any;
   setChosen(s: string): void;
 }
 
 const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
   const set = props.set;
+  const [height, setHeight] = useState(undefined);
+  const handleWindowSizeChange = () => {
+    setHeight(window.innerHeight);
+  };
+  const [notify, setNotify] = useState(false);
+
+  const animate = () => {
+    // Button begins to shake
+    setNotify(true);
+
+    // Buttons stops to shake after 2 seconds
+    setTimeout(() => setNotify(false), 2000);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
   return (
     <div
       class={style.popup}
+      style={height ? `height: ${height}px` : ``}
       onClick={(e) => {
         e.preventDefault();
         props.setChosen("");
@@ -29,7 +52,7 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           e.stopPropagation();
         }}>
         <button
-          class={style.btn}
+          class={`${style.btn} ${style.clickable}`}
           onClick={(e) => {
             e.preventDefault();
             props.setChosen("");
@@ -41,7 +64,9 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
             {/* NOTE that these links do not have animations for some newer mons and icons for newer items */}
             <img
               class={style.img}
-              src={`https://play.pokemonshowdown.com/sprites/gen5ani/${set.species}.gif`}
+              src={`https://play.pokemonshowdown.com/sprites/gen5ani/${toID(
+                set.importable.species.name
+              )}.gif`}
               onError={(event) => {
                 if (
                   event.currentTarget.src ===
@@ -50,16 +75,20 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
                   return;
                 if (
                   event.currentTarget.src ===
-                  `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`
+                  `https://play.pokemonshowdown.com/sprites/gen5/${toID(
+                    set.importable.species.name
+                  )}.png`
                 ) {
                   event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/0.png`;
                   return;
                 }
-                event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${set.species}.png`;
+                event.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${toID(
+                  set.importable.species.name
+                )}.png`;
               }}></img>
             <img
               class={style.icon}
-              src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.item
+              src={`https://play.pokemonshowdown.com/sprites/itemicons/${set.importable.item
                 .toLowerCase()
                 .split(" ")
                 .join("-")}.png`}
@@ -73,18 +102,13 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
               }}></img>
           </div>
           <div class={style.author}>
-            <b>Author:</b> {set.author}
+            <b>Author:</b> {set.author.username}
           </div>
           <div class={style.date}>
-            <b>Uploaded on:</b>{" "}
-            {new Date(set.set_uploaded_on).toLocaleDateString()}
+            <b>Uploaded on:</b> {new Date(set.created).toLocaleDateString()}
           </div>
           <div class={style.rating}>
-            <b>Rating:</b> <i class="fas fa-star" />
-            <i class="fas fa-star" />
-            <i class="fas fa-star" />
-            <i class="far fa-star" />
-            <i class="far fa-star" />
+            <b>Likes:</b> {`${set.likes ? set.likes.length : 0}`}
           </div>
         </div>
         <div class={style.description}>
@@ -92,8 +116,25 @@ const Popup: FunctionalComponent<ResultProps> = (props: ResultProps) => {
           <div>{set.description}</div>
         </div>
         <div class={style.import}>
-          <h4>Import</h4>
-          <div>{exportSet(set)}</div>
+          <h4>
+            Import{" "}
+            <button
+              class={style.clickable}
+              onClick={() => {
+                navigator.clipboard.writeText(exportSet(set.importable));
+                animate();
+              }}>
+              <i class="fa fa-clone"></i>
+            </button>
+            <i
+              class={
+                notify
+                  ? `${style.checkmark} ${style.notify} fa fa-check`
+                  : `${style.checkmark} fa fa-check`
+              }
+            />
+          </h4>
+          <div>{exportSet(set.importable)}</div>
         </div>
       </div>
     </div>

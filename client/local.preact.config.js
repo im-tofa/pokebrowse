@@ -5,13 +5,11 @@ export default {
     config.node.process = "mock";
     config.plugins.push(
       new DefinePlugin({
-        "process.env.OAUTH_DOMAIN": JSON.stringify("pokebrowse.eu.auth0.com"),
+        "process.env.OAUTH_DOMAIN": JSON.stringify("dev-gnh7bcs1.eu.auth0.com"),
         "process.env.OAUTH_CLIENTID": JSON.stringify(
-          "Rt7s2NMMH0PSNSobbNOMQykcK4429xr2"
+          "XfhFHObJfac7bUPLdK58zqaZGxsY4N3O"
         ),
-        "process.env.URL": JSON.stringify(
-          "https://pokebrowse-api.herokuapp.com/api/v1"
-        ),
+        "process.env.URL": JSON.stringify("http://localhost:8080/api/v1"),
       })
     );
   },

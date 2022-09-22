@@ -1,37 +1,21 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import { FunctionalComponent, h } from "preact";
-import { useEffect } from "preact/hooks";
+import { getCurrentUrl } from "preact-router";
+import { useEffect, useState } from "preact/hooks";
 import { Auth } from "../../components/auth";
-import Creator from "../../components/creator";
-import { Panel } from "../../components/panel";
-import { SetManager } from "../../components/set-manager";
-import { Sidebar } from "../../components/sidebar";
 import style from "./style.css";
 
 const Profile: FunctionalComponent = () => {
+  const { user, isAuthenticated, loginWithRedirect } = useAuth0();
   // set title after first render
   useEffect(() => {
-    document.title = "Profile";
+    document.title = "Profile | Pokebrowse";
   }, []);
+
   return (
-    <Auth rerouteIfSignedOut="/login">
+    <Auth authAndRedirect={getCurrentUrl()}>
       <main class={style.main}>
-        <SetManager />
-        <Sidebar>
-          <Panel>
-            <h2>Delete Sets</h2>
-            <div>
-              Select items by clicking on them (they will be highlighted in
-              blue). Then, press the delete button that appears in order to
-              delete your sets.
-              <br /> <br />
-              <b>WARNING:</b> Deleting a set is an irreversible action!
-            </div>
-          </Panel>
-          <Panel>
-            <h2>Upload Set</h2>
-            <Creator reroute="/profile" />
-          </Panel>
-        </Sidebar>
+        <div>Hello, {user?.username ? user.username : ""}!</div>
       </main>
     </Auth>
   );

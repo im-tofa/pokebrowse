@@ -2,8 +2,24 @@
   display: grid;
   height: 100%;
   width: 100%;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  background-color: #ffffff;
+  overflow-y: hidden;
+}
+
+.content {
+  display: grid;
+  height: 100%;
+  width: 100%;
   grid-template-rows: 1fr;
   grid-template-columns: auto 1fr;
   background-color: #ffffff;
   overflow-y: hidden;
+}
+
+.preact_root > a {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
 }
