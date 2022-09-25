@@ -2,7 +2,7 @@
 
 A web application for uploading and browsing Pokémon sets. This repository contains the client codebase. The server codebase is in a separate github repository.
 
-![](./images/browser.png)
+![](./images/browse-demo.gif)
 
 ## How to Run
 
