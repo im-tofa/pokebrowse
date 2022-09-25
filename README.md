@@ -30,6 +30,6 @@ Uploading sets can only be done if you are signed into an account, by accessing 
 
 The source code for pokebrowse is distributed under the terms of the [MIT License](LICENSE).
 
-Functions located in [server/src/utils/ps-utils.js](server/src/utils/ps-utils.js) and [client/src/helpers/set.ts](client/src/helpers/set.ts) are adapted from the [Pokémon Showdown Client](https://github.com/smogon/pokemon-showdown-client), with permission from the copyright holder (Zarel) to distribute under an MIT license.
+Functions located in [client/src/helpers/set.ts](client/src/helpers/set.ts) are adapted from the [Pokémon Showdown Client](https://github.com/smogon/pokemon-showdown-client), with permission from the copyright holder (Zarel) to distribute under an MIT license.
 
 Pokémon and Pokémon character names are trademarks of Nintendo.
