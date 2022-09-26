@@ -31,6 +31,7 @@ function toID(text) {
       "mow",
       "frost",
       "fan",
+      "mega",
     ].includes(splitText[splitText.length - 1].toLowerCase())
   ) {
     forme = splitText.pop().toLowerCase();
