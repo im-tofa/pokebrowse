@@ -5,7 +5,6 @@ A web application for uploading and browsing Pokémon sets. This repository cont
 ![](./images/browse-demo.gif)
 
 ## How to Run
-
 - `npm run build`, then `npm run serve` to start the client
 
 ## Overview
