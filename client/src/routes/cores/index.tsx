@@ -64,7 +64,7 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
                 resists {"<typing>"} {"<typing>"} ...
               </pre>{" "}
               - The core should include a Pokémon that takes resisted or no
-              dmaage from all of the space-separated types.
+              damage from all of the space-separated types.
             </li>
             <li>
               <pre>
