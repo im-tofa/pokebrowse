@@ -21,6 +21,25 @@
   overflow-y: hidden;
 }
 
+.cores pre {
+  display: inline-block;
+  margin: 0;
+}
+
+.cores ul {
+  margin: 0;
+}
+
+.cores h2 {
+  margin: 0.25rem;
+  margin-left: 0;
+}
+
+.line {
+  margin: 0.5rem 0 0.5rem 0;
+  border-bottom: solid 1px #444444;
+}
+
 .form {
   display: flex;
   flex-direction: column;

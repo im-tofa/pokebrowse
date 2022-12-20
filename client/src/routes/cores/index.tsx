@@ -43,6 +43,39 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
   return (
     <main class={style.main}>
       <div class={style.cores}>
+        <h2>Core Generator</h2>
+        <div>
+          Generate cores using constraints! Type in a comma-separated list of
+          constraints and click submit. Possible constraints are:
+          <ul>
+            <li>
+              <pre>type {"<typing>"}</pre> - The core should include a Pokémon
+              with this type.
+            </li>
+            <li>
+              <pre>
+                immuneTo {"<typing>"} {"<typing>"} ...
+              </pre>{" "}
+              - The core should include a Pokémon that is immune to all of the
+              space-separated types.
+            </li>
+            <li>
+              <pre>
+                resists {"<typing>"} {"<typing>"} ...
+              </pre>{" "}
+              - The core should include a Pokémon that takes resisted or no
+              dmaage from all of the space-separated types.
+            </li>
+            <li>
+              <pre>
+                neutralTo {"<typing>"} {"<typing>"} ...
+              </pre>{" "}
+              - The core should include a Pokémon that takes neutral, resisted
+              or no damage from all of the space-separated types.
+            </li>
+          </ul>
+        </div>
+        <div class={style.line}></div>
         <form
           class={style.form}
           onSubmit={async (e) => {
