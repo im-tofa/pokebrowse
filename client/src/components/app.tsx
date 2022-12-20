@@ -12,6 +12,7 @@ import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import Redirect from "../routes/redirect";
 import PrivacyPolicy from "../routes/privacypolicy";
 import VerificationPopup from "./verification-popup";
+import CoreRequester from "../routes/cores";
 
 const App: FunctionalComponent = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -45,6 +46,7 @@ const App: FunctionalComponent = () => {
             {/* <Route path="/profile" component={Profile} /> */}
             <Route path="/callback" component={Redirect} />
             <Route path="/privacypolicy" component={PrivacyPolicy} />
+            <Route path="/cores" component={CoreRequester} />
             <NotFoundPage default />
           </Router>
         </div>

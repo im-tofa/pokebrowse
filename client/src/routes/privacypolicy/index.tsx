@@ -110,8 +110,8 @@ const PrivacyPolicy: FunctionalComponent = () => {
           </li>
         </ul>
         If you make a request, we have one month to respond to you. If you would
-        like to exercise any of these rights, please contact us at our email:{" "}
-        <a href="mailto:data@pokebrow.se">data@pokebrow.se</a>
+        like to exercise any of these rights, please contact us by messaging
+        'utofa' on Smogon.
       </p>
       <h2>Cookies</h2>
       <p>
@@ -136,15 +136,15 @@ const PrivacyPolicy: FunctionalComponent = () => {
       <h2>Changes to our privacy policy</h2>
       <p>
         Pokebrowse keeps its privacy policy under regular review and places any
-        updates on this web page. This privacy policy was last updated on 18
-        September 2022.
+        updates on this web page. This privacy policy was last updated on 20
+        December 2022.
       </p>
       <h2>How to contact us</h2>
       <p>
         If you have any questions about Pokebrowse's privacy policy, the data we
         hold on you, or you would like to exercise one of your data protection
-        rights, please do not hesitate to contact us. Email us at:{" "}
-        <a href="mailto:data@pokebrow.se">data@pokebrow.se</a>
+        rights, please do not hesitate to contact us by messaging 'utofa' on
+        Smogon.
       </p>
     </div>
   );

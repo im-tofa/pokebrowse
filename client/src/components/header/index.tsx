@@ -16,6 +16,9 @@ const Header: FunctionalComponent = () => {
       <Link activeClassName={style.active} href="/upload">
         Upload
       </Link>
+      <Link activeClassName={style.active} href="/cores">
+        Cores
+      </Link>
       {/* <Auth notAuth={<Fragment />}>
         <Link activeClassName={style.active} href="/profile">
           Profile
