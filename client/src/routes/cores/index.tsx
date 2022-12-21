@@ -90,7 +90,7 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
             await request();
           }}>
           <label class={style.text}>
-            Format (past 3 generations of OU are allowed):
+            Format (past 2 generations of OU (gen 9 & 8) are allowed):
           </label>
           <input
             type="text"
