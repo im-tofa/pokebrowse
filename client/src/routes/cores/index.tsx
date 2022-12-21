@@ -10,6 +10,7 @@ interface Props {}
 const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
   const [results, setResults] = useState([]);
   const [params, setParams] = useState("");
+  const [format, setFormat] = useState("");
 
   // set title after first render
   useEffect(() => {
@@ -22,6 +23,7 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
         "/cores?" +
         new URLSearchParams({
           constraintsString: params,
+          format: format,
         })
     );
 
@@ -46,11 +48,16 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
         <h2>Core Generator</h2>
         <div>
           Generate cores using constraints! Type in a comma-separated list of
-          constraints and click submit. Possible constraints are:
+          constraints and click submit. Possible constraints are noted below,
+          where "..." means more values can be provided:
           <ul>
             <li>
               <pre>type {"<typing>"}</pre> - The core should include a Pokémon
               with this type.
+            </li>
+            <li>
+              <pre>species {"<species>"}</pre> - The core should include this
+              species.
             </li>
             <li>
               <pre>
@@ -82,6 +89,18 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
             e.preventDefault();
             await request();
           }}>
+          <label class={style.text}>
+            Format (past 3 generations of OU are allowed):
+          </label>
+          <input
+            type="text"
+            class={style.text}
+            value={format}
+            placeholder="gen9ou"
+            onChange={(e) => {
+              setFormat(e.currentTarget.value);
+            }}
+          />
           <label class={style.text}>Constraints:</label>
           <input
             type="text"
@@ -95,7 +114,7 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
           <input type="submit" value="Submit" />
         </form>
         {results && results.length != 0 && (
-          <div>
+          <div class={style.results}>
             <div>
               <b>Pairings that satisfy criteria:</b>
             </div>
