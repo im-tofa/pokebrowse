@@ -105,6 +105,9 @@ export function exportSet(set: any) {
   if (set.gigantamax) {
     text += `Gigantamax: Yes  \n`;
   }
+  if (set.teraType) {
+    text += `Tera Type: ${set.teraType}  \n`;
+  }
 
   if (set.moves) {
     for (let move of set.moves) {
