@@ -90,6 +90,13 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
             </li>
           </ul>
         </div>
+        <div class={style.note}>
+          <b>A note on "Allow rare pairings"</b>: By default, the generator will
+          only construct cores where each Pokémon is known to commonly pair with
+          at least one other Pokémon in the core (this is confirmed through
+          usage statistics). Ticking the checkbox "Allow rare pairings" removes
+          this restriction.
+        </div>
         <div class={style.line}></div>
         <form
           class={style.form}
