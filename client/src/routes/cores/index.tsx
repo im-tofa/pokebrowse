@@ -9,8 +9,10 @@ interface Props {}
 
 const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
   const [results, setResults] = useState([]);
+  const [error, setError] = useState("");
   const [params, setParams] = useState("");
-  const [format, setFormat] = useState("");
+  const [ignoreTeammateViability, setIgnoreTeammateViability] = useState(false);
+  const [format, setFormat] = useState("gen9ou");
 
   // set title after first render
   useEffect(() => {
@@ -23,6 +25,7 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
         "/cores?" +
         new URLSearchParams({
           constraintsString: params,
+          allowAnyTeammate: ignoreTeammateViability.toString(),
           format: format,
         })
     );
@@ -30,14 +33,18 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
     try {
       if (response.status !== 200) {
         setResults(undefined);
+        const json = await response.json();
+        setError(json.error);
         return;
       }
       const json = await response.json();
       console.log(json);
       setResults(json);
+      setError("");
     } catch (err) {
       console.log(err);
       setResults(undefined);
+      setError("Something went wrong");
       return;
     }
   };
@@ -47,9 +54,10 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
       <div class={style.cores}>
         <h2>Core Generator</h2>
         <div>
-          Generate cores using constraints! Type in a comma-separated list of
-          constraints and click submit. Possible constraints are noted below,
-          where "..." means more values can be provided:
+          Generate cores based on your own preferences! Type in a
+          comma-separated list of criteria and click submit. Possible types of
+          criteria are noted below, where "..." means more values can be
+          provided:
           <ul>
             <li>
               <pre>type {"<typing>"}</pre> - The core should include a Pokémon
@@ -89,29 +97,45 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
             e.preventDefault();
             await request();
           }}>
-          <label class={style.text}>
-            Format (past 2 generations of OU (gen 9 & 8) are allowed):
-          </label>
-          <input
-            type="text"
-            class={style.text}
-            value={format}
-            placeholder="gen9ou"
-            onChange={(e) => {
-              setFormat(e.currentTarget.value);
-            }}
-          />
-          <label class={style.text}>Constraints:</label>
-          <input
-            type="text"
-            class={style.text}
-            value={params}
-            placeholder="type ground, resists fire fighting dark, immuneTo ground, neutralTo ice electric"
-            onChange={(e) => {
-              setParams(e.currentTarget.value);
-            }}
-          />
-          <input type="submit" value="Submit" />
+          <fieldset>
+            <legend>Configuration</legend>
+            <label class={style.text}>
+              <span>Format:</span>
+              <select
+                value={format}
+                onChange={(e) => {
+                  setFormat(e.currentTarget.value);
+                }}>
+                <option value="gen9ou">Gen 9 OU</option>
+                <option value="gen8ou">Gen 8 OU</option>
+              </select>
+            </label>
+            <label class={style.text}>
+              <span>Allow rare pairings:</span>
+
+              <input
+                name="ignoreTeammateViability"
+                type="checkbox"
+                checked={ignoreTeammateViability}
+                onChange={(e) => {
+                  setIgnoreTeammateViability(e.currentTarget.checked);
+                }}
+              />
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Constraints</legend>
+            <input
+              type="text"
+              class={style.text}
+              value={params}
+              placeholder="type ground, resists fire fighting dark, immuneTo ground, neutralTo ice electric"
+              onChange={(e) => {
+                setParams(e.currentTarget.value);
+              }}
+            />
+          </fieldset>
+          <input class={style.submit} type="submit" value="Submit" />
         </form>
         {results && results.length != 0 && (
           <div class={style.results}>
@@ -121,6 +145,11 @@ const CoreRequester: FunctionalComponent<Props> = (props: Props) => {
             {results.map((val) => (
               <div>{val.map((v) => v.name).join(", ")}</div>
             ))}
+          </div>
+        )}
+        {error && (
+          <div>
+            <b style="color: red">{error}</b>
           </div>
         )}
       </div>

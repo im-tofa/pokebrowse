@@ -54,10 +54,23 @@
   overflow-y: scroll;
 }
 
-.form > * {
-  width: min-content;
+.form select,
+.form input {
+  margin: 0.2rem;
 }
 
-.form > .text {
+.form > fieldset {
+  /* max-width: fit-content; */
+  max-width: 100%;
+  border-width: 1px;
+  border-radius: 0.25rem;
+}
+.form .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+}
+.form > .submit {
+  width: min-content;
 }
